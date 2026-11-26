@@ -1,0 +1,49 @@
+  undefined method 'match?' for nil
+  skipping app/controllers/campeones_controller.rb
+  undefined method 'match?' for nil
+  skipping app/controllers/clasificados_controller.rb
+  undefined method 'match?' for nil
+  skipping app/controllers/eliminacion_directa_controller.rb
+  undefined method 'match?' for nil
+  skipping app/controllers/torneos_controller.rb
+  undefined method 'match?' for nil
+  skipping app/models/grupo.rb
+  undefined method 'match?' for nil
+  skipping app/models/partido.rb
+  undefined method 'match?' for nil
+  skipping app/models/seleccion.rb
+  undefined method 'match?' for nil
+  skipping app/models/torneo.rb
+  undefined method 'match?' for nil
+  skipping app/services/determinar_clasificados.rb
+Total score (lower is better) = 358
+
+1) Similar code found in :if (mass = 86)
+  app/services/siguiente_ronda.rb:214
+  app/services/siguiente_ronda.rb:229
+
+2) Similar code found in :defn (mass = 72)
+  app/controllers/grupos_controller.rb:93
+  app/controllers/partidos_controller.rb:102
+  app/controllers/partidos_grupo_controller.rb:91
+  app/controllers/selecciones_controller.rb:92
+
+3) Similar code found in :block (mass = 48)
+  app/views/selecciones/index.html.erb:153
+  app/views/selecciones/index.html.erb:163
+
+4) Similar code found in :attrasgn (mass = 46)
+  app/views/partidos_grupo/calendario.html.erb:84
+  app/views/partidos_grupo/calendario.html.erb:102
+
+5) Similar code found in :block (mass = 36)
+  app/controllers/partidos_controller.rb:31
+  app/controllers/partidos_controller.rb:51
+
+6) Similar code found in :block (mass = 36)
+  app/views/fase_de_grupos/fase_eliminatoria.html.erb:155
+  app/views/selecciones/index.html.erb:256
+
+7) Similar code found in :if (mass = 34)
+  app/views/selecciones/index.html.erb:15
+  app/views/selecciones/index.html.erb:21

@@ -1,0 +1,2151 @@
+{
+  "pdf": "qa\\reports\\document-render\\Informe_Final_QA_Mundial.pdf",
+  "pdf_sha256": "daa5653bd12d1214a77b4c210990656c67bb19f31e1be867186297352af67d50",
+  "pages": [
+    {
+      "page": 1,
+      "characters": 402,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "1\nInstituto Tecnológico de Costa Rica\nEscuela de Computación\nIngeniería en Computación\nIC-6831 Asegu",
+      "blank": false
+    },
+    {
+      "page": 2,
+      "characters": 2716,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "2\nTabla de contenidos\n1. Ficha de identificación del sistema .......................................",
+      "blank": false
+    },
+    {
+      "page": 3,
+      "characters": 2708,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "3\n6.1. Arquitectura del sistema ....................................................................",
+      "blank": false
+    },
+    {
+      "page": 4,
+      "characters": 2759,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "4\n10.4. Ejecución del sistema ......................................................................",
+      "blank": false
+    },
+    {
+      "page": 5,
+      "characters": 2757,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "5\n14.4. GitHub Actions y evidencias ................................................................",
+      "blank": false
+    },
+    {
+      "page": 6,
+      "characters": 1566,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "6\n21.3. Recomendación de liberación ................................................................",
+      "blank": false
+    },
+    {
+      "page": 7,
+      "characters": 2488,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "7\nÍndice de figuras\nFigura 1 . Arquitectura existente ..............................................",
+      "blank": false
+    },
+    {
+      "page": 8,
+      "characters": 103,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "8\nFigura 24 . Ejecución remota de GitHub Actions .................................................. ",
+      "blank": false
+    },
+    {
+      "page": 9,
+      "characters": 2596,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "9\nÍndice de tablas\nTabla 1 . Datos de identificación ...............................................",
+      "blank": false
+    },
+    {
+      "page": 10,
+      "characters": 2786,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "10\nTabla 24 . Caso UT-002 ..........................................................................",
+      "blank": false
+    },
+    {
+      "page": 11,
+      "characters": 2735,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "11\nTabla 48 . Caso INT-008 .........................................................................",
+      "blank": false
+    },
+    {
+      "page": 12,
+      "characters": 1604,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "12\nTabla 72 . Caso ACC-002 .........................................................................",
+      "blank": false
+    },
+    {
+      "page": 13,
+      "characters": 1578,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "13\n1. Ficha de identificación del sistema\nLa ficha identifica el producto, la procedencia y el entor",
+      "blank": false
+    },
+    {
+      "page": 14,
+      "characters": 541,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "14\nLa Tabla 1 presenta datos de identificación.\nTabla 1. Datos de identificación\nDato Valor\nPoblació",
+      "blank": false
+    },
+    {
+      "page": 15,
+      "characters": 1072,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "15\n2. Introducción\nEl registro de un marcador repercute en estadísticas, clasificación y podio. Esta",
+      "blank": false
+    },
+    {
+      "page": 16,
+      "characters": 806,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "16\n3. Objetivos\nLos objetivos delimitan la evaluación y las decisiones que debe sustentar la evidenc",
+      "blank": false
+    },
+    {
+      "page": 17,
+      "characters": 1739,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "17\n4. Descripción del problema y del sistema\nLa descripción relaciona las funciones documentadas con",
+      "blank": false
+    },
+    {
+      "page": 18,
+      "characters": 1505,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "18\n4.5. Requerimientos no funcionales\nRNF-01 proviene de las consideraciones técnicas originales. RN",
+      "blank": false
+    },
+    {
+      "page": 19,
+      "characters": 521,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "19\nID Requerimiento Origen Selección\nRF-09 Mostrar campeón, subcampeón y tercer lugar Explícito Sí\nR",
+      "blank": false
+    },
+    {
+      "page": 20,
+      "characters": 1688,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "20\n5. Alcance y justificación\nEl alcance prioriza las reglas e interfaces cuya falla afecta la integ",
+      "blank": false
+    },
+    {
+      "page": 21,
+      "characters": 1281,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "21\nLa Tabla 3 presenta alcance por requerimiento.\nTabla 3. Alcance por requerimiento\nID Funcionalida",
+      "blank": false
+    },
+    {
+      "page": 22,
+      "characters": 1027,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "22\nLa Tabla 4 presenta exclusiones y riesgo residual.\nTabla 4. Exclusiones y riesgo residual\nElement",
+      "blank": false
+    },
+    {
+      "page": 23,
+      "characters": 1653,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "23\n6. Diseño de la solución\nSe describe la arquitectura existente y el diseño de la infraestructura ",
+      "blank": false
+    },
+    {
+      "page": 24,
+      "characters": 179,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "24\nLa Figura 1 muestra arquitectura existente.\nFigura 1. Arquitectura existente\nFuente: Elaboración ",
+      "blank": false
+    },
+    {
+      "page": 25,
+      "characters": 179,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "25\nLa Figura 2 muestra componentes existentes.\nFigura 2. Componentes existentes\nFuente: Elaboración ",
+      "blank": false
+    },
+    {
+      "page": 26,
+      "characters": 179,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "26\nLa Figura 3 muestra entidades y relaciones.\nFigura 3. Entidades y relaciones\nFuente: Elaboración ",
+      "blank": false
+    },
+    {
+      "page": 27,
+      "characters": 193,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "27\nLa Figura 4 muestra flujo de registro de marcador.\nFigura 4. Flujo de registro de marcador\nFuente",
+      "blank": false
+    },
+    {
+      "page": 28,
+      "characters": 197,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "28\nLa Figura 5 muestra estrategia de pruebas propuesta.\nFigura 5. Estrategia de pruebas propuesta\nFu",
+      "blank": false
+    },
+    {
+      "page": 29,
+      "characters": 173,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "29\nLa Figura 6 muestra gestión de defectos.\nFigura 6. Gestión de defectos\nFuente: Elaboración a part",
+      "blank": false
+    },
+    {
+      "page": 30,
+      "characters": 229,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "30\nLa Figura 7 muestra automatización e integración continua propuesta.\nFigura 7. Automatización e i",
+      "blank": false
+    },
+    {
+      "page": 31,
+      "characters": 227,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "31\nLa Figura 8 muestra relación entre modelo, GQM, pruebas y métricas.\nFigura 8. Relación entre mode",
+      "blank": false
+    },
+    {
+      "page": 32,
+      "characters": 1927,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "32\n7. Metodología y modelo de calidad\nEl modelo conecta riesgos, requerimientos, preguntas y métrica",
+      "blank": false
+    },
+    {
+      "page": 33,
+      "characters": 1558,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "33\n7.4. Metodología GQM\nGQM relaciona la intención de la medición con preguntas y datos observables ",
+      "blank": false
+    },
+    {
+      "page": 34,
+      "characters": 1326,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "34\nLa Tabla 6 presenta objetivos y preguntas GQM.\nTabla 6. Objetivos y preguntas GQM\nObjetivo Pregun",
+      "blank": false
+    },
+    {
+      "page": 35,
+      "characters": 1475,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "35\nGQM-02: Analizar la aplicación Mundial POO con el propósito de evaluar su aptitud\nrespecto a mant",
+      "blank": false
+    },
+    {
+      "page": 36,
+      "characters": 1118,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "36\nCampo Especificación\nEscala de medición Razón\nHerramienta Catálogo CSV\nMétodo de recolección Reco",
+      "blank": false
+    },
+    {
+      "page": 37,
+      "characters": 1038,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "37\nMET-02. Casos funcionales aprobados\nLa Tabla 8 presenta ficha MET-02.\nTabla 8. Ficha MET-02\nCampo",
+      "blank": false
+    },
+    {
+      "page": 38,
+      "characters": 996,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "38\nCampo Especificación\nDecisión asociada Aceptar el criterio, condicionar o rechazar; si falta evid",
+      "blank": false
+    },
+    {
+      "page": 39,
+      "characters": 1196,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "39\nCampo Especificación\nDefinición de variables LH: líneas ejecutables de app con contador de cobert",
+      "blank": false
+    },
+    {
+      "page": 40,
+      "characters": 1053,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "40\nCampo Especificación\nInterpretación Unión de líneas SimpleCov en corridas del mismo commit; app/*",
+      "blank": false
+    },
+    {
+      "page": 41,
+      "characters": 1113,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "41\nCampo Especificación\nJustificación de selección Identifica métodos con mayor cantidad de decision",
+      "blank": false
+    },
+    {
+      "page": 42,
+      "characters": 1042,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "42\nMET-05. Código duplicado\nLa Tabla 11 presenta ficha MET-05.\nTabla 11. Ficha MET-05\nCampo Especifi",
+      "blank": false
+    },
+    {
+      "page": 43,
+      "characters": 1048,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "43\nCampo Especificación\nRechazo >5%\nDecisión asociada Aceptar el criterio, condicionar o rechazar; s",
+      "blank": false
+    },
+    {
+      "page": 44,
+      "characters": 1193,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "44\nCampo Especificación\nPreguntas GQM GQM-02-P3\nFórmula Minutos remediación / minutos desarrollo est",
+      "blank": false
+    },
+    {
+      "page": 45,
+      "characters": 1129,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "45\nCampo Especificación\nLimitaciones Umbrales internos; no prescritos por ISO. Texto íntegro de norm",
+      "blank": false
+    },
+    {
+      "page": 46,
+      "characters": 1214,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "46\nCampo Especificación\nHerramienta Brakeman, Bundler Audit y controles dirigidos\nMétodo de recolecc",
+      "blank": false
+    },
+    {
+      "page": 47,
+      "characters": 1040,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "47\nMET-08. Seguridad aprobada\nLa Tabla 14 presenta ficha MET-08.\nTabla 14. Ficha MET-08\nCampo Especi",
+      "blank": false
+    },
+    {
+      "page": 48,
+      "characters": 969,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "48\nCampo Especificación\nDecisión asociada Aceptar el criterio, condicionar o rechazar; si falta evid",
+      "blank": false
+    },
+    {
+      "page": 49,
+      "characters": 1228,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "49\nCampo Especificación\nDefinición de variables n:solicitudes observadas por escenario, ruta y nivel",
+      "blank": false
+    },
+    {
+      "page": 50,
+      "characters": 1056,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "50\nCampo Especificación\nInterpretación Peor P95 por ruta y carga; conservar desglose. No extrapolar\n",
+      "blank": false
+    },
+    {
+      "page": 51,
+      "characters": 865,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "51\nCampo Especificación\nUmbral general <=1%\nAceptación total <=1%\nAceptación parcial >1..5%\nRechazo ",
+      "blank": false
+    },
+    {
+      "page": 52,
+      "characters": 1117,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "52\nCampo Especificación\nCaracterística ISO/IEC\n25010:2023\nCapacidad de interacción\nObjetivo Responde",
+      "blank": false
+    },
+    {
+      "page": 53,
+      "characters": 1058,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "53\nCampo Especificación\nExclusiones Dependencias y código generado; no sustituir datos humanos\nLimit",
+      "blank": false
+    },
+    {
+      "page": 54,
+      "characters": 1141,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "54\nCampo Especificación\nHerramienta Cronómetro y formularios reales\nMétodo de recolección Recoger re",
+      "blank": false
+    },
+    {
+      "page": 55,
+      "characters": 1154,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "55\nMET-13. Incumplimientos WCAG\nLa Tabla 19 presenta ficha MET-13.\nTabla 19. Ficha MET-13\nCampo Espe",
+      "blank": false
+    },
+    {
+      "page": 56,
+      "characters": 748,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "56\nCampo Especificación\nRechazo >=1 bloqueante\nDecisión asociada Aceptar el criterio, condicionar o ",
+      "blank": false
+    },
+    {
+      "page": 57,
+      "characters": 1671,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "57\n8. Plan general de calidad y plan de pruebas\nEl plan establece recursos, orden de trabajo, criter",
+      "blank": false
+    },
+    {
+      "page": 58,
+      "characters": 1552,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "58\n8.5. Criterios de salida y aceptación\nExigir cobertura de diseño de todos los RF asignados, casos",
+      "blank": false
+    },
+    {
+      "page": 59,
+      "characters": 1671,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "59\n9. Herramientas utilizadas\nLa selección de herramientas responde al lenguaje Ruby, la interfaz Ra",
+      "blank": false
+    },
+    {
+      "page": 60,
+      "characters": 963,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "60\nTrabajo Códig\no\nEvidencia original\nflay 0 qa\\reports\\runs\\20261125T213032255660-0600\\flay.log\nbra",
+      "blank": false
+    },
+    {
+      "page": 61,
+      "characters": 1746,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "61\n10. Procedimiento de instalación e instructivo de uso\nEl procedimiento utiliza un ambiente test a",
+      "blank": false
+    },
+    {
+      "page": 62,
+      "characters": 1191,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "62\npartidos y /partidos_grupo/calendario muestra resultados y tabla. /fase_eliminatoria y\n/campeones",
+      "blank": false
+    },
+    {
+      "page": 63,
+      "characters": 1731,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "63\n11. Pruebas estáticas\nLa revisión estática contrasta especificación, código y reportes de herrami",
+      "blank": false
+    },
+    {
+      "page": 64,
+      "characters": 1842,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "64\n11.5. Hallazgos y resultados\nLas tablas de hallazgos y revisión conservan el estado de confirmaci",
+      "blank": false
+    },
+    {
+      "page": 65,
+      "characters": 221,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "65\nRF Deficiencia de especificación Propuesta a ratificar\nRF-09 No define cuándo publicar\npodio\nMost",
+      "blank": false
+    },
+    {
+      "page": 66,
+      "characters": 1686,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "66\n12. Pruebas dinámicas\nLos niveles y tipos de prueba aportan evidencia complementaria. Sus resulta",
+      "blank": false
+    },
+    {
+      "page": 67,
+      "characters": 1674,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "67\n12.5. Pruebas de rendimiento y carga\nSe diseñan dos escenarios locales:5, 10, 20VU y 25, 50, 100V",
+      "blank": false
+    },
+    {
+      "page": 68,
+      "characters": 1158,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "68\n13. Casos de prueba\nLos registros siguientes conservan el diseño previo y los resultados observad",
+      "blank": false
+    },
+    {
+      "page": 69,
+      "characters": 1246,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "69\nCampo Detalle\nEvidencia y defecto qa\\reports\\runs\\20261125T224518089588-0600\\unit.json\nDefecto: S",
+      "blank": false
+    },
+    {
+      "page": 70,
+      "characters": 1298,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "70\nCampo Detalle\nImplementación y\nejecución\ntest/unit/qa_unit_test.rb\nbash qa/scripts/run_all.sh --o",
+      "blank": false
+    },
+    {
+      "page": 71,
+      "characters": 1028,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "71\nUT-004. Empate suma un punto\nLa Tabla 26 presenta caso UT-004.\nTabla 26. Caso UT-004\nCampo Detall",
+      "blank": false
+    },
+    {
+      "page": 72,
+      "characters": 1045,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "72\nUT-005. Derrota visitante no suma\nLa Tabla 27 presenta caso UT-005.\nTabla 27. Caso UT-005\nCampo D",
+      "blank": false
+    },
+    {
+      "page": 73,
+      "characters": 1084,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "73\nUT-006. Recalcular dos veces es idempotente\nLa Tabla 28 presenta caso UT-006.\nTabla 28. Caso UT-0",
+      "blank": false
+    },
+    {
+      "page": 74,
+      "characters": 1064,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "74\nUT-007. Nombre legible de selección\nLa Tabla 29 presenta caso UT-007.\nTabla 29. Caso UT-007\nCampo",
+      "blank": false
+    },
+    {
+      "page": 75,
+      "characters": 1006,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "75\nUT-008. Diferencia de goles\nLa Tabla 30 presenta caso UT-008.\nTabla 30. Caso UT-008\nCampo Detalle",
+      "blank": false
+    },
+    {
+      "page": 76,
+      "characters": 1013,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "76\nUT-009. Normalización de grupo\nLa Tabla 31 presenta caso UT-009.\nTabla 31. Caso UT-009\nCampo Deta",
+      "blank": false
+    },
+    {
+      "page": 77,
+      "characters": 1023,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "77\nUT-010. Grupo con cuatro equipos completo\nLa Tabla 32 presenta caso UT-010.\nTabla 32. Caso UT-010",
+      "blank": false
+    },
+    {
+      "page": 78,
+      "characters": 1034,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "78\nUT-011. Grupo con tres equipos tiene espacio\nLa Tabla 33 presenta caso UT-011.\nTabla 33. Caso UT-",
+      "blank": false
+    },
+    {
+      "page": 79,
+      "characters": 1073,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "79\nUT-012. Orden de posiciones delegado\nLa Tabla 34 presenta caso UT-012.\nTabla 34. Caso UT-012\nCamp",
+      "blank": false
+    },
+    {
+      "page": 80,
+      "characters": 1020,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "80\nUT-013. Penales resuelven empate\nLa Tabla 35 presenta caso UT-013.\nTabla 35. Caso UT-013\nCampo De",
+      "blank": false
+    },
+    {
+      "page": 81,
+      "characters": 1039,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "81\nUT-014. Partido pendiente sin ganador\nLa Tabla 36 presenta caso UT-014.\nTabla 36. Caso UT-014\nCam",
+      "blank": false
+    },
+    {
+      "page": 82,
+      "characters": 1064,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "82\nUT-015. Mejores terceros por puntos\nLa Tabla 37 presenta caso UT-015.\nTabla 37. Caso UT-015\nCampo",
+      "blank": false
+    },
+    {
+      "page": 83,
+      "characters": 1045,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "83\nUT-016. Progreso de grupos en frontera\nLa Tabla 38 presenta caso UT-016.\nTabla 38. Caso UT-016\nCa",
+      "blank": false
+    },
+    {
+      "page": 84,
+      "characters": 1042,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "84\nUT-017. Torneo incompleto sin podio\nLa Tabla 39 presenta caso UT-017.\nTabla 39. Caso UT-017\nCampo",
+      "blank": false
+    },
+    {
+      "page": 85,
+      "characters": 1053,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "85\nUT-018. Torneo con tres lugares finalizado\nLa Tabla 40 presenta caso UT-018.\nTabla 40. Caso UT-01",
+      "blank": false
+    },
+    {
+      "page": 86,
+      "characters": 1299,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "86\nINT-001. Registrar marcador persiste y recalcula\nLa Tabla 41 presenta caso INT-001.\nTabla 41. Cas",
+      "blank": false
+    },
+    {
+      "page": 87,
+      "characters": 1312,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "87\nINT-002. Editar resultado conserva consistencia\nLa Tabla 42 presenta caso INT-002.\nTabla 42. Caso",
+      "blank": false
+    },
+    {
+      "page": 88,
+      "characters": 1244,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "88\nINT-003. Ruta alternativa no duplica puntos\nLa Tabla 43 presenta caso INT-003.\nTabla 43. Caso INT",
+      "blank": false
+    },
+    {
+      "page": 89,
+      "characters": 1283,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "89\nINT-004. Alta de selección por interfaz HTTP\nLa Tabla 44 presenta caso INT-004.\nTabla 44. Caso IN",
+      "blank": false
+    },
+    {
+      "page": 90,
+      "characters": 1265,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "90\nINT-005. Quinta selección rechazada\nLa Tabla 45 presenta caso INT-005.\nTabla 45. Caso INT-005\nCam",
+      "blank": false
+    },
+    {
+      "page": 91,
+      "characters": 1290,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "91\nINT-006. Grupo válido y eliminación restringida\nLa Tabla 46 presenta caso INT-006.\nTabla 46. Caso",
+      "blank": false
+    },
+    {
+      "page": 92,
+      "characters": 1295,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "92\nINT-007. Clasificación de 48 selecciones\nLa Tabla 47 presenta caso INT-007.\nTabla 47. Caso INT-00",
+      "blank": false
+    },
+    {
+      "page": 93,
+      "characters": 1289,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "93\nINT-008. Avance automático entre rondas\nLa Tabla 48 presenta caso INT-008.\nTabla 48. Caso INT-008",
+      "blank": false
+    },
+    {
+      "page": 94,
+      "characters": 1282,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "94\nINT-009. Cierre persiste podio\nLa Tabla 49 presenta caso INT-009.\nTabla 49. Caso INT-009\nCampo De",
+      "blank": false
+    },
+    {
+      "page": 95,
+      "characters": 1177,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "95\nE2E-001. Consulta de selecciones\nLa Tabla 50 presenta caso E2E-001.\nTabla 50. Caso E2E-001\nCampo ",
+      "blank": false
+    },
+    {
+      "page": 96,
+      "characters": 1202,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "96\nE2E-002. Registro de selección\nLa Tabla 51 presenta caso E2E-002.\nTabla 51. Caso E2E-002\nCampo De",
+      "blank": false
+    },
+    {
+      "page": 97,
+      "characters": 1163,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "97\nE2E-003. Consulta de grupo\nLa Tabla 52 presenta caso E2E-003.\nTabla 52. Caso E2E-003\nCampo Detall",
+      "blank": false
+    },
+    {
+      "page": 98,
+      "characters": 1265,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "98\nE2E-004. Registro de marcador por calendario\nLa Tabla 53 presenta caso E2E-004.\nTabla 53. Caso E2",
+      "blank": false
+    },
+    {
+      "page": 99,
+      "characters": 1225,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "99\nE2E-005. Frontera de marcador negativo\nLa Tabla 54 presenta caso E2E-005.\nTabla 54. Caso E2E-005\n",
+      "blank": false
+    },
+    {
+      "page": 100,
+      "characters": 1215,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "100\nE2E-006. Consulta de tabla de posiciones\nLa Tabla 55 presenta caso E2E-006.\nTabla 55. Caso E2E-0",
+      "blank": false
+    },
+    {
+      "page": 101,
+      "characters": 1199,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "101\nE2E-007. Bloqueo de avance prematuro\nLa Tabla 56 presenta caso E2E-007.\nTabla 56. Caso E2E-007\nC",
+      "blank": false
+    },
+    {
+      "page": 102,
+      "characters": 1288,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "102\nE2E-008. Guardar eliminatoria y generar octavos\nLa Tabla 57 presenta caso E2E-008.\nTabla 57. Cas",
+      "blank": false
+    },
+    {
+      "page": 103,
+      "characters": 1199,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "103\nE2E-009. Podio final en interfaz\nLa Tabla 58 presenta caso E2E-009.\nTabla 58. Caso E2E-009\nCampo",
+      "blank": false
+    },
+    {
+      "page": 104,
+      "characters": 1111,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "104\nUAT-001. Registrar un resultado real de uso\nLa Tabla 59 presenta caso UAT-001.\nTabla 59. Caso UA",
+      "blank": false
+    },
+    {
+      "page": 105,
+      "characters": 1126,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "105\nUAT-002. Interpretar tabla y clasificación\nLa Tabla 60 presenta caso UAT-002.\nTabla 60. Caso UAT",
+      "blank": false
+    },
+    {
+      "page": 106,
+      "characters": 1092,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "106\nUAT-003. Consultar avance y podio\nLa Tabla 61 presenta caso UAT-003.\nTabla 61. Caso UAT-003\nCamp",
+      "blank": false
+    },
+    {
+      "page": 107,
+      "characters": 1371,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "107\nPERF-001. Consulta local con carga 5, 10, 20\nLa Tabla 62 presenta caso PERF-001.\nTabla 62. Caso ",
+      "blank": false
+    },
+    {
+      "page": 108,
+      "characters": 1374,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "108\nPERF-002. Consulta local con carga 25, 50, 100\nLa Tabla 63 presenta caso PERF-002.\nTabla 63. Cas",
+      "blank": false
+    },
+    {
+      "page": 109,
+      "characters": 1257,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "109\nSEG-001. Consulta parametrizada ante SQLi\nLa Tabla 64 presenta caso SEG-001.\nTabla 64. Caso SEG-",
+      "blank": false
+    },
+    {
+      "page": 110,
+      "characters": 1255,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "110\nSEG-002. Salida de texto ante XSS\nLa Tabla 65 presenta caso SEG-002.\nTabla 65. Caso SEG-002\nCamp",
+      "blank": false
+    },
+    {
+      "page": 111,
+      "characters": 1278,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "111\nSEG-003. Acceso anónimo de escritura\nLa Tabla 66 presenta caso SEG-003.\nTabla 66. Caso SEG-003\nC",
+      "blank": false
+    },
+    {
+      "page": 112,
+      "characters": 1270,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "112\nSEG-004. Protección CSRF efectiva\nLa Tabla 67 presenta caso SEG-004.\nTabla 67. Caso SEG-004\nCamp",
+      "blank": false
+    },
+    {
+      "page": 113,
+      "characters": 1230,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "113\nSEG-005. Errores sin datos internos\nLa Tabla 68 presenta caso SEG-005.\nTabla 68. Caso SEG-005\nCa",
+      "blank": false
+    },
+    {
+      "page": 114,
+      "characters": 1225,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "114\nSEG-006. Entradas inválidas sin corrupción\nLa Tabla 69 presenta caso SEG-006.\nTabla 69. Caso SEG",
+      "blank": false
+    },
+    {
+      "page": 115,
+      "characters": 1190,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "115\nUSA-001. Éxito y tiempo de tres tareas con tres personas\nLa Tabla 70 presenta caso USA-001.\nTabl",
+      "blank": false
+    },
+    {
+      "page": 116,
+      "characters": 1344,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "116\nACC-001. Accesibilidad de /partidos_grupo/calendario\nLa Tabla 71 presenta caso ACC-001.\nTabla 71",
+      "blank": false
+    },
+    {
+      "page": 117,
+      "characters": 1296,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "117\nACC-002. Accesibilidad de /grupos/ID\nLa Tabla 72 presenta caso ACC-002.\nTabla 72. Caso ACC-002\nC",
+      "blank": false
+    },
+    {
+      "page": 118,
+      "characters": 1320,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "118\nACC-003. Accesibilidad de /fase_eliminatoria\nLa Tabla 73 presenta caso ACC-003.\nTabla 73. Caso A",
+      "blank": false
+    },
+    {
+      "page": 119,
+      "characters": 1338,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "119\nEST-001. Revisión estática de código y especificación\nLa Tabla 74 presenta caso EST-001.\nTabla 7",
+      "blank": false
+    },
+    {
+      "page": 120,
+      "characters": 1652,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "120\n14. Automatización e integración continua\nLa automatización conserva reportes por corrida y actu",
+      "blank": false
+    },
+    {
+      "page": 121,
+      "characters": 602,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "121\n15. Matriz de trazabilidad\nLa matriz permite recorrer desde una obligación hasta sus pruebas, re",
+      "blank": false
+    },
+    {
+      "page": 122,
+      "characters": 1175,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "122\nLos rangos de defectos incluyen todos los identificadores entre sus extremos. El CSV conserva ca",
+      "blank": false
+    },
+    {
+      "page": 123,
+      "characters": 1173,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "123\nRF/RNF Característica Caso Tipo / nivel Automatizada Resultado Defecto Responsable\nRF-02 Adecuac",
+      "blank": false
+    },
+    {
+      "page": 124,
+      "characters": 1237,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "124\nRF/RNF Característica Caso Tipo / nivel Automatizada Resultado Defecto Responsable\nRF-03 Adecuac",
+      "blank": false
+    },
+    {
+      "page": 125,
+      "characters": 1243,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "125\nRF/RNF Característica Caso Tipo / nivel Automatizada Resultado Defecto Responsable\nRF-01 Adecuac",
+      "blank": false
+    },
+    {
+      "page": 126,
+      "characters": 1084,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "126\nRF/RNF Característica Caso Tipo / nivel Automatizada Resultado Defecto Responsable\nRF-04 Adecuac",
+      "blank": false
+    },
+    {
+      "page": 127,
+      "characters": 734,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "127\nRF/RNF Característica Caso Tipo / nivel Automatizada Resultado Defecto Responsable\nRNF-03 Seguri",
+      "blank": false
+    },
+    {
+      "page": 128,
+      "characters": 284,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "128\nRF/RNF Característica Caso Tipo / nivel Automatizada Resultado Defecto Responsable\nRNF-01 Manten",
+      "blank": false
+    },
+    {
+      "page": 129,
+      "characters": 1644,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "129\n16. Gestión de defectos\nEl registro distingue hallazgos confirmados, candidatos automáticos y pr",
+      "blank": false
+    },
+    {
+      "page": 130,
+      "characters": 1560,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "130\nEsperado: Cada equipo debe enviar su propio marcador; validar y persistir 2-1. Actual:\nvalue: pa",
+      "blank": false
+    },
+    {
+      "page": 131,
+      "characters": 1563,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "131\nReproducción: Abrir app/controllers/partidos_controller.rb, línea 80, en el commit de\nlínea base",
+      "blank": false
+    },
+    {
+      "page": 132,
+      "characters": 1553,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "132\nReproducción: Abrir app/controllers/campeones_controller.rb, línea 64, en el commit de\nlínea bas",
+      "blank": false
+    },
+    {
+      "page": 133,
+      "characters": 1574,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "133\nReproducción: Abrir app/controllers/clasificados_controller.rb, línea 26, en el commit de\nlínea ",
+      "blank": false
+    },
+    {
+      "page": 134,
+      "characters": 1572,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "134\nReproducción: Abrir app/services/actualizar_estadisticas_seleccion.rb, línea 51, en el\ncommit de",
+      "blank": false
+    },
+    {
+      "page": 135,
+      "characters": 1625,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "135\nReproducción: Abrir app/views/layouts/application.html.erb, línea 2, en el commit de\nlínea base;",
+      "blank": false
+    },
+    {
+      "page": 136,
+      "characters": 1568,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "136\nReproducción: Leer Proyecto_4_POO_Mundial_2026.md, Requerimientos del sistema,\npunto 1 y contras",
+      "blank": false
+    },
+    {
+      "page": 137,
+      "characters": 1692,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "137\nImpacto y recomendación: Administrar grupos únicos A..L; rechazar eliminación si\nconserva selecc",
+      "blank": false
+    },
+    {
+      "page": 138,
+      "characters": 1573,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "138\n- Diferencia de goles.\n- Goles a favor.\nEvidencia: Proyecto_4_POO_Mundial_2026.md:25; docs/Revis",
+      "blank": false
+    },
+    {
+      "page": 139,
+      "characters": 1561,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "139\nReproducción: Leer Proyecto_4_POO_Mundial_2026.md, Requerimientos del sistema,\npunto 6 y contras",
+      "blank": false
+    },
+    {
+      "page": 140,
+      "characters": 1744,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "140\nImpacto y recomendación: Para empate eliminatorio exigir ambos penales enteros>=0 y\ndistintos an",
+      "blank": false
+    },
+    {
+      "page": 141,
+      "characters": 1788,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "141\nEvidencia: Proyecto_4_POO_Mundial_2026.md:46; docs/Revision_Requerimientos.csv.\nRequerimiento: R",
+      "blank": false
+    },
+    {
+      "page": 142,
+      "characters": 1689,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "142\nEsperado: Confirmar flujo real ycondiciones del hallazgo antes de clasificarlo como\nvulnerabilid",
+      "blank": false
+    },
+    {
+      "page": 143,
+      "characters": 1564,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "143\nID Observación Ubicación / evidencia Estado\nDEF-\n032\nReek:\nTooManyInstanceVariables\napp/controll",
+      "blank": false
+    },
+    {
+      "page": 144,
+      "characters": 1552,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "144\nID Observación Ubicación / evidencia Estado\nDEF-\n046\nRuboCop:\nLayout/ExtraSpacing\napp/controller",
+      "blank": false
+    },
+    {
+      "page": 145,
+      "characters": 1670,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "145\nID Observación Ubicación / evidencia Estado\nDEF-\n060\nRuboCop:\nMetrics/ClassLength\napp/controller",
+      "blank": false
+    },
+    {
+      "page": 146,
+      "characters": 1441,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "146\nID Observación Ubicación / evidencia Estado\nDEF-\n074\nRuboCop: Style/SymbolArray app/controllers/",
+      "blank": false
+    },
+    {
+      "page": 147,
+      "characters": 1316,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "147\nID Observación Ubicación / evidencia Estado\nDEF-\n084\nCVE-2026-33202: Rails Active\nStorage has po",
+      "blank": false
+    },
+    {
+      "page": 148,
+      "characters": 1391,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "148\nID Observación Ubicación / evidencia Estado\nDEF-\n093\nCVE-2026-54905: Concurrent\nRuby -\n`Reentran",
+      "blank": false
+    },
+    {
+      "page": 149,
+      "characters": 1348,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "149\nID Observación Ubicación / evidencia Estado\nDEF-\n102\nGHSA-3f4q-8x5m-76v8:\nPossible local file di",
+      "blank": false
+    },
+    {
+      "page": 150,
+      "characters": 1286,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "150\nID Observación Ubicación / evidencia Estado\nDEF-\n111\nGHSA-5prr-v3j2-97mh:\nNokogiri: Possible Out",
+      "blank": false
+    },
+    {
+      "page": 151,
+      "characters": 1280,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "151\nID Observación Ubicación / evidencia Estado\nDEF-\n119\nGHSA-8678-w3jw-xfc2:\nNokogiri: XML::Schema ",
+      "blank": false
+    },
+    {
+      "page": 152,
+      "characters": 1294,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "152\nID Observación Ubicación / evidencia Estado\nDEF-\n127\nGHSA-9wjq-cp2p-hrgf: SVG\n`href` attribute b",
+      "blank": false
+    },
+    {
+      "page": 153,
+      "characters": 1273,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "153\nID Observación Ubicación / evidencia Estado\nDEF-\n135\nGHSA-hfr4-8rjc-97m2:\nPossible circumvention",
+      "blank": false
+    },
+    {
+      "page": 154,
+      "characters": 1291,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "154\nID Observación Ubicación / evidencia Estado\nDEF-\n143\nGHSA-p2pm-g2h6-7j5j:\nPossible DoS vulnerabi",
+      "blank": false
+    },
+    {
+      "page": 155,
+      "characters": 1378,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "155\nID Observación Ubicación / evidencia Estado\nDEF-\n151\nGHSA-r9jg-fmfx-2gv6:\nPossible cache poisoni",
+      "blank": false
+    },
+    {
+      "page": 156,
+      "characters": 1365,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "156\nID Observación Ubicación / evidencia Estado\nDEF-\n160\nGHSA-wjv4-x9w8-wm3h:\nNokogiri: Possible Use",
+      "blank": false
+    },
+    {
+      "page": 157,
+      "characters": 1285,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "157\n17. Resultados de ejecución\nEste capítulo presenta cantidades derivadas del catálogo y los repor",
+      "blank": false
+    },
+    {
+      "page": 158,
+      "characters": 584,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "158\nIndicador Cantidad\nBloqueado 29\nNo ejecutado 4\nFallido 1\nRF con evidencia aprobada 7\nLa Tabla 78",
+      "blank": false
+    },
+    {
+      "page": 159,
+      "characters": 581,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "159\nLa Tabla 80 presenta resultados por responsable.\nTabla 80. Resultados por responsable\nresponsabl",
+      "blank": false
+    },
+    {
+      "page": 160,
+      "characters": 72,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "160\nrequerimiento Aprobado Fallido Bloqueado No\nejecutado\nRNF-O2 0 0 0 0",
+      "blank": false
+    },
+    {
+      "page": 161,
+      "characters": 1491,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "161\n18. Métricas y su interpretación\nLos valores se calculan a partir de reportes y formularios; su ",
+      "blank": false
+    },
+    {
+      "page": 162,
+      "characters": 1542,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "162\nMétrica Valor Evaluación Interpretación\nMET-04 14 Aceptación\nparcial\n210 métodos; promedio 2.23;",
+      "blank": false
+    },
+    {
+      "page": 163,
+      "characters": 1557,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "163\n19. Evaluación de deuda técnica\nLa estimación de deuda prioriza problemas únicos y declara el co",
+      "blank": false
+    },
+    {
+      "page": 164,
+      "characters": 777,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "164\nID Hallazg\no\nDescripción Minutos\nestimados\nPrioridad\nDT-\n002\nDEF-\n002\nmensaje no inicializado en",
+      "blank": false
+    },
+    {
+      "page": 165,
+      "characters": 910,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "165\n20. Análisis de riesgos\nLos riesgos explican la prioridad de ejecución y las condiciones necesar",
+      "blank": false
+    },
+    {
+      "page": 166,
+      "characters": 1286,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "166\nLa Tabla 84 presenta exposición, controles y tratamiento de riesgos.\nTabla 84. Exposición, contr",
+      "blank": false
+    },
+    {
+      "page": 167,
+      "characters": 1615,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "167\n21. Análisis de resultados y recomendación de liberación\nLa recomendación integra resultados, de",
+      "blank": false
+    },
+    {
+      "page": 168,
+      "characters": 1407,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "168\n22. Conclusiones y recomendaciones\nLas conclusiones se limitan a la línea base y la evidencia di",
+      "blank": false
+    },
+    {
+      "page": 169,
+      "characters": 1558,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "169\n23. Distribución del trabajo en equipo\nLa asignación conserva las especialidades y la responsabi",
+      "blank": false
+    },
+    {
+      "page": 170,
+      "characters": 111,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "170\nIntegrante RF RNF\nJimena Vindas Acosta RF-01, RF-02 RNF-02\nCésar Gamboa Naranjo RF-05..RF-09 RNF",
+      "blank": false
+    },
+    {
+      "page": 171,
+      "characters": 1736,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "171\n24. Referencias\nSe incluyen únicamente referencias identificadas o consultadas de forma verifica",
+      "blank": false
+    },
+    {
+      "page": 172,
+      "characters": 645,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "172\nRuby. (s. f.). JavaScript: Prism documentation.\nhttps://ruby.github.io/prism/rb/docs/javascript_",
+      "blank": false
+    },
+    {
+      "page": 173,
+      "characters": 998,
+      "width": 612.0,
+      "height": 792.0,
+      "start": "173\n25. Anexos y evidencias\nLos anexos reúnen fuentes editables, reportes, instrumentos y evidencias",
+      "blank": false
+    },
+    {
+      "page": 174,
+      "characters": 169,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "174\nLa Figura 9 muestra estados reales del catálogo.\nFigura 9. Estados reales del catálogo\nFuente: q",
+      "blank": false
+    },
+    {
+      "page": 175,
+      "characters": 169,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "175\nLa Figura 10 muestra hallazgos por severidad.\nFigura 10. Hallazgos por severidad\nFuente: Registr",
+      "blank": false
+    },
+    {
+      "page": 176,
+      "characters": 146,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "176\nLa Figura 11 muestra métodos con mayor complejidad.\nFigura 11. Métodos con mayor complejidad\nFue",
+      "blank": false
+    },
+    {
+      "page": 177,
+      "characters": 153,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "177\nLa Figura 12 muestra resultado de pruebas unitarias.\nFigura 12. Resultado de pruebas unitarias\nF",
+      "blank": false
+    },
+    {
+      "page": 178,
+      "characters": 1136,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "178\nLa Figura 13 muestra resultado de integración.\nEVIDENCIA PENDIENTE. Desde Entregables: bash qa/s",
+      "blank": false
+    },
+    {
+      "page": 179,
+      "characters": 1175,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "179\nLa Figura 16 muestra verificaciones de seguridad.\nEVIDENCIA PENDIENTE. Desde Entregables: bash q",
+      "blank": false
+    },
+    {
+      "page": 180,
+      "characters": 1087,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "180\nLa Figura 19 muestra tiempos de usabilidad reales.\nEVIDENCIA PENDIENTE. Desde Entregables: pytho",
+      "blank": false
+    },
+    {
+      "page": 181,
+      "characters": 875,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "181\nLa Figura 22 muestra calendario y tabla de posiciones.\nEVIDENCIA PENDIENTE. Ejecutar E2E o abrir",
+      "blank": false
+    },
+    {
+      "page": 182,
+      "characters": 526,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "182\nLa Tabla 86 presenta inventario de evidencia disponible.\nTabla 86. Inventario de evidencia dispo",
+      "blank": false
+    },
+    {
+      "page": 183,
+      "characters": 826,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "183\nID Caso Herramienta Ruta\nEV-003 E2E-001;\nE2E-002;\nE2E-003;\nE2E-004;\nE2E-005;\nE2E-006;\nE2E-007;\nE",
+      "blank": false
+    },
+    {
+      "page": 184,
+      "characters": 780,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "184\nID Caso Herramienta Ruta\nEV-010 bundler-audit qa\\reports\\runs\\20261125T155700781919-\n0600\\bundle",
+      "blank": false
+    },
+    {
+      "page": 185,
+      "characters": 744,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "185\nID Caso Herramienta Ruta\nEV-020 complexity qa\\reports\\runs\\20261125T160055893388-\n0600\\complexit",
+      "blank": false
+    },
+    {
+      "page": 186,
+      "characters": 754,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "186\nID Caso Herramienta Ruta\nEV-030 versions qa\\reports\\runs\\20261125T165246778161-\n0600\\versions.lo",
+      "blank": false
+    },
+    {
+      "page": 187,
+      "characters": 768,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "187\nID Caso Herramienta Ruta\nEV-040 prepare qa\\reports\\runs\\20261125T212517075406-\n0600\\prepare.log\n",
+      "blank": false
+    },
+    {
+      "page": 188,
+      "characters": 732,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "188\nID Caso Herramienta Ruta\nEV-050 flay qa\\reports\\runs\\20261125T213032255660-\n0600\\flay.log\nEV-051",
+      "blank": false
+    },
+    {
+      "page": 189,
+      "characters": 377,
+      "width": 792.0,
+      "height": 612.0,
+      "start": "189\nID Caso Herramienta Ruta\nEV-060 versions qa\\reports\\runs\\20261125T224142260795-\n0600\\versions.lo",
+      "blank": false
+    }
+  ],
+  "blank_pages": [],
+  "boards": [
+    {
+      "board": "board-01.png",
+      "pages": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "board": "board-02.png",
+      "pages": [
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "board": "board-03.png",
+      "pages": [
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "board": "board-04.png",
+      "pages": [
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "board": "board-05.png",
+      "pages": [
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "board": "board-06.png",
+      "pages": [
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    {
+      "board": "board-07.png",
+      "pages": [
+        25,
+        26,
+        27,
+        28
+      ]
+    },
+    {
+      "board": "board-08.png",
+      "pages": [
+        29,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "board": "board-09.png",
+      "pages": [
+        33,
+        34,
+        35,
+        36
+      ]
+    },
+    {
+      "board": "board-10.png",
+      "pages": [
+        37,
+        38,
+        39,
+        40
+      ]
+    },
+    {
+      "board": "board-11.png",
+      "pages": [
+        41,
+        42,
+        43,
+        44
+      ]
+    },
+    {
+      "board": "board-12.png",
+      "pages": [
+        45,
+        46,
+        47,
+        48
+      ]
+    },
+    {
+      "board": "board-13.png",
+      "pages": [
+        49,
+        50,
+        51,
+        52
+      ]
+    },
+    {
+      "board": "board-14.png",
+      "pages": [
+        53,
+        54,
+        55,
+        56
+      ]
+    },
+    {
+      "board": "board-15.png",
+      "pages": [
+        57,
+        58,
+        59,
+        60
+      ]
+    },
+    {
+      "board": "board-16.png",
+      "pages": [
+        61,
+        62,
+        63,
+        64
+      ]
+    },
+    {
+      "board": "board-17.png",
+      "pages": [
+        65,
+        66,
+        67,
+        68
+      ]
+    },
+    {
+      "board": "board-18.png",
+      "pages": [
+        69,
+        70,
+        71,
+        72
+      ]
+    },
+    {
+      "board": "board-19.png",
+      "pages": [
+        73,
+        74,
+        75,
+        76
+      ]
+    },
+    {
+      "board": "board-20.png",
+      "pages": [
+        77,
+        78,
+        79,
+        80
+      ]
+    },
+    {
+      "board": "board-21.png",
+      "pages": [
+        81,
+        82,
+        83,
+        84
+      ]
+    },
+    {
+      "board": "board-22.png",
+      "pages": [
+        85,
+        86,
+        87,
+        88
+      ]
+    },
+    {
+      "board": "board-23.png",
+      "pages": [
+        89,
+        90,
+        91,
+        92
+      ]
+    },
+    {
+      "board": "board-24.png",
+      "pages": [
+        93,
+        94,
+        95,
+        96
+      ]
+    },
+    {
+      "board": "board-25.png",
+      "pages": [
+        97,
+        98,
+        99,
+        100
+      ]
+    },
+    {
+      "board": "board-26.png",
+      "pages": [
+        101,
+        102,
+        103,
+        104
+      ]
+    },
+    {
+      "board": "board-27.png",
+      "pages": [
+        105,
+        106,
+        107,
+        108
+      ]
+    },
+    {
+      "board": "board-28.png",
+      "pages": [
+        109,
+        110,
+        111,
+        112
+      ]
+    },
+    {
+      "board": "board-29.png",
+      "pages": [
+        113,
+        114,
+        115,
+        116
+      ]
+    },
+    {
+      "board": "board-30.png",
+      "pages": [
+        117,
+        118,
+        119,
+        120
+      ]
+    },
+    {
+      "board": "board-31.png",
+      "pages": [
+        121,
+        122,
+        123,
+        124
+      ]
+    },
+    {
+      "board": "board-32.png",
+      "pages": [
+        125,
+        126,
+        127,
+        128
+      ]
+    },
+    {
+      "board": "board-33.png",
+      "pages": [
+        129,
+        130,
+        131,
+        132
+      ]
+    },
+    {
+      "board": "board-34.png",
+      "pages": [
+        133,
+        134,
+        135,
+        136
+      ]
+    },
+    {
+      "board": "board-35.png",
+      "pages": [
+        137,
+        138,
+        139,
+        140
+      ]
+    },
+    {
+      "board": "board-36.png",
+      "pages": [
+        141,
+        142,
+        143,
+        144
+      ]
+    },
+    {
+      "board": "board-37.png",
+      "pages": [
+        145,
+        146,
+        147,
+        148
+      ]
+    },
+    {
+      "board": "board-38.png",
+      "pages": [
+        149,
+        150,
+        151,
+        152
+      ]
+    },
+    {
+      "board": "board-39.png",
+      "pages": [
+        153,
+        154,
+        155,
+        156
+      ]
+    },
+    {
+      "board": "board-40.png",
+      "pages": [
+        157,
+        158,
+        159,
+        160
+      ]
+    },
+    {
+      "board": "board-41.png",
+      "pages": [
+        161,
+        162,
+        163,
+        164
+      ]
+    },
+    {
+      "board": "board-42.png",
+      "pages": [
+        165,
+        166,
+        167,
+        168
+      ]
+    },
+    {
+      "board": "board-43.png",
+      "pages": [
+        169,
+        170,
+        171,
+        172
+      ]
+    },
+    {
+      "board": "board-44.png",
+      "pages": [
+        173,
+        174,
+        175,
+        176
+      ]
+    },
+    {
+      "board": "board-45.png",
+      "pages": [
+        177,
+        178,
+        179,
+        180
+      ]
+    },
+    {
+      "board": "board-46.png",
+      "pages": [
+        181,
+        182,
+        183,
+        184
+      ]
+    },
+    {
+      "board": "board-47.png",
+      "pages": [
+        185,
+        186,
+        187,
+        188
+      ]
+    },
+    {
+      "board": "board-48.png",
+      "pages": [
+        189
+      ]
+    }
+  ],
+  "raster_dpi": 100,
+  "png_sha256": {
+    "page-001.png": "7a196832b9b1d741258927d6a2754ae21752efa7f08ff6c6571219ae2efa03cb",
+    "page-002.png": "5e09a2d422eac2e869719b95c0a1bdc7dad8de5a6f39f33317257ae0ac008154",
+    "page-003.png": "4fa7b3405ed28359358b59e6e0dffb4df96827c82c046de0051478f3b135f234",
+    "page-004.png": "581d3e804d79205baf47b07f80a6c37167b2dfa8a0bb034e6d6a1ea04d3b4a0f",
+    "page-005.png": "c9545749a49cce522202356b77fe345c13d00b8d51ae3d1e66b9185c996491b1",
+    "page-006.png": "b9483c5492a510ffb0ab83313b929c870d40cac147e4f17627b45016fa18d493",
+    "page-007.png": "30f05488d6ba5d6a616ee294dc3f6b300b9218bc394de3b59a3c0ac416b99de1",
+    "page-008.png": "ed0b28b6244c7db81676063e792d0e8b5b9179986b68d7dc1c971aca8bed0a47",
+    "page-009.png": "e153055415a1de0b4d06c7c4f2c13c9d562fdae431149c6af655d2930b5da34d",
+    "page-010.png": "43f1c870a434503d388d999c89fcf8dc210305fd1bacb4364ba506df49060088",
+    "page-011.png": "3a01292c50390a1aa7de30cba473e4a7151ad7066b4c8fe3fe18717618003b2d",
+    "page-012.png": "77aa499b8c42193c0128d566dd47e78015aa4b73d2555b9e4f375a5521cccbe3",
+    "page-013.png": "6c9f2d3e29f52c04842dc03c980986acd307deb8fb43707a880bd6a98daa689e",
+    "page-014.png": "3d579447529da540d84141b64375c3c55f41687550719150abc0abf6d47cd4eb",
+    "page-015.png": "2dde0102d97149451cee44ac200a77db8515d37ad00fbd9181c029111432d1ef",
+    "page-016.png": "04333cb2cda5020084c7289a05bf3d54d70878cb193e7ec7afc2cde8a141dcee",
+    "page-017.png": "0cc5fa4d62aea4038a9d8d9c2b30fc4e26801142dafb8643668a5731ac465fdc",
+    "page-018.png": "c7e58a0b17bb3305f19ffdeed8ad2da3724813c6e1d191e4a2eec1aeda61f387",
+    "page-019.png": "a8aa7c7bab9358218805fee7997ea2aafc74958985bb80d621b93b0097896b76",
+    "page-020.png": "b55bc82777d2d3822fb2756bfec7bedaa9eddbc14c32c6a1aacd81bbcbb2b593",
+    "page-021.png": "4a04a8c1fbc5e35ef21c59287f66055e06ce639f92c955ae9fb2940ff66649ad",
+    "page-022.png": "0ce8afeaf9bf5ed220b43d268092674ee7a6956bbe2d9d8f16e1deb3dfa196a0",
+    "page-023.png": "84c534973dbf1fff5fd0403ef3d91ff096bca3e43256d93ba18b0348cc7b1577",
+    "page-024.png": "c705d31836bce868d54d103ec7e1b35a1f48c495b8efa4e5274d1bf35ee04b6a",
+    "page-025.png": "808a0976cffb552bf1a09c79049f4542c82b326eca52448623e1b31af752b49a",
+    "page-026.png": "701595051e2decc10e961f8852548284a71e686dd0e3e2cc4be8b0b198e7ca6e",
+    "page-027.png": "7f10c6322df8ec8fa86de21946084ad3b899da711e9629cd3e9eded68cc59e42",
+    "page-028.png": "26f4b26d26cdfbf279a31316cfee47d17a6fd684ae55bc7120f2bfefceb13b30",
+    "page-029.png": "a8e94a0a8c62c533c625120751d4d7b03c356052a296a8ca154201484b708dc5",
+    "page-030.png": "28fae6aab20c425f1e10da4a1f0e0b35b8eb039ff3e10def7299e6ad49340ce3",
+    "page-031.png": "4d14f44f44b2668efe03b18b276f297f6ab125e9b13f31e217c8c6f217d3e740",
+    "page-032.png": "2794d58fadb035a28f1ffd900585ac1acf1fea1e8f78110f8f2822454d274b3a",
+    "page-033.png": "f52531f718707153d8e13524ea5bb8ce957ecdfa2dfd45185091ebaecb718b08",
+    "page-034.png": "5a3e7850cf717d2d346182cc1728d00ecd1984da0f259f653806d777bc72e077",
+    "page-035.png": "97b3755b5acd9998c96cfca22d04724904ebca06ce9c7faa78bb54d1f137c849",
+    "page-036.png": "eafa98472564a81d4f90886dd6f4a7cdc2cc8e8e7a2fdd4e1f83465bce5990b0",
+    "page-037.png": "37adf1e4cbd84107bd44cd3690ba7095ec177c7d0dc90561bca1f12b8367bbdb",
+    "page-038.png": "aabdbb7024ef738c389ca98ad1d171ff453d25822bdb82a527cfaac36791e8ca",
+    "page-039.png": "6a95806ac937641815ac96a41bc9b34de934ed199b642b54cf81cc3f8f3ecbfd",
+    "page-040.png": "7b045254207516e3fe430b34edc470718ce88c1c815854ad61b19e4c579121c4",
+    "page-041.png": "776d8daa712a326cec31071d2ea5fda5d8348a52569a1c5c902df64bc78914fa",
+    "page-042.png": "838fd2e4c90da30d1ed5fea633e72b004883edf996bce584343ec3185182bb4f",
+    "page-043.png": "50a0bc57876e4af948c1deac98636f91e3caf7b89c3a2d3367fa0b21d1fb138a",
+    "page-044.png": "2cbf95f4586d9311cd843b33393561b22517aba873cae571093bb5cf215ff477",
+    "page-045.png": "913ff91697a4e304e3df57802047c83cf93684f0e07545b4d91f10a2be9f9651",
+    "page-046.png": "60d2b20c90c657eed70220e1bddb97fd64964725fdfb806f24a856bb40ef4447",
+    "page-047.png": "e7ed03e42b317106935a61dc167475e8818bae44601ea9dc56a775c537089754",
+    "page-048.png": "ad40845f7388004cb33c1184bd91fe562ad46543558ad03c791f1220ea1380a5",
+    "page-049.png": "78d51f935be2f92e803bfe1bbd8f75b2486b2fc20476228979a16e698ce5ee80",
+    "page-050.png": "3e88c8c90c762db2a2721a71ebed2ad513ee97ef6c9ae5c81996b8a3193a98d2",
+    "page-051.png": "64d49979188312b3ddcc45e4a9d6269022dbdab17c14f3e5ac4fb13042b4aefe",
+    "page-052.png": "364b4f7ec05143935450e9a79e3c334f1ae2b821f357c45d24e003c1d0b19d0b",
+    "page-053.png": "431892603633baeda0bd07656b70e0f0fc9ee62ea054edc11be7120e43d22e15",
+    "page-054.png": "ca1ad246cefdd253f02280d6f587adb50ad7cbe3f84eceb33719cc8397a8ade0",
+    "page-055.png": "7defa7ccda70e720498b7569368f203d3c51a245f6f8e860f7ef233f98811c08",
+    "page-056.png": "5b752139a0a646c6dd61f3e8af921050ab5520ad8a9274f823bee842e9650f90",
+    "page-057.png": "a4497e520c8f48fdb93a771765e2cb470e83d2a912493fb0048159d9edf1349c",
+    "page-058.png": "d3e66180aef6274ccf0ea401ab62a4a78cb225053d6716d0d4755de38cf1f982",
+    "page-059.png": "5830ff6a94a32c40bbb19b8392830e4364f2abf90d1ea26b0dff7ce2810a9fe4",
+    "page-060.png": "5d0a05ce77ff87d926eb185a419a088d294f75758d5dc10b6cab7b1aaa029edc",
+    "page-061.png": "07ec0f9f7734be2d690611c56968cda43a332adf104e2834d95059797a4a0eba",
+    "page-062.png": "a3a261545cae8823658eed02da778606e183e0bf8c608a134fc17c833dbffd47",
+    "page-063.png": "614b431b11645123c4824d4f31673e0067d1c5f4df735cead132bcc83e60bb6b",
+    "page-064.png": "0cfd594e2f7f08b68e9cb754536adeb45f5e303c2f4a456c9f92956b6c426c48",
+    "page-065.png": "7a91bc4a7dc3612b7ee3b0fadfee70cf4640f477b3fe04110a3c708decb73966",
+    "page-066.png": "51081e90c41b6427794cf74311b0d4757d6676d132a8d02bcb2c7e99eb8fa830",
+    "page-067.png": "14213698e1b8dc905c0ec205c4bb3fc4658f44188b504dd3ab80fbe12095671b",
+    "page-068.png": "0dd5b23e74a5870ac6db5a1547851f4dba384417c36f9a60fa2335358af9e8e2",
+    "page-069.png": "e2c467d37f4e88d2d4b71b9a4fba32ca6f7ec57495551fbce9bd055347df163d",
+    "page-070.png": "b8340ef8bf0a0f75977abcfb68cbd5d340d5692a5aa2a5b26e52333d494edea6",
+    "page-071.png": "db8ef42951269317552c98fdc595ce73d0744109af7c39af1b779f42d3d3ee1a",
+    "page-072.png": "0732222518095e4099b622a1382efa0146c14243b8576fe9f4f8bdadb3d2c659",
+    "page-073.png": "bd86f328cde3d3aa97c77365558dfe45af94d4f4f942be76cd2d6a25654a007e",
+    "page-074.png": "da4bf7025e8ea847ba1377c29d174c1945c3b0eaadee8b0203378aa3392b2de3",
+    "page-075.png": "30093a54afd83fdfcc95747117ccafe88d97340369b28b2dea132049acefe216",
+    "page-076.png": "1c22b16b7a5ec7cac84dd491a8d7eca44f0a914572fef107fef05fc78c1d5671",
+    "page-077.png": "f8fc93bf10fc04b39454fa7614668dfacb0b1eee70ec2681c292784da573a1bc",
+    "page-078.png": "72ee28739d2dc4e3d0ca4eb7779a1944a959dba6768018019cac02c30c5cc4a8",
+    "page-079.png": "548bd93099a4bce460c37980d6881e52aae57bbe4f55e815fa5c0030226109e3",
+    "page-080.png": "17a91fa361b4f66c96e806005de55fe64f1a05947f7fc8a3cd6468d838db2c31",
+    "page-081.png": "50472aab091ec26b33ad9ded709c57c94e30bad21fda1d3f01f29d7bc27771ca",
+    "page-082.png": "110ef7200ab025f5eb3ac6cf53892b0a696167ddbe098a1a2005442ff36a5098",
+    "page-083.png": "81912afc3dec3affc62fa3b1ed550902e88f1d260cfb22560a6f0813e4156b82",
+    "page-084.png": "888660e50b01b12dc566265ab01e89c3a82d4be9f66a3c2bd8cdd446fb74e523",
+    "page-085.png": "956923f7d04a03d31a4f8588a52815b57a4ed953a4455f2ccc8700ba43c9564c",
+    "page-086.png": "ddfa93756ed2a27848c5cb7220c1e6ebc164a65583f3081abe644b46cb97e844",
+    "page-087.png": "19cf606ef7cbb7476485a61c83fa75b3b97f0628422d720b652697f61d41e36f",
+    "page-088.png": "daa57da9862668a39cef01da92e350b93eaf678dbf1db959e79df1da9070a871",
+    "page-089.png": "578d6a2ed5bffc112b57095b92198bf4c91f81be43fa9848e183546ec6d23a6d",
+    "page-090.png": "723de6e2414b535eb6759c1f2d8554bb144f70819fe3ff0827fbbc3abdaa07eb",
+    "page-091.png": "791c782b859a813b3190e850e41581e1c13febffbd925dff1db844ce957dd1c7",
+    "page-092.png": "e1fb21dca31f14cb9d2f7faff5f560c8a73acb820b7f7160231402cd103d15c0",
+    "page-093.png": "77b960db6dc60c4a77693d62de39ece28d754eb6c862f67b457daa19d61aa390",
+    "page-094.png": "0c79946e1a59811590fead3dc64536afef87578a3780b29b8b261383dbb43590",
+    "page-095.png": "d84134bba63342c9aa6e3947f2463f557e2063e1da6e841a0dd972a9c29b1bc6",
+    "page-096.png": "412fd9cd1babc8d4b8e8f04f5a4f8a684ab578912914b46e838698e3cd1e1128",
+    "page-097.png": "89438f63795b2007633a34ad733e997e4a8dd93fc11ec1f8eade9ddd158adf55",
+    "page-098.png": "2ec0fd7108393da9f44de80ec46a84d4f2f179c1ed1c024f22f2f15fc820c2e5",
+    "page-099.png": "87093b18f4284a7addbe3f15db35f0e2e6cf021b20996bb8ad9d137aaeedc2f8",
+    "page-100.png": "7af549b2f2eaca2060bdf5cb2db6b1c0f421ad9b80eabcc1d253a27b7613fba9",
+    "page-101.png": "d6a24617aa6b13543b0c52c1dd04919ac450e5a4f8aab991381d3b33c393a243",
+    "page-102.png": "ee832a127c9a2d3283ea1cdbf6e9e90dc9cd17b5d0e2db190bd05399ec3cb239",
+    "page-103.png": "480fef004f8048ec15b539b6114040ca3e910f3b859d76d0d893c7d13febd644",
+    "page-104.png": "151c2199adf71204d29c4c05bf28ddfe5ad33a9fe56fb956695b48b434b7d23b",
+    "page-105.png": "14b4874e6bedec2450f5bfd2eda8751f3b76eb80d01bc267f02054b541c967df",
+    "page-106.png": "f2480a6c94a5a5325f922f82056359c10f4aeca6268bbabebce1643681342467",
+    "page-107.png": "90a4dc2e267f38574c4668b4811983d327114c75ef8c9aa773fc81e019984446",
+    "page-108.png": "d2caaa5e8611b34a177bda4a8e555f7d881317feb692f5d2b5b3515dfb8f6b6e",
+    "page-109.png": "0823b2abddc6562958da3e86e6ff57c79a8e21b367b6f9b11caa0c06c8f96e4e",
+    "page-110.png": "1f9dd2279fab15338947ddae342e32cfa00cee96b749b284ba8e465c6c358d9a",
+    "page-111.png": "fafd5d41f194042cd44136bcbeb7346b44b34a9c7ea50c39d9b4613735489e33",
+    "page-112.png": "2528c9eb5060afc31a3cecefb0ef1e3cd935cc5dd2edbbc001bcc21b39c31129",
+    "page-113.png": "0bf913f785ca0e32b6d7eb717f004d56bb91f08f5c9c4934770b4b1d221d82bb",
+    "page-114.png": "212a33da06411e48a52b4da6c86640847e9d59cafe6a9ca654aa4f91ecf90644",
+    "page-115.png": "8a4cd727888f87817bff0af0be08ed44d8f26bab925e9a054a2f88b1c9f18848",
+    "page-116.png": "cea204e5fb1dbfaa4a3a3d9b5c7ab379f51e0ca691b48b231fb15df9987f074e",
+    "page-117.png": "fe532cfdcae685a22553595c68e08c957da84c5ce027977b5936f68c89243286",
+    "page-118.png": "7288d000339f315e655cefadd3665da920221ac57b91b6b8657fe1dbba383f1d",
+    "page-119.png": "febde7f19e23fff3e4e963d1b2e35890d99a14455d4fceee1784ec24d790c084",
+    "page-120.png": "c183a518232a0cefd1c4192affde7f23aa69b4b97be053e253d601a13263f043",
+    "page-121.png": "fbe21b51815b4928aed14918ddc22ad091546aaa7bbf9e5daa0b62f3b873a99e",
+    "page-122.png": "83e5ccc3aae8caf90dfd0398a9e92e8d0bf5f0f90cbda356e6bce54a9085b9d9",
+    "page-123.png": "b22f2925c831c8dedc1b92fd55da0663c05d6cdf30fd931450b2982c4c7a8b03",
+    "page-124.png": "b3032fffd68e94239502a33a59ba0039cdf3ffb5c69782aaa4eb6c1153384ebd",
+    "page-125.png": "0f7fdae2cfdcaf124c7c4f388c2625e6315739cb27e27140131c81539d9dc8df",
+    "page-126.png": "54d2bbf8eb7aa24142e11d7d893b58ac54c1fa137f5d60a529ee1f8bc5f21644",
+    "page-127.png": "48f4a2c7dd17d355860a1ef3e35f75241d477b61bf14bf0488ec5c957f2a2c03",
+    "page-128.png": "a9952bea90077add108b71b7bc026b9ee4dd3e9fe594aa31ccce5e709eb4a40e",
+    "page-129.png": "eeb818ef573086eb35f1e217cc684c606c5eaff07dee44278d45f084281d2291",
+    "page-130.png": "b3e0fa3e55caf9bc3a690b8ae33f15c87777f0908743eb64ab3f8d95f1fb9d19",
+    "page-131.png": "467ef32070f67a368e89dd58b5733faff08dfb65c0c6ca5a1165dab829462684",
+    "page-132.png": "c4f07ed97ae262aaf35a30d6e56d7f1a1bb8163a2323d454bd7b7ab76c10a896",
+    "page-133.png": "ad0d34de884f22bd575656b0b540576d82555dea7b6479476372e299c10b6a91",
+    "page-134.png": "864b0cdf5d37245dcd0e50c071e867c98d35df8c6d6294eecc38de943442920e",
+    "page-135.png": "8e4db5260b76a05890de58259e2600e84188787111d8e38e284f12e60564ed69",
+    "page-136.png": "30c579d78ff762f454bf44b617fa934c4262e2c38299df64bba4e6e74795e448",
+    "page-137.png": "5a441d4ade5f2d828a0e8eec4f176d4553f64580d7920210d67d7fdcfb2f7890",
+    "page-138.png": "def6fad30d290d666e6e8de69f6524bf915b59ef649e42e3aa905c658f260dcc",
+    "page-139.png": "529980d01e3b818539b80391c9463532c741eb92849e55011aa49c37fd4cfaa6",
+    "page-140.png": "3b127c4ad819a1f4422e6d0039783db9006b2a34ef4d2e57ac1cbfad8db4f7c1",
+    "page-141.png": "56145a150be0c9b69031d0a5f28547a01d73c42b8b08067afd6045e6cb54aadc",
+    "page-142.png": "5a73ce7fbe0280fa06bc7a03b8dbea055ee9642e2a74834cc8e98abf20d2f154",
+    "page-143.png": "a83aea24ac6a720a2e905924a6ba2b2dc293260d03ab8a516cd23faa1748682e",
+    "page-144.png": "16b91faf2d12b1916fe8e414ecff9b654806402dc71705ce924463f84b0dbec9",
+    "page-145.png": "eb8ec9e8a70cbb4456bbd75e16b50a569e9aec89bab141cd4cf74ab9aadc7cd7",
+    "page-146.png": "a3d8726b88f8b2518c1e249d8104d93f44ae12562ee39897a817e324e4c5b098",
+    "page-147.png": "8c9cf77e8d10786e42c1800334e597b907ae1b3224816ff470a09d745a3db71e",
+    "page-148.png": "e3053c0111fff8f509cc0ba691ca9e9c37ce4c193c1821b530ba0021efe7f48f",
+    "page-149.png": "f2e305f6974bfef7ab04fcd1f3115243dda1c1cc9bcaab940bd3b65f522c00c8",
+    "page-150.png": "ff0fcb47fe1a4a8d6a3ade6ee935592a2d7c1ab5e0f11d4643843224293547bb",
+    "page-151.png": "6f70230387473c94267951242c442840b9da83a868ec125cb8ff56c04516b309",
+    "page-152.png": "3387c25b48d851b0d33b5e0bb242d6b787e556a72e06ddbae34900678348f326",
+    "page-153.png": "bf07bfae898810559c8c918bffe457a8b64d15b751626d6ceac3bdc0e3b4e59b",
+    "page-154.png": "72c23d397ae764f4a685ae1f37ef44c74d68e914797976790b5ec8cbafc1e3d5",
+    "page-155.png": "a9283913bef29b43dbdf489195ae8b2421642143ef3e1d5272ea5ae8f961cf07",
+    "page-156.png": "21a2111818a741ba7b685beb0b34e5ae350867fbcd6a8d2d8eade5c69f5d7732",
+    "page-157.png": "8f453da0662e770ac44b0da479ee49ed29f2d4f0f962cd08b4a5933db68d207a",
+    "page-158.png": "84430307358bb6a18812da9c44edd98273a03cb0303c927d82836dcb71c1f965",
+    "page-159.png": "33d1c490dd968a70c4062c565bb7323b2e88c1af7bc2baa6279020e9f0b95493",
+    "page-160.png": "f2b4e8b729e1b8ec2bbb462b8bc374c69b0bb3389e7bd2f3f57636a247d9f369",
+    "page-161.png": "3dd9ffffca66c160d3d032edfa50918f1ce2c46ff2488941e65b44cc262df4ba",
+    "page-162.png": "219d54ecb387a8f3f2132e92b053394ba0c0d194b4d0426906e9cfdf55b2a298",
+    "page-163.png": "83a223344e963c8a419a5b7cb8091843fb1a9886730e615cca8b874d90128502",
+    "page-164.png": "0b98cb4b534044c3ccbffd57d2761801f226635bbb8f17dd964a60f1b38fb74e",
+    "page-165.png": "596e20954c6282294753e34b0487f64293983d2710c4d396a9e75bf303758f7a",
+    "page-166.png": "1d1a65e12e29c4b8f13381b3a356275e7c88ed859057d5eadb1d44320c1123b5",
+    "page-167.png": "29e27ae5ef35bc7922f1aa93a919e3c1a0c357adcd2e0dfb46d30ad87769d64c",
+    "page-168.png": "328c999cb0c42af35e98c7dc89195227b0b12ddf3d9d02ec93c8a7c855cf53b2",
+    "page-169.png": "04b2fbf5128d2cd905f46f75b0dcc0c2f90d04989587a22b539d40b69d33d826",
+    "page-170.png": "1a07558b9bbf3af2fe61ffc8d4ee58e57288fd6cbcaf9ed5d2d3bb6f646257cd",
+    "page-171.png": "59678b42b7993fda9a84fca891fbcc0140dbd5c19537673c7291c196fb410b06",
+    "page-172.png": "2e22ce7eeff0c7a01013b11094dc5640489f1d7086bddb230dd27ec204fc8e69",
+    "page-173.png": "7a301f0bac1811b2536970ed0089e28487ebf3356466a2fbaa32e8683b4e1bd3",
+    "page-174.png": "79ec1535c485bf6df78dba61c14ced80d4c74b08fb9b289b04a945190a415316",
+    "page-175.png": "36bc92cba6d18d158d46a52f9b2fb0b42ceeac49119f84eb8e645373b7be21c4",
+    "page-176.png": "4fbafa9f2094e1754970565784d99745b82093eff529ab5cec237e540c69b08d",
+    "page-177.png": "8dacc9f12772e014086f63e756b47e77f6be432a217cb95cb0d233d683a9c586",
+    "page-178.png": "3f049c6239b9dd9bbcc8f2f2ed61c01438754a0dc1344827b49f362b5947051e",
+    "page-179.png": "0a719c95b1fdc80be1b1484f718eaf55d0a65a921ea655386008f30b809ca135",
+    "page-180.png": "986d1db3b97b6a301e433ca35036f1126cbc86b5ac2bc3411c4d4cbf62164e73",
+    "page-181.png": "dd39470e5b1c89ca778ca4b75564412335b1aeeb248578d55e777540bef713e3",
+    "page-182.png": "5b1cc096443ebabd9bc46c49be4aae7b9a6f9313d0f088205f14f5e9bf5d2d4a",
+    "page-183.png": "a58cc4c5f31f42e4a2014bab40c769e01df37cff654f0f6fe4a779bebd6ea75f",
+    "page-184.png": "cd97dca09748d3956797c2f14ce117594253872e69efb4dc8f3917c4d5ca6c35",
+    "page-185.png": "22c803106c6d4f544adcd1b9f61e032f36c38e1e26421854eebc15f3f61bd842",
+    "page-186.png": "0a5c1f493959376ae17a809c798426a65bc7dcba4d5285e34f0944d89a36753c",
+    "page-187.png": "7f98f499741465abd90e663261c4159ba74a7f05535f2962033d15f9c9a9e6d9",
+    "page-188.png": "1bfcebb06567dcab7b38580f9c124696088e73db50017f8ef5ed19ea4b0bba6c",
+    "page-189.png": "7c2545f0539929d150f84accf221416674dea40c4b55260567104f03771d7dc4"
+  },
+  "changed_since_previous_raster": [
+    30,
+    61,
+    62,
+    178,
+    179,
+    180
+  ],
+  "note": "Boards preserve every source page at its native pixel size; no resampling."
+}

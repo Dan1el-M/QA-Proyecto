@@ -1,0 +1,146 @@
+{
+  "checked_at": "2026-11-25T22:53:00.786207",
+  "scope": "QA harness syntax and frozen design; does not credit application or human tests",
+  "results": [
+    {
+      "check": "Python syntax",
+      "passed": true
+    },
+    {
+      "check": "Frozen design SHA256",
+      "passed": true
+    },
+    {
+      "check": "Ruby syntax: qa\\boot.rb",
+      "passed": true,
+      "exit": 0,
+      "output": "Syntax OK"
+    },
+    {
+      "check": "Ruby syntax: qa\\data\\dataset.rb",
+      "passed": true,
+      "exit": 0,
+      "output": "Syntax OK"
+    },
+    {
+      "check": "Ruby syntax: qa\\scripts\\prepare.rb",
+      "passed": true,
+      "exit": 0,
+      "output": "Syntax OK"
+    },
+    {
+      "check": "Ruby syntax: qa\\scripts\\probe_model.rb",
+      "passed": true,
+      "exit": 0,
+      "output": "Syntax OK"
+    },
+    {
+      "check": "Ruby syntax: qa\\scripts\\probe_runtime.rb",
+      "passed": true,
+      "exit": 0,
+      "output": "Syntax OK"
+    },
+    {
+      "check": "Ruby syntax: qa\\scripts\\server.rb",
+      "passed": true,
+      "exit": 0,
+      "output": "Syntax OK"
+    },
+    {
+      "check": "Ruby syntax: qa\\scripts\\stdio.rb",
+      "passed": true,
+      "exit": 0,
+      "output": "Syntax OK"
+    },
+    {
+      "check": "Ruby syntax: test\\qa_reporter.rb",
+      "passed": true,
+      "exit": 0,
+      "output": "Syntax OK"
+    },
+    {
+      "check": "Ruby syntax: test\\test_helper.rb",
+      "passed": true,
+      "exit": 0,
+      "output": "Syntax OK"
+    },
+    {
+      "check": "Ruby syntax: test\\integration\\qa_integration_test.rb",
+      "passed": true,
+      "exit": 0,
+      "output": "Syntax OK"
+    },
+    {
+      "check": "Ruby syntax: test\\integration\\qa_security_test.rb",
+      "passed": true,
+      "exit": 0,
+      "output": "Syntax OK"
+    },
+    {
+      "check": "Ruby syntax: test\\unit\\qa_unit_test.rb",
+      "passed": true,
+      "exit": 0,
+      "output": "Syntax OK"
+    },
+    {
+      "check": "JavaScript syntax: qa\\accessibility\\scan.cjs",
+      "passed": true,
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "check": "JavaScript syntax: qa\\e2e\\mundial.spec.cjs",
+      "passed": true,
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "check": "JavaScript syntax: qa\\e2e\\playwright.config.cjs",
+      "passed": true,
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "check": "JavaScript syntax: qa\\scripts\\check_config.cjs",
+      "passed": true,
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "check": "JavaScript syntax: qa\\scripts\\complexity.mjs",
+      "passed": true,
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "check": "JavaScript syntax: qa\\scripts\\prism_probe.mjs",
+      "passed": true,
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "check": "Bash syntax: env.sh",
+      "passed": true,
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "check": "Bash syntax: finalize_report.sh",
+      "passed": true,
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "check": "Bash syntax: run_all.sh",
+      "passed": true,
+      "exit": 0,
+      "output": ""
+    },
+    {
+      "check": "Bash syntax: start.sh",
+      "passed": true,
+      "exit": 0,
+      "output": ""
+    }
+  ]
+}

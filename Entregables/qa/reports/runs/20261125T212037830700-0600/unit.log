@@ -1,0 +1,17 @@
+Run options: --seed 38520
+
+# Running:
+
+..E...............
+
+Finished in 0.004366s, 4122.4835 runs/s, 3893.4566 assertions/s.
+
+  1) Error:
+QaUnitTest#test_UT_012:
+ArgumentError: mocked method :reorder expects 1 arguments, got []
+    app/models/grupo.rb:58:in 'Grupo#tabla_posiciones'
+    test/unit/qa_unit_test.rb:88:in 'QaUnitTest#test_UT_012'
+
+18 runs, 17 assertions, 0 failures, 1 errors, 0 skips
+Coverage report generated for Unit Tests to C:/Users/jdmor/OneDrive - Estudiantes ITCR/@TEC/VI Semestre/QA/proyecto/QA-Proyecto/qa/reports/runs/20261125T212037830700-0600/coverage-unit.
+Line Coverage: 12.77% (208 / 1629)

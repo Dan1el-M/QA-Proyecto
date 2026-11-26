@@ -1,0 +1,164 @@
+[
+  {
+    "id": "UT-005",
+    "status": "Aprobado",
+    "assertions": 1,
+    "seconds": 0.00007120007649064064,
+    "observed": "",
+    "failure_kind": "Aserción",
+    "trace": []
+  },
+  {
+    "id": "UT-011",
+    "status": "Aprobado",
+    "assertions": 1,
+    "seconds": 0.00006849993951618671,
+    "observed": "",
+    "failure_kind": "Aserción",
+    "trace": []
+  },
+  {
+    "id": "UT-014",
+    "status": "Aprobado",
+    "assertions": 1,
+    "seconds": 0.000021200161427259445,
+    "observed": "",
+    "failure_kind": "Aserción",
+    "trace": []
+  },
+  {
+    "id": "UT-004",
+    "status": "Aprobado",
+    "assertions": 1,
+    "seconds": 0.000022500054910779,
+    "observed": "",
+    "failure_kind": "Aserción",
+    "trace": []
+  },
+  {
+    "id": "UT-016",
+    "status": "Aprobado",
+    "assertions": 1,
+    "seconds": 0.0005296999588608742,
+    "observed": "",
+    "failure_kind": "Aserción",
+    "trace": []
+  },
+  {
+    "id": "UT-008",
+    "status": "Aprobado",
+    "assertions": 1,
+    "seconds": 0.000045800115913152695,
+    "observed": "",
+    "failure_kind": "Aserción",
+    "trace": []
+  },
+  {
+    "id": "UT-001",
+    "status": "Aprobado",
+    "assertions": 1,
+    "seconds": 0.000013200100511312485,
+    "observed": "",
+    "failure_kind": "Aserción",
+    "trace": []
+  },
+  {
+    "id": "UT-003",
+    "status": "Aprobado",
+    "assertions": 1,
+    "seconds": 0.00002010003663599491,
+    "observed": "",
+    "failure_kind": "Aserción",
+    "trace": []
+  },
+  {
+    "id": "UT-002",
+    "status": "Aprobado",
+    "assertions": 1,
+    "seconds": 0.0000100000761449337,
+    "observed": "",
+    "failure_kind": "Aserción",
+    "trace": []
+  },
+  {
+    "id": "UT-009",
+    "status": "Aprobado",
+    "assertions": 1,
+    "seconds": 0.00002259993925690651,
+    "observed": "",
+    "failure_kind": "Aserción",
+    "trace": []
+  },
+  {
+    "id": "UT-007",
+    "status": "Aprobado",
+    "assertions": 1,
+    "seconds": 0.00004020007327198982,
+    "observed": "",
+    "failure_kind": "Aserción",
+    "trace": []
+  },
+  {
+    "id": "UT-015",
+    "status": "Aprobado",
+    "assertions": 1,
+    "seconds": 0.002108499873429537,
+    "observed": "",
+    "failure_kind": "Aserción",
+    "trace": []
+  },
+  {
+    "id": "UT-010",
+    "status": "Aprobado",
+    "assertions": 1,
+    "seconds": 0.000041899969801306725,
+    "observed": "",
+    "failure_kind": "Aserción",
+    "trace": []
+  },
+  {
+    "id": "UT-006",
+    "status": "Aprobado",
+    "assertions": 1,
+    "seconds": 0.000027999980375170708,
+    "observed": "",
+    "failure_kind": "Aserción",
+    "trace": []
+  },
+  {
+    "id": "UT-012",
+    "status": "Aprobado",
+    "assertions": 2,
+    "seconds": 0.000022900057956576347,
+    "observed": "",
+    "failure_kind": "Aserción",
+    "trace": []
+  },
+  {
+    "id": "UT-017",
+    "status": "Aprobado",
+    "assertions": 1,
+    "seconds": 0.000045000109821558,
+    "observed": "",
+    "failure_kind": "Aserción",
+    "trace": []
+  },
+  {
+    "id": "UT-013",
+    "status": "Aprobado",
+    "assertions": 1,
+    "seconds": 0.00002310005947947502,
+    "observed": "",
+    "failure_kind": "Aserción",
+    "trace": []
+  },
+  {
+    "id": "UT-018",
+    "status": "Aprobado",
+    "assertions": 1,
+    "seconds": 0.000028900103643536568,
+    "observed": "",
+    "failure_kind": "Aserción",
+    "trace": []
+  }
+]

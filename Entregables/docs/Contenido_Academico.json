@@ -1,0 +1,478 @@
+{
+  "chapters": [
+    [
+      "Ficha de identificación del sistema",
+      [
+        [
+          "Identificación y procedencia",
+          "Mundial-POO es una aplicación web para administrar la Copa Mundial FIFA2026. Su especificación original contempla48 selecciones distribuidas en12 grupos y una fase de eliminación hasta el podio. El código usa el módulo MundialPoo y las páginas muestran Mundial POO. El curso de origen es Programación Orientada a Objetos. La nómina completa del equipo original no está verificada; la auditoría conserva su historial."
+        ],
+        [
+          "Tecnologías y acceso",
+          "La línea base declara Ruby4.0.5,Rails7.1.6,Bundler4.0.10 y SQLite. La interfaz combina ERB,formularios Rails y JavaScript embebido,con estilos y fuentes externos. El ambiente de auditoría se restringe a http://127.0.0.1:3100 y una base SQLite exclusiva en qa/data/qa.sqlite3. No se identificaron perfiles diferenciados,modelos de cuenta ni autenticación."
+        ],
+        [
+          "Requerimientos documentados y seleccionados",
+          "Se identificaron nueve requerimientos funcionales numerados en la especificación original y cuatro obligaciones técnicas normalizadas: Ruby on Rails,interfaz gráfica,arquitectura con buenas prácticas POO/SOLID y código modular,comentado y estructurado. Las dos últimas se agrupan en RNF-01 para la auditoría. El inventario conserva tres RNF explícitos normalizados y tres criterios derivados adicionales,con su procedencia. Se seleccionan los nueve RF y cuatro RNF; los criterios derivados de seguridad,interacción y desempeño requieren ratificación del equipo."
+        ]
+      ]
+    ],
+    [
+      "Introducción",
+      [
+        [
+          "Contexto y enfoque",
+          "La calidad de un sistema de torneos depende de la correspondencia entre los marcadores almacenados,los puntos calculados,las clasificaciones y las fases mostradas. Un error propagado en ese encadenamiento puede producir un campeón incorrecto aunque cada pantalla resulte visualmente plausible. Esta auditoría integra verificación del código y sus contratos con validación del uso,según los mínimos del proyecto IC-6831(Escuela de Computación,2026,pp.4–6)."
+        ],
+        [
+          "Organización del estudio",
+          "El estudio fija una línea base,identifica requerimientos y riesgos,define oráculos antes de ejecutar y conserva resultados por corrida. La evidencia se organiza mediante cinco características de ISO/IEC25010:2023 y trece métricas derivadas con GQM. Las conclusiones distinguen observaciones estáticas,resultados dinámicos,riesgos candidatos y actividades humanas sin realizar."
+        ]
+      ]
+    ],
+    [
+      "Objetivos",
+      [
+        [
+          "Objetivo general",
+          "Evaluar la calidad de Mundial-POO en su línea base mediante auditoría estática,pruebas de los niveles aplicables,métricas reproducibles y evidencia trazable,para emitir una recomendación de liberación defendible."
+        ],
+        [
+          "Objetivos específicos",
+          "Identificar y asignar los requerimientos; evaluar adecuación funcional,mantenibilidad,seguridad,eficiencia de desempeño y capacidad de interacción; diseñar casos positivos,negativos y de frontera; verificar efectos persistidos; conservar defectos sin corregirlos; preparar validación con personas externas; automatizar recolección,trazabilidad y regeneración del informe; explicar los riesgos residuales y las condiciones de salida."
+        ]
+      ]
+    ],
+    [
+      "Descripción del problema y del sistema",
+      [
+        [
+          "Contexto",
+          "La especificación original pide gestionar un torneo de48 selecciones y12 grupos. Los dos primeros de cada grupo y los ocho mejores terceros constituyen32 clasificados. Las etapas eliminatorias corresponden a los partidos73–104. La auditoría trata esa especificación local como oráculo; no incorpora reglas deportivas externas que no hayan sido solicitadas."
+        ],
+        [
+          "Problema abordado por el sistema",
+          "La aplicación centraliza el registro de selecciones,grupos y resultados para evitar cálculos manuales dispersos. Debe conservar coherencia entre puntos,goles,diferencias y posiciones,así como entre ganadores,partidos de la ronda siguiente y podio. La consulta por navegador y las respuestas JSON puntuales de grupos son interfaces existentes; no hay una API independiente documentada."
+        ],
+        [
+          "Descripción funcional",
+          "La pantalla raíz administra grupos y selecciones. PartidosGrupoController permite generar un calendario y registrar marcadores; Grupo y Seleccion proporcionan ordenamientos y estadísticas. DeterminarClasificados calcula los primeros,segundos y mejores terceros. SiguienteRonda crea emparejamientos y Torneo determina los puestos finales. La existencia de controladores y rutas no acredita que todas sus vistas estén disponibles."
+        ],
+        [
+          "Requerimientos funcionales",
+          "Se conservan los identificadores originales1–9 y se agregan los alias trazables RF-01 a RF-09. Los oráculos de prueba precisan las entradas y resultados concretos; las propuestas para resolver ambigüedades se presentan como revisión técnica,sin alterar el documento fuente."
+        ],
+        [
+          "Requerimientos no funcionales",
+          "RNF-01 proviene de las consideraciones técnicas originales. RNF-02,RNF-03 yRNF-04 agregan criterios operativos de interacción,seguridad y desempeño. No se presentan como requisitos originales. La falta de autenticación se evalúa como un riesgo de uso compartido cuya política debe ratificarse,conservando el comportamiento existente."
+        ],
+        [
+          "Situación inicial de calidad",
+          "La línea base no contiene una carpeta test con una suite implementada. El README describe rutas en inglés y nombres de servicios que difieren de los archivos reales. Hay múltiples caminos de actualización de resultados y algunas rutas dependen de vistas ausentes. Estos hechos justifican priorizar integridad,recorridos de sistema y analizabilidad antes de cualquier recomendación favorable."
+        ]
+      ]
+    ],
+    [
+      "Alcance y justificación",
+      [
+        [
+          "Elementos incluidos",
+          "El alcance comprende los nueve RF originales,los cuatro criterios no funcionales seleccionados,las interfaces HTML existentes,las respuestas JSON de grupos,los modelos y servicios,las relaciones SQLite y el procedimiento de instalación aislada. El catálogo incluye clases aisladas,integración con persistencia,navegador real y verificaciones no funcionales."
+        ],
+        [
+          "Elementos excluidos",
+          "Se excluyen ataques o carga contraCDN y otros terceros,infraestructura de producción no autorizada y un estudio exhaustivo de todos los navegadores. No hay una función de contraseñas que pueda evaluarse como funcionalidad existente. Cada exclusión conserva su riesgo residual y su justificación; ninguna se apoya únicamente en disponibilidad de tiempo."
+        ],
+        [
+          "Justificación basada en riesgos",
+          "Se priorizan pérdida de integridad en marcadores y estadísticas,bloqueo de fases,escritura sin identidad y barreras de interacción. La exposición es probabilidad×impacto en escalas1–5;1–4 es bajo,5–9 medio,10–15 alto y16–25 crítico. Es una convención metodológica interna,aplicada antes de recomendar tratamientos."
+        ],
+        [
+          "Limitaciones",
+          "Las mediciones locales dependen del hardware y de las versiones instaladas. Un análisis estático no confirma por sí solo la explotación de una vulnerabilidad; una prueba automatizada de interfaz tampoco sustituye aceptación humana. Los resultados no medidos se conservan como desconocidos. La ausencia de una corrección en esta auditoría mantiene los riesgos iniciales."
+        ]
+      ]
+    ],
+    [
+      "Diseño de la solución",
+      [
+        [
+          "Arquitectura del sistema",
+          "La arquitectura existente es MVC. config/routes.rb conduce a controladores que consultan modelos Active Record y renderizan ERB; cuatro servicios separan parte de las reglas. SQLite conserva grupos,selecciones,partidos y torneos. Las asociaciones de podio y ganador son opcionales hasta el cierre. Los diagramas distinguen esta arquitectura de la infraestructura propuesta para auditarla."
+        ],
+        [
+          "Diseño de la estrategia de calidad",
+          "La infraestructura de QA añade pruebas,instrumentos,scripts y reportes fuera de app,config ydb. El diseño se congela antes de la ejecución. La suite normaliza estados,conserva los códigos de salida y permite continuar verificaciones independientes después de una falla. No se aplica corrección automática de hallazgos."
+        ],
+        [
+          "Diagramas correspondientes",
+          "Las figuras de arquitectura,componentes,relaciones y flujo de marcadores se obtienen de los archivos reales. Los diagramas de estrategia,defectos,automatización y GQM representan el proceso de auditoría. Se conservan fuentes editables DOT y JSON junto a las imágenes."
+        ],
+        [
+          "Prototipo o sistema funcional existente",
+          "El producto auditado constituye el prototipo exigido por la estructura académica. Las pantallas representativas son administración de selecciones,calendario y resultados,y podio. Las capturas se obtienen del sistema local con datos sintéticos. Cuando una ejecución no permite obtenerlas,su ausencia se identifica expresamente y no se reemplaza con una simulación."
+        ]
+      ]
+    ],
+    [
+      "Metodología y modelo de calidad",
+      [
+        [
+          "ISO/IEC25010:2023",
+          "La segunda edición del modelo de producto define nueve características(ISO,2023). Se utiliza la terminología de2023: capacidad de interacción,flexibilidad y protección(Safety). Se consultaron la ficha pública de ISO y el material del proyecto; no se afirma acceso al texto íntegro de pago. Los umbrales de esta auditoría son decisiones internas, no prescripciones universales de ISO."
+        ],
+        [
+          "Características seleccionadas",
+          "Adecuación funcional tiene prioridad crítica por exactitud de resultados y avance; sus subcaracterísticas pertinentes son completitud,corrección y pertinencia. Mantenibilidad es alta por analizabilidad,modularidad y modificabilidad de reglas duplicadas. Seguridad es crítica por integridad y autenticidad de cambios. Eficiencia de desempeño es alta por comportamiento temporal y capacidad de consulta concurrente. Capacidad de interacción es alta por operabilidad,inclusividad,protección ante errores y asistencia a organizadores y espectadores. Los requerimientos,casos y métricas vinculados se especifican en las matrices."
+        ],
+        [
+          "Características excluidas como ejes principales",
+          "Compatibilidad no es un eje principal porque no se identificó un intercambio contratado con sistemas externos; las pruebas de integración continúan siendo obligatorias. Fiabilidad requeriría una observación prolongada y contratos de disponibilidad y recuperación que no existen; se conservan verificaciones de persistencia. Flexibilidad se limita al ambiente local acordado y no a una matriz de plataformas; no se omite instalación ni la medición de carga. Protección(Safety) no es un eje principal porque el sistema no controla procesos físicos ni decisiones que comprometan la integridad corporal; los riesgos sobre datos se tratan bajo seguridad e integridad."
+        ],
+        [
+          "Metodología GQM",
+          "GQM relaciona la intención de la medición con preguntas y datos observables(Basili,1992). Cada uno de los cinco objetivos usa la plantilla objeto,propósito,enfoque,perspectiva y contexto. Las quince preguntas preceden a los resultados; una misma métrica puede responder más de una pregunta si conserva la relación explícita con casos y evidencia."
+        ],
+        [
+          "Fichas de métricas ISO/IEC25023",
+          "Las trece fichas siguen los campos solicitados en la página5 del enunciado. ISO/IEC25023:2016 se identifica como referencia de medición del producto; sus fórmulas completas no fueron consultadas directamente. Las fórmulas operativas aquí son adaptaciones del equipo,con unidad,escala,herramienta,recolección,frecuencia,umbrales y decisión. Un denominador vacío produce No evaluado, nunca un cero supuesto."
+        ]
+      ]
+    ],
+    [
+      "Plan general de calidad y plan de pruebas",
+      [
+        [
+          "Estrategia,recursos y prioridades",
+          "Los recursos humanos son los tres integrantes con asignaciones explícitas. Los recursos técnicos son un equipo Windows,Git Bash,Ruby4.0.5,Bundler,Rails7.1.6,SQLite,Node,Chromium y Python para documentos. Se automatiza regresión y medición repetible; se mantiene intervención humana en inspección,aceptación,usabilidad y parte de accesibilidad."
+        ],
+        [
+          "Cronograma",
+          "La planificación entre el25 y el30 de noviembre de2026 organiza: preparación y diseño; ejecución técnica y análisis; sesiones humanas y ratificación; integración de evidencias; revisión académica antes de la entrega. Las fechas de ejecución verificables proceden de los reportes por corrida. El cronograma es una propuesta y no acredita reuniones o trabajo individual realizado."
+        ],
+        [
+          "Criterios de entrada",
+          "Exigir línea base registrada,diseño de casos congelado,dependencias verificadas,ambiente test y base exclusiva deQA. Antes de escribir datos,se verifica la conexión resuelta. Las pruebas de navegador,carga y seguridad deben apuntar solo a loopback."
+        ],
+        [
+          "Suspensión y reanudación",
+          "Suspender una prueba si el destino no está autorizado,la conexión apunta fuera deQA,el proceso agota recursos o los errores de carga superan10% de forma persistente. Conservar el registro del impedimento. Reanudar después de comprobar el mismo aislamiento,restaurar exclusivamente el dataset propio y registrar una nueva corrida; no cambiar el oráculo para obtener un aprobado."
+        ],
+        [
+          "Criterios de salida y aceptación",
+          "Exigir cobertura de diseño de todos los RF asignados,casos obligatorios ejecutados o limitaciones justificadas,evidencia verificable,defectos registrados,evaluación de las cinco características y mínimos humanos satisfechos. Los umbrales de las trece fichas determinan aceptación total,parcial o rechazo. La recomendación de liberación requiere además considerar severidad,integridad y riesgos residuales."
+        ],
+        [
+          "Datos,ambientes,evidencias y defectos",
+          "Los datos usan nombres Equipo QA y códigos sintéticos. Las integraciones se aíslan mediante transacciones; los perfiles de navegador restauran solo qa/data/qa.sqlite3. Cada corrida conserva comando,fecha,commit,código de salida y reportes originales. Los hallazgos se clasifican por severidad y prioridad independientes,con referencias bidireccionales; se distingue un problema del ambiente de un defecto de la aplicación."
+        ]
+      ]
+    ],
+    [
+      "Herramientas utilizadas",
+      [
+        [
+          "Selección y justificación",
+          "Git registra procedencia e integridad. Prism analiza la sintaxis Ruby para una medición ciclomática reproducible; jscpd informa bloques repetidos que se convierten en una unión de líneas por archivo. Minitest y el framework Rails son los ejecutores de unidad e integración previstos; SimpleCov registra líneas de app. Playwright usa la interfaz completa; axe combina reglas automáticas con revisión manual y k6 define carga local. Python y python-docx actualizan matrices e informe. La tabla de ejecuciones diferencia herramientas que produjeron resultados de las bloqueadas."
+        ],
+        [
+          "Herramientas complementarias",
+          "RuboCop,Reek,Flay,Brakeman yBundlerAudit se ejecutan si el bundle queda disponible y conservan su salida aun cuando detectan anomalías. SonarQube,ZAP yLighthouse no se consideran ejecutados sin reportes propios; no son necesarios como herramientas redundantes para atribuir resultados inexistentes. La deuda alternativa declara explícitamente sus costos y supuestos."
+        ]
+      ]
+    ],
+    [
+      "Procedimiento de instalación e instructivo de uso",
+      [
+        [
+          "Prerrequisitos",
+          "En Windows se requiere Git Bash,Ruby4.0.5 con Devkit,Bundler4.0.10 y un navegador Chromium gestionado por Playwright. Node y Python permiten automatización e informe. Las versiones efectivamente detectadas figuran en el registro del ambiente. Una instalación de Ruby sin MSYS2 puede fallar al compilar gemas nativas."
+        ],
+        [
+          "Instalación y configuración",
+          "Desde la raíz del repositorio, entrar primero con cd Entregables. Desde Entregables: source qa/scripts/env.sh; bundle install; npm ci --prefix qa; npx --prefix qa playwright install chromium; python -m pip install -r qa/requirements.txt. El bundle deQA evalúa el Gemfile original y agrega herramientas de prueba,conservando los archivos de producción. En RubyInstaller se registra la opción RI_FORCE_PATH_FOR_DLL=1 cuando evita el fallo de carga deDLL. Las rutas docs/, qa/, test/ y .qa-runtime/ parten de Entregables; las referencias al código app/, config/ y db/ parten de la raíz del repositorio."
+        ],
+        [
+          "Preparación de la base de datos",
+          "ruby qa/scripts/prepare.rb base carga el esquema solo cuando las tablas no existen y crea los datos sintéticos. Los perfiles empty,finished,knockout ypodium preparan estados alternativos. El script exige RAILS_ENV=test y una conexión que termine en qa/data/qa.sqlite3. No se ejecutan los seeds originales sobre una base existente."
+        ],
+        [
+          "Ejecución del sistema",
+          "bash qa/scripts/start.sh base prepara el dataset y abre un servidor enlazado a127.0.0.1:3100. La raíz muestra gestión de selecciones; /partidos_grupo organiza los partidos y /partidos_grupo/calendario muestra resultados y tabla. /fase_eliminatoria y /campeones/podio corresponden a los flujos avanzados."
+        ],
+        [
+          "Instructivo de uso",
+          "Registrar grupos A..L y asignar hasta cuatro selecciones a cada uno desde la pantalla principal. Abrir Partidos de grupo y generar calendario cuando los grupos estén completos. Seleccionar grupo,registrar ambos goles y verificar la tabla tras recargar. Después de72 partidos concluidos,consultar clasificación y fase eliminatoria; resolver empates con penales antes de avanzar. Al concluir los partidos103 y104,consultar podio. Si un defecto impide un paso,se registra la incidencia y no se modifica la aplicación para ocultarla."
+        ],
+        [
+          "Ejecución de pruebas y solución de problemas",
+          "bash qa/scripts/run_all.sh ejecuta los trabajos independientes y conserva reportes. --only permite seleccionar un conjunto; --load activa rendimiento local. La ausencia de Ruby,una gema nativa sin compilar,un navegador faltante o k6 ausente son problemas del ambiente,con salida original preservada. El documento no transforma esos errores en pruebas aprobadas. Las instrucciones operativas deQA detallan restauración y comandos."
+        ]
+      ]
+    ],
+    [
+      "Pruebas estáticas",
+      [
+        [
+          "Revisión de requerimientos",
+          "Se revisan ambigüedad,completitud,consistencia,correctitud,verificabilidad y trazabilidad,con los criterios solicitados de ISO/IEC/IEEE29148:2018(Escuela de Computación,2026,p.4). Las propuestas reescritas precisan límites y condiciones de avance; su correctitud frente a necesidades reales requiere ratificación humana. El acta técnica no acredita una reunión de inspección."
+        ],
+        [
+          "Revisión de código",
+          "Los hallazgos identifican archivo,línea,commit y fragmento. La revisión se centra en actualización única de estadísticas,validación previa a conversiones,flujo de mensajes,vistas disponibles,código sobrescrito y confinamiento de rutas de archivos. La clasificación de un hallazgo estático no afirma una ejecución HTTP inexistente."
+        ],
+        [
+          "Inspección formal",
+          "Se prepara una inspección del registro de resultados con moderador,revisor y escriba. La asignación debe comprobar autoría del artefacto para impedir que su autor modere o registre su propia inspección. Agenda,lista de cotejo,hallazgos preliminares,decisiones y seguimiento están disponibles; solo un acta real confirmada acredita su realización."
+        ],
+        [
+          "Evaluación de mantenibilidad",
+          "La separación en servicios facilita localizar algunas reglas,pero coexiste con lógica de actualización en modelos y controladores. El acoplamiento de consultas globales y la duplicación de rangos de fases aumentan el costo de modificación. La medición AST informa distribución,promedio,máximo y ubicaciones; la duplicación se calcula por líneas y no por cantidad de coincidencias."
+        ],
+        [
+          "Hallazgos y resultados",
+          "Las tablas de hallazgos y revisión conservan el estado de confirmación. Los reportes originales sustentan los resultados cuantitativos. La deuda se estima sin aplicar cambios al código de negocio y sin contabilizar otra vez un mismo problema cuando lo detectan varias técnicas."
+        ]
+      ]
+    ],
+    [
+      "Pruebas dinámicas",
+      [
+        [
+          "Pruebas unitarias",
+          "Los18 casos iniciales ejercitan métodos y servicios aislados con dobles de atributos y asociaciones. No dependen de HTTP ni de una base activa. Los modelos reales se cargan para conservar su implementación; los dobles sustituyen únicamente sus colaboradores. Se registran aserciones,fallos,errores,omisiones,tiempo y cobertura cuando el entorno permite ejecutar."
+        ],
+        [
+          "Pruebas de integración",
+          "Los nueve casos colaboran con modelos,servicios,controladores y SQLite reales. Se verifican respuestas y cambios persistidos,así como ausencia de altas o modificaciones ante rechazo. Las pruebas usan transacciones y una conexión exclusiva. Los casos de puntos y avance incluyen idempotencia y conservación de relaciones."
+        ],
+        [
+          "Pruebas de sistema",
+          "Los nueve recorridos Playwright usan Chromium y formularios reales,con selectores de etiquetas o atributos existentes. No hay reintentos que oculten fallos. Se conservan captura,traza y video de fallos,además del reporte HTML yJSON. Los recursos externos se bloquean durante la navegación automatizada; las limitaciones visuales de esa condición se consideran al interpretar capturas."
+        ],
+        [
+          "Pruebas de aceptación",
+          "Se planifican tres escenarios conP01,P02 yP03,externos al equipo. El mínimo del enunciado es de dos personas externas(Escuela de Computación,2026,p.5). Formularios y criterios distinguen decisiones individuales de aceptación y evidencia del funcionamiento. Ningún resultado se acredita a partir de una prueba automática."
+        ],
+        [
+          "Pruebas de rendimiento y carga",
+          "Se diseñan dos escenarios locales:5,10,20VU y25,50,100VU. Hay calentamiento,transición entre niveles,períodos estables,reducción y recuperación. El máximo autorizado es100VU. Se separan errores de transporte,respuestasHTTP y contenido funcional. El P95 y la tasa de errores se comparan por ruta y carga con umbrales fijados previamente; una planificación de carga no se presenta como capacidad demostrada."
+        ],
+        [
+          "Pruebas de seguridad",
+          "Se verifican SQLi,XSS,escritura anónima,CSRF,errores sin datos internos y validación de marcadores. Se habilita la protección CSRF para comprobarla,aunque Rails test la desactiva por defecto. El criterio de restricción anónima es derivado y requiere ratificación. La revisión de rutas locales de banderas se registra como candidato hasta comprobarse con un archivo sintético. No se inspeccionan secretos ni se prueban sistemas ajenos."
+        ],
+        [
+          "Pruebas de usabilidad",
+          "La prueba requiere tres participantes y tres tareas diferenciadas de aceptación. Los objetivos previos son120s para registrar y verificar un marcador,90s para interpretar tabla y90s para consultar podio. Se conservan fallos,abandonos,ayuda,errores y tiempos. La satisfacción propia de1a5 no se presenta como SUS."
+        ],
+        [
+          "Pruebas de accesibilidad",
+          "Se evalúan calendario,detalle de grupo y fase eliminatoria. axe genera hallazgos por criterio y elemento; la revisión manual comprueba teclado,orden y visibilidad del foco,contraste,etiquetas,errores,tablas,zoom y reflujo. WCAG2.2 exige considerar todos los criterios aplicables para declarar conformidad; una evaluación automática parcial no basta(W3C,2024)."
+        ]
+      ]
+    ],
+    [
+      "Casos de prueba",
+      [
+        [
+          "Catálogo y diseño previo",
+          "El catálogo congelado contiene los datos de cada caso,oráculo,técnica,nivel,tipo,prioridad,requerimiento,característica y responsable. Los resultados se incorporan posteriormente desde evidencia. Se distinguen Aprobado,Fallido,Bloqueado yNo ejecutado. Los casos de frontera comprueban cero,capacidad de cuatro selecciones,marcadores negativos y avance incompleto,sin duplicar pruebas solo para aumentar cantidades."
+        ]
+      ]
+    ],
+    [
+      "Automatización e integración continua",
+      [
+        [
+          "Estrategia y casos automatizados",
+          "Se automatizan métodos aislados,colaboraciones persistidas,recorridos críticos,análisis estático,controles repetibles,carga yrevisión automática de accesibilidad. La frecuencia recomendada es en cada cambio para regresión y análisis; la carga se activa manualmente sobre una instancia dedicada. Los reportes por corrida permiten comparar resultados sin sobrescribir evidencia previa."
+        ],
+        [
+          "Casos manuales",
+          "Aceptación,usabilidad,inspección formal y revisiones manuales deWCAG requieren observación y decisión humanas. Su automatización se limita a validar formularios,agregar datos y regenerar tablas. La confirmación del aporte individual y la revisión académica final permanecen a cargo de los integrantes."
+        ],
+        [
+          "Comando unificado",
+          "bash qa/scripts/run_all.sh verifica versiones,ejecuta trabajos independientes y conserva logs,códigos de salida y resumen. Los conjuntos se seleccionan con --only; --load habilita los dos perfiles de carga local. Un código no cero indica pruebas fallidas o un bloqueo técnico y nunca se sustituye por éxito silencioso."
+        ],
+        [
+          "GitHub Actions y evidencias",
+          "El workflow prepara Ruby,Node yPython,instala el bundle deQA y ejecuta la suite local. Usa permisos de lectura y conserva artefactos incluso ante fallos. Su definición local no demuestra una ejecución remota aprobada. No se realiza push para activarlo; la validación remota queda sujeta a la publicación decidida por el equipo."
+        ]
+      ]
+    ],
+    [
+      "Matriz de trazabilidad",
+      [
+        [
+          "Matriz integral y cobertura",
+          "La matriz enlaza requerimiento,característica,caso,tipo y nivel,función automática,resultado,defecto yresponsable. Las columnas adicionales deCSV conservan métrica,evidencia,implementación y preguntaGQM. Un RF con caso diseñado no equivale a un RF validado; el análisis informa ambas cantidades. La revisión automática rechaza identificadores huérfanos y casos sin responsable."
+        ]
+      ]
+    ],
+    [
+      "Gestión de defectos",
+      [
+        [
+          "Metodología",
+          "Cada hallazgo conserva reproducción,oráculo,resultado real,archivo,línea,commit y evidencia. Las anomalías estáticas,los defectos funcionales,los candidatos de seguridad y los problemas de ambiente se distinguen. Un mismo defecto puede vincular varios casos; los tickets no se duplican por herramienta."
+        ],
+        [
+          "Severidad y prioridad",
+          "Crítica significa afectación grave a una funcionalidad esencial,seguridad ointegridad. Alta afecta una función principal; media tiene impacto limitado o alternativa; baja es secundaria. La prioridadP1–P4 expresa urgencia de atención y se propone para ratificación del producto; no se deduce automáticamente del estado de una prueba."
+        ],
+        [
+          "Registro,distribución y análisis",
+          "La distribución por severidad,módulo y característica se calcula desde el registro editable. Los hallazgos confirmados estáticamente conservan esa procedencia; la explotación de candidatos exige verificación independiente. El informe no acredita correcciones,porque el objeto es evaluar la línea base."
+        ]
+      ]
+    ],
+    [
+      "Resultados de ejecución",
+      [
+        [
+          "Criterio de lectura",
+          "Los resultados proceden de reportes por corrida yformularios confirmados. Se informa el total diseñado,implementado,automatizado,concluyente,bloqueado yno ejecutado. La existencia de código de prueba solo demuestra implementación, no ejecución niaprobación."
+        ],
+        [
+          "Resultados agrupados",
+          "Las agrupaciones por nivel,tipo,característica,requerimiento yresponsable permiten localizar vacíos de evidencia. La responsabilidad indica asignación del trabajo ycustodia; no certifica autoría ni ejecución personal. Los registros originales muestranfecha,ambiente ycommit."
+        ],
+        [
+          "Bloqueos y casos no ejecutados",
+          "Un fallo del entorno que impide iniciar un caso se registra Bloqueado con su log. Una actividad humana sin sesión real permanece No ejecutado. Una aserción incumplida tras ejecutarse conserva Fallido. Los porcentajes de aprobación utilizan solo resultados concluyentes yreportan aparte el avance para no ocultar la ejecución incompleta."
+        ]
+      ]
+    ],
+    [
+      "Métricas y su interpretación",
+      [
+        [
+          "Resultados y umbrales",
+          "Las trece métricas se recalculan desde datos conservados. La cobertura de diseño es distinta del porcentaje de casos aprobados y de la cobertura de líneas. La complejidad se interpreta por método,la duplicación porlíneas únicas,y la deuda como una estimación con supuestos. Los resultados sin evidencia suficiente se muestran No evaluado."
+        ],
+        [
+          "Decisiones por característica",
+          "Un incumplimiento de integridad o un defecto alto condiciona la liberación aunque la cobertura de diseño alcance100%. La falta de datos humanos impide concluir sobre éxito ytiempo de tareas. Una tasa de seguridad favorable con controles pendientes conserva incertidumbre; un P95 local no demuestra capacidad en producción. Los resultados parciales de accesibilidad no equivalen a conformidadWCAG."
+        ]
+      ]
+    ],
+    [
+      "Evaluación de deuda técnica",
+      [
+        [
+          "Resultados e inventario",
+          "La deuda reúne problemas comprobables y un candidato de seguridad,con componente,evidencia,impacto,estimación yorden de atención. Se prioriza corregir la integridad de marcadores yestadísticas,luego desbloquear fases yreducir contradicciones de documentación yduplicación. No se corrige la deuda durante laauditoría."
+        ],
+        [
+          "Estimación y limitaciones",
+          "Se estima remediación en minutos por problema único ydesarrollo como2minutos porlínea Ruby no vacía nicomentario. La suma incluye reproducción,cambio yregresión previstos; no representa tiempo invertido. El costo de desarrollo carece de registros históricos yse somete a sensibilidad de1 y4minutos/LOC. La razón no es una medición deSonarQube."
+        ],
+        [
+          "Propuesta priorizada de pago",
+          "Atender primero el campo visitante,el conteo único de puntos yla validación de entradas. Después resolver el mensaje de eliminatorias,vistas faltantes yguardas de avance. Confirmar el candidato de lectura local antes de cerrar su riesgo. Consolidar código sobrescrito ydocumentación. Cada intervención posterior debe ejecutar regresión de sus RF yconservar evidencia nueva contra una línea base distinta."
+        ]
+      ]
+    ],
+    [
+      "Análisis de riesgos",
+      [
+        [
+          "Matriz y priorización",
+          "Los riesgos combinan causa,consecuencia,probabilidad,impacto,controles,tratamiento,pruebas yresponsable. La escala interna de1–5 ordena la ejecución ylas recomendaciones. Las pruebasprioritarias cubren integridad,bloqueo de avance,seguridad einclusión; no se confunden hallazgos ya observados con riesgosfuturos."
+        ],
+        [
+          "Controles y riesgos residuales",
+          "Las validaciones de modelos,las asociaciones yCSRF son controles existentes,con sus límites. Una auditoría sin correcciones no reduce por sí misma laexposición. Los riesgos se mantienen hasta demostrar un tratamiento yuna nueva verificación. Los resultados de carga ylas sesiones humanas pueden modificar la estimacióncuando exista evidencia suficiente."
+        ]
+      ]
+    ],
+    [
+      "Análisis de resultados y recomendación de liberación",
+      [
+        [
+          "Evaluación global",
+          "La decisión considera RF críticos,defectos confirmados,integridad,seguridad,cobertura,desempeño,interacción,aceptación yriesgo residual. Una métrica aislada no habilita liberación. El alcance local ylas verificaciones pendientes limitan cualquier generalización."
+        ],
+        [
+          "Cumplimiento de criterios y limitaciones",
+          "La estructura del informe ylos instrumentos constituyen entregables verificables,pero no sustituyen resultados reales. Las actividades humanas obligatorias,las ejecuciones bloqueadas yla revisión manual deaccesibilidad se informan en la matriz de cumplimiento. La ausencia de datos no se interpreta como ausencia deproblemas."
+        ],
+        [
+          "Recomendación de liberación",
+          "La recomendación específica se calcula a partir del registro yse presenta junto al resumen cuantitativo. Para cambiarla se requieren reproducción ycorrección posterior autorizada de los defectos altos,regresión aprobada,validación de los RF críticos ylos mínimos de aceptación,usabilidad,seguridad,rendimiento yaccesibilidad. La auditoría conserva la aplicación evaluadasin alterar sus reglas."
+        ]
+      ]
+    ],
+    [
+      "Conclusiones y recomendaciones",
+      [
+        [
+          "Conclusiones generales",
+          "La revisión identifica puntos concretos donde entradas,persistencia ypresentación pueden divergir. La trazabilidad ylos oráculos congelados permiten contrastar esas diferencias de forma repetible. La calidad debe juzgarse con evidencia concluyente yconservando los vacíosde validación, no por el número de archivos generados."
+        ],
+        [
+          "Conclusiones por característica",
+          "La adecuación funcional depende de mantener un marcador inequívoco yun único cómputo. La mantenibilidad mejora su evidencia al localizar complejidad yduplicación,pero requiere intervención posterior. La seguridad combina controles existentes con una política de acceso aún por ratificar. El desempeño solo puede concluirse por los niveles realmente medidos. La interacción exige personas reales yrevisión manual complementaria."
+        ],
+        [
+          "Recomendaciones y trabajo futuro",
+          "Priorizar integridad de resultados,bloqueos de fases yconfirmación de riesgos de seguridad; después consolidar documentación ydeuda. Completar protocolos humanos,incorporar evidencias yregenerar. En una iteración posterior,pactar oráculos de desempate,política de acceso,recuperación ycompatibilidad de navegadores,con una línea base propia ypruebasde regresión."
+        ]
+      ]
+    ],
+    [
+      "Distribución del trabajo en equipo",
+      [
+        [
+          "José Daniel Morera Elizondo",
+          "Responsable asignado de RF-03,RF-04 yRNF-01: marcadores,posiciones,mantenibilidad,automatización,cobertura eintegración del informe. Debe ratificar sus hallazgos ysu aporte real; los reportes de herramientas no prueban ejecución personal."
+        ],
+        [
+          "Jimena Vindas Acosta",
+          "Responsable asignada de RF-01,RF-02 yRNF-02: selecciones,grupos,interfaz,aceptación,usabilidad yaccesibilidad. Coordina la obtención anónima de resultados humanos yla revisión manual; los protocolos no acreditan sesiones realizadas."
+        ],
+        [
+          "César Gamboa Naranjo",
+          "Responsable asignado de RF-05 aRF-09,RNF-03 yRNF-04: clasificación,eliminación,penales,avance,podio,seguridad,desempeño epersistencia. Debe ratificar la política de acceso ylos candidatos de seguridad antes de considerarlos verificados."
+        ],
+        [
+          "Matriz consolidada y actividades pendientes de confirmación",
+          "La distribución amplía el mínimo de dos RF yun RNF porintegrante sin cambiar las especialidades. Cada persona conserva casos de los niveles pertinentes asus requerimientos. La inspección formal rota roles cuando laautoría lo exige. La matriz ylas actas posteriores documentarán el aporte confirmado sin atribuir reuniones niresultados inexistentes."
+        ]
+      ]
+    ],
+    [
+      "Referencias",
+      []
+    ],
+    [
+      "Anexos y evidencias",
+      [
+        [
+          "Instrumentos y artefactos",
+          "Los anexos editables incluyen catálogo congelado,matriz de trazabilidad,registro de defectos,riesgos,fichas yresultados de métricas,listas de cotejo,actas e instrumentos de aceptación,usabilidad yaccesibilidad. Las evidencias se conservan con identificador,fecha,herramienta,comando,ambiente,commit,caso,métrica,responsable yruta. Los archivos de pruebas ylas fuentes de diagramas permiten reproducirel estudio."
+        ],
+        [
+          "Estado de las evidencias",
+          "Las figuras con evidencia disponible contienen resultados auténticos ovisualizaciones fieles de reportes originales. Las pendientes conservan número yprocedimiento hasta que se incorpore un archivo validado. La versión final debe eliminar sus bloques temporales mediante regeneración,conservando las limitaciones metodológicas legítimas."
+        ]
+      ]
+    ]
+  ],
+  "references": [
+    "Basili, V. R. (1992). Software modeling and measurement: The Goal/Question/Metric paradigm (CS-TR-2956;UMIACS-TR-92-96). University of Maryland. https://drum.lib.umd.edu/items/8119803a-362b-42ec-b6ce-2311713e7236",
+    "Escuela de Computación del Instituto Tecnológico de Costa Rica. (2026). Proyecto integrado de auditoría y validación de sistemas de información[Enunciado del curso IC-6831,profesora Alicia Salazar Hernández].",
+    "International Organization for Standardization. (2023). ISO/IEC25010:2023: Systems and software engineering—Systems and software Quality Requirements and Evaluation(SQuaRE)—Product quality model[Ficha pública]. https://www.iso.org/standard/78176.html",
+    "International Organization for Standardization. (2016). ISO/IEC25023:2016: Systems and software engineering—Systems and software Quality Requirements and Evaluation(SQuaRE)—Measurement of system and software product quality[Ficha pública]. https://www.iso.org/standard/35747.html",
+    "International Organization for Standardization. (2018). ISO/IEC/IEEE29148:2018: Systems and software engineering—Life cycle processes—Requirements engineering[Ficha pública]. https://committee.iso.org/cms/live/live/en/sites/isoorg/contents/data/standard/07/20/72089.html",
+    "Ruby on Rails. (s. f.). Testing Rails applications (Versión 7.1). https://guides.rubyonrails.org/v7.1/testing.html",
+    "Ruby on Rails. (s. f.). Securing Rails applications (Versión 7.1). https://guides.rubyonrails.org/v7.1/security.html",
+    "Ruby. (s. f.). JavaScript: Prism documentation. https://ruby.github.io/prism/rb/docs/javascript_md.html",
+    "World Wide Web Consortium. (2024,12 de diciembre). Web Content Accessibility Guidelines(WCAG)2.2. https://www.w3.org/TR/WCAG22/",
+    "Proyecto 4 de POO: Sistema de gestión de la Copa Mundial FIFA 2026. (s. f.). [Especificación incluida en el repositorio, commit789565e; autoría no identificada en el documento].",
+    "Arquitectura del proyecto Ruby on Rails; Guía: Sistema de cálculo de tablas de posiciones; Mundial-POO(README). (s. f.). [Documentación original del repositorio, commit789565e; autoría no identificada en los documentos].",
+    "Ruby on Rails. (2025, 29 de octubre). New Rails releases and end of support announcement. https://rubyonrails.org/2025/10/29/new-rails-releases-and-end-of-support-announcement"
+  ]
+}

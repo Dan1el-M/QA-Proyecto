@@ -1,0 +1,63 @@
+{
+  "title": "Modelo de calidad y cadena de evidencia",
+  "nodes": [
+    [
+      "iso",
+      "Cinco características\nISO/IEC 25010:2023",
+      600,
+      115
+    ],
+    [
+      "gqm",
+      "Cinco objetivos GQM\ny quince preguntas",
+      600,
+      330
+    ],
+    [
+      "test",
+      "Requerimientos y casos\noráculos y responsables",
+      80,
+      590
+    ],
+    [
+      "metrics",
+      "Trece métricas\numbrales internos",
+      1120,
+      590
+    ],
+    [
+      "evidence",
+      "Reportes y evidencias\ninterpretación y decisión",
+      600,
+      790
+    ]
+  ],
+  "edges": [
+    [
+      "iso",
+      "gqm",
+      ""
+    ],
+    [
+      "gqm",
+      "test",
+      ""
+    ],
+    [
+      "gqm",
+      "metrics",
+      ""
+    ],
+    [
+      "test",
+      "evidence",
+      ""
+    ],
+    [
+      "metrics",
+      "evidence",
+      ""
+    ]
+  ],
+  "source": "GQM.csv; Fichas_Metricas.csv; Matriz_Trazabilidad.csv"
+}

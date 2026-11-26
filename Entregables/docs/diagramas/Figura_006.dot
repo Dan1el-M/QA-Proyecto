@@ -1,0 +1,9 @@
+digraph G { rankdir=TB; node [shape=box];
+detect [label="Detectar y preservar\nreporte, captura o traza"];
+triage [label="Reproducir y clasificar\nseveridad y prioridad"];
+record [label="Registrar y vincular\nRF, caso, evidencia"];
+decision [label="Evaluar riesgo y liberación\ncorrección fuera de auditoría"];
+detect -> triage [label=""];
+triage -> record [label="sin duplicar"];
+record -> decision [label=""];
+}

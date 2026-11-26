@@ -1,0 +1,17 @@
+{
+  "file": "Ejercicio_de_pruebas_sistema_23_Oct.xlsx",
+  "headers_only": [
+    "Seleccionar un proyecto cualquiera, suyo o público, puede usar cualquier herramienta para automatizarlas, puede ser  Playwright o Selenium",
+    "ID",
+    "Requerimiento",
+    "Escenario",
+    "Tipo",
+    "Precondiciones",
+    "Resultado esperado",
+    "Prueba automatizada",
+    "Resultado obtenido",
+    "Estado",
+    "Defecto"
+  ],
+  "use": "Solo formato metodológico; filas con datos y credenciales excluidas"
+}

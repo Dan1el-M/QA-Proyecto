@@ -1,0 +1,9 @@
+digraph G { rankdir=TB; node [shape=box];
+f [label="Formulario de calendario\nmarcadores de dos equipos"];
+c [label="PartidosGrupoController\nconversión to_i"];
+p [label="Partido#registrar_resultado!\nvalidación y guardado"];
+s [label="after_save\nrecálculo de estadísticas"];
+f -> c [label="PATCH"];
+c -> p [label="2 marcadores"];
+p -> s [label="si finalizado y fase_grupos"];
+}

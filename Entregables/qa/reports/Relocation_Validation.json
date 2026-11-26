@@ -1,0 +1,73 @@
+{
+  "checked_at": "2026-11-25T22:53:01.685711-06:00",
+  "application_root": "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto",
+  "deliverables_root": "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\Entregables",
+  "checks": [
+    {
+      "name": "Separate application and deliverables roots",
+      "passed": true
+    },
+    {
+      "name": "Original tracked application files",
+      "passed": true,
+      "count": 342,
+      "changed": []
+    },
+    {
+      "name": "Frozen test design",
+      "passed": true
+    },
+    {
+      "name": "Case implementation paths",
+      "passed": true,
+      "count": 52,
+      "missing": []
+    },
+    {
+      "name": "Historic raw evidence, frozen files and user references preserved",
+      "passed": true,
+      "count": 247,
+      "changed": []
+    },
+    {
+      "name": "CI location and YAML configuration from repository root",
+      "passed": true,
+      "output": "{\n  \"workflow\": \"Valid YAML1.2; read-only contents permission\",\n  \"implemented\": 52,\n  \"missing\": []\n}",
+      "error": ""
+    },
+    {
+      "name": "Relocated native unit execution",
+      "passed": true,
+      "run": "20261125T224518089588-0600",
+      "cases": 18,
+      "assertions": 19
+    },
+    {
+      "name": "Application coverage scope retained",
+      "passed": true,
+      "numerator": "208",
+      "denominator": "1629"
+    },
+    {
+      "name": "Static analysis finds original application",
+      "passed": true,
+      "methods": 210,
+      "maximum": 14
+    },
+    {
+      "name": "Case evidence paths resolve after relocation",
+      "passed": true,
+      "missing": []
+    },
+    {
+      "name": "Boot reaches original Gemfile without missing relocated files",
+      "passed": true
+    }
+  ],
+  "relocation_checks_passed": true,
+  "application_bundle_ready": false,
+  "existing_environment_blocker": "Missing sqlite3 native gem",
+  "boot_exit_code": 1,
+  "boot_log": "qa\\reports\\relocation\\boot.log",
+  "note": "Historic reports retain their original command paths; current QA paths are relative to Entregables, original source paths to the repository root."
+}

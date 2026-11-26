@@ -1,0 +1,9 @@
+{
+  "title": "Hallazgos registrados por severidad",
+  "values": {
+    "Alta": 8,
+    "Media": 105,
+    "Baja": 54
+  },
+  "source": "docs/Registro_Defectos.csv; candidatos diferenciados en registro"
+}

@@ -1,0 +1,31 @@
+{
+  "run_id": "20261125T224334206267-0600",
+  "commit": "789565ea61bae6a84cc8d9ae3be871f601f4a2d1",
+  "os": "Windows-11-10.0.26200-SP0",
+  "jobs": [
+    {
+      "name": "versions",
+      "command": [
+        "C:\\Users\\jdmor\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "qa/scripts/versions.py"
+      ],
+      "cwd": "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\Entregables",
+      "exit_code": 0,
+      "seconds": 1.046,
+      "log": "qa\\reports\\runs\\20261125T224334206267-0600\\versions.log",
+      "started_at": "20261125T224334206267-0600"
+    },
+    {
+      "name": "unit",
+      "command": [
+        "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\Entregables\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+        "test/unit/qa_unit_test.rb"
+      ],
+      "cwd": "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\Entregables",
+      "exit_code": 0,
+      "seconds": 2.672,
+      "log": "qa\\reports\\runs\\20261125T224334206267-0600\\unit.log",
+      "started_at": "20261125T224334206267-0600"
+    }
+  ]
+}

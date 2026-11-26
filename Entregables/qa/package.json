@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "name": "mundial-qa",
+  "scripts": {
+    "e2e": "playwright test -c e2e/playwright.config.cjs",
+    "accessibility": "node accessibility/scan.cjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.11.0",
+    "@playwright/test": "^1.56.1",
+    "@ruby/prism": "^2.1.0",
+    "jscpd": "^4.0.5",
+    "yaml": "^2.8.1"
+  }
+}

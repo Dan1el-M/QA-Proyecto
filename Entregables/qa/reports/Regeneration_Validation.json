@@ -1,0 +1,15 @@
+{
+  "checked_at": "2026-11-25T22:54:34.522247-06:00",
+  "scope": "Relocated metadata and static finding regeneration",
+  "before": {
+    "docs/Contenido_Academico.json": "8d24295ae9bf352ef0da70e7f0cc72365f5bccf5e0dfd3db8902d4e444c0344c",
+    "docs/Fichas_Metricas.csv": "e013a9a38f347deade5461389e061717616aa0da4e5f857cfbf2391d51ead000",
+    "docs/Registro_Defectos.csv": "50cb0a146efa748f69d2ed6077ed6b548dfb9574676212757bd563ca50aa2cc4"
+  },
+  "after": {
+    "docs/Contenido_Academico.json": "8d24295ae9bf352ef0da70e7f0cc72365f5bccf5e0dfd3db8902d4e444c0344c",
+    "docs/Fichas_Metricas.csv": "e013a9a38f347deade5461389e061717616aa0da4e5f857cfbf2391d51ead000",
+    "docs/Registro_Defectos.csv": "50cb0a146efa748f69d2ed6077ed6b548dfb9574676212757bd563ca50aa2cc4"
+  },
+  "idempotent": true
+}

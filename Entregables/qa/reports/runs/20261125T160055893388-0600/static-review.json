@@ -1,0 +1,8 @@
+{
+  "findings": 12,
+  "requirements_reviewed": 9,
+  "source": "app/ and original specification",
+  "status": "Fallido",
+  "remediation_minutes": 885,
+  "development_assumption": "2 minutos por línea Ruby no vacía ni comentario; estimación interna, no medición SonarQube; no sumar hallazgos repetidos"
+}

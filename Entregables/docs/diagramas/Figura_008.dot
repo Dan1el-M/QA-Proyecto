@@ -1,0 +1,12 @@
+digraph G { rankdir=TB; node [shape=box];
+iso [label="Cinco características\nISO/IEC 25010:2023"];
+gqm [label="Cinco objetivos GQM\ny quince preguntas"];
+test [label="Requerimientos y casos\noráculos y responsables"];
+metrics [label="Trece métricas\numbrales internos"];
+evidence [label="Reportes y evidencias\ninterpretación y decisión"];
+iso -> gqm [label=""];
+gqm -> test [label=""];
+gqm -> metrics [label=""];
+test -> evidence [label=""];
+metrics -> evidence [label=""];
+}

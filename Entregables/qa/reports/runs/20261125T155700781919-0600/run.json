@@ -1,0 +1,154 @@
+{
+  "run_id": "20261125T155700781919-0600",
+  "commit": "789565ea61bae6a84cc8d9ae3be871f601f4a2d1",
+  "os": "Windows-11-10.0.26200-SP0",
+  "jobs": [
+    {
+      "name": "versions",
+      "command": [
+        "C:\\Users\\jdmor\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "qa/scripts/versions.py"
+      ],
+      "exit_code": 0,
+      "seconds": 1.985,
+      "log": "qa\\reports\\runs\\20261125T155700781919-0600\\versions.log",
+      "started_at": "20261125T155700781919-0600"
+    },
+    {
+      "name": "complexity",
+      "command": [
+        "node",
+        "qa/scripts/complexity.mjs",
+        "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T155700781919-0600\\complexity.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.25,
+      "log": "qa\\reports\\runs\\20261125T155700781919-0600\\complexity.log",
+      "started_at": "20261125T155700781919-0600"
+    },
+    {
+      "name": "duplication",
+      "command": [
+        "node",
+        "qa/node_modules/jscpd/bin/jscpd",
+        "app",
+        "--format",
+        "ruby,markup",
+        "--min-lines",
+        "5",
+        "--min-tokens",
+        "50",
+        "--reporters",
+        "json",
+        "--output",
+        "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T155700781919-0600\\jscpd"
+      ],
+      "exit_code": 0,
+      "seconds": 1.125,
+      "log": "qa\\reports\\runs\\20261125T155700781919-0600\\duplication.log",
+      "started_at": "20261125T155700781919-0600"
+    },
+    {
+      "name": "rubocop",
+      "command": [
+        "ruby",
+        "-S",
+        "bundle",
+        "exec",
+        "rubocop",
+        "app",
+        "--format",
+        "json",
+        "--out",
+        "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T155700781919-0600\\rubocop.json"
+      ],
+      "exit_code": 127,
+      "seconds": 0.015,
+      "log": "qa\\reports\\runs\\20261125T155700781919-0600\\rubocop.log",
+      "started_at": "20261125T155700781919-0600"
+    },
+    {
+      "name": "reek",
+      "command": [
+        "ruby",
+        "-S",
+        "bundle",
+        "exec",
+        "reek",
+        "app",
+        "--format",
+        "json"
+      ],
+      "exit_code": 127,
+      "seconds": 0.016,
+      "log": "qa\\reports\\runs\\20261125T155700781919-0600\\reek.log",
+      "started_at": "20261125T155700781919-0600"
+    },
+    {
+      "name": "flay",
+      "command": [
+        "ruby",
+        "-S",
+        "bundle",
+        "exec",
+        "flay",
+        "app"
+      ],
+      "exit_code": 127,
+      "seconds": 0.0,
+      "log": "qa\\reports\\runs\\20261125T155700781919-0600\\flay.log",
+      "started_at": "20261125T155700781919-0600"
+    },
+    {
+      "name": "brakeman",
+      "command": [
+        "ruby",
+        "-S",
+        "bundle",
+        "exec",
+        "brakeman",
+        "--no-pager",
+        "--format",
+        "json",
+        "--output",
+        "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T155700781919-0600\\brakeman.json"
+      ],
+      "exit_code": 127,
+      "seconds": 0.015,
+      "log": "qa\\reports\\runs\\20261125T155700781919-0600\\brakeman.log",
+      "started_at": "20261125T155700781919-0600"
+    },
+    {
+      "name": "bundler-audit",
+      "command": [
+        "ruby",
+        "-S",
+        "bundle",
+        "exec",
+        "bundler-audit",
+        "check",
+        "--gemfile-lock",
+        "Gemfile.lock",
+        "--format",
+        "json"
+      ],
+      "exit_code": 127,
+      "seconds": 0.0,
+      "log": "qa\\reports\\runs\\20261125T155700781919-0600\\bundler-audit.log",
+      "started_at": "20261125T155700781919-0600"
+    },
+    {
+      "name": "static-review",
+      "command": [
+        "C:\\Users\\jdmor\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "qa/scripts/static_review.py",
+        "--run",
+        "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T155700781919-0600"
+      ],
+      "exit_code": 1,
+      "seconds": 0.157,
+      "log": "qa\\reports\\runs\\20261125T155700781919-0600\\static-review.log",
+      "started_at": "20261125T155700781919-0600"
+    }
+  ]
+}

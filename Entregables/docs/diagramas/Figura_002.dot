@@ -1,0 +1,7 @@
+digraph G { rankdir=TB; node [shape=box];
+controllers [label="Controladores de resultados\ny fases"];
+services [label="ActualizarEstadisticasSeleccion\nCalcularGanadorPartido\nDeterminarClasificados\nSiguienteRonda"];
+classes [label="Grupo, Seleccion, Partido\ny Torneo"];
+controllers -> services [label=""];
+services -> classes [label=""];
+}

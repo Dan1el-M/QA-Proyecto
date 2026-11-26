@@ -1,0 +1,7 @@
+﻿id,nombre,paginas,sha256,extraction,uso
+SRC-01,Proyecto-Integrado-2026-II.pdf,8,7ddd6b8361632e0a379d6a0acab1644763e7e05fd895e4ff230a39afe363fb4c,qa\reports\sources\Fuente_01.txt,Enunciado principal; lectura completa y revisión visual
+SRC-02,Apuntes_4.6_Ejercicios_de_Pruebas_estaticas.pdf,24,4406f8f26a21b8439bf4abdbf04d1aae3d5f9f0e8a2a7591c37467b45c1da418,qa\reports\sources\Fuente_02.txt,Referencia metodológica; no impone obligaciones del proyecto
+SRC-03,Apuntes_04_Metricas_-_calidad_de_software_(v2)_[Repaired].pdf,37,e7e090772ea42da0c51450cb5ec94e1f1a12ebb25e9a6d180fe77aa98d0eea77,qa\reports\sources\Fuente_03.txt,Referencia metodológica; no impone obligaciones del proyecto
+SRC-04,Apuntes_7.0_Laboratorio_pruebas_de_Integracion.pdf,6,e7478e93f08f1931f17197386299f516dab007c310121e37d589aca86fc5edf5,qa\reports\sources\Fuente_04.txt,Referencia metodológica; no impone obligaciones del proyecto
+SRC-05,Laboratorio de pruebas de integración.pdf,45,f4d330831a175ab83b3fa2d015aff363b1e9e857a4e1760b52be1d923ca10f20,qa\reports\sources\Fuente_05.txt,Referencia metodológica; no impone obligaciones del proyecto
+SRC-XLSX,Ejercicio_de_pruebas_sistema_23_Oct.xlsx,No aplica,90f6b87f63f926f11c5bb6b91ced2251f406c7a392bf9f82f4ccc98b3bccceb2,qa/reports/sources/Referencia_Casos_XLSX.json,Formato metodológico de casos

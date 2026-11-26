@@ -1,0 +1,170 @@
+[0] Arguments: C:\Users\jdmor\OneDrive - Estudiantes ITCR\@TEC\VI Semestre\QA\proyecto\QA-Proyecto\.qa-runtime\msys2-installer.exe, install, --root, C:\Users\jdmor\AppData\Local\Temp\qa-mundial-msys64, --accept-messages, --confirm-command
+[19] Operations sanity check succeeded.
+[26] Using metadata cache from "C:/Users/jdmor/AppData/Local/cache\\qt-installer-framework\\d75f1c19-3379-3717-ae8d-1404b51494a9"
+[27] Found 0 cached items.
+[30] Loaded control script ":/metadata/installer-config/control_js"
+[35] Loading component scripts...
+[39] Loading component scripts...
+[40] Warning: QFont::setPixelSize: Pixel size <= 0 (-1)
+[41] Selected components without dependencies:
+com.msys2.root
+[44] Installation space required: "315.49 MB"
+[44] Temporary space required: "0.00 bytes"
+[46] Cache and install directories are on the same volume. Volume mount point: "C:\\" Free space available: "273.57 GB"
+[47] Installation will use 315.49 MB of disk space.
+[47] backup  operation: Mkdir
+[48] 	- arguments: C:/Users/jdmor/AppData/Local/Temp/qa-mundial-msys64
+[49] Done
+[49] perform  operation: Mkdir
+[50] 	- arguments: C:/Users/jdmor/AppData/Local/Temp/qa-mundial-msys64
+[51] Done
+[53] Preparing the installation...
+[53] Install size: 1 components
+[68] Preparing to unpack components...
+[69] backup com.msys2.root concurrent operation: Extract
+[70] 	- arguments: installer://com.msys2.root/20251213msys64.7z, C:/Users/jdmor/AppData/Local/Temp/qa-mundial-msys64
+[70] Started
+[640] Unpacking components...
+[653] perform com.msys2.root concurrent operation: Extract
+[653] 	- arguments: installer://com.msys2.root/20251213msys64.7z, C:/Users/jdmor/AppData/Local/Temp/qa-mundial-msys64
+[653] Started
+[28287] Installing component MSYS2
+[28288] backup com.msys2.root operation: CreateShortcut
+[28288] 	- arguments: C:/Users/jdmor/AppData/Local/Temp/qa-mundial-msys64/mingw64.exe, C:\Users\jdmor\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\MSYS2/MSYS2 MINGW64.lnk, iconPath=C:/Users/jdmor/AppData/Local/Temp/qa-mundial-msys64/mingw64.exe
+[28289] Done
+[28291] perform com.msys2.root operation: CreateShortcut
+[28291] 	- arguments: C:/Users/jdmor/AppData/Local/Temp/qa-mundial-msys64/mingw64.exe, C:\Users\jdmor\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\MSYS2/MSYS2 MINGW64.lnk
+[28668] Done
+[28669] backup com.msys2.root operation: CreateShortcut
+[28670] 	- arguments: C:/Users/jdmor/AppData/Local/Temp/qa-mundial-msys64/ucrt64.exe, C:\Users\jdmor\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\MSYS2/MSYS2 UCRT64.lnk, iconPath=C:/Users/jdmor/AppData/Local/Temp/qa-mundial-msys64/ucrt64.exe
+[28671] Done
+[28673] perform com.msys2.root operation: CreateShortcut
+[28674] 	- arguments: C:/Users/jdmor/AppData/Local/Temp/qa-mundial-msys64/ucrt64.exe, C:\Users\jdmor\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\MSYS2/MSYS2 UCRT64.lnk
+[28732] Done
+[28733] backup com.msys2.root operation: CreateShortcut
+[28734] 	- arguments: C:/Users/jdmor/AppData/Local/Temp/qa-mundial-msys64/clang64.exe, C:\Users\jdmor\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\MSYS2/MSYS2 CLANG64.lnk, iconPath=C:/Users/jdmor/AppData/Local/Temp/qa-mundial-msys64/clang64.exe
+[28735] Done
+[28736] perform com.msys2.root operation: CreateShortcut
+[28736] 	- arguments: C:/Users/jdmor/AppData/Local/Temp/qa-mundial-msys64/clang64.exe, C:\Users\jdmor\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\MSYS2/MSYS2 CLANG64.lnk
+[28793] Done
+[28795] backup com.msys2.root operation: CreateShortcut
+[28796] 	- arguments: C:/Users/jdmor/AppData/Local/Temp/qa-mundial-msys64/clangarm64.exe, C:\Users\jdmor\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\MSYS2/MSYS2 CLANGARM64.lnk, iconPath=C:/Users/jdmor/AppData/Local/Temp/qa-mundial-msys64/clangarm64.exe
+[28797] Done
+[28798] perform com.msys2.root operation: CreateShortcut
+[28799] 	- arguments: C:/Users/jdmor/AppData/Local/Temp/qa-mundial-msys64/clangarm64.exe, C:\Users\jdmor\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\MSYS2/MSYS2 CLANGARM64.lnk
+[28853] Done
+[28854] backup com.msys2.root operation: CreateShortcut
+[28855] 	- arguments: C:/Users/jdmor/AppData/Local/Temp/qa-mundial-msys64/msys2.exe, C:\Users\jdmor\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\MSYS2/MSYS2 MSYS.lnk, iconPath=C:/Users/jdmor/AppData/Local/Temp/qa-mundial-msys64/msys2.exe
+[28856] Done
+[28856] perform com.msys2.root operation: CreateShortcut
+[28857] 	- arguments: C:/Users/jdmor/AppData/Local/Temp/qa-mundial-msys64/msys2.exe, C:\Users\jdmor\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\MSYS2/MSYS2 MSYS.lnk
+[28905] Done
+[28906] backup com.msys2.root operation: Execute
+[28909] 	- arguments: C:/Users/jdmor/AppData/Local/Temp/qa-mundial-msys64\usr\bin\bash.exe, --login, -c, exit
+[28910] Done
+[28911] perform com.msys2.root operation: Execute
+[28914] 	- arguments: C:/Users/jdmor/AppData/Local/Temp/qa-mundial-msys64\usr\bin\bash.exe, --login, -c, exit
+[29111] C:/Users/jdmor/AppData/Local/Temp/qa-mundial-msys64\\usr\\bin\\bash.exe" started, arguments: "--login -c exit
+[29971] Copying skeleton files.\nThese files are for the users to personalise their msys2 experience.\n\n
+[29973] They will never be overwritten nor automatically updated.\n\n
+[30266] './.bashrc' -> '/home/jdmor/.bashrc'\n
+[30322] './.bash_profile' -> '/home/jdmor/.bash_profile'\n
+[30373] './.profile' -> '/home/jdmor/.profile'\n
+[30706] 'C:\\WINDOWS\\system32\\drivers\\etc\\hosts' -> '/etc/hosts'\n
+[30852] 'C:\\WINDOWS\\system32\\drivers\\etc\\protocol' -> '/etc/protocols'\n
+[30990] 'C:\\WINDOWS\\system32\\drivers\\etc\\services' -> '/etc/services'\n
+[31126] 'C:\\WINDOWS\\system32\\drivers\\etc\\networks' -> '/etc/networks'\n
+[33568] ==> Generating pacman master key. This may take some time.\n
+[36679] ==> Updating trust database...\n
+[37141] ==> Appending keys from msys2.gpg...\n
+[38786] ==> Locally signing trusted keys in keyring...\n
+[40253]   -> Locally signed 5 keys.\n
+[40299] ==> Importing owner trust values...\n
+[40416] ==> Disabling revoked keys in keyring...\n
+[41048]   -> Disabled 4 keys.\n
+[41098] ==> Updating trust database...\n
+[61594] Warning: [1;32mMSYS2 is starting for the first time. Executing the initial setup.[1;0m
+gpg: /etc/pacman.d/gnupg/trustdb.gpg: trustdb created
+gpg: no ultimately trusted keys found
+gpg: starting migration from earlier GnuPG versions
+gpg: porting secret keys from '/etc/pacman.d/gnupg/secring.gpg' to gpg-agent
+gpg: migration succeeded
+gpg: Generating pacman keyring master key...
+gpg: directory '/etc/pacman.d/gnupg/openpgp-revocs.d' created
+gpg: revocation certificate stored as '/etc/pacman.d/gnupg/openpgp-revocs.d/DABBF9C4A1956B74AD5A13770516DFBEE5349D31.rev'
+gpg: Done
+gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
+gpg: setting ownertrust to 4
+gpg: setting ownertrust to 4
+gpg: setting ownertrust to 4
+gpg: setting ownertrust to 4
+gpg: setting ownertrust to 4
+gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+gpg: depth: 0  valid:   1  signed:   5  trust: 0-, 0q, 0n, 0m, 0f, 1u
+gpg: depth: 1  valid:   5  signed:   6  trust: 0-, 0q, 0n, 5m, 0f, 0u
+gpg: depth: 2  valid:   3  signed:   2  trust: 3-, 0q, 0n, 0m, 0f, 0u
+gpg: refreshing 1 key from hkps://keyserver.ubuntu.com
+gpg: key F40D263ECA25678A: "Alexey Pavlov (Alexpux) <alexey.pawlow@gmail.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+gpg: refreshing 1 key from hkps://keyserver.ubuntu.com
+gpg: key 790AE56A1D3CFDDC: "David Macek (MSYS2 master key) <david.macek.0@gmail.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+gpg: refreshing 1 key from hkps://keyserver.ubuntu.com
+gpg: key DA7EF2ABAEEA755C: "Martell Malone (martell) <martellmalone@gmail.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+gpg: refreshing 1 key from hkps://keyserver.ubuntu.com
+gpg: key 755B8182ACD22879: "Christoph Reiter (MSYS2 master key) <reiter.christoph@gmail.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+gpg: refreshing 1 key from hkps://keyserver.ubuntu.com
+gpg: key 9F418C233E652008: "Ignacio Casal Quinteiro <icquinteiro@gmail.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+gpg: refreshing 1 key from hkps://keyserver.ubuntu.com
+gpg: key BBE514E53E0D0813: "Ray Donnelly (MSYS2 Developer - master key) <mingw.android@gmail.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+gpg: refreshing 1 key from hkps://keyserver.ubuntu.com
+gpg: key 5F92EFC1A47D45A1: "Alexey Pavlov (Alexpux) <alexpux@gmail.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+gpg: refreshing 1 key from hkps://keyserver.ubuntu.com
+gpg: key 974C8BE49078F532: "David Macek <david.macek.0@gmail.com>" 3 new signatures
+gpg: key 974C8BE49078F532: "David Macek <david.macek.0@gmail.com>" 1 signature cleaned
+gpg: Total number processed: 1
+gpg:         new signatures: 3
+gpg:     signatures cleaned: 1
+gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+gpg: depth: 0  valid:   1  signed:   5  trust: 0-, 0q, 0n, 0m, 0f, 1u
+gpg: depth: 1  valid:   5  signed:   7  trust: 0-, 0q, 0n, 5m, 0f, 0u
+gpg: depth: 2  valid:   4  signed:   2  trust: 4-, 0q, 0n, 0m, 0f, 0u
+gpg: next trustdb check due at 2027-02-10
+gpg: refreshing 1 key from hkps://keyserver.ubuntu.com
+gpg: key FA11531AA0AA7F57: "Christoph Reiter (MSYS2 development key) <reiter.christoph@gmail.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+gpg: refreshing 1 key from hkps://keyserver.ubuntu.com
+gpg: key 794DCF97F93FC717: "Martell Malone (martell) <me@martellmalone.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+gpg: refreshing 1 key from hkps://keyserver.ubuntu.com
+gpg: key D595C9AB2C51581E: "Martell Malone (MSYS2 Developer) <martellmalone@gmail.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+gpg: refreshing 1 key from hkps://keyserver.ubuntu.com
+gpg: key 4DF3B7664CA56930: "Ray Donnelly (MSYS2 Developer) <mingw.android@gmail.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+[1;32mInitial setup complete. MSYS2 is now ready to use.[1;0m
+
+[61596] Done
+[61622] Writing maintenance tool: "C:/Users/jdmor/AppData/Local/Temp/qa-mundial-msys64/uninstall.exe.new"
+[61624] Writing maintenance tool.
+[61983] Wrote permissions for maintenance tool.
+[62376] Maintenance tool hard restart: false.
+[62389] Installation finished!
+[62390] Components installed successfully.

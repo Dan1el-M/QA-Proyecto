@@ -1,0 +1,968 @@
+[
+  {
+    "name": "versions",
+    "command": [
+      "C:\\Users\\jdmor\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "qa/scripts/versions.py"
+    ],
+    "exit_code": 0,
+    "seconds": 1.985,
+    "log": "qa\\reports\\runs\\20261125T155700781919-0600\\versions.log",
+    "started_at": "20261125T155700781919-0600",
+    "run": "20261125T155700781919-0600"
+  },
+  {
+    "name": "complexity",
+    "command": [
+      "node",
+      "qa/scripts/complexity.mjs",
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T155700781919-0600\\complexity.json"
+    ],
+    "exit_code": 0,
+    "seconds": 0.25,
+    "log": "qa\\reports\\runs\\20261125T155700781919-0600\\complexity.log",
+    "started_at": "20261125T155700781919-0600",
+    "run": "20261125T155700781919-0600"
+  },
+  {
+    "name": "duplication",
+    "command": [
+      "node",
+      "qa/node_modules/jscpd/bin/jscpd",
+      "app",
+      "--format",
+      "ruby,markup",
+      "--min-lines",
+      "5",
+      "--min-tokens",
+      "50",
+      "--reporters",
+      "json",
+      "--output",
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T155700781919-0600\\jscpd"
+    ],
+    "exit_code": 0,
+    "seconds": 1.125,
+    "log": "qa\\reports\\runs\\20261125T155700781919-0600\\duplication.log",
+    "started_at": "20261125T155700781919-0600",
+    "run": "20261125T155700781919-0600"
+  },
+  {
+    "name": "rubocop",
+    "command": [
+      "ruby",
+      "-S",
+      "bundle",
+      "exec",
+      "rubocop",
+      "app",
+      "--format",
+      "json",
+      "--out",
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T155700781919-0600\\rubocop.json"
+    ],
+    "exit_code": 127,
+    "seconds": 0.015,
+    "log": "qa\\reports\\runs\\20261125T155700781919-0600\\rubocop.log",
+    "started_at": "20261125T155700781919-0600",
+    "run": "20261125T155700781919-0600"
+  },
+  {
+    "name": "reek",
+    "command": [
+      "ruby",
+      "-S",
+      "bundle",
+      "exec",
+      "reek",
+      "app",
+      "--format",
+      "json"
+    ],
+    "exit_code": 127,
+    "seconds": 0.016,
+    "log": "qa\\reports\\runs\\20261125T155700781919-0600\\reek.log",
+    "started_at": "20261125T155700781919-0600",
+    "run": "20261125T155700781919-0600"
+  },
+  {
+    "name": "flay",
+    "command": [
+      "ruby",
+      "-S",
+      "bundle",
+      "exec",
+      "flay",
+      "app"
+    ],
+    "exit_code": 127,
+    "seconds": 0.0,
+    "log": "qa\\reports\\runs\\20261125T155700781919-0600\\flay.log",
+    "started_at": "20261125T155700781919-0600",
+    "run": "20261125T155700781919-0600"
+  },
+  {
+    "name": "brakeman",
+    "command": [
+      "ruby",
+      "-S",
+      "bundle",
+      "exec",
+      "brakeman",
+      "--no-pager",
+      "--format",
+      "json",
+      "--output",
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T155700781919-0600\\brakeman.json"
+    ],
+    "exit_code": 127,
+    "seconds": 0.015,
+    "log": "qa\\reports\\runs\\20261125T155700781919-0600\\brakeman.log",
+    "started_at": "20261125T155700781919-0600",
+    "run": "20261125T155700781919-0600"
+  },
+  {
+    "name": "bundler-audit",
+    "command": [
+      "ruby",
+      "-S",
+      "bundle",
+      "exec",
+      "bundler-audit",
+      "check",
+      "--gemfile-lock",
+      "Gemfile.lock",
+      "--format",
+      "json"
+    ],
+    "exit_code": 127,
+    "seconds": 0.0,
+    "log": "qa\\reports\\runs\\20261125T155700781919-0600\\bundler-audit.log",
+    "started_at": "20261125T155700781919-0600",
+    "run": "20261125T155700781919-0600"
+  },
+  {
+    "name": "static-review",
+    "command": [
+      "C:\\Users\\jdmor\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "qa/scripts/static_review.py",
+      "--run",
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T155700781919-0600"
+    ],
+    "exit_code": 1,
+    "seconds": 0.157,
+    "log": "qa\\reports\\runs\\20261125T155700781919-0600\\static-review.log",
+    "started_at": "20261125T155700781919-0600",
+    "run": "20261125T155700781919-0600"
+  },
+  {
+    "name": "versions",
+    "command": [
+      "C:\\Users\\jdmor\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "qa/scripts/versions.py"
+    ],
+    "exit_code": 0,
+    "seconds": 1.844,
+    "log": "qa\\reports\\runs\\20261125T160055893388-0600\\versions.log",
+    "started_at": "20261125T160055893388-0600",
+    "run": "20261125T160055893388-0600"
+  },
+  {
+    "name": "complexity",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.EXE",
+      "qa/scripts/complexity.mjs",
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T160055893388-0600\\complexity.json"
+    ],
+    "exit_code": 0,
+    "seconds": 0.312,
+    "log": "qa\\reports\\runs\\20261125T160055893388-0600\\complexity.log",
+    "started_at": "20261125T160055893388-0600",
+    "run": "20261125T160055893388-0600"
+  },
+  {
+    "name": "duplication",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.EXE",
+      "qa/node_modules/jscpd/bin/jscpd",
+      "app",
+      "--format",
+      "ruby,markup",
+      "--min-lines",
+      "5",
+      "--min-tokens",
+      "50",
+      "--reporters",
+      "json",
+      "--output",
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T160055893388-0600\\jscpd"
+    ],
+    "exit_code": 0,
+    "seconds": 1.453,
+    "log": "qa\\reports\\runs\\20261125T160055893388-0600\\duplication.log",
+    "started_at": "20261125T160055893388-0600",
+    "run": "20261125T160055893388-0600"
+  },
+  {
+    "name": "rubocop",
+    "command": [
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+      "-S",
+      "bundle",
+      "exec",
+      "rubocop",
+      "app",
+      "--format",
+      "json",
+      "--out",
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T160055893388-0600\\rubocop.json"
+    ],
+    "exit_code": 1,
+    "seconds": 1.875,
+    "log": "qa\\reports\\runs\\20261125T160055893388-0600\\rubocop.log",
+    "started_at": "20261125T160055893388-0600",
+    "run": "20261125T160055893388-0600"
+  },
+  {
+    "name": "reek",
+    "command": [
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+      "-S",
+      "bundle",
+      "exec",
+      "reek",
+      "app",
+      "--format",
+      "json"
+    ],
+    "exit_code": 1,
+    "seconds": 1.75,
+    "log": "qa\\reports\\runs\\20261125T160055893388-0600\\reek.log",
+    "started_at": "20261125T160055893388-0600",
+    "run": "20261125T160055893388-0600"
+  },
+  {
+    "name": "flay",
+    "command": [
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+      "-S",
+      "bundle",
+      "exec",
+      "flay",
+      "app"
+    ],
+    "exit_code": 1,
+    "seconds": 1.594,
+    "log": "qa\\reports\\runs\\20261125T160055893388-0600\\flay.log",
+    "started_at": "20261125T160055893388-0600",
+    "run": "20261125T160055893388-0600"
+  },
+  {
+    "name": "brakeman",
+    "command": [
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+      "-S",
+      "bundle",
+      "exec",
+      "brakeman",
+      "--no-pager",
+      "--format",
+      "json",
+      "--output",
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T160055893388-0600\\brakeman.json"
+    ],
+    "exit_code": 1,
+    "seconds": 1.859,
+    "log": "qa\\reports\\runs\\20261125T160055893388-0600\\brakeman.log",
+    "started_at": "20261125T160055893388-0600",
+    "run": "20261125T160055893388-0600"
+  },
+  {
+    "name": "bundler-audit",
+    "command": [
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+      "-S",
+      "bundle",
+      "exec",
+      "bundler-audit",
+      "check",
+      "--gemfile-lock",
+      "Gemfile.lock",
+      "--format",
+      "json"
+    ],
+    "exit_code": 1,
+    "seconds": 1.797,
+    "log": "qa\\reports\\runs\\20261125T160055893388-0600\\bundler-audit.log",
+    "started_at": "20261125T160055893388-0600",
+    "run": "20261125T160055893388-0600"
+  },
+  {
+    "name": "static-review",
+    "command": [
+      "C:\\Users\\jdmor\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "qa/scripts/static_review.py",
+      "--run",
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T160055893388-0600"
+    ],
+    "exit_code": 0,
+    "seconds": 0.25,
+    "log": "qa\\reports\\runs\\20261125T160055893388-0600\\static-review.log",
+    "started_at": "20261125T160055893388-0600",
+    "run": "20261125T160055893388-0600"
+  },
+  {
+    "name": "versions",
+    "command": [
+      "C:\\Users\\jdmor\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "qa/scripts/versions.py"
+    ],
+    "exit_code": 0,
+    "seconds": 2.391,
+    "log": "qa\\reports\\runs\\20261125T162842386891-0600\\versions.log",
+    "started_at": "20261125T162842386891-0600",
+    "run": "20261125T162842386891-0600"
+  },
+  {
+    "name": "unit",
+    "command": [
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+      "test/unit/qa_unit_test.rb"
+    ],
+    "exit_code": 1,
+    "seconds": 5.703,
+    "log": "qa\\reports\\runs\\20261125T162842386891-0600\\unit.log",
+    "started_at": "20261125T162842386891-0600",
+    "run": "20261125T162842386891-0600"
+  },
+  {
+    "name": "versions",
+    "command": [
+      "C:\\Users\\jdmor\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "qa/scripts/versions.py"
+    ],
+    "exit_code": 0,
+    "seconds": 3.187,
+    "log": "qa\\reports\\runs\\20261125T165246778161-0600\\versions.log",
+    "started_at": "20261125T165246778161-0600",
+    "run": "20261125T165246778161-0600"
+  },
+  {
+    "name": "unit",
+    "command": [
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+      "test/unit/qa_unit_test.rb"
+    ],
+    "exit_code": 1,
+    "seconds": 7.766,
+    "log": "qa\\reports\\runs\\20261125T165246778161-0600\\unit.log",
+    "started_at": "20261125T165246778161-0600",
+    "run": "20261125T165246778161-0600"
+  },
+  {
+    "name": "versions",
+    "command": [
+      "C:\\Users\\jdmor\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "qa/scripts/versions.py"
+    ],
+    "exit_code": 0,
+    "seconds": 5.0,
+    "log": "qa\\reports\\runs\\20261125T212037830700-0600\\versions.log",
+    "started_at": "20261125T212037830700-0600",
+    "run": "20261125T212037830700-0600"
+  },
+  {
+    "name": "unit",
+    "command": [
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+      "test/unit/qa_unit_test.rb"
+    ],
+    "exit_code": 1,
+    "seconds": 4.718,
+    "log": "qa\\reports\\runs\\20261125T212037830700-0600\\unit.log",
+    "started_at": "20261125T212037830700-0600",
+    "run": "20261125T212037830700-0600"
+  },
+  {
+    "name": "versions",
+    "command": [
+      "C:\\Users\\jdmor\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "qa/scripts/versions.py"
+    ],
+    "exit_code": 0,
+    "seconds": 1.468,
+    "log": "qa\\reports\\runs\\20261125T212245957740-0600\\versions.log",
+    "started_at": "20261125T212245957740-0600",
+    "run": "20261125T212245957740-0600"
+  },
+  {
+    "name": "unit",
+    "command": [
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+      "test/unit/qa_unit_test.rb"
+    ],
+    "exit_code": 0,
+    "seconds": 3.407,
+    "log": "qa\\reports\\runs\\20261125T212245957740-0600\\unit.log",
+    "started_at": "20261125T212245957740-0600",
+    "run": "20261125T212245957740-0600"
+  },
+  {
+    "name": "versions",
+    "command": [
+      "C:\\Users\\jdmor\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "qa/scripts/versions.py"
+    ],
+    "exit_code": 0,
+    "seconds": 1.296,
+    "log": "qa\\reports\\runs\\20261125T212517075406-0600\\versions.log",
+    "started_at": "20261125T212517075406-0600",
+    "run": "20261125T212517075406-0600"
+  },
+  {
+    "name": "complexity",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.EXE",
+      "qa/scripts/complexity.mjs",
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T212517075406-0600\\complexity.json"
+    ],
+    "exit_code": 0,
+    "seconds": 0.219,
+    "log": "qa\\reports\\runs\\20261125T212517075406-0600\\complexity.log",
+    "started_at": "20261125T212517075406-0600",
+    "run": "20261125T212517075406-0600"
+  },
+  {
+    "name": "duplication",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.EXE",
+      "qa/node_modules/jscpd/bin/jscpd",
+      "app",
+      "--format",
+      "ruby,markup",
+      "--min-lines",
+      "5",
+      "--min-tokens",
+      "50",
+      "--reporters",
+      "json",
+      "--output",
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T212517075406-0600\\jscpd"
+    ],
+    "exit_code": 0,
+    "seconds": 1.0,
+    "log": "qa\\reports\\runs\\20261125T212517075406-0600\\duplication.log",
+    "started_at": "20261125T212517075406-0600",
+    "run": "20261125T212517075406-0600"
+  },
+  {
+    "name": "rubocop",
+    "command": [
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+      "-r",
+      "./qa/scripts/stdio.rb",
+      "-S",
+      "rubocop",
+      "app",
+      "--format",
+      "json",
+      "--out",
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T212517075406-0600\\rubocop.json"
+    ],
+    "exit_code": 1,
+    "seconds": 7.375,
+    "log": "qa\\reports\\runs\\20261125T212517075406-0600\\rubocop.log",
+    "started_at": "20261125T212517075406-0600",
+    "run": "20261125T212517075406-0600"
+  },
+  {
+    "name": "reek",
+    "command": [
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+      "-r",
+      "./qa/scripts/stdio.rb",
+      "-S",
+      "reek",
+      "app",
+      "--format",
+      "json"
+    ],
+    "exit_code": 2,
+    "seconds": 2.469,
+    "log": "qa\\reports\\runs\\20261125T212517075406-0600\\reek.log",
+    "started_at": "20261125T212517075406-0600",
+    "run": "20261125T212517075406-0600"
+  },
+  {
+    "name": "flay",
+    "command": [
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+      "-r",
+      "./qa/scripts/stdio.rb",
+      "-S",
+      "flay",
+      "app"
+    ],
+    "exit_code": 0,
+    "seconds": 1.031,
+    "log": "qa\\reports\\runs\\20261125T212517075406-0600\\flay.log",
+    "started_at": "20261125T212517075406-0600",
+    "run": "20261125T212517075406-0600"
+  },
+  {
+    "name": "brakeman",
+    "command": [
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+      "-r",
+      "./qa/scripts/stdio.rb",
+      "-S",
+      "brakeman",
+      "--no-pager",
+      "--format",
+      "json",
+      "--output",
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T212517075406-0600\\brakeman.json"
+    ],
+    "exit_code": 3,
+    "seconds": 9.844,
+    "log": "qa\\reports\\runs\\20261125T212517075406-0600\\brakeman.log",
+    "started_at": "20261125T212517075406-0600",
+    "run": "20261125T212517075406-0600"
+  },
+  {
+    "name": "bundler-audit",
+    "command": [
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+      "-r",
+      "./qa/scripts/stdio.rb",
+      "-S",
+      "bundler-audit",
+      "check",
+      "--gemfile-lock",
+      "Gemfile.lock",
+      "--format",
+      "json"
+    ],
+    "exit_code": 1,
+    "seconds": 5.937,
+    "log": "qa\\reports\\runs\\20261125T212517075406-0600\\bundler-audit.log",
+    "started_at": "20261125T212517075406-0600",
+    "run": "20261125T212517075406-0600"
+  },
+  {
+    "name": "static-review",
+    "command": [
+      "C:\\Users\\jdmor\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "qa/scripts/static_review.py",
+      "--run",
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T212517075406-0600"
+    ],
+    "exit_code": 0,
+    "seconds": 0.125,
+    "log": "qa\\reports\\runs\\20261125T212517075406-0600\\static-review.log",
+    "started_at": "20261125T212517075406-0600",
+    "run": "20261125T212517075406-0600"
+  },
+  {
+    "name": "unit",
+    "command": [
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+      "test/unit/qa_unit_test.rb"
+    ],
+    "exit_code": 0,
+    "seconds": 3.813,
+    "log": "qa\\reports\\runs\\20261125T212517075406-0600\\unit.log",
+    "started_at": "20261125T212517075406-0600",
+    "run": "20261125T212517075406-0600"
+  },
+  {
+    "name": "integration",
+    "command": [
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+      "test/integration/qa_integration_test.rb"
+    ],
+    "exit_code": 1,
+    "seconds": 0.828,
+    "log": "qa\\reports\\runs\\20261125T212517075406-0600\\integration.log",
+    "started_at": "20261125T212517075406-0600",
+    "run": "20261125T212517075406-0600"
+  },
+  {
+    "name": "security",
+    "command": [
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+      "test/integration/qa_security_test.rb"
+    ],
+    "exit_code": 1,
+    "seconds": 0.813,
+    "log": "qa\\reports\\runs\\20261125T212517075406-0600\\security.log",
+    "started_at": "20261125T212517075406-0600",
+    "run": "20261125T212517075406-0600"
+  },
+  {
+    "name": "prepare",
+    "command": [
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+      "qa/scripts/prepare.rb",
+      "finished"
+    ],
+    "exit_code": 1,
+    "seconds": 0.765,
+    "log": "qa\\reports\\runs\\20261125T212517075406-0600\\prepare.log",
+    "started_at": "20261125T212517075406-0600",
+    "run": "20261125T212517075406-0600"
+  },
+  {
+    "name": "e2e",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.EXE",
+      "qa/node_modules/@playwright/test/cli.js",
+      "test",
+      "-c",
+      "qa/e2e/playwright.config.cjs"
+    ],
+    "exit_code": 1,
+    "seconds": 1.5,
+    "log": "qa\\reports\\runs\\20261125T212517075406-0600\\e2e.log",
+    "started_at": "20261125T212517075406-0600",
+    "run": "20261125T212517075406-0600"
+  },
+  {
+    "name": "accessibility",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.EXE",
+      "qa/accessibility/scan.cjs"
+    ],
+    "exit_code": 2,
+    "seconds": 0.563,
+    "log": "qa\\reports\\runs\\20261125T212517075406-0600\\accessibility.log",
+    "started_at": "20261125T212517075406-0600",
+    "run": "20261125T212517075406-0600"
+  },
+  {
+    "name": "performance",
+    "exit_code": null,
+    "command": [],
+    "log": "",
+    "reason": "Use --load to activate the local maximum100VU profile",
+    "run": "20261125T212517075406-0600"
+  },
+  {
+    "name": "versions",
+    "command": [
+      "C:\\Users\\jdmor\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "qa/scripts/versions.py"
+    ],
+    "exit_code": 0,
+    "seconds": 1.11,
+    "log": "qa\\reports\\runs\\20261125T213032255660-0600\\versions.log",
+    "started_at": "20261125T213032255660-0600",
+    "run": "20261125T213032255660-0600"
+  },
+  {
+    "name": "complexity",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.EXE",
+      "qa/scripts/complexity.mjs",
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T213032255660-0600\\complexity.json"
+    ],
+    "exit_code": 0,
+    "seconds": 0.156,
+    "log": "qa\\reports\\runs\\20261125T213032255660-0600\\complexity.log",
+    "started_at": "20261125T213032255660-0600",
+    "run": "20261125T213032255660-0600"
+  },
+  {
+    "name": "duplication",
+    "command": [
+      "C:\\Program Files\\nodejs\\node.EXE",
+      "qa/node_modules/jscpd/bin/jscpd",
+      "app",
+      "--format",
+      "ruby,markup",
+      "--min-lines",
+      "5",
+      "--min-tokens",
+      "50",
+      "--reporters",
+      "json",
+      "--output",
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T213032255660-0600\\jscpd"
+    ],
+    "exit_code": 0,
+    "seconds": 0.688,
+    "log": "qa\\reports\\runs\\20261125T213032255660-0600\\duplication.log",
+    "started_at": "20261125T213032255660-0600",
+    "run": "20261125T213032255660-0600"
+  },
+  {
+    "name": "rubocop",
+    "command": [
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+      "-r",
+      "./qa/scripts/stdio.rb",
+      "-S",
+      "rubocop",
+      "app",
+      "--format",
+      "json",
+      "--out",
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T213032255660-0600\\rubocop.json"
+    ],
+    "exit_code": 1,
+    "seconds": 3.015,
+    "log": "qa\\reports\\runs\\20261125T213032255660-0600\\rubocop.log",
+    "started_at": "20261125T213032255660-0600",
+    "run": "20261125T213032255660-0600"
+  },
+  {
+    "name": "reek",
+    "command": [
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+      "-r",
+      "./qa/scripts/stdio.rb",
+      "-S",
+      "reek",
+      "app",
+      "--format",
+      "json"
+    ],
+    "exit_code": 2,
+    "seconds": 2.047,
+    "log": "qa\\reports\\runs\\20261125T213032255660-0600\\reek.log",
+    "started_at": "20261125T213032255660-0600",
+    "run": "20261125T213032255660-0600"
+  },
+  {
+    "name": "flay",
+    "command": [
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+      "-r",
+      "./qa/scripts/stdio.rb",
+      "-S",
+      "flay",
+      "app"
+    ],
+    "exit_code": 0,
+    "seconds": 0.813,
+    "log": "qa\\reports\\runs\\20261125T213032255660-0600\\flay.log",
+    "started_at": "20261125T213032255660-0600",
+    "run": "20261125T213032255660-0600"
+  },
+  {
+    "name": "brakeman",
+    "command": [
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+      "-r",
+      "./qa/scripts/stdio.rb",
+      "-S",
+      "brakeman",
+      "--no-threads",
+      "--no-pager",
+      "--format",
+      "json",
+      "--output",
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T213032255660-0600\\brakeman.json"
+    ],
+    "exit_code": 3,
+    "seconds": 7.406,
+    "log": "qa\\reports\\runs\\20261125T213032255660-0600\\brakeman.log",
+    "started_at": "20261125T213032255660-0600",
+    "run": "20261125T213032255660-0600"
+  },
+  {
+    "name": "bundler-audit",
+    "command": [
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+      "-r",
+      "./qa/scripts/stdio.rb",
+      "-S",
+      "bundler-audit",
+      "check",
+      "--gemfile-lock",
+      "Gemfile.lock",
+      "--format",
+      "json"
+    ],
+    "exit_code": 1,
+    "seconds": 0.984,
+    "log": "qa\\reports\\runs\\20261125T213032255660-0600\\bundler-audit.log",
+    "started_at": "20261125T213032255660-0600",
+    "run": "20261125T213032255660-0600"
+  },
+  {
+    "name": "static-review",
+    "command": [
+      "C:\\Users\\jdmor\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "qa/scripts/static_review.py",
+      "--run",
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T213032255660-0600"
+    ],
+    "exit_code": 0,
+    "seconds": 0.078,
+    "log": "qa\\reports\\runs\\20261125T213032255660-0600\\static-review.log",
+    "started_at": "20261125T213032255660-0600",
+    "run": "20261125T213032255660-0600"
+  },
+  {
+    "name": "versions",
+    "command": [
+      "C:\\Users\\jdmor\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "qa/scripts/versions.py"
+    ],
+    "exit_code": 0,
+    "seconds": 1.015,
+    "log": "qa\\reports\\runs\\20261125T213143108870-0600\\versions.log",
+    "started_at": "20261125T213143108870-0600",
+    "run": "20261125T213143108870-0600"
+  },
+  {
+    "name": "prepare",
+    "command": [
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+      "qa/scripts/prepare.rb",
+      "finished"
+    ],
+    "exit_code": 1,
+    "seconds": 0.61,
+    "log": "qa\\reports\\runs\\20261125T213143108870-0600\\prepare.log",
+    "started_at": "20261125T213143108870-0600",
+    "run": "20261125T213143108870-0600"
+  },
+  {
+    "name": "performance-normal",
+    "command": [
+      "k6",
+      "run",
+      "--out",
+      "json=C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T213143108870-0600\\k6-normal.jsonl",
+      "--summary-export",
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T213143108870-0600\\k6-normal-summary.json",
+      "qa/performance/load.js"
+    ],
+    "exit_code": 127,
+    "seconds": 0.015,
+    "log": "qa\\reports\\runs\\20261125T213143108870-0600\\performance-normal.log",
+    "started_at": "20261125T213143108870-0600",
+    "run": "20261125T213143108870-0600"
+  },
+  {
+    "name": "performance-high",
+    "command": [
+      "k6",
+      "run",
+      "--out",
+      "json=C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T213143108870-0600\\k6-high.jsonl",
+      "--summary-export",
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T213143108870-0600\\k6-high-summary.json",
+      "qa/performance/load.js"
+    ],
+    "exit_code": 127,
+    "seconds": 0.016,
+    "log": "qa\\reports\\runs\\20261125T213143108870-0600\\performance-high.log",
+    "started_at": "20261125T213143108870-0600",
+    "run": "20261125T213143108870-0600"
+  },
+  {
+    "name": "versions",
+    "command": [
+      "C:\\Users\\jdmor\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "qa/scripts/versions.py"
+    ],
+    "exit_code": 0,
+    "seconds": 1.109,
+    "log": "qa\\reports\\runs\\20261125T213747478400-0600\\versions.log",
+    "started_at": "20261125T213747478400-0600",
+    "run": "20261125T213747478400-0600"
+  },
+  {
+    "name": "unit",
+    "command": [
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+      "test/unit/qa_unit_test.rb"
+    ],
+    "exit_code": 0,
+    "seconds": 2.688,
+    "log": "qa\\reports\\runs\\20261125T213747478400-0600\\unit.log",
+    "started_at": "20261125T213747478400-0600",
+    "run": "20261125T213747478400-0600"
+  },
+  {
+    "name": "versions",
+    "command": [
+      "C:\\Users\\jdmor\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "qa/scripts/versions.py"
+    ],
+    "cwd": "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\Entregables",
+    "exit_code": 0,
+    "seconds": 1.188,
+    "log": "qa\\reports\\runs\\20261125T224142260795-0600\\versions.log",
+    "started_at": "20261125T224142260795-0600",
+    "run": "20261125T224142260795-0600"
+  },
+  {
+    "name": "unit",
+    "command": [
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\Entregables\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+      "test/unit/qa_unit_test.rb"
+    ],
+    "cwd": "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\Entregables",
+    "exit_code": 1,
+    "seconds": 3.921,
+    "log": "qa\\reports\\runs\\20261125T224142260795-0600\\unit.log",
+    "started_at": "20261125T224142260795-0600",
+    "run": "20261125T224142260795-0600"
+  },
+  {
+    "name": "versions",
+    "command": [
+      "C:\\Users\\jdmor\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "qa/scripts/versions.py"
+    ],
+    "cwd": "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\Entregables",
+    "exit_code": 0,
+    "seconds": 1.046,
+    "log": "qa\\reports\\runs\\20261125T224334206267-0600\\versions.log",
+    "started_at": "20261125T224334206267-0600",
+    "run": "20261125T224334206267-0600"
+  },
+  {
+    "name": "unit",
+    "command": [
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\Entregables\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+      "test/unit/qa_unit_test.rb"
+    ],
+    "cwd": "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\Entregables",
+    "exit_code": 0,
+    "seconds": 2.672,
+    "log": "qa\\reports\\runs\\20261125T224334206267-0600\\unit.log",
+    "started_at": "20261125T224334206267-0600",
+    "run": "20261125T224334206267-0600"
+  },
+  {
+    "name": "versions",
+    "command": [
+      "C:\\Users\\jdmor\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "qa/scripts/versions.py"
+    ],
+    "cwd": "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\Entregables",
+    "exit_code": 0,
+    "seconds": 1.016,
+    "log": "qa\\reports\\runs\\20261125T224518089588-0600\\versions.log",
+    "started_at": "20261125T224518089588-0600",
+    "run": "20261125T224518089588-0600"
+  },
+  {
+    "name": "unit",
+    "command": [
+      "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\Entregables\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+      "test/unit/qa_unit_test.rb"
+    ],
+    "cwd": "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\Entregables",
+    "exit_code": 0,
+    "seconds": 2.578,
+    "log": "qa\\reports\\runs\\20261125T224518089588-0600\\unit.log",
+    "started_at": "20261125T224518089588-0600",
+    "run": "20261125T224518089588-0600"
+  }
+]

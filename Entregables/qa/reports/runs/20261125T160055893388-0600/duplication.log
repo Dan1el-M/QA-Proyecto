@@ -1,0 +1,14 @@
+Clone found (ruby):
+ - app\models\torneo.rb [265:5 - 272:12] (7 lines, 83 tokens)
+   app\services\siguiente_ronda.rb [31:12 - 38:11]
+
+Clone found (ruby):
+ - app\controllers\eliminacion_directa_controller.rb [262:55 - 272:38] (10 lines, 93 tokens)
+   app\services\siguiente_ronda.rb [121:32 - 131:35]
+
+JSON report saved to C:\Users\jdmor\OneDrive - Estudiantes ITCR\@TEC\VI Semestre\QA\proyecto\QA-Proyecto\qa\reports\runs\20261125T160055893388-0600\jscpd\jscpd-report.json
+time: 316.731ms
+
+💡 Auto-refactor with AI: npx skills add kucherenko/jscpd
+🎩 New: Gangsta Agents — discipline your AI coding → gangsta.page
+💖 Support jscpd project → https://opencollective.com/jscpd

@@ -1,0 +1,12 @@
+{
+  "title": "Métodos con mayor complejidad ciclomática",
+  "values": {
+    "EliminacionDirectaController#actualizar_resultados": 14,
+    "SiguienteRonda#avanzar": 11,
+    "EliminacionDirectaController#fase_eliminatoria": 8,
+    "SeleccionesController#preparar_index": 8,
+    "EliminacionDirectaController#index": 7,
+    "EliminacionDirectaController#partidos_con_penales_empatados": 7
+  },
+  "source": "qa\\reports\\runs\\20261125T213032255660-0600\\complexity.json"
+}

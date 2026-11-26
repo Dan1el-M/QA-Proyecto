@@ -1,0 +1,185 @@
+=== PÁGINA 1 ===
+PRUEBAS  ESTATICAS
+=== PÁGINA 2 ===
+
+=== PÁGINA 3 ===
+
+=== PÁGINA 4 ===
+
+=== PÁGINA 5 ===
+
+=== PÁGINA 6 ===
+
+=== PÁGINA 7 ===
+
+=== PÁGINA 8 ===
+
+=== PÁGINA 9 ===
+     INSPECCIONES
+
+
+
+
+o       ESTE CÓDIGO CONTIENE UNO DE LOS ERRORES DE SEGURIDAD MÁS
+        FAMOSOS DE LA INDUSTRIA, CONOCIDO COMO EL BUG "GOTO            FAIL"
+        (CVE-2014-1266) DESCUBIERTO EN EL FRAMEWORK         SECURE
+        TRANSPORT   DE APPLE.
+
+o       ESTE ES UN CODIGO    EN C, DEBIDO  A QUE  NO HAY LLAVES,
+        ENTONCES   EL SEGUNDO GOTO     SIEMPRE   SE VA A EJECUTAR
+
+o       EL CÓDIGO SALTA A LA ETIQUETA     FAIL: ANTES DE LLEGAR A
+        SSLHASHSHA1.FINAL. COMO LA VARIABLE        ERR TENÍA UN VALOR DE
+        0 (ÉXITO) DE LA OPERACIÓN ANTERIOR, LA FUNCIÓN DEVUELVE UN
+        ESTADO DE "ÉXITO" SIN HABER VALIDADO REALMENTE LA FIRMA
+        DIGITAL. ESTO PERMITE ATAQUES DE     MAN-IN-THE-MIDDLE     (MITM)
+=== PÁGINA 10 ===
+INSPECCIONES
+=== PÁGINA 11 ===
+INSPECCIONES   -
+HERRAMIENTAS
+=== PÁGINA 12 ===
+o   ANALIZA EL SIGUIENTE CÓDIGO EN PYTHON            QUE PROCESA UNA LISTA DE USUARIOS:
+
+
+DEF PROCESAR_USUARIOS(USUARIOS):
+FOR  U IN USUARIOS:
+IFU['ACTIVO’]:
+PRINT('PROCESANDO:', U['NOMBRE’])
+PRINT('ENVÍO DE LOG COMPLETADO')
+o   SI LA INTENCIÓN ES QUE EL LOG SE ENVÍE SOLO PARA USUARIOS ACTIVOS, ¿CUÁL ES EL
+    ERROR?
+=== PÁGINA 13 ===
+o   ANALIZA EL SIGUIENTE CÓDIGO EN PYTHON
+o   SE DESEA CREAR UNA FUNCIÓN QUE AGREGUE UN ÍTEM A UNA LISTA POR DEFECTO:
+DEF AGREGAR_ITEM(ITEM, LISTA=[]):
+LISTA.APPEND(ITEM)
+RETURN   LISTA
+o   ¿POR QUÉ ESTE CÓDIGO SE CONSIDERA UNA MALA PRÁCTICA O UN ERROR DE LÓGICA?
+=== PÁGINA 14 ===
+o   ANALIZA EL SIGUIENTE CÓDIGO EN PYTHON
+
+
+o   CONSIDERA ESTE INTENTO DE VALIDAR EL ACCESO DE UN ADMINISTRADOR:
+DEF VERIFICAR_ADMIN(USER):
+STATUS = 'DENEGADO’
+IFUSER.IS_ADMIN: STATUS = 'CONCEDIDO’
+RETURN   STATUS
+o   ¿QUÉ PASARÍA SI 'USER.IS_ADMIN' ARROJA UNA EXCEPCIÓN NO CONTROLADA?
+=== PÁGINA 15 ===
+o   ANALIZA EL SIGUIENTE CÓDIGO EN PYTHON
+
+
+o   ¿CUÁL ES EL RIESGO DE SEGURIDAD EN ESTE FRAGMENTO DE VALIDACIÓN?
+PASSWORD_INGRESADA       = '1234’
+IFPASSWORD_INGRESADA        IS '1234’:
+LOGIN_EXITOSO()
+=== PÁGINA 16 ===
+o   ANALIZA EL SIGUIENTE CÓDIGO EN PYTHON
+
+
+X = 10
+DEF MI_FUNCION():
+PRINT(X) X = 5
+o   ¿QUÉ OCURRE AL EJECUTAR MI_FUNCION()?
+=== PÁGINA 17 ===
+o   ANALIZA EL SIGUIENTE CÓDIGO EN PYTHON
+
+
+TRY:
+RESULTADO = 10 / 0
+EXCEPT:
+PASS
+o   ¿POR QUÉ ESTE MANEJO DE ERRORES ES PELIGROSO?
+=== PÁGINA 18 ===
+o   ANALIZA EL SIGUIENTE CÓDIGO EN PYTHON
+
+
+o   UN DESARROLLADOR ESCRIBE ESTO PARA OPTIMIZAR MEMORIA:
+LISTA_GRANDE    = LIST(RANGE(1000000))
+... PROCESO ...
+DEL LISTA_GRANDE
+o   ¿GARANTIZA 'DEL' QUE LA MEMORIA SE LIBERE INMEDIATAMENTE?
+=== PÁGINA 19 ===
+1. Herramientas por Categoría y Lenguaje
+A.   Linters  y Formateadores (Estilo y Errores Básicos)
+      a.1 Estas aseguran que el código sea legible y siga las convenciones de la comunidad
+             Python:   * Flake8: Combina varios chequeos de estilo (PEP8).
+             JavaScript/TypeScript:      * ESLint: El estándar de la industria; altamente configurable.
+             C / C++:   * Cppcheck: Especializado en detectar fugas de memoria y punteros nulos.
+
+
+o
+=== PÁGINA 20 ===
+1. Herramientas por Categoría y Lenguaje
+B. Seguridad (SAST -     Static  Application   Security Testing)
+             Buscan vulnerabilidades como inyecciones SQL, contraseñas quemadas o el error "goto                       fail" que
+vimos antes.
+             Bandit  (Python):   Específico para encontrar problemas de seguridad comunes en Python.
+             Snyk:  Analiza tanto el código como las dependencias (librerías de terceros) en busca de
+             vulnerabilidades conocidas.
+             Checkmarx     / Fortify: Herramientas empresariales de alto nivel muy completas               pero de pago.
+o            cuándo   detenerse a refactorizar.
+=== PÁGINA 21 ===
+1. Herramientas por Categoría y Lenguaje
+
+C. Suites de Calidad Total
+             SonarQube / SonarCloud:         Es la herramienta reina.
+             No solo busca errores, sino que mide la "deuda técnica", la duplicación de código y la cobertura de
+             pruebas.
+
+
+o
+=== PÁGINA 22 ===
+1. Herramientas por Categoría y Lenguaje
+
+Para que una inspección estática sea efectiva, no debe ser un evento único, sino un proceso continuo:
+Nivel 1: El IDE (Local)
+             Cómo:   Instalar extensiones (como la de SonarLint            o ESLint) directamente en VS Code          o PyCharm.
+             Resultado:    El programador ve "subrayados" rojos o amarillos mientras escribe, corrigiendo errores
+             antes de siquiera guardar el archivo.
+
+Nivel 2: o Pre-commit   Hooks
+             Cómo:   Usar una herramienta llamada pre-commit. Se configura un archivo .pre-commit-config.yaml.
+             Resultado:    Cuando el desarrollador intenta hacer un git           commit, la herramienta corre
+             automáticamente. Si hay errores (por ejemplo, una variable no usada o un fallo de seguridad), el
+             commit    se bloquea hasta que se arregle.
+
+Nivel 3: El Pipeline de CI/CD (Servidor)
+             Cómo:   Configurar GitHub Actions, GitLab         CI o Jenkins para ejecutar las herramientas cada vez que
+             alguien sube código o abre un Pull          Request.
+             Resultado:    El equipo de revisión técnica recibe un reporte automático. Si el código no pasa los
+             "Quality  Gates" (umbrales de calidad), no se permite la integración al proyecto principal.
+=== PÁGINA 23 ===
+1. Herramientas por Categoría y Lenguaje
+
+Para probar una inspección en Python, se puede:
+
+             Instalar Bandit:    pip install  bandit
+             Ejecutarlo:   bandit  -r  folder/
+             Resultado:    Te dará un reporte de severidad (Low, Medium, High) indicando exactamente qué línea
+             de código es un riesgo de seguridad.
+o
+=== PÁGINA 24 ===
+Ejercicio para entregar hoy mismo, en parejas
+
+                                                                                                 1.   Inspección Manual
+import hashlib                                                                                          1.   Sin ejecutar el codigo  llenar un check
+                                                                                                             list para identificar, linea de error,
+def login_v2(user_data, db_connection):                                                                      descripcion y el impacto del error
+[Línea de ejemplo con credenciales omitida]
+                                                                                                  2. Verificacion automatizada
+    user = db_connection.find(user_data['username'])                                                 Installar bandit (pip install bandit)
+    if not user:                                                                                     Ejecutar: bandit nombre_archive
+        return "Acceso Denegado"                                                                     Instalar flake 8 (pip install flake8)
+        print(f"DEBUG: Intento de acceso para {user_data['username']}")                               Ejecutar flake8 nombre archive
+    print(of"LOG : Usuario {user_data['username']} autenticado
+exitosamente")                                                                                    3. Reporte:
+[Línea de ejemplo con credenciales omitida]
+        return True                                                                               1
+                                                                                                  Que detectamos que no se detecto en la parte 2?
+    return False                                                                                  Ademas:
+                                                                                                  Entregar un documento con:
+def get_permissions(role, current_list=[]):                                                       Id error, herramienta, severidad error, y propuesta
+    current_list.append(role)                                                                     para resolver
+    return current_list

@@ -1,0 +1,22 @@
+Stopped processing SimpleCov as a previous error not related to SimpleCov has been detected
+C:/Users/jdmor/OneDrive - Estudiantes ITCR/@TEC/VI Semestre/QA/proyecto/QA-Proyecto/.qa-runtime/gems/gems/activerecord-7.1.6/lib/active_record/validations/presence.rb:5:in '<module:Validations>': uninitialized constant ActiveModel::Validations::PresenceValidator (NameError)
+
+    class PresenceValidator < ActiveModel::Validations::PresenceValidator # :nodoc:
+                                                      ^^^^^^^^^^^^^^^^^^^
+	from C:/Users/jdmor/OneDrive - Estudiantes ITCR/@TEC/VI Semestre/QA/proyecto/QA-Proyecto/.qa-runtime/gems/gems/activerecord-7.1.6/lib/active_record/validations/presence.rb:4:in '<module:ActiveRecord>'
+	from C:/Users/jdmor/OneDrive - Estudiantes ITCR/@TEC/VI Semestre/QA/proyecto/QA-Proyecto/.qa-runtime/gems/gems/activerecord-7.1.6/lib/active_record/validations/presence.rb:3:in '<top (required)>'
+	from C:/Users/jdmor/OneDrive - Estudiantes ITCR/@TEC/VI Semestre/QA/proyecto/QA-Proyecto/.qa-runtime/rubyinstaller-4.0.5-1-x64/lib/ruby/4.0.0/bundled_gems.rb:60:in 'Kernel.require'
+	from C:/Users/jdmor/OneDrive - Estudiantes ITCR/@TEC/VI Semestre/QA/proyecto/QA-Proyecto/.qa-runtime/rubyinstaller-4.0.5-1-x64/lib/ruby/4.0.0/bundled_gems.rb:60:in 'block (2 levels) in Kernel#replace_require'
+	from C:/Users/jdmor/OneDrive - Estudiantes ITCR/@TEC/VI Semestre/QA/proyecto/QA-Proyecto/.qa-runtime/gems/gems/activerecord-7.1.6/lib/active_record/validations.rb:95:in '<top (required)>'
+	from C:/Users/jdmor/OneDrive - Estudiantes ITCR/@TEC/VI Semestre/QA/proyecto/QA-Proyecto/.qa-runtime/rubyinstaller-4.0.5-1-x64/lib/ruby/4.0.0/bundled_gems.rb:60:in 'Kernel.require'
+	from C:/Users/jdmor/OneDrive - Estudiantes ITCR/@TEC/VI Semestre/QA/proyecto/QA-Proyecto/.qa-runtime/rubyinstaller-4.0.5-1-x64/lib/ruby/4.0.0/bundled_gems.rb:60:in 'block (2 levels) in Kernel#replace_require'
+	from C:/Users/jdmor/OneDrive - Estudiantes ITCR/@TEC/VI Semestre/QA/proyecto/QA-Proyecto/.qa-runtime/gems/gems/activerecord-7.1.6/lib/active_record/base.rb:309:in '<class:Base>'
+	from C:/Users/jdmor/OneDrive - Estudiantes ITCR/@TEC/VI Semestre/QA/proyecto/QA-Proyecto/.qa-runtime/gems/gems/activerecord-7.1.6/lib/active_record/base.rb:282:in '<module:ActiveRecord>'
+	from C:/Users/jdmor/OneDrive - Estudiantes ITCR/@TEC/VI Semestre/QA/proyecto/QA-Proyecto/.qa-runtime/gems/gems/activerecord-7.1.6/lib/active_record/base.rb:15:in '<top (required)>'
+	from C:/Users/jdmor/OneDrive - Estudiantes ITCR/@TEC/VI Semestre/QA/proyecto/QA-Proyecto/.qa-runtime/rubyinstaller-4.0.5-1-x64/lib/ruby/4.0.0/bundled_gems.rb:60:in 'Kernel.require'
+	from C:/Users/jdmor/OneDrive - Estudiantes ITCR/@TEC/VI Semestre/QA/proyecto/QA-Proyecto/.qa-runtime/rubyinstaller-4.0.5-1-x64/lib/ruby/4.0.0/bundled_gems.rb:60:in 'block (2 levels) in Kernel#replace_require'
+	from C:/Users/jdmor/OneDrive - Estudiantes ITCR/@TEC/VI Semestre/QA/proyecto/QA-Proyecto/app/models/application_record.rb:1:in '<top (required)>'
+	from test/unit/qa_unit_test.rb:18:in 'Kernel#require_relative'
+	from test/unit/qa_unit_test.rb:18:in '<main>'
+Coverage report generated for Unit Tests to C:/Users/jdmor/OneDrive - Estudiantes ITCR/@TEC/VI Semestre/QA/proyecto/QA-Proyecto/qa/reports/runs/20261125T165246778161-0600/coverage-unit.
+Line Coverage: 0.05% (1 / 1887)

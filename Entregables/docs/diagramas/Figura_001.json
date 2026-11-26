@@ -1,0 +1,58 @@
+{
+  "title": "Arquitectura existente: solicitud y persistencia",
+  "nodes": [
+    [
+      "browser",
+      "Navegador\nHTML y formularios",
+      600,
+      115
+    ],
+    [
+      "routes",
+      "Rutas Rails\nconfig/routes.rb",
+      600,
+      330
+    ],
+    [
+      "mvc",
+      "Controladores y vistas\napp/controllers, app/views",
+      80,
+      555
+    ],
+    [
+      "business",
+      "Modelos y servicios\napp/models, app/services",
+      1120,
+      555
+    ],
+    [
+      "db",
+      "SQLite: cuatro tablas\ngrupo, selección, partido, torneo",
+      600,
+      780
+    ]
+  ],
+  "edges": [
+    [
+      "browser",
+      "routes",
+      "HTTP"
+    ],
+    [
+      "routes",
+      "mvc",
+      "acción"
+    ],
+    [
+      "mvc",
+      "business",
+      "consulta / escritura"
+    ],
+    [
+      "business",
+      "db",
+      "Active Record"
+    ]
+  ],
+  "source": "config/routes.rb; config/database.yml; app/"
+}

@@ -1,0 +1,7 @@
+************************************* Invoked: Wed Nov 25 16:28:22 2026
+[0] Arguments: C:\Users\jdmor\OneDrive - Estudiantes ITCR\@TEC\VI Semestre\QA\proyecto\QA-Proyecto\.qa-runtime\msys2-installer.exe, install, --root, C:\Users\jdmor\OneDrive - Estudiantes ITCR\@TEC\VI Semestre\QA\proyecto\QA-Proyecto\.qa-runtime\rubyinstaller-4.0.5-1-x64\msys64, --accept-messages, --confirm-command
+[8] Operations sanity check succeeded.
+[14] Using metadata cache from "C:/Users/jdmor/AppData/Local/cache\\qt-installer-framework\\d75f1c19-3379-3717-ae8d-1404b51494a9"
+[15] Found 0 cached items.
+[19] Loaded control script ":/metadata/installer-config/control_js"
+[20] Warning: The installation path must not contain \"@\", please specify a valid directory.
