@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\Users\jdmor\OneDrive - Estudiantes ITCR\@TEC\VI Semestre\QA\proyecto\QA-Proyecto\qa\scripts\static_review.py", line 92, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "C:\Users\jdmor\OneDrive - Estudiantes ITCR\@TEC\VI Semestre\QA\proyecto\QA-Proyecto\qa\scripts\static_review.py", line 42, in main
+    add('README describe servicios y rutas ausentes','README.md','GroupStandingService',
+  File "C:\Users\jdmor\OneDrive - Estudiantes ITCR\@TEC\VI Semestre\QA\proyecto\QA-Proyecto\qa\scripts\static_review.py", line 24, in add
+    modulo=file.split('/')[1],archivo=file,linea=line,commit='789565ea61bae6a84cc8d9ae3be871f601f4a2d1',
+           ~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range

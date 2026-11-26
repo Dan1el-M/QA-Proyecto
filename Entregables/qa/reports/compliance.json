@@ -1,0 +1,20 @@
+{
+  "consistency_errors": [],
+  "checks": 47,
+  "pending_or_partial": 11,
+  "missing_figures": [
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "ready": false
+}

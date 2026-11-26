@@ -1,0 +1,325 @@
+{
+  "statistics": {
+    "detectionDate": "2026-11-26T03:30:34.039Z",
+    "formats": {
+      "ruby": {
+        "sources": {
+          "app/services/siguiente_ronda.rb": {
+            "lines": 247,
+            "tokens": 2008,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 17,
+            "duplicatedTokens": 176,
+            "percentage": 6.88,
+            "percentageTokens": 8.76,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/services/determinar_clasificados.rb": {
+            "lines": 97,
+            "tokens": 584,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/services/calcular_ganador_partido.rb": {
+            "lines": 55,
+            "tokens": 307,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/services/actualizar_estadisticas_seleccion.rb": {
+            "lines": 98,
+            "tokens": 563,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/models/torneo.rb": {
+            "lines": 315,
+            "tokens": 1759,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 7,
+            "duplicatedTokens": 83,
+            "percentage": 2.22,
+            "percentageTokens": 4.72,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/models/seleccion.rb": {
+            "lines": 246,
+            "tokens": 1703,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/models/partido.rb": {
+            "lines": 229,
+            "tokens": 1386,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/models/grupo.rb": {
+            "lines": 138,
+            "tokens": 712,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/helpers/application_helper.rb": {
+            "lines": 37,
+            "tokens": 393,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/controllers/torneos_controller.rb": {
+            "lines": 111,
+            "tokens": 670,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/controllers/selecciones_controller.rb": {
+            "lines": 133,
+            "tokens": 1060,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/controllers/posiciones_controller.rb": {
+            "lines": 75,
+            "tokens": 529,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/controllers/partidos_grupo_controller.rb": {
+            "lines": 195,
+            "tokens": 1550,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/controllers/partidos_controller.rb": {
+            "lines": 131,
+            "tokens": 901,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/controllers/grupos_controller.rb": {
+            "lines": 145,
+            "tokens": 1248,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/controllers/eliminacion_directa_controller.rb": {
+            "lines": 389,
+            "tokens": 3179,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 10,
+            "duplicatedTokens": 93,
+            "percentage": 2.57,
+            "percentageTokens": 2.93,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/controllers/clasificados_controller.rb": {
+            "lines": 141,
+            "tokens": 826,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "app/controllers/campeones_controller.rb": {
+            "lines": 138,
+            "tokens": 930,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 2920,
+          "tokens": 20308,
+          "sources": 18,
+          "clones": 2,
+          "duplicatedLines": 17,
+          "duplicatedTokens": 176,
+          "percentage": 0.58,
+          "percentageTokens": 0.87,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      }
+    },
+    "total": {
+      "lines": 2920,
+      "tokens": 20308,
+      "sources": 18,
+      "clones": 2,
+      "duplicatedLines": 17,
+      "duplicatedTokens": 176,
+      "percentage": 0.58,
+      "percentageTokens": 0.87,
+      "newDuplicatedLines": 0,
+      "newClones": 0
+    }
+  },
+  "duplicates": [
+    {
+      "format": "ruby",
+      "lines": 8,
+      "fragment": "{\r\n      \"dieciseisavos\" => (73..88),\r\n      \"octavos\"       => (89..96),\r\n      \"cuartos\"       => (97..100),\r\n      \"semifinal\"     => (101..102),\r\n      \"tercer_lugar\"  => (103..103),\r\n      \"final\"         => (104..104)\r\n    }.fetch",
+      "tokens": 83,
+      "firstFile": {
+        "name": "app\\models\\torneo.rb",
+        "start": 265,
+        "end": 272,
+        "startLoc": {
+          "line": 265,
+          "column": 5,
+          "position": 1378
+        },
+        "endLoc": {
+          "line": 272,
+          "column": 12,
+          "position": 1461
+        }
+      },
+      "secondFile": {
+        "name": "app\\services\\siguiente_ronda.rb",
+        "start": 31,
+        "end": 38,
+        "startLoc": {
+          "line": 31,
+          "column": 12,
+          "position": 129
+        },
+        "endLoc": {
+          "line": 38,
+          "column": 11,
+          "position": 212
+        }
+      }
+    },
+    {
+      "format": "ruby",
+      "lines": 11,
+      "fragment": ".select do |partido|\r\n      partido.goles_local.present? &&\r\n        partido.goles_visitante.present? &&\r\n        partido.goles_local == partido.goles_visitante &&\r\n        partido.goles_penales_local.present? &&\r\n        partido.goles_penales_visitante.present? &&\r\n        partido.goles_penales_local == partido.goles_penales_visitante\r\n    end\r\n  end\r\n\r\n  def generar_dieciseisavos_iniciales",
+      "tokens": 93,
+      "firstFile": {
+        "name": "app\\controllers\\eliminacion_directa_controller.rb",
+        "start": 262,
+        "end": 272,
+        "startLoc": {
+          "line": 262,
+          "column": 55,
+          "position": 2194
+        },
+        "endLoc": {
+          "line": 272,
+          "column": 38,
+          "position": 2287
+        }
+      },
+      "secondFile": {
+        "name": "app\\services\\siguiente_ronda.rb",
+        "start": 121,
+        "end": 131,
+        "startLoc": {
+          "line": 121,
+          "column": 32,
+          "position": 920
+        },
+        "endLoc": {
+          "line": 131,
+          "column": 35,
+          "position": 1013
+        }
+      }
+    }
+  ]
+}

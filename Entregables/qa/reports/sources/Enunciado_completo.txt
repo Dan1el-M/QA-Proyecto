@@ -1,0 +1,431 @@
+=== PAGINA 1 ===
+Escuela de Computación · Instituto Tecnológico de Costa Rica
+IC-6831 Aseguramiento de la calidad del software · Prof. Alicia Salazar Hernández
+Proyecto Integrado de Auditoría y Validación de Sistemas de
+Información
+
+Ejecutar un proceso completo de aseguramiento de la calidad sobre un sistema real, anclado en el modelo de
+calidad de producto de la norma ISO/IEC 25010:2023, combinando auditorías estáticas, pruebas dinámicas de todos
+los niveles y tipos, métricas cuantitativas y automatización.
+Objetivo general
+
+Ejecutar un proceso completo de aseguramiento de la calidad sobre una aplicación web real, combinando
+auditorías estáticas y dinámicas, pruebas funcionales y no funcionales, aplicando verificación y validación,
+herramientas automatizadas y un modelo de calidad vigente. El modelo de calidad del proyecto es ISO/IEC
+25010:2023,.
+El proyecto combina auditorías estáticas, pruebas dinámicas, evaluación de atributos de calidad, gestión de
+defectos, automatización, métricas y recomendaciones basadas en evidencia.
+
+Objetivos específicos
+
+Al finalizar el proyecto, la persona estudiante será capaz de:
+     ●    Analizar requerimientos funcionales y no funcionales de un sistema de información.
+     ●    Seleccionar y justificar las características de calidad relevantes para un sistema concreto, usando ISO/IEC
+          25010:2023.
+     ●    Derivar métricas y especificarlas con el formato de ficha de ISO/IEC 25023.
+     ●    Diseñar y ejecutar pruebas estáticas y dinámicas en todos los niveles.
+     ●    Aplicar técnicas de verificación y validación de software.
+     ●    Detectar, documentar y clasificar defectos de software.
+     ●    Automatizar pruebas utilizando herramientas profesionales.
+     ●    Analizar deuda técnica y mantenibilidad con evidencia de herramientas.
+     ●    Elaborar reportes técnicos de calidad y formular recomendaciones basadas en evidencia.
+     ●    Emitir una recomendación de liberación defendible ante una contraparte.
+
+Selección del sistema a auditar
+
+Cada equipo auditará un Proyecto del que tengan acceso a
+     -    Código fuente
+     -    Documentación
+     -    Requisitos funcionales y no funcionales
+
+
+Ficha de identificación del sistema
+El informe debe abrir con estos datos:
+=== PAGINA 2 ===
+ Dato                                                                            Dato
+
+ Nombre y naturaleza de la aplicación                                            Tecnologías utilizadas
+
+ Población meta                                                                  URL o forma de acceso al ambiente de pruebas
+
+ Curso y equipo de origen del sistema                                            Perfiles de persona usuaria disponibles
+
+ Cantidad total de requerimientos funcionales                                    Cantidad total de requerimientos no funcionales
+
+
+
+Alcance
+
+Cada equipo definirá explícitamente, y justificará por riesgo, lo siguiente:
+
+ Lo que incluye                                                                  Lo que excluye
+
+ Módulos auditados                                                               Módulos no evaluados
+
+ Funcionalidades evaluadas                                                       Servicios de terceros
+
+ Interfaces incluidas                                                            Infraestructura externa
+
+ APIs incluidas                                                                  Sistemas externos integrados
+La exclusión se justifica, no se enumera. Para cada módulo que dejen fuera, digan por qué el riesgo de no probarlo
+es aceptable. «No nos dio tiempo» no es una justificación técnica; «este módulo es de solo lectura, no tiene reglas
+de negocio y su falla no produce pérdida de datos» sí lo es.
+
+Marco de calidad: ISO/IEC 25010:2023
+
+Esta sección es el eje del proyecto. Todo lo demás —las pruebas, las métricas, los defectos, el informe— se organiza
+a partir de aquí.
+
+Las nueve características del modelo de producto
+La segunda edición de la norma (2023) define nueve características. Respecto de la edición 2011 que aparece en
+muchos materiales: Usabilidad pasó a llamarse Capacidad de interacción, Portabilidad pasó a llamarse Flexibilidad y
+absorbió la escalabilidad y la capacidad de ser probado, y se incorporó Protección (Safety).
+
+ Característica                            Subcaracterísticas
+
+ 1. Adecuación funcional                   Completitud, corrección y pertinencia funcional
+
+ 2. Eficiencia de desempeño                Comportamiento temporal, capacidad, utilización de recursos
+
+ 3. Compatibilidad                         Coexistencia, interoperabilidad
+
+ 4. Capacidad de interacción               Reconocibilidad, aprendizaje, operabilidad, protección ante errores de la persona usuaria,
+                                           compromiso, inclusividad, asistencia, autodescripción
+
+ 5. Fiabilidad                             Ausencia de fallos, tolerancia a fallos, disponibilidad, recuperabilidad
+
+ 6. Seguridad                              Confidencialidad, integridad, no repudio, responsabilidad, autenticidad, resistencia
+
+ 7. Mantenibilidad                         Modularidad, reusabilidad, analizabilidad, modificabilidad
+
+ 8. Flexibilidad                           Capacidad de ser probado, adaptabilidad, escalabilidad, instalabilidad, reemplazabilidad
+
+ 9. Protección (Safety)                    Restricciones operacionales, identificación de riesgos, falla segura, advertencia de peligro, integración
+                                           segura
+=== PAGINA 3 ===
+Qué debe hacer el equipo con el modelo
+ 1.  Seleccionar al menos cinco características de las nueve, de las cuales tres son obligatorias: Adecuación
+      funcional, Mantenibilidad y Seguridad. Las otras dos las elige el equipo.
+ 2.  Justificar la selección y la prioridad en función de lo que su sistema hace y de a quién afectaría una falla. Un
+      sistema de matrícula y un juego no priorizan lo mismo.
+ 3.  Justificar también lo que dejan fuera: por cada característica no seleccionada, una línea diciendo por qué no es
+      relevante para este sistema.
+ 4.  Derivar las métricas: por cada característica, un objetivo con la plantilla de Basili, de dos a cuatro preguntas, y
+      las métricas que las responden.
+ 5.  Especificar cada métrica con la ficha de ISO/IEC 25023                         , cuyo formato se detalla más adelante.
+
+La tabla que conecta el modelo con las pruebas
+Esta es la razón por la que el proyecto exige todos los tipos de prueba: cada característica solo se puede evidenciar
+con un tipo distinto. No se trata de hacer muchas pruebas porque sí, sino de que ninguna sola técnica alcanza para
+hablar de la calidad del sistema.
+
+ Característica                  La pregunta que responde              Cómo se evidencia                                 Ejemplo de métrica
+
+ Adecuación funcional            ¿Hace lo que debe hacer?              Pruebas funcionales, de sistema y de              % de requerimientos con al menos un
+                                                                       aceptación                                        caso aprobado
+
+ Eficiencia de desempeño         ¿Responde a tiempo y con qué          Pruebas de rendimiento y de carga                 Tiempo de respuesta en el percentil 95
+                                 recursos?                                                                               con N personas concurrentes
+
+ Compatibilidad                  ¿Convive e intercambia bien           Pruebas de integración, validación de             % de respuestas conformes al
+                                 con lo demás?                         contratos, varios navegadores                     esquema acordado
+
+ Capacidad de                    ¿La persona usuaria logra su          Pruebas de usabilidad con personas y              Tasa de éxito de tarea;
+ interacción                     objetivo?                             revisión de accesibilidad                         incumplimientos WCAG 2.2 nivel AA
+
+ Fiabilidad                      ¿Se mantiene funcionando y se         Pruebas de sistema con fallos inducidos y         Fallos por cada 100 ejecuciones;
+                                 recupera?                             de recuperación                                   tiempo de recuperación
+
+ Seguridad                       ¿Protege la información?              Pruebas de seguridad sobre el sistema             Hallazgos por severidad; % de
+                                                                       propio                                            controles de acceso verificados
+
+ Mantenibilidad                  ¿Se puede cambiar sin                 Pruebas estáticas: revisión de código y           Complejidad ciclomática; razón de
+                                 romperlo?                             análisis automatizado                             deuda técnica; duplicación
+
+ Flexibilidad                    ¿Se adapta, escala y se instala?      Pruebas de instalación limpia, de                 Tiempo de instalación desde cero;
+                                                                       escalabilidad y de portabilidad                   degradación al doblar la carga
+
+ Protección (Safety)             ¿Evita daños a personas,              Análisis de riesgos más casos de condición        % de condiciones peligrosas
+                                 bienes o datos?                       peligrosa                                         identificadas con salvaguarda
+                                                                                                                         verificada
+
+Plan general de calidad
+
+Cada equipo elaborará un plan que incluya, como mínimo:
+
+ Elemento                                                                            Elemento
+
+ Objetivos de calidad, ligados a las características seleccionadas                   Recursos necesarios
+
+ Estrategia de pruebas                                                               Cronograma
+
+ Tipos y niveles de prueba                                                           Roles y responsabilidades
+
+ Riesgos identificados y su priorización                                             Herramientas
+
+ Métricas e indicadores                                                              Estrategia de automatización
+
+ Criterios de entrada                                                                Criterios de salida y de aceptación
+=== PAGINA 4 ===
+Tipos de prueba a realizar
+
+A · Pruebas estáticas
+Se ejecutan sin correr el sistema. Son las que sostienen Mantenibilidad y buena parte de Adecuación funcional.
+
+ Actividad                               Qué se revisa                                                          Evidencia esperada
+
+ Revisión de requerimientos              Ambigüedad, completitud, consistencia, trazabilidad,                   Acta de la revisión con los hallazgos clasificados, y
+                                         correctitud, verificabilidad. Use las características de               los requerimientos reescritos
+                                         ISO/IEC/IEEE 29148:2018 vistas en clase
+
+ Revisión de código                      Legibilidad, modularidad, duplicación, complejidad,                    Lista de hallazgos con archivo y línea; al menos
+                                         convenciones, código muerto                                            una inspección formal con roles
+
+ Evaluación de mantenibilidad            Acoplamiento, cohesión, complejidad ciclomática,                       Reporte de la herramienta más interpretación
+                                         reutilización, facilidad de modificación                               propia
+
+ Evaluación de deuda técnica             Código duplicado, código muerto, vulnerabilidades, smells,             Reporte con la deuda estimada y una propuesta
+                                         dependencias obsoletas                                                 priorizada de pago
+
+
+
+B · Pruebas dinámicas por nivel
+
+ Nivel                       Qué se prueba                                                                        Contra qué se compara
+
+ Unitarias                   Funciones y clases aisladas, con dobles de prueba                                    El diseño detallado
+
+ Integración                 La colaboración entre componentes: servicio ↔ base de datos,                         La arquitectura y los contratos
+                             API ↔ API, servicio ↔ cola
+
+ Sistema                     La aplicación completa por su interfaz real                                          Los requerimientos del sistema
+
+ Aceptación (UAT)            La aptitud para el uso real                                                          Los procesos y las necesidades de quien lo
+                                                                                                                  va a usar
+
+
+
+C · Pruebas dinámicas por tipo
+
+ Tipo                               Qué se verifica                                                                  Herramientas sugeridas
+
+ Funcionales                        Que cada requerimiento funcional se cumpla, incluidos los caminos                Selenium, Playwright, Cypress, Postman
+                                    de error y las fronteras
+
+ Rendimiento y carga                Tiempo de respuesta, concurrencia, uso de recursos, throughput,                  JMeter, k6
+                                    comportamiento al degradarse
+
+ Seguridad                          Control de acceso, inyección SQL, XSS, manejo de contraseñas y                   OWASP ZAP, pruebas manuales dirigidas. Lea
+                                    sesiones                                                                         antes las reglas de seguridad
+
+ Usabilidad y accesibilidad         Facilidad de uso, navegación, experiencia, y conformidad con WCAG                Prueba con personas usuarias, axe DevTools,
+                                    2.2 nivel AA                                                                     Lighthouse
+
+Cobertura mínima obligatoria
+
+Estos son mínimos por equipo
+
+
+ Rubro                                                                Mínimo por equipo
+
+ Características de ISO/IEC 25010:2023 evaluadas                      5 de 9 (obligatorias: Adecuación funcional, Mantenibilidad, Seguridad)
+
+ Métricas especificadas con ficha completa                            1 por característica seleccionada (mínimo 5)
+=== PAGINA 5 ===
+ Rubro                                                            Mínimo por equipo
+
+ Requerimientos funcionales cubiertos                             2 por integrante de grupo
+
+ Requerimientos no funcionales cubiertos                          1 por integrante de grupo
+
+ Casos de prueba documentados                                     funcionales de camino feliz,  negativos o de error, y de frontera o no funcionales
+
+ Pruebas unitarias                                                con reporte de cobertura de código
+
+ Pruebas de integración                                           verificando el efecto de lado y no solo la respuesta
+
+ Pruebas de sistema automatizadas de punta a punta
+
+ Escenarios de aceptación con personas usuarias reales            3 escenarios, con al menos 2 personas externas al equipo
+
+ Escenarios de rendimiento                                        2, con carga creciente y umbral declarado de antemano
+
+ Verificaciones de seguridad                                      6, sobre el sistema propio y en ambiente de pruebas
+
+ Usabilidad y accesibilidad                                       1 prueba con 3 personas más revisión WCAG 2.2 AA de 3 pantallas
+
+ Casos automatizados
+
+ Defectos                                                         Todos los encontrados, registrados formalmente
+
+Diseño de métricas y criterios de aceptación
+
+Las métricas no se escogen de una lista: se derivan de un objetivo. Use GQM y después especifique cada métrica
+con la ficha de ISO/IEC 25023.
+
+Ficha obligatoria por métrica
+
+ Campo                                                                            Campo
+
+ Característica de ISO/IEC 25010:2023 que mide                                    Método de recolección
+
+ Objetivo de la métrica (pregunta GQM que responde)                               Frecuencia de medición
+
+ Fórmula                                                                          Justificación de por qué esta métrica y no otra
+
+ Unidad de medida y escala                                                        Umbral de aceptación total, parcial y rechazo
+
+ Herramienta de medición                                                          Decisión que cambia según el resultado
+
+ Umbral de aceptación
+
+
+
+Casos de prueba
+
+Los casos deben alinearse con las características de calidad seleccionadas e incluir el escenario y el resultado
+esperado.
+
+Formato obligatorio
+
+ Campo                                                 Campo                                                  Campo
+
+ ID                                                    Prioridad                                              Resultado esperado
+
+ Nombre                                                Característica 25010 que evidencia                     Resultado obtenido
+
+ Objetivo                                              Precondiciones                                         Estado
+
+ Requerimiento asociado                                Datos de prueba                                        Evidencia
+=== PAGINA 6 ===
+ Campo                                             Campo                                              Campo
+
+ Tipo y nivel de prueba                            Pasos, o nombre de la prueba                       Responsable
+                                                   automatizada
+
+Dos campos se agregan respecto del formato anterior: Característica 25010, que es lo que permite agrupar los
+resultados por atributo de calidad, y Responsable, que es lo que permite evaluar el aporte individual.
+
+Aporte individual
+El proyecto es en equipo y se entrega como uno solo. Además, cada integrante responde por al menos dos
+requerimientos funcionales y uno no funcional, con sus casos de prueba de todos los niveles y tipos que
+correspondan, identificados con su nombre en la columna Responsable de la matriz de trazabilidad. Esa columna es
+la base de la nota individual.
+El resultado esperado se escribe antes de ejecutar. Si se llena después de ver qué hizo el sistema, dejó de ser una
+prueba y pasó a ser una descripción del comportamiento, errores incluidos.
+
+Matriz de trazabilidad
+
+Una sola tabla debe permitir recorrer el proyecto de punta a punta, en los dos sentidos:
+
+ Columna                                         Para qué sirve
+
+ Requerimiento                                   El origen. Todo caso nace de aquí
+
+ Característica de ISO/IEC 25010:2023            Permite reportar resultados por atributo de calidad, no solo por requerimiento
+
+ Caso de prueba                                  El identificador del caso
+
+ Tipo y nivel de prueba                          Para verificar que se cubrieron todos los tipos exigidos
+
+ Prueba automatizada                             Nombre de la función, cuando el caso esté automatizado
+
+ Resultado                                       Aprobado, fallido, bloqueado o no ejecutado
+
+ Defecto                                         El identificador del defecto, cuando aplique
+
+ Responsable                                     Quién del equipo diseñó y ejecutó el caso
+Con esta matriz se debe poder responder en un minuto: ¿qué requerimientos no tienen ninguna prueba? ¿Qué
+características de calidad quedaron sin evidencia? ¿Qué defectos afectan al mismo requerimiento?
+
+Gestión de defectos
+
+Cada defecto se registra formalmente con: ID, título, descripción, severidad, prioridad, pasos para reproducir,
+resultado esperado, resultado actual, evidencia, estado, responsable, y el caso de prueba que lo encontró.
+
+                      Qué mide                                                                            Quién la decide
+
+ Severidad            Cuánto daño causa el defecto al sistema o a quien lo usa                            Quien prueba
+
+ Prioridad            Qué tan pronto hay que corregirlo                                                   Quien decide sobre el producto
+Que no coincidan en alguna fila no es un error: es señal de que se pensaron por separado. Un defecto sin pasos
+para reproducir no es un reporte, es una queja.
+
+Automatización
+
+La estrategia de automatización debe declarar explícitamente qué se automatiza y qué no, y por qué.
+=== PAGINA 7 ===
+ Pregunta                                        Qué se espera que respondan
+
+ ¿Qué se automatizó?                             Los casos que se van a repetir muchas veces: regresión, caminos críticos, validaciones de datos
+
+ ¿Qué quedó manual y por qué?                    Usabilidad, exploración y lo que se ejecuta una sola vez. Automatizar eso cuesta más de lo que
+                                                 ahorra
+
+ ¿Cómo se ejecuta la suite?                      Un único comando documentado. Si solo corre en la máquina de una persona, no sirve
+
+ ¿Qué evidencia produce?                         Un informe por corrida, y captura o traza de cada fallo
+
+ ¿Corre en integración continua?                 No es obligatorio, pero suma. Si lo hacen, incluyan el archivo de configuración del pipeline
+
+Reglas de seguridad, datos y ética
+
+Pruebas de seguridad y de carga
+1.  Solo sobre el sistema propio del equipo, en un ambiente local o de pruebas levantado por ustedes.
+2.  Nunca contra sistemas de terceros
+
+Datos
+     ●     Datos de prueba sintéticos. Nada de datos personales reales, ni siquiera los de ustedes mismos.
+     ●     Credenciales y llaves no se publican en el repositorio ni en el informe. Use variables de entorno y un
+           archivo de ejemplo sin valores reales.
+
+Herramientas
+
+Indiquen las herramientas automatizadas y manuales que van a usar, y por qué cada una. Esta lista es orientativa,
+no obligatoria.
+
+ Para qué                                              Opciones
+
+ Análisis estático y deuda técnica                     SonarQube o SonarCloud, ESLint, Pylint, Ruff, Checkstyle
+
+ Pruebas unitarias                                     JUnit 5, pytest, Jest o Vitest, xUnit.net, según el lenguaje
+
+ Pruebas de integración                                Testcontainers, pytest con la base real, WireMock para servicios externos
+
+ Pruebas de sistema de punta a punta                   Selenium, Playwright, Cypress
+
+ Pruebas de API                                        Postman y Newman, pytest con requests, RestAssured
+
+ Rendimiento y carga                                   Apache JMeter, k6
+
+ Seguridad                                             OWASP ZAP en modo pasivo, revisión manual guiada por OWASP Top 10
+
+ Accesibilidad                                         axe DevTools, Lighthouse, revisión manual con teclado
+
+ Cobertura de código                                   La del lenguaje: coverage.py, JaCoCo, Istanbul
+Una advertencia de clasificación: Selenium, Playwright y Cypress son herramientas de interfaz y de punta a punta,
+no de integración. Para probar que su API escribe bien en la base de datos, usarlas es lento y frágil.
+
+Informe final
+
+Debe incluir al menos:
+
+ Sección                                              Sección                                               Sección
+
+ Portada                                              Plan de pruebas                                       Métricas y su interpretación
+
+ Introducción                                         Herramientas utilizadas                               Evaluación de deuda técnica
+
+ Objetivos                                            Casos de prueba                                       Análisis de riesgos
+=== PAGINA 8 ===
+ Sección                                             Sección                                               Sección
+
+ Descripción del sistema                             Matriz de trazabilidad                                Análisis de resultados
+
+ Alcance y justificación                             Gestión de defectos                                   Conclusiones y recomendaciones
+
+ Metodología y modelo de calidad                     Resultados de ejecución                               Anexos y evidencia
+
+Entrega
+
+Fecha de entrega: 30 noviembre

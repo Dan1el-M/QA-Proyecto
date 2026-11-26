@@ -1,0 +1,48 @@
+name: QA auditoría
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    defaults:
+      run:
+        working-directory: Entregables
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '4.0.5'
+          bundler: '4.0.10'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Dependencies
+        env:
+          BUNDLE_GEMFILE: qa/Gemfile
+        run: |
+          bundle install --jobs 4
+          BUNDLE_GEMFILE=qa/unit.Gemfile bundle install --jobs 4
+          npm ci --prefix qa
+          node qa/node_modules/@playwright/test/cli.js install --with-deps chromium
+          python -m pip install -r qa/requirements.txt
+      - name: Suite
+        run: python qa/scripts/run_all.py --no-report
+      - name: Recalculate and regenerate
+        if: always()
+        run: python qa/scripts/finalize.py
+      - name: Preserve evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa-${{ github.run_id }}
+          path: |
+            Entregables/qa/reports/
+            Entregables/docs/
+          retention-days: 30

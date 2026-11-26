@@ -1,0 +1,47 @@
+{
+  "title": "Proceso existente: registro de marcador de grupo",
+  "nodes": [
+    [
+      "f",
+      "Formulario de calendario\nmarcadores de dos equipos",
+      600,
+      115
+    ],
+    [
+      "c",
+      "PartidosGrupoController\nconversión to_i",
+      600,
+      330
+    ],
+    [
+      "p",
+      "Partido#registrar_resultado!\nvalidación y guardado",
+      600,
+      545
+    ],
+    [
+      "s",
+      "after_save\nrecálculo de estadísticas",
+      600,
+      760
+    ]
+  ],
+  "edges": [
+    [
+      "f",
+      "c",
+      "PATCH"
+    ],
+    [
+      "c",
+      "p",
+      "2 marcadores"
+    ],
+    [
+      "p",
+      "s",
+      "si finalizado y fase_grupos"
+    ]
+  ],
+  "source": "calendario.html.erb; partidos_grupo_controller.rb; partido.rb"
+}

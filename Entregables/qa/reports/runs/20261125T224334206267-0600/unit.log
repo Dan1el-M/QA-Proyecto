@@ -1,0 +1,11 @@
+Run options: --seed 64072
+
+# Running:
+
+..................
+
+Finished in 0.002242s, 8029.6205 runs/s, 8475.7106 assertions/s.
+
+18 runs, 19 assertions, 0 failures, 0 errors, 0 skips
+Coverage report generated for Unit Tests to C:/Users/jdmor/OneDrive - Estudiantes ITCR/@TEC/VI Semestre/QA/proyecto/QA-Proyecto/Entregables/qa/reports/runs/20261125T224334206267-0600/coverage-unit.
+Line Coverage: 56.06% (208 / 371)

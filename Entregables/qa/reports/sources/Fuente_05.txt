@@ -1,0 +1,1196 @@
+=== PÁGINA 1 ===
+                                  Instituto Tecnológico de Costa Rica
+
+                                 Campus Tecnológico Central Cartago
+
+                                Escuela de Ingeniería en Computación
+
+
+                                 Laboratorio de pruebas de integración
+
+
+                              Cesar Ricardo Gamboa Naranjo - 2024138712
+
+
+                                Jose Daniel Morera Elizondo - 2024114502
+
+
+
+                            IC6831-Aseguramiento de la calidad del software
+
+
+                                  Prof. Alicia Marcela Salazar Hernandez
+
+
+                                              17 de octubre 2026
+
+
+                                                   II Semestre
+=== PÁGINA 2 ===
+1. Diseño de casos de prueba de integración                                                                        4
+    1.1. Matriz de casos de prueba de integración                                                                  4
+    1.2. Especificación de los casos de prueba                                                                     5
+2. Evidencias de ejecución de las pruebas                                                                          7
+    2.1. TC-01: Consultar catálogo de productos                                                                    7
+    2.2. TC-02: Consultar producto por ID                                                                          8
+    2.3. TC-03: Crear carrito de compra                                                                            9
+    2.4. TC-04: Validar total del carrito                                                                         10
+    2.5. TC-05: Consultar producto inexistente                                                                    11
+    2.6. TC-06: Validar cantidades negativas                                                                      11
+    2.7. TC-07: Enviar datos incompletos                                                                          12
+    2.8. TC-08: Validar tipos de datos incorrectos                                                                13
+    2.9 TC-11: Validación de autenticación simulada                                                               14
+3. Resultados de la ejecución de la colección Postman                                                             15
+4. Automatización de pruebas con Pytest y SQLite en memoria                                                       16
+    4.1. Objetivo                                                                                                 16
+    4.2. Preparación del entorno                                                                                  16
+    4.3. Organización del proyecto                                                                                16
+    4.4. Configuración de SQLite en memoria                                                                       16
+    4.5. Consulta de productos y validación del contrato                                                          17
+    4.6. Inserción y recuperación de productos                                                                    18
+    4.7. Ejecución de las primeras pruebas                                                                        20
+    4.8. Validación de cantidades                                                                                 20
+    4.9. Comprobación del total del carrito                                                                       23
+    4.10. Consulta de un producto inexistente                                                                     25
+    4.11. Medición del tiempo de respuesta                                                                        27
+5. Ejercicios adicionales                                                                                         28
+    5.1. Idempotencia y control de duplicados                                                                     28
+    5.2. Envío de un cuerpo de solicitud inválido                                                                 31
+    5.3. Simulación de un fallo de persistencia                                                                   33
+    5.4. Cierre simulado del flujo                                                                                35
+6. Resultados y métricas                                                                                          38
+    6.1. Ejecución completa                                                                                       38
+    6.2. Resumen de resultados                                                                                    39
+7. Hallazgos y recomendaciones                                                                                    40
+8. Comparación entre Postman y Pytest                                                                             41
+9. Conclusiones                                                                                                   43
+    9.1. Respuestas a las preguntas finales de la guía                                                            43
+=== PÁGINA 3 ===
+
+=== PÁGINA 4 ===
+1. Diseño de casos de prueba de integración
+
+En esta sección se definen los escenarios para evaluar Fake Store API mediante Postman y Pytest. Se
+consideran consultas de productos, operaciones simuladas de carrito, cálculo de totales, validación de
+datos, manejo de errores, persistencia temporal y rendimiento. La matriz y sus especificaciones establecen
+los criterios que servirán para registrar e interpretar los resultados.
+
+1.1. Matriz de casos de prueba de integración
+
+La matriz reúne diez casos de prueba con sus acciones, resultados esperados y tipos de validación. Los
+criterios describen el comportamiento que se evaluará, sin suponer que la API de demostración cumple
+todas las reglas de negocio planteadas.
+
+
+   ID        Caso de prueba             Endpoint / Acción                  Resultado esperado                       Tipo de
+                                                                                                                  validación
+
+
+
+ TC-01      Consultar catálogo       GET /products                  Código 200, lista no vacía y             HTTP y contrato
+            de productos                                            productos con datos válidos.
+
+
+
+ TC-02      Consultar                GET /products/1                Código 200 y producto con ID 1,          HTTP y datos
+            producto por ID                                         nombre y precio válidos.
+
+
+
+ TC-03      Crear carrito de         POST /carts                    Respuesta con identificador de           Integración y
+            compra                                                  carrito y productos enviados.            contrato
+
+
+
+ TC-04      Validar total del        Cálculo de precios y           El monto total coincide con la           Regla de negocio
+            carrito                  cantidades                     suma de precio × cantidad.
+
+
+
+ TC-05      Consultar                GET /products/999999           Se identifica que el producto no         Prueba negativa
+            producto                                                existe y se documenta la
+            inexistente                                             respuesta.
+
+
+
+ TC-06      Validar cantidades       Validación de cantidad         Se identifica la cantidad inválida       Regla de negocio
+            negativas                -2                             y se impide registrarla en SQLite.
+=== PÁGINA 5 ===
+ TC-07      Enviar datos             POST /carts                     Se verifica y documenta la               Prueba negativa
+            incompletos                                              respuesta ante campos faltantes.
+
+
+
+ TC-08      Validar tipos de         Validación de JSON              Se detectan campos con tipos             Contrato y errores
+            datos incorrectos                                        incompatibles con el contrato
+                                                                     esperado.
+
+
+
+ TC-09      Persistir producto       API → SQLite en                 El producto consultado se                Persistencia e
+            en SQLite                memoria                         almacena y recupera                      integración
+                                                                     correctamente.
+
+
+
+
+ TC-10      Medir tiempo de          GET /products                   Se registra el tiempo y se               Rendimiento
+            respuesta                                                compara con el umbral de 1000
+                                                                     ms.
+
+
+                              Tabla 1. Matriz de casos de prueba de integración de Fake Store API.
+1.2. Especificación de los casos de prueba
+
+La siguiente tabla complementa la matriz con los objetivos, datos de entrada, procedimientos y métricas
+correspondientes a cada escenario, para facilitar la ejecución y el seguimiento de las pruebas.
+
+    ID              Objetivo                 Datos de entrada                        Pasos                        Métrica
+
+
+
+ TC-01       Verificar el catálogo                 Ninguno                Ejecutar GET y validar                Cobertura y
+                                                                                     JSON                        aprobación
+
+
+
+ TC-02         Verificar consulta                   ID = 1                 Consultar ID y validar               Aprobación
+                    individual                                                      campos
+
+
+
+ TC-03       Verificar creación de          Usuario, producto y            Enviar POST y validar                Aprobación
+                      carrito                      cantidad                        respuesta
+=== PÁGINA 6 ===
+TC-04       Comprobar cálculo            Precio y cantidad = 2           Calcular y comparar                  Exactitud
+                   del total                                                       total
+
+
+
+TC-05        Evaluar producto                 ID = 999999                Consultar y analizar           Manejo de errores
+                 inexistente                                                    respuesta
+
+
+
+TC-06        Detectar cantidad               Cantidad = -2                 Validar e intentar                 Defectos
+                   inválida                                                     registrar
+
+
+
+TC-07          Evaluar datos               JSON sin campos             Enviar POST y analizar           Manejo de errores
+                incompletos                    requeridos                       respuesta
+
+
+                                        Cantidad = "dos"              Enviar POST y
+TC-08         Validar tipos de          (texto)                       comprobar el tipo de                    Contrato
+                     datos                                            dato
+
+
+
+TC-09      Verificar persistencia           Producto válido              Consultar, insertar y               Integridad
+                                                                                recuperar
+
+
+
+TC-10      Evaluar rendimiento                  Ninguno                 Ejecutar GET y medir               Tiempo en ms
+                                                                                 tiempo
+
+
+
+                               Tabla 2. Especificaciones de los casos de prueba de integración.
+
+
+=== PÁGINA 7 ===
+2. Evidencias de ejecución de las pruebas
+
+Se presentan las evidencias obtenidas en Postman para los casos TC-01 a TC-08, indicando el propósito
+de cada prueba y los resultados observados. Las validaciones fallidas se conservan como hallazgos del
+comportamiento de Fake Store API y no se interpretan como errores de ejecución del laboratorio.
+
+2.1. TC-01: Consultar catálogo de productos
+
+Se ejecutaron cinco validaciones de consulta del catálogo: cuatro aprobadas y una fallida. La API
+respondió 200 OK y entregó datos válidos, pero el tiempo registrado fue de 1052,75 ms, ligeramente
+superior al umbral establecido de 1000 ms.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                           Imagen 1. Resultados de la consulta del catálogo de productos (TC-01).
+=== PÁGINA 8 ===
+2.2. TC-02: Consultar producto por ID
+
+La consulta individual devolvió el producto solicitado con código 200 OK. Las seis validaciones de
+identificación, estructura, precio y tiempo de respuesta finalizaron correctamente.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                Imagen 2. Resultados de la consulta de producto por ID (TC-02).
+=== PÁGINA 9 ===
+2.3. TC-03: Crear carrito de compra
+
+La creación simulada del carrito devolvió 201 Created y los datos del producto y su cantidad. Las seis
+validaciones automáticas fueron aprobadas; la respuesta no garantiza persistencia permanente en el
+servicio de demostración.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                               Imagen 3. Resultados de la creación simulada del carrito (TC-03).
+=== PÁGINA 10 ===
+2.4. TC-04: Validar total del carrito
+
+Las cinco validaciones fueron aprobadas. Se calculó el total de dos unidades a partir del precio consultado
+de 109,95 por unidad, obteniendo 219,90. El total se calculó en Postman, ya que el endpoint utilizado no
+lo devolvía.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 Imagen 4. Resultados del cálculo y validación del total (TC-04).
+=== PÁGINA 11 ===
+2.5. TC-05: Consultar producto inexistente
+
+Al consultar el identificador 999999, la API devolvió 200 OK sin datos de producto. Tres de cuatro
+validaciones fueron aprobadas; falló la comprobación del código 404 esperado para un recurso
+inexistente.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                              Imagen 5. Resultados de la consulta de producto inexistente (TC-05).
+2.6. TC-06: Validar cantidades negativas
+
+Se envió una cantidad de -2 y la API respondió 201 Created. Tres de cinco validaciones aprobaron; dos
+fallaron porque el servicio no rechazó la cantidad inválida, lo que representa un mismo hallazgo de regla
+de negocio.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                              Imagen 6. Resultados de la prueba de cantidades negativas (TC-06).
+
+
+=== PÁGINA 12 ===
+                              Imagen 7. Resultados de la prueba de cantidades negativas (TC-06B).
+2.7. TC-07: Enviar datos incompletos
+
+La solicitud omitió el campo products y recibió 201 Created. Tres de cinco validaciones aprobaron; dos
+fallaron al comprobar el rechazo esperado del carrito incompleto. Ambas fallas describen un mismo
+hallazgo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                Imagen 8. Resultados de la prueba de datos incompletos (TC-07).
+=== PÁGINA 13 ===
+2.8. TC-08: Validar tipos de datos incorrectos
+
+Se envió la cantidad como texto ("dos") y la API respondió 201 Created. Tres de cinco validaciones
+aprobaron; dos fallaron porque la solicitud no fue rechazada, evidenciando una limitación de validación
+de tipos para el escenario definido.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                           Imagen 9 . Resultados de la prueba de tipos de datos incorrectos (TC-08).
+=== PÁGINA 14 ===
+2.9 TC-11: Validación de autenticación simulada
+
+Se realizaron pruebas de autenticación simulada mediante dos solicitudes al endpoint de consulta de
+productos de Fake Store API. La primera solicitud utilizó un token ficticio, mientras que la segunda se
+ejecutó sin autenticación. Ambas devolvieron el código HTTP 200 OK y permitieron consultar
+correctamente la información del producto.
+
+Estos resultados evidencian que el endpoint evaluado permite el acceso público, sin requerir
+autenticación. No obstante, debido a que se utilizó un token simulado, no es posible determinar si la API
+dispone de mecanismos reales de validación de credenciales.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        Imagen 10. Resultados de la prueba de autenticación simulada con token (TC-11).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                           Imagen 11. Resultados de la prueba de consulta sin autenticación (TC-11B).
+
+
+
+
+
+
+=== PÁGINA 15 ===
+3. Resultados de la ejecución de la colección Postman
+
+Se ejecutó la colección de pruebas de integración mediante Collection Runner de Postman, utilizando el
+entorno QA_API_LAB y realizando tres iteraciones completas sobre ocho solicitudes HTTP.
+
+Durante la ejecución se realizaron 123 validaciones automáticas, de las cuales 101 fueron aprobadas y 22
+fallaron, obteniendo un porcentaje de aprobación del 82.11 %. El tiempo promedio de respuesta fue de
+325 ms y no se registraron errores de ejecución.
+
+Las validaciones fallidas estuvieron relacionadas principalmente con los escenarios negativos, en los
+cuales se identificaron limitaciones de Fake Store API respecto al manejo de recursos inexistentes,
+cantidades negativas, datos incompletos y tipos de datos incorrectos. Estos resultados permiten
+documentar posibles deficiencias en la validación de contratos HTTP y reglas de negocio para el
+escenario de compras evaluado.
+
+
+
+
+
+
+
+
+
+                                              Imagen 12. Número de iteraciones.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                           Imagen 13. Resultados en las iteraciones.
+=== PÁGINA 16 ===
+4. Automatización de pruebas con Pytest y SQLite en
+memoria
+
+4.1. Objetivo
+
+Automatizar pruebas de integración que permitan consultar productos de Fake Store API, validar los datos
+recibidos y comprobar su almacenamiento y recuperación mediante SQLite en memoria. Además, evaluar
+escenarios de error y la consistencia de los datos durante el flujo de integración.
+
+4.2. Preparación del entorno
+
+Para desarrollar las pruebas se utiliza Python, Pytest y Requests. La biblioteca SQLite está incluida en
+Python y permite crear una base de datos temporal sin instalar un servidor adicional. El proyecto utiliza
+un entorno virtual para administrar sus dependencias.
+
+
+
+
+
+
+
+Imagen 14. Verificación del entorno de pruebas y disponibilidad de las dependencias.
+
+4.3. Organización del proyecto
+
+El proyecto contiene una carpeta tests para las pruebas automatizadas, una carpeta evidencias para los
+resultados de ejecución y un archivo requirements.txt con las dependencias necesarias.
+
+
+
+
+
+
+
+
+
+
+
+
+Imagen 15. Estructura del proyecto de automatización.
+
+4.4. Configuración de SQLite en memoria
+
+La conexión se configura mediante una fixture de Pytest utilizando sqlite3.connect(":memory:"). Cada
+prueba que solicita esta fixture recibe una base de datos nueva, con una tabla para almacenar los
+productos del carrito. Al finalizar la prueba, la conexión se cierra y los datos temporales se eliminan.
+=== PÁGINA 17 ===
+Imagen 16. Configuración de la base de datos temporal y aislamiento de las pruebas.
+
+4.5. Consulta de productos y validación del contrato
+
+Esta prueba consulta el endpoint /products y verifica que la respuesta tenga estado HTTP 200, contenga
+una lista no vacía y presente los campos esperados. Se comprueban los tipos y las restricciones definidas
+para id, title, price, category e image.
+=== PÁGINA 18 ===
+Imagen 17. Prueba automatizada del contrato de los productos.
+
+4.6. Inserción y recuperación de productos
+
+Esta prueba obtiene un producto desde la API, calcula el total correspondiente a una cantidad determinada
+y lo inserta en SQLite. Posteriormente, consulta el registro almacenado y compara el identificador,
+nombre, precio, cantidad y total con los datos originales.
+=== PÁGINA 19 ===
+Imagen 18. Integración entre la consulta a la API y la persistencia en SQLite.
+=== PÁGINA 20 ===
+4.7. Ejecución de las primeras pruebas
+
+Las pruebas se ejecutan desde la terminal mediante el siguiente comando:
+python -m pytest -v
+
+
+
+
+
+
+
+
+
+
+
+
+Imagen 19.. Resultado de ejecución de las pruebas de contrato y persistencia.
+Las dos pruebas aprobaron y no se registraron fallos. Se verificó que la API devuelve productos con los
+campos y tipos esperados y que un producto puede insertarse y recuperarse correctamente en SQLite en
+memoria, conservando sus datos. Pytest reportó 2 pruebas aprobadas en 2,23 segundos.
+
+4.8. Validación de cantidades
+
+Se evalúa la aceptación de cantidades enteras positivas y el rechazo de cero, cantidades negativas y
+valores de tipo texto. La función guardar_producto() valida la cantidad antes de insertar el producto en
+SQLite y genera una excepción ValueError cuando la entrada no cumple la regla establecida.
+=== PÁGINA 21 ===
+Imagen 20. Validación de la cantidad antes de almacenar el producto.
+
+Las pruebas comprueban que una cantidad válida se almacene correctamente y que las entradas 0, -1,
+"dos" y "2" sean rechazadas. Para cada entrada inválida, se verifica que se produzca la excepción esperada
+y que el carrito permanezca vacío.
+=== PÁGINA 22 ===
+Imagen 21. Pruebas de aceptación de cantidades válidas y rechazo de cantidades inválidas.
+
+Las pruebas de esta sección se ejecutan mediante el siguiente comando:
+
+python -m pytest -v tests/test_api_integration.py -k "cantidad"
+=== PÁGINA 23 ===
+Imagen 22. Resultados de las pruebas automatizadas de cantidades.
+
+Las cinco pruebas aprobaron y no se registraron fallos. Se aceptó y almacenó la cantidad entera positiva
+evaluada, mientras que se rechazaron cero, una cantidad negativa, texto y un número representado como
+texto. En los cuatro casos inválidos se comprobó que no se insertaron registros en el carrito. Los
+resultados verifican la validación implementada en Python y su integración con SQLite en memoria; no
+evalúan el rechazo de cantidades por parte de la API.
+
+
+
+4.9. Comprobación del total del carrito
+
+Se consultan dos productos de la API y se almacenan en SQLite en memoria con cantidades de dos y tres
+unidades, respectivamente. La prueba verifica los precios, las cantidades y los subtotales recuperados.
+Posteriormente, compara la suma de los subtotales almacenados con el total esperado, calculado a partir
+de los datos originales.
+=== PÁGINA 24 ===
+Imagen 23. Prueba automatizada de los subtotales y del total del carrito.
+
+La prueba se ejecuta mediante el siguiente comando:
+=== PÁGINA 25 ===
+python -m pytest -v -s tests/test_api_integration.py::test_total_carrito
+
+
+
+
+
+
+
+
+
+
+Imagen 24. Comparación del total esperado con el total recuperado de SQLite.
+
+La prueba aprobó. Se verificó el almacenamiento de dos productos con sus precios y cantidades
+correspondientes, así como la consistencia de sus subtotales. El total obtenido mediante la consulta a
+SQLite coincidió con el total esperado calculado a partir de los datos de la API.
+
+
+
+4.10. Consulta de un producto inexistente
+
+Se consulta el endpoint /products/999999 para evaluar el manejo de un identificador inexistente. La
+función registra el código HTTP y el contenido recibido y, al detectar que el producto no existe, genera
+una excepción antes de intentar almacenarlo. La prueba comprueba que se produzca la excepción
+esperada y que el carrito permanezca vacío.
+=== PÁGINA 26 ===
+Imagen 25. Consulta del producto y manejo de una respuesta de producto inexistente.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=== PÁGINA 27 ===
+Imagen 26. Verificación de que el producto inexistente no se almacena en SQLite.
+
+La prueba se ejecuta mediante el siguiente comando:
+
+python -m pytest -v -s tests/test_api_integration.py::test_producto_inexistente
+
+
+
+
+
+
+
+
+Imagen 27. Respuesta recibida y resultado de la prueba de producto inexistente.
+
+La API devolvió HTTP 200 con contenido vacío ('') al consultar el producto inexistente. El código
+detectó la ausencia del producto y evitó su inserción en SQLite, donde se verificaron 0 registros en el
+carrito. La prueba aprobó y Pytest reportó 1 prueba aprobada en 1,00 segundo.
+
+
+
+4.11. Medición del tiempo de respuesta
+
+Se mide la duración de una petición GET al endpoint /products mediante perf_counter(), desde el inicio
+de la solicitud hasta la recepción completa de la respuesta. El tiempo se convierte a milisegundos y se
+compara con un umbral de 1000 ms. También se verifica que la respuesta tenga estado HTTP 200.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=== PÁGINA 28 ===
+Imagen 28. Implementación de la medición del tiempo de respuesta.
+
+La prueba se ejecuta mediante el siguiente comando:
+
+python -m pytest -v -s tests/test_api_integration.py::test_tiempo_respuesta
+
+
+
+
+
+
+
+
+
+Imagen 29. Evaluación del tiempo de respuesta de la API.
+
+La petición a /products devolvió HTTP 200 y registró un tiempo de 481,22 ms, por lo que cumplió el
+umbral de 1000 ms. La prueba aprobó. Esta medición corresponde a una única petición bajo las
+condiciones de red y disponibilidad del servicio durante la ejecución.
+
+
+5. Ejercicios adicionales
+
+5.1. Idempotencia y control de duplicados
+
+Se repite el almacenamiento del mismo producto con idénticos datos y cantidad para comprobar que el
+estado del carrito se mantenga sin cambios. Se utiliza una restricción UNIQUE sobre producto_id y una
+operación de inserción con actualización en caso de conflicto.
+
+Regla implementada: Cada producto puede ocupar una sola fila en el carrito. Al guardar nuevamente el
+mismo identificador, se reemplazan sus datos y cantidad. La cantidad recibida representa la cantidad final
+deseada, por lo que no se acumula con la anterior.
+=== PÁGINA 29 ===
+Imagen 30. Implementación del control de duplicados en SQLite.
+=== PÁGINA 30 ===
+Imagen 31. Comparación del estado del carrito antes y después de repetir la operación.
+=== PÁGINA 31 ===
+Imagen 32. Evaluación de la consistencia del carrito ante una operación repetida.
+
+La prueba de idempotencia aprobó. Después del primer almacenamiento y de repetir la operación se
+mantuvo un único registro con una cantidad de dos unidades. La comparación confirmó que los datos del
+carrito permanecieron iguales, sin generar duplicados ni acumular cantidades. Además, la ejecución
+completa reportó 11 pruebas aprobadas, sin fallos ni errores.
+
+La prueba evalúa la idempotencia del almacenamiento local implementado en Python y SQLite.
+
+
+
+5.2. Envío de un cuerpo de solicitud inválido
+
+Se envía una solicitud POST al endpoint /carts con una cantidad de −2 unidades para un producto. La
+solicitud se realiza directamente a la API, sin utilizar la función local de validación, para evaluar cómo
+responde el servicio ante una cantidad inválida.
+
+Como criterio de aceptación de la prueba, se espera el rechazo mediante HTTP 400 o 422. Se registran los
+datos enviados, el código HTTP y el contenido de la respuesta.
+=== PÁGINA 32 ===
+Imagen 33. Solicitud de creación de un carrito con una cantidad negativa.
+
+La prueba se ejecuta mediante el siguiente comando:
+
+python -m pytest -v -s tests/test_api_integration.py::test_body_invalido
+=== PÁGINA 33 ===
+Imagen 34. Respuesta de la API ante un cuerpo de solicitud inválido.
+
+La API respondió con HTTP 201 y devolvió un carrito con identificador 11, conservando la cantidad
+inválida de −2 unidades. La prueba falló porque se esperaba el rechazo mediante HTTP 400 o 422. Esto
+evidencia que, en la solicitud evaluada, el servicio aceptó una cantidad negativa, incumpliendo la regla de
+negocio establecida para el laboratorio. Se recomienda validar las cantidades en el servidor antes de
+aceptar la solicitud. La respuesta recibida no demuestra que el carrito haya quedado almacenado
+permanentemente.
+
+
+
+
+
+5.3. Simulación de un fallo de persistencia
+
+Se simula un escenario en el que la consulta a la API funciona, pero la escritura en SQLite falla. Para
+provocar el fallo se activa PRAGMA query_only = ON, que permite consultar la base de datos e impide
+modificarla.
+
+La función procesar_producto() consulta un producto e intenta almacenarlo. Si SQLite genera una
+excepción OperationalError, la función revierte la transacción y devuelve un resultado de error. La prueba
+verifica que la operación no se anuncie como exitosa y que el carrito permanezca vacío.
+=== PÁGINA 34 ===
+Imagen 35. Gestión del error durante el almacenamiento del producto.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Imagen 36. Simulación del fallo de escritura y comprobación del estado del carrito.
+
+La prueba se ejecuta mediante el siguiente comando:
+
+python -m pytest -v -s tests/test_api_integration.py::test_fallo_persistencia
+=== PÁGINA 35 ===
+Imagen 37. Manejo de un fallo de persistencia durante el flujo de integración.
+
+La consulta a la API se realizó correctamente, pero SQLite rechazó la escritura con el error attempt to
+write a readonly database. El código capturó la excepción, informó «No se pudo almacenar el producto» y
+devolvió exito: False. Se verificó que quedaron 0 registros almacenados, por lo que el flujo no anunció
+una operación exitosa. La prueba aprobó y Pytest reportó 1 prueba aprobada en 1,28 segundos.
+
+
+
+
+
+5.4. Cierre simulado del flujo
+
+Se evalúa el cierre local del carrito después de consultar productos de la API y almacenarlos en SQLite en
+memoria. Antes de confirmar, se comprueba que el carrito no esté vacío y que sus identificadores,
+cantidades, precios y subtotales cumplan las validaciones implementadas.
+
+Para un carrito válido, se almacena una constancia en la tabla confirmaciones con el número de productos
+distintos, el total y el estado CONFIRMADO_SIMULADO. Esta operación representa una confirmación
+local y no realiza un pago real ni confirma una compra en la API.
+=== PÁGINA 36 ===
+Imagen 38. Validación del carrito y almacenamiento de la confirmación simulada.
+
+Las pruebas verifican que un carrito con dos productos genere una confirmación con el total esperado y
+que un carrito vacío sea rechazado sin generar una confirmación.
+=== PÁGINA 37 ===
+
+=== PÁGINA 38 ===
+Imagen 39. Pruebas de cierre de un carrito válido y rechazo de un carrito vacío.
+
+Las pruebas se ejecutan mediante el siguiente comando:
+
+python -m pytest -v -s tests/test_api_integration.py -k "cierre_simulado"
+
+
+
+
+
+
+
+
+
+
+
+
+Imagen 40. Verificación del cierre simulado del carrito.
+
+Las dos pruebas seleccionadas aprobaron. El carrito válido generó la confirmación local 1, con dos
+productos distintos, un total de 286,80 y el estado CONFIRMADO_SIMULADO. El carrito vacío fue
+rechazado sin generar una confirmación. El cierre se realizó únicamente en SQLite en memoria y no se
+efectuó ningún pago real.
+
+
+
+
+6. Resultados y métricas
+
+6.1. Ejecución completa
+
+Para conservar los resultados de la ejecución se utiliza el siguiente comando:
+
+python -m pytest -v --junitxml=evidencias/pytest-results.xml
+=== PÁGINA 39 ===
+Imagen 41. Resultado general de las pruebas automatizadas.
+
+Se ejecutaron 15 casos de prueba: 14 aprobaron y uno falló, obteniendo un 93,33 % de aprobación. La
+ejecución completa duró 7,11 segundos y generó el reporte evidencias/pytest-results.xml.
+
+El caso fallido corresponde al envío de una cantidad negativa: la API respondió HTTP 201 y conservó el
+valor −2, cuando el criterio establecido esperaba su rechazo mediante HTTP 400 o 422. Las pruebas de
+persistencia, cantidades locales, totales, producto inexistente, idempotencia, manejo del fallo de escritura
+y cierre simulado aprobaron. La petición evaluada para rendimiento registró 465,84 ms, cumpliendo el
+umbral de 1000 ms.
+
+
+
+6.2. Resumen de resultados
+
+La ejecución completa incluyó 15 casos de prueba y registró 10 peticiones HTTP. Se obtuvieron 14 casos
+aprobados y uno fallido, sin errores de ejecución ni de conexión. Los resultados se conservaron en el
+archivo evidencias/pytest-results.xml.
+
+
+
+ Indicador                                                Resultado
+
+ Casos ejecutados                                         15
+=== PÁGINA 40 ===
+ Casos aprobados                                         14
+
+ Casos fallidos                                          1
+
+ Casos con error de ejecución                            0
+
+ Casos omitidos                                          0
+
+ Porcentaje de casos aprobados                           93,33 %
+
+ Peticiones HTTP realizadas                              10
+
+ Tiempo promedio general de las peticiones               689,59 ms
+
+
+ Defectos detectados por un caso fallido de              1: aceptación de cantidades negativas
+ Pytest
+
+ Cobertura de las operaciones HTTP                       100 %: 3 de 3
+ definidas para esta suite
+
+ Validaciones por endpoint                               No contabilizadas por el registro de métricas;
+                                                         requieren revisión del código
+
+ Tasa de respuestas HTTP inesperadas                     0 %: ninguna en 10 peticiones
+ 4xx/5xx
+
+ Errores de conexión                                     0
+
+ Duración total de Pytest                                7,11 s
+
+Tiempos promedio por endpoint
+
+ Operación HTTP                Peticiones          Tiempo promedio                Estados recibidos
+
+ GET /products                 8                   654,51 ms                      200
+
+ GET /products/{id}            1                   834,01 ms                      200
+
+ POST /carts                   1                   825,73 ms                      201
+
+El porcentaje de aprobación se calculó mediante 14 ÷ 15 × 100 = 93,33 %. Los tres promedios por
+endpoint estuvieron por debajo del umbral de referencia de 1000 ms. Estos resultados describen
+únicamente la ejecución observada y no garantizan un rendimiento estable en otras condiciones.
+La cobertura del 100 % indica que se ejecutaron las tres operaciones HTTP definidas para esta suite. No
+representa cobertura de toda la API ni de todos los escenarios posibles. En particular, la consulta por
+identificador evaluó un producto inexistente y el POST evaluó una cantidad negativa.
+
+Aunque no se recibieron respuestas HTTP 4xx/5xx, se detectó un incumplimiento funcional: el servicio
+aceptó una cantidad de −2 mediante HTTP 201. Por ello, una tasa de errores HTTP del 0 % no implica
+=== PÁGINA 41 ===
+ausencia de defectos. El fallo de escritura en SQLite fue provocado deliberadamente y su manejo correcto
+permitió que esa prueba aprobara.
+
+
+
+
+
+ 7. Hallazgos y recomendaciones
+
+Durante las pruebas con Postman y Pytest se documentaron cuatro hallazgos de la API: aceptación de
+cantidades negativas, respuesta ambigua para un producto inexistente, aceptación de datos incompletos y
+aceptación de cantidades de tipo texto. Las severidades propuestas consideran su impacto potencial en un
+sistema real. Los comportamientos detectados en ambas herramientas se registran una sola vez.
+
+
+
+ ID          Hallazgo         Evidencia                         Impacto             Severidad            Recomendación
+             observado                                                              propuesta
+
+ H-01        La API           Secciones 5.2 y 6.1.              En un sistema       Media:               Validar en el
+             aceptó un        Prueba                            real, aceptar       incumplimient        servidor que
+             carrito con      test_body_invalido,               cantidades          o de la regla        cada cantidad
+             una              reportada como fallida.           negativas           de cantidades        sea un entero
+             cantidad                                           podría generar      positivas, sin       positivo y
+             de −2                                              inconsistencia      evidencia de         rechazar los
+             unidades,                                          s en los            efectos sobre        valores inválidos
+             respondió                                          totales,            pagos o              mediante HTTP
+             HTTP 201                                           inventarios y       inventario           400 o 422,
+             y devolvió                                         pedidos. La         real.                acompañados de
+             el valor                                           respuesta no                             un mensaje
+             negativo                                           demuestra                                descriptivo.
+             en el                                              persistencia
+             cuerpo de                                          permanente.
+             la
+             respuesta.
+=== PÁGINA 42 ===
+ H-02        La               Sección 4.10. Prueba               El cliente debe      Baja:                Comunicar la
+             consulta al      test_producto_inexistente          comprobar el         oportunidad          ausencia del
+             producto         ; respuesta HTTP 200,              contenido            de mejora en         recurso
+             inexistente      contenido '' y cero                además del           la claridad de       mediante HTTP
+             /products/9      registros en el carrito.           estado HTTP          la respuesta;        404 y una
+             99999                                               para detectar        el flujo local       respuesta JSON
+             devolvió                                            la ausencia del      evitó                descriptiva.
+             HTTP 200                                            producto y           almacenar            Mantener en el
+             con                                                 evitar errores       datos                cliente la
+             contenido                                           al interpretar       inválidos.           comprobación
+             vacío.                                              la respuesta.                             del contenido
+                                                                 El código                                 antes de
+                                                                 local gestionó                            procesarlo.
+                                                                 este escenario
+                                                                 correctamente.
+
+Las validaciones locales rechazaron las cantidades inválidas y evitaron duplicados al repetir el
+almacenamiento. También se gestionó correctamente el fallo de escritura provocado mediante el modo de
+solo lectura de SQLite, sin informar éxito ni almacenar registros. Este fallo fue inducido para comprobar
+el manejo de errores y no constituye un defecto encontrado en la API.
+
+Durante el desarrollo se corrigió una coma duplicada en la sentencia de creación de la tabla. El problema
+afectaba la preparación de las pruebas y quedó resuelto antes de la ejecución final, que reportó 14 casos
+aprobados y uno fallido.
+8. Comparación entre Postman y Pytest
+
+Postman facilitó la exploración de solicitudes HTTP, el uso de variables dinámicas y la revisión visual de
+respuestas. Pytest permitió automatizar el flujo con código Python, integrar las consultas con SQLite en
+memoria y comprobar escenarios locales de persistencia y manejo de errores.
+
+ Aspecto                         Postman                                         Pytest
+
+ Preparación de                  Interfaz gráfica, variables de                  Código Python mediante
+ solicitudes                     ambiente y scripts.                             Requests.
+
+ Comprobaciones                  Aserciones en JavaScript sobre                  Aserciones en Python,
+                                 respuestas y variables.                         excepciones esperadas y
+                                                                                 consultas SQL.
+
+ Persistencia utilizada          Variables de ambiente para reutilizar           SQLite en memoria, con una
+ en este laboratorio             datos. La creación del carrito fue              base nueva por prueba que utiliza
+                                 simulada y no demostró persistencia             la fixture.
+                                 permanente.
+=== PÁGINA 43 ===
+ Evidencias                      Capturas y resultados del Collection            Capturas de terminal y reporte
+                                 Runner.                                         JUnit XML.
+
+ Resultados obtenidos            La ejecución documentada de tres                La ejecución final registró 14
+                                 iteraciones sobre ocho solicitudes              casos aprobados y uno fallido:
+                                 registró 101 validaciones aprobadas             93,33 % de aprobación de casos.
+                                 y 22 fallidas: 82,11 % de aprobación
+                                 de validaciones.
+
+
+ Ventajas observadas             Permite explorar endpoints y revisar            Permite comprobar datos
+                                 rápidamente solicitudes, respuestas             almacenados, parametrizar
+                                 y escenarios negativos.                         entradas y simular fallos de
+                                                                                 persistencia de forma repetible.
+
+
+ Limitaciones                    La ejecución documentada                        Las pruebas que consultan la API
+ observadas                      corresponde a una versión de ocho               dependen de la conexión y
+                                 solicitudes; la colección entregada             disponibilidad del servicio. El
+                                 contiene once.                                  código y las dependencias
+                                                                                 requieren mantenimiento.
+
+
+ Cuándo utilizarlo               Durante la exploración de una API y             Para ejecutar regresiones y
+                                 la revisión interactiva de su                   verificar flujos que incluyen
+                                 comportamiento.                                 lógica local y bases de datos.
+
+
+Los porcentajes de ambas herramientas no son directamente comparables: Postman contabiliza
+validaciones individuales y Pytest contabiliza casos, cada uno con varias comprobaciones. Las
+herramientas se complementan; Postman facilita explorar el servicio y Pytest permite ampliar las
+comprobaciones hacia la integración con la persistencia local.
+9. Conclusiones
+
+Con este laboratorio pudimos comprobar que probar una API no consiste solamente en revisar que
+devuelva un código HTTP exitoso, sino también en verificar los datos y cómo se utilizan durante el flujo.
+Con Postman exploramos las solicitudes y sus respuestas, mientras que con Pytest automatizamos las
+consultas, el almacenamiento en SQLite y las comprobaciones del carrito. En la ejecución final aprobaron
+14 de las 15 pruebas, para un 93,33 % de aprobación. La prueba fallida permitió identificar que la API
+aceptaba cantidades negativas, aunque respondía con HTTP 201. Esto demuestra que algunos problemas
+podrían pasar desapercibidos si solo revisamos la interfaz gráfica o los códigos de respuesta.
+
+También comprobamos que los productos se almacenaban y recuperaban correctamente, que el total del
+carrito coincidía con lo esperado y que repetir el almacenamiento no generaba duplicados. Al provocar un
+fallo de escritura, el código informó el error sin anunciar una operación exitosa. La automatización nos
+permitió repetir estas comprobaciones y conservar evidencia de los resultados. Aun así, trabajamos con
+=== PÁGINA 44 ===
+una API de demostración, una base temporal y un cierre simulado sin pagos reales. Para llevar este flujo a
+producción, ampliaríamos las pruebas de seguridad, rendimiento y manejo de errores, especialmente ante
+solicitudes repetidas o fallos de un proveedor de pagos, por el riesgo de generar cobros duplicados o
+pedidos inconsistentes.
+
+
+
+9.1. Respuestas a las preguntas finales de la guía
+
+¿Qué diferencia observó entre una prueba de API aislada y una prueba de integración?
+Una prueba aislada comprueba una solicitud y su respuesta, por ejemplo, el código HTTP y los campos de
+un producto. Una prueba de integración verifica la interacción entre componentes. En este laboratorio se
+consultó la API, se almacenaron sus datos en SQLite y se recuperaron para comprobar su consistencia. El
+fallo de escritura simulado demostró que una respuesta correcta de la API no garantiza que todo el flujo
+termine correctamente.
+
+¿Qué defectos podrían pasar desapercibidos si solo se prueba la interfaz gráfica?
+Podrían pasar desapercibidos la aceptación de cantidades negativas mediante solicitudes directas, los tipos
+de datos incorrectos, las respuestas ambiguas para recursos inexistentes y los problemas de persistencia.
+Una interfaz puede impedir ciertas entradas, mientras que la API continúa aceptándolas cuando se
+consulta directamente.
+
+¿Qué validaciones fueron más importantes: estado HTTP, contrato JSON, reglas de negocio o
+persistencia? Justifique.
+
+Las reglas de negocio y la persistencia fueron especialmente importantes para evaluar el flujo completo.
+La API respondió HTTP 201 ante una cantidad negativa, por lo que un código de éxito no garantizó datos
+válidos. Asimismo, las consultas posteriores a SQLite permitieron comprobar el almacenamiento real
+dentro de la prueba. El estado HTTP y el contrato JSON siguen siendo necesarios para interpretar la
+respuesta y procesarla correctamente.
+¿Qué riesgos tendría integrar un proveedor externo de pagos sin pruebas automatizadas?
+
+Podrían producirse cobros duplicados al repetir solicitudes, montos incorrectos, estados de pago mal
+interpretados o diferencias entre el pago y el pedido registrado. También sería más difícil detectar
+cambios del proveedor y comprobar el comportamiento ante interrupciones. Estos riesgos no se evaluaron
+con pagos reales en este laboratorio, pero justifican probar la integración en un ambiente de pruebas antes
+de utilizarla en producción.
+
+¿Qué mejoraría en su estrategia de pruebas si este proyecto fuera para producción?
+Incorporaría pruebas automáticas en el proceso de integración continua, ambientes controlados y
+simulaciones del proveedor para escenarios de error. Ampliaría la evaluación de autenticación,
+autorización, concurrencia, límites e idempotencia. Para importes monetarios utilizaría decimales o
+unidades mínimas enteras. También definiría el inventario completo de endpoints y realizaría mediciones
+=== PÁGINA 45 ===
+repetidas de rendimiento, complementadas con pruebas de carga y seguimiento de los defectos
+encontrados.
+
+

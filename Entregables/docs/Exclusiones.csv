@@ -1,0 +1,5 @@
+﻿elemento,motivo,riesgo_residual,impacto,aceptacion
+Infraestructura pública y despliegue de producción,No existe ambiente de producción autorizado,Configuración de hosting sin evaluar,No extrapolar seguridad o capacidad del equipo local,El objeto es la versión local; no se recomienda producción sin revisión propia
+"CDN de estilos,Google Fonts y servicios de terceros",No son sistemas propios; las cargas y escaneos están restringidos a loopback,Disponibilidad y presentación dependientes de red,La presentación puede variar sin conectividad,Evaluar dependencia por inspección; no ejecutar ataques ni carga externa
+Contraseñas y roles existentes,No se encontraron modelos de identidad ni login,Escritura abierta en instancia compartida,La falta de autenticación requiere decisión de producto,No se añade identidad; SEG-003 prueba el criterio de seguridad derivado
+Conformidad completa de navegadores e infraestructura,La muestra E2E es Chromium local y no existe contrato de interoperabilidad,Diferencias en otros navegadores,No generalizar la compatibilidad,Se prioriza integridad; integración e instalación permanecen incluidas

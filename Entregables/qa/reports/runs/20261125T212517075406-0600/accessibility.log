@@ -1,0 +1,14 @@
+browserType.launch: Executable doesn't exist at C:\Users\jdmor\AppData\Local\ms-playwright\chromium_headless_shell-1255\chrome-headless-shell-win64\chrome-headless-shell.exe
+╔════════════════════════════════════════════════════════════╗
+║ Looks like Playwright was just installed or updated.       ║
+║ Please run the following command to download new browsers: ║
+║                                                            ║
+║     npx playwright install                                 ║
+║                                                            ║
+║ <3 Playwright Team                                         ║
+╚════════════════════════════════════════════════════════════╝
+    at C:\Users\jdmor\OneDrive - Estudiantes ITCR\@TEC\VI Semestre\QA\proyecto\QA-Proyecto\qa\accessibility\scan.cjs:8:31
+    at Object.<anonymous> (C:\Users\jdmor\OneDrive - Estudiantes ITCR\@TEC\VI Semestre\QA\proyecto\QA-Proyecto\qa\accessibility\scan.cjs:21:3) {
+  log: [],
+  name: 'Error'
+}

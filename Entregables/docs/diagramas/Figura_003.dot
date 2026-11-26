@@ -1,0 +1,11 @@
+digraph G { rankdir=TB; node [shape=box];
+t [label="torneos\netapa_actual; podio opcional"];
+g [label="grupos\nletra única; torneo opcional"];
+m [label="partidos\nmarcador; equipos; ganador"];
+s [label="selecciones\ngrupo; puntos; GF; GC; DG"];
+t -> g [label="1 : N"];
+t -> m [label="1 : N"];
+g -> s [label="1 : N"];
+m -> s [label="local / visitante / ganador"];
+g -> m [label="1 : N"];
+}

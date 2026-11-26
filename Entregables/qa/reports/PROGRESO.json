@@ -1,0 +1,173 @@
+{
+  "updated_at": "2026-11-25T22:54:34.522247-06:00",
+  "baseline": true,
+  "design_frozen": true,
+  "implemented_cases": 52,
+  "results": {
+    "designed": 52,
+    "automated": 48,
+    "implemented": 52,
+    "states": {
+      "Aprobado": 18,
+      "Bloqueado": 29,
+      "No ejecutado": 4,
+      "Fallido": 1
+    },
+    "conclusive": 19,
+    "rf_selected": 9,
+    "rnf_selected": 4,
+    "rf_with_passed_evidence": 7,
+    "metrics_evaluated": 6,
+    "metrics_pending": 7,
+    "defects_confirmed": 21,
+    "security_candidates": 92,
+    "by_level": {
+      "Aceptación": {
+        "No ejecutado": 3
+      },
+      "Estática": {
+        "Fallido": 1
+      },
+      "Integración": {
+        "Bloqueado": 15
+      },
+      "Sistema": {
+        "Bloqueado": 14,
+        "No ejecutado": 1
+      },
+      "Unitaria": {
+        "Aprobado": 18
+      }
+    },
+    "by_characteristic": {
+      "Adecuación funcional": {
+        "Aprobado": 18,
+        "Bloqueado": 18,
+        "No ejecutado": 3
+      },
+      "Capacidad de interacción": {
+        "No ejecutado": 1,
+        "Bloqueado": 3
+      },
+      "Eficiencia de desempeño": {
+        "Bloqueado": 2
+      },
+      "Mantenibilidad": {
+        "Fallido": 1
+      },
+      "Seguridad": {
+        "Bloqueado": 6
+      }
+    },
+    "by_owner": {
+      "César Gamboa Naranjo": {
+        "Aprobado": 6,
+        "Bloqueado": 14,
+        "No ejecutado": 1
+      },
+      "Jimena Vindas Acosta": {
+        "Aprobado": 5,
+        "Bloqueado": 9,
+        "No ejecutado": 1
+      },
+      "José Daniel Morera Elizondo": {
+        "Aprobado": 7,
+        "Bloqueado": 6,
+        "No ejecutado": 2,
+        "Fallido": 1
+      }
+    },
+    "by_requirement": {
+      "RF-01": {
+        "Aprobado": 2,
+        "Bloqueado": 4
+      },
+      "RF-02": {
+        "Aprobado": 3,
+        "Bloqueado": 2
+      },
+      "RF-03": {
+        "Aprobado": 2,
+        "Bloqueado": 4,
+        "No ejecutado": 1
+      },
+      "RF-04": {
+        "Aprobado": 5,
+        "Bloqueado": 2,
+        "No ejecutado": 1
+      },
+      "RF-05": {
+        "Aprobado": 2,
+        "Bloqueado": 2,
+        "No ejecutado": 1
+      },
+      "RF-06": {
+        "Bloqueado": 2,
+        "No ejecutado": 1
+      },
+      "RF-07": {
+        "Aprobado": 2,
+        "Bloqueado": 2
+      },
+      "RF-08": {
+        "Bloqueado": 2
+      },
+      "RF-09": {
+        "Aprobado": 2,
+        "Bloqueado": 2,
+        "No ejecutado": 1
+      },
+      "RNF-01": {
+        "Fallido": 1
+      },
+      "RNF-02": {
+        "No ejecutado": 1,
+        "Bloqueado": 3
+      },
+      "RNF-03": {
+        "Bloqueado": 6
+      },
+      "RNF-04": {
+        "Bloqueado": 2
+      },
+      "RNF-O1": {},
+      "RNF-O2": {}
+    },
+    "release": "Liberación no recomendada"
+  },
+  "compliance": {
+    "consistency_errors": [],
+    "checks": 47,
+    "pending_or_partial": 11,
+    "missing_figures": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "ready": false
+  },
+  "human_activities_confirmed": [],
+  "original_logic_changes": 0,
+  "document_qa": {
+    "report": "qa/reports/Document_QA.json",
+    "pages": 189,
+    "all_pages_reviewed": true,
+    "docx_sha256": "9b2d863d75b0c9dfecef6034bcb5a60639d34806911a67ea8ef83860271019c2"
+  },
+  "relocation": {
+    "deliverables": "Entregables",
+    "application": "..",
+    "validation": "qa/reports/Relocation_Validation.json",
+    "checks_passed": 11,
+    "preserved_evidence_files": 247
+  }
+}

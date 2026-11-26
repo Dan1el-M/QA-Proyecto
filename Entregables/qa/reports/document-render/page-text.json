@@ -1,0 +1,1214 @@
+[
+  {
+    "p": 1,
+    "chars": 402,
+    "start": "1 Instituto Tecnológico de Costa Rica Escuela de Computación Ingeniería en Computación IC-6831 Asegu",
+    "w": 612.0
+  },
+  {
+    "p": 2,
+    "chars": 2747,
+    "start": "2 Tabla de contenidos Tabla de contenidos ..........................................................",
+    "w": 612.0
+  },
+  {
+    "p": 3,
+    "chars": 2722,
+    "start": "3 5.3. Justificación basada en riesgos .............................................................",
+    "w": 612.0
+  },
+  {
+    "p": 4,
+    "chars": 2766,
+    "start": "4 10.1. Prerrequisitos .............................................................................",
+    "w": 612.0
+  },
+  {
+    "p": 5,
+    "chars": 2768,
+    "start": "5 14.1. Estrategia y casos automatizados ...........................................................",
+    "w": 612.0
+  },
+  {
+    "p": 6,
+    "chars": 1892,
+    "start": "6 21. Análisis de resultados y recomendación de liberación .........................................",
+    "w": 612.0
+  },
+  {
+    "p": 7,
+    "chars": 2488,
+    "start": "7 Índice de figuras Figura 1 . Arquitectura existente ..............................................",
+    "w": 612.0
+  },
+  {
+    "p": 8,
+    "chars": 103,
+    "start": "8 Figura 24 . Ejecución remota de GitHub Actions .................................................. ",
+    "w": 612.0
+  },
+  {
+    "p": 9,
+    "chars": 2616,
+    "start": "9 Índice de tablas Tabla 1 . Datos de identificación ...............................................",
+    "w": 612.0
+  },
+  {
+    "p": 10,
+    "chars": 2786,
+    "start": "10 Tabla 24 . Caso UT-003 ..........................................................................",
+    "w": 612.0
+  },
+  {
+    "p": 11,
+    "chars": 2729,
+    "start": "11 Tabla 48 . Caso INT-009 .........................................................................",
+    "w": 612.0
+  },
+  {
+    "p": 12,
+    "chars": 1491,
+    "start": "12 Tabla 72 . Caso ACC-003 .........................................................................",
+    "w": 612.0
+  },
+  {
+    "p": 13,
+    "chars": 1657,
+    "start": "13 1. Ficha de identificación del sistema La ficha identifica el producto, la procedencia y el entor",
+    "w": 612.0
+  },
+  {
+    "p": 14,
+    "chars": 464,
+    "start": "14 Dato Valor Población meta Personas organizadoras y espectadoras; perfiles inferidos de los proces",
+    "w": 612.0
+  },
+  {
+    "p": 15,
+    "chars": 1069,
+    "start": "15 2. Introducción El registro de un marcador repercute en estadísticas, clasificación ypodio. Esta ",
+    "w": 612.0
+  },
+  {
+    "p": 16,
+    "chars": 806,
+    "start": "16 3. Objetivos Los objetivos delimitan la evaluación y las decisiones que debe sustentar la evidenc",
+    "w": 612.0
+  },
+  {
+    "p": 17,
+    "chars": 1735,
+    "start": "17 4. Descripción del problema y del sistema La descripción relaciona las funciones documentadas con",
+    "w": 612.0
+  },
+  {
+    "p": 18,
+    "chars": 1357,
+    "start": "18 4.5. Requerimientos no funcionales RNF-01 proviene de las consideraciones técnicas originales. RN",
+    "w": 612.0
+  },
+  {
+    "p": 19,
+    "chars": 667,
+    "start": "19 ID Requerimiento Origen Selección RF-07 Registrar resultados eliminatorios y penales Explícito Sí",
+    "w": 612.0
+  },
+  {
+    "p": 20,
+    "chars": 1684,
+    "start": "20 5. Alcance y justificación El alcance prioriza las reglas einterfaces cuya falla afecta la integr",
+    "w": 612.0
+  },
+  {
+    "p": 21,
+    "chars": 1202,
+    "start": "21 La Tabla 3 presenta alcance por requerimiento. Tabla 3. Alcance por requerimiento ID Funcionalida",
+    "w": 612.0
+  },
+  {
+    "p": 22,
+    "chars": 1160,
+    "start": "22 ID Funcionalidad y justificación de inclusión Niveles RNF-04 P95 <=1 s y errores <=1 % en consult",
+    "w": 612.0
+  },
+  {
+    "p": 23,
+    "chars": 1650,
+    "start": "23 6. Diseño de la solución Se describe la arquitectura existente y el diseño de la infraestructura ",
+    "w": 612.0
+  },
+  {
+    "p": 24,
+    "chars": 179,
+    "start": "24 La Figura 1 muestra arquitectura existente. Figura 1. Arquitectura existente Fuente: Elaboración ",
+    "w": 792.0
+  },
+  {
+    "p": 25,
+    "chars": 179,
+    "start": "25 La Figura 2 muestra componentes existentes. Figura 2. Componentes existentes Fuente: Elaboración ",
+    "w": 792.0
+  },
+  {
+    "p": 26,
+    "chars": 179,
+    "start": "26 La Figura 3 muestra entidades y relaciones. Figura 3. Entidades y relaciones Fuente: Elaboración ",
+    "w": 792.0
+  },
+  {
+    "p": 27,
+    "chars": 193,
+    "start": "27 La Figura 4 muestra flujo de registro de marcador. Figura 4. Flujo de registro de marcador Fuente",
+    "w": 792.0
+  },
+  {
+    "p": 28,
+    "chars": 197,
+    "start": "28 La Figura 5 muestra estrategia de pruebas propuesta. Figura 5. Estrategia de pruebas propuesta Fu",
+    "w": 792.0
+  },
+  {
+    "p": 29,
+    "chars": 173,
+    "start": "29 La Figura 6 muestra gestión de defectos. Figura 6. Gestión de defectos Fuente: Elaboración a part",
+    "w": 792.0
+  },
+  {
+    "p": 30,
+    "chars": 229,
+    "start": "30 La Figura 7 muestra automatización e integración continua propuesta. Figura 7. Automatización e i",
+    "w": 792.0
+  },
+  {
+    "p": 31,
+    "chars": 227,
+    "start": "31 La Figura 8 muestra relación entre modelo, GQM, pruebas y métricas. Figura 8. Relación entre mode",
+    "w": 792.0
+  },
+  {
+    "p": 32,
+    "chars": 1924,
+    "start": "32 7. Metodología y modelo de calidad El modelo conecta riesgos, requerimientos, preguntas y métrica",
+    "w": 612.0
+  },
+  {
+    "p": 33,
+    "chars": 1335,
+    "start": "33 7.4. Metodología GQM GQM relaciona la intención de la medición con preguntas y datos observables(",
+    "w": 612.0
+  },
+  {
+    "p": 34,
+    "chars": 1316,
+    "start": "34 Objetivo Pregunta Texto Métricas GQM-03 GQM-03-P1 ¿Cuántas vulnerabilidades confirmadas hay por s",
+    "w": 612.0
+  },
+  {
+    "p": 35,
+    "chars": 1080,
+    "start": "35 GQM-04: Analizar la aplicación Mundial POO con el propósito de evaluar su aptitud respecto a efic",
+    "w": 612.0
+  },
+  {
+    "p": 36,
+    "chars": 783,
+    "start": "36 Campo Especificación justificacion Informa directamente la decisión sobre adecuación funcional um",
+    "w": 612.0
+  },
+  {
+    "p": 37,
+    "chars": 767,
+    "start": "37 MET-02. Casos funcionales aprobados La Tabla 7 presenta ficha MET-02. Tabla 7. Ficha MET-02 Campo",
+    "w": 612.0
+  },
+  {
+    "p": 38,
+    "chars": 852,
+    "start": "38 Campo Especificación decision Aceptar el criterio, condicionar o rechazar; si falta evidencia, no",
+    "w": 612.0
+  },
+  {
+    "p": 39,
+    "chars": 931,
+    "start": "39 Campo Especificación formula Líneas ejecutadas / ejecutables ×100 variables Numerador y denominad",
+    "w": 612.0
+  },
+  {
+    "p": 40,
+    "chars": 693,
+    "start": "40 Campo Especificación resultado 12.769 estado Rechazo interpretacion Unión de líneas SimpleCov en ",
+    "w": 612.0
+  },
+  {
+    "p": 41,
+    "chars": 1013,
+    "start": "41 Campo Especificación metodo Recoger reportes originales; normalizar sin omitir fallos, bloqueos o",
+    "w": 612.0
+  },
+  {
+    "p": 42,
+    "chars": 715,
+    "start": "42 MET-05. Código duplicado La Tabla 10 presenta ficha MET-05. Tabla 10. Ficha MET-05 Campo Especifi",
+    "w": 612.0
+  },
+  {
+    "p": 43,
+    "chars": 894,
+    "start": "43 Campo Especificación parcial >3..5% rechazo >5% decision Aceptar el criterio, condicionar o recha",
+    "w": 612.0
+  },
+  {
+    "p": 44,
+    "chars": 834,
+    "start": "44 Campo Especificación nombre Razón de deuda técnica caracteristica Mantenibilidad objetivo Respond",
+    "w": 612.0
+  },
+  {
+    "p": 45,
+    "chars": 936,
+    "start": "45 Campo Especificación alcance Código app/ de línea base y casos vinculados exclusiones Dependencia",
+    "w": 612.0
+  },
+  {
+    "p": 46,
+    "chars": 985,
+    "start": "46 Campo Especificación variables Numerador y denominador documentados en el resultado; desconocidos",
+    "w": 612.0
+  },
+  {
+    "p": 47,
+    "chars": 733,
+    "start": "47 Campo Especificación estado No evaluado interpretacion Candidatos sin verificar: 92. No inferir a",
+    "w": 612.0
+  },
+  {
+    "p": 48,
+    "chars": 794,
+    "start": "48 Campo Especificación frecuencia En cada corrida y después de incorporar evidencia humana justific",
+    "w": 612.0
+  },
+  {
+    "p": 49,
+    "chars": 720,
+    "start": "49 MET-09. Tiempo P95 La Tabla 14 presenta ficha MET-09. Tabla 14. Ficha MET-09 Campo Especificación",
+    "w": 612.0
+  },
+  {
+    "p": 50,
+    "chars": 856,
+    "start": "50 Campo Especificación decision Aceptar el criterio, condicionar o rechazar; si falta evidencia, no",
+    "w": 612.0
+  },
+  {
+    "p": 51,
+    "chars": 923,
+    "start": "51 Campo Especificación formula Errores inesperados / solicitudes ×100 variables Numerador y denomin",
+    "w": 612.0
+  },
+  {
+    "p": 52,
+    "chars": 676,
+    "start": "52 Campo Especificación resultado No evaluado estado No evaluado interpretacion Peor tasa por nivel;",
+    "w": 612.0
+  },
+  {
+    "p": 53,
+    "chars": 785,
+    "start": "53 Campo Especificación frecuencia En cada corrida y después de incorporar evidencia humana justific",
+    "w": 612.0
+  },
+  {
+    "p": 54,
+    "chars": 795,
+    "start": "54 MET-12. Tiempo de tareas La Tabla 17 presenta ficha MET-12. Tabla 17. Ficha MET-12 Campo Especifi",
+    "w": 612.0
+  },
+  {
+    "p": 55,
+    "chars": 823,
+    "start": "55 Campo Especificación decision Aceptar el criterio, condicionar o rechazar; si falta evidencia, no",
+    "w": 612.0
+  },
+  {
+    "p": 56,
+    "chars": 911,
+    "start": "56 Campo Especificación preguntas GQM-05-P3 formula Conteo de incumplimientos confirmados por pantal",
+    "w": 612.0
+  },
+  {
+    "p": 57,
+    "chars": 320,
+    "start": "57 Campo Especificación limitaciones Umbrales internos; no prescritos por ISO. Texto íntegro de norm",
+    "w": 612.0
+  },
+  {
+    "p": 58,
+    "chars": 1665,
+    "start": "58 8. Plan general de calidad y plan de pruebas El plan establece recursos, orden de trabajo, criter",
+    "w": 612.0
+  },
+  {
+    "p": 59,
+    "chars": 1548,
+    "start": "59 8.5. Criterios de salida y aceptación Exigir cobertura de diseño de todos los RF asignados, casos",
+    "w": 612.0
+  },
+  {
+    "p": 60,
+    "chars": 1548,
+    "start": "60 9. Herramientas utilizadas La selección de herramientas responde al lenguaje Ruby, la interfaz Ra",
+    "w": 612.0
+  },
+  {
+    "p": 61,
+    "chars": 925,
+    "start": "61 Trabajo Código Evidencia original rubocop 1 qa\\reports\\runs\\20261125T213 032255660-0600\\rubocop.l",
+    "w": 612.0
+  },
+  {
+    "p": 62,
+    "chars": 214,
+    "start": "62 Trabajo Código Evidencia original performance-normal 127 qa\\reports\\runs\\20261125T213 143108870-0",
+    "w": 612.0
+  },
+  {
+    "p": 63,
+    "chars": 1678,
+    "start": "63 10. Procedimiento de instalación e instructivo de uso El procedimiento utiliza un ambiente test a",
+    "w": 612.0
+  },
+  {
+    "p": 64,
+    "chars": 1045,
+    "start": "64 10.5. Instructivo de uso Registrar grupos A..L y asignar hasta cuatro selecciones a cada uno desd",
+    "w": 612.0
+  },
+  {
+    "p": 65,
+    "chars": 1728,
+    "start": "65 11. Pruebas estáticas La revisión estática contrasta especificación, código yreportes de herramie",
+    "w": 612.0
+  },
+  {
+    "p": 66,
+    "chars": 1510,
+    "start": "66 11.5. Hallazgos y resultados Las tablas de hallazgos y revisión conservan el estado de confirmaci",
+    "w": 612.0
+  },
+  {
+    "p": 67,
+    "chars": 637,
+    "start": "67 RF Deficiencia de especificación Propuesta a ratificar RF-07 No define penal incompleto ni empate",
+    "w": 612.0
+  },
+  {
+    "p": 68,
+    "chars": 1678,
+    "start": "68 12. Pruebas dinámicas Los niveles ytipos de prueba aportan evidencia complementaria. Sus resultad",
+    "w": 612.0
+  },
+  {
+    "p": 69,
+    "chars": 1756,
+    "start": "69 12.5. Pruebas de rendimiento y carga Se diseñan dos escenarios locales:5, 10, 20VU y25, 50, 100VU",
+    "w": 612.0
+  },
+  {
+    "p": 70,
+    "chars": 699,
+    "start": "70 La evidencia de resultado de integración se presenta en la Figura 13 de los anexos. La evidencia ",
+    "w": 612.0
+  },
+  {
+    "p": 71,
+    "chars": 1157,
+    "start": "71 13. Casos de prueba Los registros siguientes conservan el diseño previo y los resultados observad",
+    "w": 612.0
+  },
+  {
+    "p": 72,
+    "chars": 1025,
+    "start": "72 Campo Detalle Evidencia y defecto qa\\reports\\runs\\20261125T213747478400- 0600\\unit.json Defecto: ",
+    "w": 612.0
+  },
+  {
+    "p": 73,
+    "chars": 1078,
+    "start": "73 Campo Detalle Evidencia y defecto qa\\reports\\runs\\20261125T213747478400- 0600\\unit.json Defecto: ",
+    "w": 612.0
+  },
+  {
+    "p": 74,
+    "chars": 1044,
+    "start": "74 Campo Detalle Evidencia y defecto qa\\reports\\runs\\20261125T213747478400- 0600\\unit.json Defecto: ",
+    "w": 612.0
+  },
+  {
+    "p": 75,
+    "chars": 1061,
+    "start": "75 Campo Detalle Evidencia y defecto qa\\reports\\runs\\20261125T213747478400- 0600\\unit.json Defecto: ",
+    "w": 612.0
+  },
+  {
+    "p": 76,
+    "chars": 1100,
+    "start": "76 Campo Detalle Evidencia y defecto qa\\reports\\runs\\20261125T213747478400- 0600\\unit.json Defecto: ",
+    "w": 612.0
+  },
+  {
+    "p": 77,
+    "chars": 1080,
+    "start": "77 Campo Detalle Evidencia y defecto qa\\reports\\runs\\20261125T213747478400- 0600\\unit.json Defecto: ",
+    "w": 612.0
+  },
+  {
+    "p": 78,
+    "chars": 1022,
+    "start": "78 Campo Detalle Evidencia y defecto qa\\reports\\runs\\20261125T213747478400- 0600\\unit.json Defecto: ",
+    "w": 612.0
+  },
+  {
+    "p": 79,
+    "chars": 1029,
+    "start": "79 Campo Detalle Evidencia y defecto qa\\reports\\runs\\20261125T213747478400- 0600\\unit.json Defecto: ",
+    "w": 612.0
+  },
+  {
+    "p": 80,
+    "chars": 1039,
+    "start": "80 Campo Detalle Evidencia y defecto qa\\reports\\runs\\20261125T213747478400- 0600\\unit.json Defecto: ",
+    "w": 612.0
+  },
+  {
+    "p": 81,
+    "chars": 1050,
+    "start": "81 Campo Detalle Evidencia y defecto qa\\reports\\runs\\20261125T213747478400- 0600\\unit.json Defecto: ",
+    "w": 612.0
+  },
+  {
+    "p": 82,
+    "chars": 1089,
+    "start": "82 Campo Detalle Evidencia y defecto qa\\reports\\runs\\20261125T213747478400- 0600\\unit.json Defecto: ",
+    "w": 612.0
+  },
+  {
+    "p": 83,
+    "chars": 1036,
+    "start": "83 Campo Detalle Evidencia y defecto qa\\reports\\runs\\20261125T213747478400- 0600\\unit.json Defecto: ",
+    "w": 612.0
+  },
+  {
+    "p": 84,
+    "chars": 1055,
+    "start": "84 Campo Detalle Evidencia y defecto qa\\reports\\runs\\20261125T213747478400- 0600\\unit.json Defecto: ",
+    "w": 612.0
+  },
+  {
+    "p": 85,
+    "chars": 1080,
+    "start": "85 Campo Detalle Evidencia y defecto qa\\reports\\runs\\20261125T213747478400- 0600\\unit.json Defecto: ",
+    "w": 612.0
+  },
+  {
+    "p": 86,
+    "chars": 1061,
+    "start": "86 Campo Detalle Evidencia y defecto qa\\reports\\runs\\20261125T213747478400- 0600\\unit.json Defecto: ",
+    "w": 612.0
+  },
+  {
+    "p": 87,
+    "chars": 1058,
+    "start": "87 Campo Detalle Evidencia y defecto qa\\reports\\runs\\20261125T213747478400- 0600\\unit.json Defecto: ",
+    "w": 612.0
+  },
+  {
+    "p": 88,
+    "chars": 1069,
+    "start": "88 Campo Detalle Evidencia y defecto qa\\reports\\runs\\20261125T213747478400- 0600\\unit.json Defecto: ",
+    "w": 612.0
+  },
+  {
+    "p": 89,
+    "chars": 1144,
+    "start": "89 Campo Detalle Evidencia y defecto qa\\reports\\runs\\20261125T213747478400- 0600\\unit.json Defecto: ",
+    "w": 612.0
+  },
+  {
+    "p": 90,
+    "chars": 1264,
+    "start": "90 Campo Detalle Resultado obtenido y estado Bloqueado; El proceso no produjo un resultado individua",
+    "w": 612.0
+  },
+  {
+    "p": 91,
+    "chars": 1227,
+    "start": "91 Campo Detalle Resultado esperado 1 punto por equipo; sin acumulación anterior Resultado obtenido ",
+    "w": 612.0
+  },
+  {
+    "p": 92,
+    "chars": 1264,
+    "start": "92 Campo Detalle Pasos / función PATCH /partidos/:id/registrar_resultado test_INT_003 Resultado espe",
+    "w": 612.0
+  },
+  {
+    "p": 93,
+    "chars": 1288,
+    "start": "93 Campo Detalle Pasos / función POST /selecciones y recargar registro test_INT_004 Resultado espera",
+    "w": 612.0
+  },
+  {
+    "p": 94,
+    "chars": 1293,
+    "start": "94 Campo Detalle Pasos / función POST /selecciones y comparar conteo test_INT_005 Resultado esperado",
+    "w": 612.0
+  },
+  {
+    "p": 95,
+    "chars": 1138,
+    "start": "95 Campo Detalle Pasos / función GET /grupos/:id; DELETE mismo grupo test_INT_006 Resultado esperado",
+    "w": 612.0
+  },
+  {
+    "p": 96,
+    "chars": 1244,
+    "start": "96 Campo Detalle Precondiciones y datos Ambiente QA local aislado y datos sintéticos preparados; par",
+    "w": 612.0
+  },
+  {
+    "p": 97,
+    "chars": 1168,
+    "start": "97 Campo Detalle Característica y responsable Adecuación funcional; César Gamboa Naranjo Precondicio",
+    "w": 612.0
+  },
+  {
+    "p": 98,
+    "chars": 1238,
+    "start": "98 Campo Detalle Tipo, nivel, técnica y prioridad Funcional; Integración; Caja gris; contrato HTTP o",
+    "w": 612.0
+  },
+  {
+    "p": 99,
+    "chars": 1191,
+    "start": "99 Campo Detalle Objetivo y requerimiento Consulta de selecciones; RF-01 Tipo, nivel, técnica y prio",
+    "w": 612.0
+  },
+  {
+    "p": 100,
+    "chars": 1215,
+    "start": "100 Campo Detalle Objetivo y requerimiento Registro de selección; RF-01 Tipo, nivel, técnica y prior",
+    "w": 612.0
+  },
+  {
+    "p": 101,
+    "chars": 1198,
+    "start": "101 Campo Detalle Objetivo y requerimiento Consulta de grupo; RF-02 Tipo, nivel, técnica y prioridad",
+    "w": 612.0
+  },
+  {
+    "p": 102,
+    "chars": 1163,
+    "start": "102 Campo Detalle Objetivo y requerimiento Registro de marcador por calendario; RF-03 Tipo, nivel, t",
+    "w": 612.0
+  },
+  {
+    "p": 103,
+    "chars": 1227,
+    "start": "103 E2E-005. Frontera de marcador negativo La Tabla 53 presenta caso E2E-005. Tabla 53. Caso E2E-005",
+    "w": 612.0
+  },
+  {
+    "p": 104,
+    "chars": 1216,
+    "start": "104 E2E-006. Consulta de tabla de posiciones La Tabla 54 presenta caso E2E-006. Tabla 54. Caso E2E-0",
+    "w": 612.0
+  },
+  {
+    "p": 105,
+    "chars": 1201,
+    "start": "105 E2E-007. Bloqueo de avance prematuro La Tabla 55 presenta caso E2E-007. Tabla 55. Caso E2E-007 C",
+    "w": 612.0
+  },
+  {
+    "p": 106,
+    "chars": 1290,
+    "start": "106 E2E-008. Guardar eliminatoria y generar octavos La Tabla 56 presenta caso E2E-008. Tabla 56. Cas",
+    "w": 612.0
+  },
+  {
+    "p": 107,
+    "chars": 1200,
+    "start": "107 E2E-009. Podio final en interfaz La Tabla 57 presenta caso E2E-009. Tabla 57. Caso E2E-009 Campo",
+    "w": 612.0
+  },
+  {
+    "p": 108,
+    "chars": 1112,
+    "start": "108 UAT-001. Registrar un resultado real de uso La Tabla 58 presenta caso UAT-001. Tabla 58. Caso UA",
+    "w": 612.0
+  },
+  {
+    "p": 109,
+    "chars": 1127,
+    "start": "109 UAT-002. Interpretar tabla y clasificación La Tabla 59 presenta caso UAT-002. Tabla 59. Caso UAT",
+    "w": 612.0
+  },
+  {
+    "p": 110,
+    "chars": 1093,
+    "start": "110 UAT-003. Consultar avance y podio La Tabla 60 presenta caso UAT-003. Tabla 60. Caso UAT-003 Camp",
+    "w": 612.0
+  },
+  {
+    "p": 111,
+    "chars": 1373,
+    "start": "111 PERF-001. Consulta local con carga 5, 10, 20 La Tabla 61 presenta caso PERF-001. Tabla 61. Caso ",
+    "w": 612.0
+  },
+  {
+    "p": 112,
+    "chars": 1246,
+    "start": "112 PERF-002. Consulta local con carga 25, 50, 100 La Tabla 62 presenta caso PERF-002. Tabla 62. Cas",
+    "w": 612.0
+  },
+  {
+    "p": 113,
+    "chars": 1166,
+    "start": "113 Campo Detalle Fecha, ambiente y versión 20261125T213143108870-0600; Windows; loopback; RAILS_ENV",
+    "w": 612.0
+  },
+  {
+    "p": 114,
+    "chars": 1156,
+    "start": "114 Campo Detalle Implementación y ejecución test/integration/qa_security_test.rb bash qa/scripts/ru",
+    "w": 612.0
+  },
+  {
+    "p": 115,
+    "chars": 1182,
+    "start": "115 Campo Detalle Postcondiciones y métrica Sin cambios en datos ajenos a QA; restaurar transacción ",
+    "w": 612.0
+  },
+  {
+    "p": 116,
+    "chars": 1142,
+    "start": "116 Campo Detalle Evidencia y defecto qa\\reports\\runs\\20261125T212517075406- 0600\\security.log Defec",
+    "w": 612.0
+  },
+  {
+    "p": 117,
+    "chars": 1164,
+    "start": "117 Campo Detalle Resultado obtenido y estado Bloqueado; El proceso no produjo un resultado individu",
+    "w": 612.0
+  },
+  {
+    "p": 118,
+    "chars": 1518,
+    "start": "118 Campo Detalle Resultado esperado Respuesta controlada o redirección; sin stacktrace ni cambios R",
+    "w": 612.0
+  },
+  {
+    "p": 119,
+    "chars": 1226,
+    "start": "119 SEG-006. Entradas inválidas sin corrupción La Tabla 68 presenta caso SEG-006. Tabla 68. Caso SEG",
+    "w": 612.0
+  },
+  {
+    "p": 120,
+    "chars": 1191,
+    "start": "120 USA-001. Éxito y tiempo de tres tareas con tres personas La Tabla 69 presenta caso USA-001. Tabl",
+    "w": 612.0
+  },
+  {
+    "p": 121,
+    "chars": 1346,
+    "start": "121 ACC-001. Accesibilidad de /partidos_grupo/calendario La Tabla 70 presenta caso ACC-001. Tabla 70",
+    "w": 612.0
+  },
+  {
+    "p": 122,
+    "chars": 1298,
+    "start": "122 ACC-002. Accesibilidad de /grupos/ID La Tabla 71 presenta caso ACC-002. Tabla 71. Caso ACC-002 C",
+    "w": 612.0
+  },
+  {
+    "p": 123,
+    "chars": 1322,
+    "start": "123 ACC-003. Accesibilidad de /fase_eliminatoria La Tabla 72 presenta caso ACC-003. Tabla 72. Caso A",
+    "w": 612.0
+  },
+  {
+    "p": 124,
+    "chars": 1514,
+    "start": "124 EST-001. Revisión estática de código y especificación La Tabla 73 presenta caso EST-001. Tabla 7",
+    "w": 612.0
+  },
+  {
+    "p": 125,
+    "chars": 367,
+    "start": "125 Campo Detalle Postcondiciones y métrica Sin cambios en datos ajenos a QA; restaurar transacción ",
+    "w": 612.0
+  },
+  {
+    "p": 126,
+    "chars": 1740,
+    "start": "126 14. Automatización e integración continua La automatización conserva reportes por corrida yactua",
+    "w": 612.0
+  },
+  {
+    "p": 127,
+    "chars": 3,
+    "start": "127",
+    "w": 612.0
+  },
+  {
+    "p": 128,
+    "chars": 598,
+    "start": "128 15. Matriz de trazabilidad La matriz permite recorrer desde una obligación hasta sus pruebas, re",
+    "w": 612.0
+  },
+  {
+    "p": 129,
+    "chars": 996,
+    "start": "129 La Tabla 74 presenta matriz integral bidireccional. Tabla 74. Matriz integral bidireccional RF/R",
+    "w": 792.0
+  },
+  {
+    "p": 130,
+    "chars": 1063,
+    "start": "130 RF/RNF Característica Caso Tipo / nivel Automatizada Resultado Defecto Responsable RF-02 Adecuac",
+    "w": 792.0
+  },
+  {
+    "p": 131,
+    "chars": 1145,
+    "start": "131 RF/RNF Característica Caso Tipo / nivel Automatizada Resultado Defecto Responsable RF-03 Adecuac",
+    "w": 792.0
+  },
+  {
+    "p": 132,
+    "chars": 1133,
+    "start": "132 RF/RNF Característica Caso Tipo / nivel Automatizada Resultado Defecto Responsable RF-07 Adecuac",
+    "w": 792.0
+  },
+  {
+    "p": 133,
+    "chars": 1115,
+    "start": "133 RF/RNF Característica Caso Tipo / nivel Automatizada Resultado Defecto Responsable RF-08 Adecuac",
+    "w": 792.0
+  },
+  {
+    "p": 134,
+    "chars": 365,
+    "start": "134 RF/RNF Característica Caso Tipo / nivel Automatizada Resultado Defecto Responsable RNF-03 Seguri",
+    "w": 792.0
+  },
+  {
+    "p": 135,
+    "chars": 767,
+    "start": "135 RF/RNF Característica Caso Tipo / nivel Automatizada Resultado Defecto Responsable RNF-03 Seguri",
+    "w": 792.0
+  },
+  {
+    "p": 136,
+    "chars": 613,
+    "start": "136 RF/RNF Característica Caso Tipo / nivel Automatizada Resultado Defecto Responsable RNF-03 Seguri",
+    "w": 792.0
+  },
+  {
+    "p": 137,
+    "chars": 773,
+    "start": "137 RF/RNF Característica Caso Tipo / nivel Automatizada Resultado Defecto Responsable RNF-01 Manten",
+    "w": 792.0
+  },
+  {
+    "p": 138,
+    "chars": 3,
+    "start": "138",
+    "w": 792.0
+  },
+  {
+    "p": 139,
+    "chars": 1642,
+    "start": "139 16. Gestión de defectos El registro distingue hallazgos confirmados, candidatos automáticos ypro",
+    "w": 612.0
+  },
+  {
+    "p": 140,
+    "chars": 1558,
+    "start": "140 Esperado: Cada equipo debe enviar su propio marcador; validar y persistir 2-1. Actual: value: pa",
+    "w": 612.0
+  },
+  {
+    "p": 141,
+    "chars": 1561,
+    "start": "141 Reproducción: Abrir app/controllers/partidos_controller.rb, línea 80, en el commit de línea base",
+    "w": 612.0
+  },
+  {
+    "p": 142,
+    "chars": 1545,
+    "start": "142 Reproducción: Abrir app/controllers/campeones_controller.rb, línea 64, en el commit de línea bas",
+    "w": 612.0
+  },
+  {
+    "p": 143,
+    "chars": 1543,
+    "start": "143 No existe app/views/clasificados/en_progreso.html.erb. También faltan vistas implícitas de vario",
+    "w": 612.0
+  },
+  {
+    "p": 144,
+    "chars": 1608,
+    "start": "144 El recálculo incluye todos los tipos de partido y los convierte en puntos. Recalcular grupos des",
+    "w": 612.0
+  },
+  {
+    "p": 145,
+    "chars": 1677,
+    "start": "145 El layout raíz carece del atributo lang. El criterio WCAG 2.2 3.1.1 exige identificar el idioma ",
+    "w": 612.0
+  },
+  {
+    "p": 146,
+    "chars": 1624,
+    "start": "146 No especifica dominios de puntajes ni reglas de edición Reproducción: Leer Proyecto_4_POO_Mundia",
+    "w": 612.0
+  },
+  {
+    "p": 147,
+    "chars": 1692,
+    "start": "147 Impacto y recomendación: Administrar grupos únicos A..L; rechazar eliminación si conserva selecc",
+    "w": 612.0
+  },
+  {
+    "p": 148,
+    "chars": 1567,
+    "start": "148 - Diferencia de goles. - Goles a favor. Evidencia: Proyecto_4_POO_Mundial_2026.md:25; docs/Revis",
+    "w": 612.0
+  },
+  {
+    "p": 149,
+    "chars": 1559,
+    "start": "149 Reproducción: Leer Proyecto_4_POO_Mundial_2026.md, Requerimientos del sistema, punto 6 y contras",
+    "w": 612.0
+  },
+  {
+    "p": 150,
+    "chars": 1743,
+    "start": "150 Impacto y recomendación: Para empate eliminatorio exigir ambos penales enteros>=0 y distintos an",
+    "w": 612.0
+  },
+  {
+    "p": 151,
+    "chars": 1469,
+    "start": "151 Evidencia: Proyecto_4_POO_Mundial_2026.md:46; docs/Revision_Requerimientos.csv. Requerimiento: R",
+    "w": 612.0
+  },
+  {
+    "p": 152,
+    "chars": 1337,
+    "start": "152 ID Observación Ubicación / evidencia Estado DEF-032 Reek: TooManyInstanceVaria bles app/controll",
+    "w": 612.0
+  },
+  {
+    "p": 153,
+    "chars": 1434,
+    "start": "153 ID Observación Ubicación / evidencia Estado DEF-044 RuboCop: Layout/EmptyLinesAro undClassBody a",
+    "w": 612.0
+  },
+  {
+    "p": 154,
+    "chars": 1470,
+    "start": "154 ID Observación Ubicación / evidencia Estado DEF-056 RuboCop: Layout/TrailingWhitesp ace app/cont",
+    "w": 612.0
+  },
+  {
+    "p": 155,
+    "chars": 1250,
+    "start": "155 ID Observación Ubicación / evidencia Estado DEF-069 RuboCop: Style/IfUnlessModifier app/controll",
+    "w": 612.0
+  },
+  {
+    "p": 156,
+    "chars": 1057,
+    "start": "156 ID Observación Ubicación / evidencia Estado DEF-079 CVE-2026-33170: Rails Active Support has a p",
+    "w": 612.0
+  },
+  {
+    "p": 157,
+    "chars": 1015,
+    "start": "157 ID Observación Ubicación / evidencia Estado DEF-086 CVE-2026-47240: Net::IMAP: Command Injection",
+    "w": 612.0
+  },
+  {
+    "p": 158,
+    "chars": 1110,
+    "start": "158 ID Observación Ubicación / evidencia Estado DEF-093 CVE-2026-54905: Concurrent Ruby - `Reentrant",
+    "w": 612.0
+  },
+  {
+    "p": 159,
+    "chars": 1047,
+    "start": "159 ID Observación Ubicación / evidencia Estado DEF-100 GHSA-2p2f-4rq4-gjwc: Possible XSS vulnerabil",
+    "w": 612.0
+  },
+  {
+    "p": 160,
+    "chars": 1125,
+    "start": "160 ID Observación Ubicación / evidencia Estado DEF-107 GHSA-4v6q-hvv7- 49h9: Memory exhaustion with",
+    "w": 612.0
+  },
+  {
+    "p": 161,
+    "chars": 1086,
+    "start": "161 ID Observación Ubicación / evidencia Estado DEF-114 GHSA-5v8h-3h3q- 446p: Nokogiri: Possible Use",
+    "w": 612.0
+  },
+  {
+    "p": 162,
+    "chars": 1110,
+    "start": "162 ID Observación Ubicación / evidencia Estado DEF-121 GHSA-8gmh-2hhj- 2hv9: Addressable URI normal",
+    "w": 612.0
+  },
+  {
+    "p": 163,
+    "chars": 999,
+    "start": "163 ID Observación Ubicación / evidencia Estado DEF-128 GHSA-cj75-f6xr-r4g7: Possible XSS vulnerabil",
+    "w": 612.0
+  },
+  {
+    "p": 164,
+    "chars": 1132,
+    "start": "164 ID Observación Ubicación / evidencia Estado DEF-134 GHSA-h7wh-q2qr- 458c: Possible XSS via share",
+    "w": 612.0
+  },
+  {
+    "p": 165,
+    "chars": 983,
+    "start": "165 ID Observación Ubicación / evidencia Estado DEF-141 GHSA-mvxr-6m87- mv2q: Email address spoofing",
+    "w": 612.0
+  },
+  {
+    "p": 166,
+    "chars": 1108,
+    "start": "166 ID Observación Ubicación / evidencia Estado DEF-147 GHSA-phwj-rprq-35pp: Nokogiri: Possible Use-",
+    "w": 612.0
+  },
+  {
+    "p": 167,
+    "chars": 1072,
+    "start": "167 ID Observación Ubicación / evidencia Estado DEF-154 GHSA-rq8q-p985-fjq7: Possible XSS vulnerabil",
+    "w": 612.0
+  },
+  {
+    "p": 168,
+    "chars": 1284,
+    "start": "168 ID Observación Ubicación / evidencia Estado DEF-161 GHSA-wm3x-v3qw- 4jh3: Possible Strong Parame",
+    "w": 612.0
+  },
+  {
+    "p": 169,
+    "chars": 3,
+    "start": "169",
+    "w": 612.0
+  },
+  {
+    "p": 170,
+    "chars": 1277,
+    "start": "170 17. Resultados de ejecución Este capítulo presenta cantidades derivadas del catálogo y los repor",
+    "w": 612.0
+  },
+  {
+    "p": 171,
+    "chars": 566,
+    "start": "171 Indicador Cantidad Bloqueado 29 No ejecutado 4 Fallido 1 RF con evidencia aprobada 7 La Tabla 77",
+    "w": 612.0
+  },
+  {
+    "p": 172,
+    "chars": 579,
+    "start": "172 característica Aprobado Fallido Bloqueado No ejecutado Seguridad 0 0 6 0 La Tabla 79 presenta re",
+    "w": 612.0
+  },
+  {
+    "p": 173,
+    "chars": 233,
+    "start": "173 requerimiento Aprobado Fallido Bloqueado No ejecutado RNF-01 0 1 0 0 RNF-02 0 0 3 1 RNF-03 0 0 6",
+    "w": 612.0
+  },
+  {
+    "p": 174,
+    "chars": 1342,
+    "start": "174 18. Métricas y su interpretación Los valores se calculan a partir de reportes yformularios; su i",
+    "w": 612.0
+  },
+  {
+    "p": 175,
+    "chars": 945,
+    "start": "175 Métrica Valor Evaluación Interpretación MET-03 12.769 Rechazo Unión de líneas SimpleCov en corri",
+    "w": 612.0
+  },
+  {
+    "p": 176,
+    "chars": 709,
+    "start": "176 Métrica Valor Evaluación Interpretación MET-08 No evaluado No evaluado 0/6 controles concluyente",
+    "w": 612.0
+  },
+  {
+    "p": 177,
+    "chars": 1538,
+    "start": "177 19. Evaluación de deuda técnica La estimación de deuda prioriza problemas únicos ydeclara el cos",
+    "w": 612.0
+  },
+  {
+    "p": 178,
+    "chars": 701,
+    "start": "178 ID Hallazgo Descripción Minutos estimados Prioridad DT-002 DEF-002 mensaje no inicializado en gu",
+    "w": 612.0
+  },
+  {
+    "p": 179,
+    "chars": 108,
+    "start": "179 ID Hallazgo Descripción Minutos estimados Prioridad DT-011 DEF-011 WCAG: documento HTML sin idio",
+    "w": 612.0
+  },
+  {
+    "p": 180,
+    "chars": 904,
+    "start": "180 20. Análisis de riesgos Los riesgos explican la prioridad de ejecución y las condiciones necesar",
+    "w": 612.0
+  },
+  {
+    "p": 181,
+    "chars": 825,
+    "start": "181 La Tabla 83 presenta exposición, controles y tratamiento de riesgos. Tabla 83. Exposición, contr",
+    "w": 792.0
+  },
+  {
+    "p": 182,
+    "chars": 509,
+    "start": "182 ID Riesgo P I P×I Nivel Control existente Tratamiento RSK-006 Saturación bajo concurrencia 3 4 1",
+    "w": 792.0
+  },
+  {
+    "p": 183,
+    "chars": 1611,
+    "start": "183 21. Análisis de resultados y recomendación de liberación La recomendación integra resultados, de",
+    "w": 612.0
+  },
+  {
+    "p": 184,
+    "chars": 1396,
+    "start": "184 22. Conclusiones y recomendaciones Las conclusiones se limitan a la línea base y la evidencia di",
+    "w": 612.0
+  },
+  {
+    "p": 185,
+    "chars": 1552,
+    "start": "185 23. Distribución del trabajo en equipo La asignación conserva las especialidades y la responsabi",
+    "w": 612.0
+  },
+  {
+    "p": 186,
+    "chars": 111,
+    "start": "186 Integrante RF RNF Jimena Vindas Acosta RF-01, RF-02 RNF-02 César Gamboa Naranjo RF-05..RF-09 RNF",
+    "w": 612.0
+  },
+  {
+    "p": 187,
+    "chars": 1651,
+    "start": "187 24. Referencias Se incluyen únicamente referencias identificadas oconsultadas de forma verificab",
+    "w": 612.0
+  },
+  {
+    "p": 188,
+    "chars": 457,
+    "start": "188 World Wide Web Consortium.(2024,12 de diciembre). Web Content Accessibility Guidelines(WCAG)2.2.",
+    "w": 612.0
+  },
+  {
+    "p": 189,
+    "chars": 1253,
+    "start": "189 25. Anexos y evidencias Los anexos reúnen fuentes editables, reportes, instrumentos yevidencias ",
+    "w": 612.0
+  },
+  {
+    "p": 190,
+    "chars": 169,
+    "start": "190 La Figura 9 muestra estados reales del catálogo. Figura 9. Estados reales del catálogo Fuente: q",
+    "w": 792.0
+  },
+  {
+    "p": 191,
+    "chars": 169,
+    "start": "191 La Figura 10 muestra hallazgos por severidad. Figura 10. Hallazgos por severidad Fuente: Registr",
+    "w": 792.0
+  },
+  {
+    "p": 192,
+    "chars": 146,
+    "start": "192 La Figura 11 muestra métodos con mayor complejidad. Figura 11. Métodos con mayor complejidad Fue",
+    "w": 792.0
+  },
+  {
+    "p": 193,
+    "chars": 418,
+    "start": "193 La Figura 12 muestra resultado de pruebas unitarias. Figura 12. Resultado de pruebas unitarias F",
+    "w": 792.0
+  },
+  {
+    "p": 194,
+    "chars": 1299,
+    "start": "194 Fuente: Reportes originales o formularios confirmados. La Figura 14 muestra evidencia de recorri",
+    "w": 792.0
+  },
+  {
+    "p": 195,
+    "chars": 1319,
+    "start": "195 Fuente: Reportes originales o formularios confirmados. La Figura 18 muestra aceptación con perso",
+    "w": 792.0
+  },
+  {
+    "p": 196,
+    "chars": 1072,
+    "start": "196 Fuente: Captura auténtica de la instancia local con datos sintéticos. La Figura 22 muestra calen",
+    "w": 792.0
+  },
+  {
+    "p": 197,
+    "chars": 1156,
+    "start": "197 ID Caso Herramienta Ruta EV-001 UT-001; UT-002; UT-003; UT- 004; UT-005; UT-006; UT-007; UT-008;",
+    "w": 792.0
+  },
+  {
+    "p": 198,
+    "chars": 771,
+    "start": "198 ID Caso Herramienta Ruta EV-009 brakeman qa\\reports\\runs\\20261125T1557 00781919-0600\\brakeman.lo",
+    "w": 792.0
+  },
+  {
+    "p": 199,
+    "chars": 763,
+    "start": "199 ID Caso Herramienta Ruta EV-019 bundler-audit qa\\reports\\runs\\20261125T1600 55893388-0600\\bundle",
+    "w": 792.0
+  },
+  {
+    "p": 200,
+    "chars": 755,
+    "start": "200 ID Caso Herramienta Ruta EV-029 unit qa\\reports\\runs\\20261125T1652 46778161-0600\\unit.log EV-030",
+    "w": 792.0
+  },
+  {
+    "p": 201,
+    "chars": 755,
+    "start": "201 ID Caso Herramienta Ruta EV-039 flay qa\\reports\\runs\\20261125T2125 17075406-0600\\flay.log EV-040",
+    "w": 792.0
+  },
+  {
+    "p": 202,
+    "chars": 746,
+    "start": "202 ID Caso Herramienta Ruta EV-049 duplication qa\\reports\\runs\\20261125T2130 32255660-0600\\duplicat",
+    "w": 792.0
+  }
+]

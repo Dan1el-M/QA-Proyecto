@@ -1,0 +1,47 @@
+{
+  "title": "Proceso de gestión de defectos",
+  "nodes": [
+    [
+      "detect",
+      "Detectar y preservar\nreporte, captura o traza",
+      600,
+      115
+    ],
+    [
+      "triage",
+      "Reproducir y clasificar\nseveridad y prioridad",
+      600,
+      330
+    ],
+    [
+      "record",
+      "Registrar y vincular\nRF, caso, evidencia",
+      600,
+      545
+    ],
+    [
+      "decision",
+      "Evaluar riesgo y liberación\ncorrección fuera de auditoría",
+      600,
+      760
+    ]
+  ],
+  "edges": [
+    [
+      "detect",
+      "triage",
+      ""
+    ],
+    [
+      "triage",
+      "record",
+      "sin duplicar"
+    ],
+    [
+      "record",
+      "decision",
+      ""
+    ]
+  ],
+  "source": "Registro_Defectos.csv; flujo de QA"
+}

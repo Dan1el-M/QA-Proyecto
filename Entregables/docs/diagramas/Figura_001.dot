@@ -1,0 +1,11 @@
+digraph G { rankdir=TB; node [shape=box];
+browser [label="Navegador\nHTML y formularios"];
+routes [label="Rutas Rails\nconfig/routes.rb"];
+mvc [label="Controladores y vistas\napp/controllers, app/views"];
+business [label="Modelos y servicios\napp/models, app/services"];
+db [label="SQLite: cuatro tablas\ngrupo, selección, partido, torneo"];
+browser -> routes [label="HTTP"];
+routes -> mvc [label="acción"];
+mvc -> business [label="consulta / escritura"];
+business -> db [label="Active Record"];
+}

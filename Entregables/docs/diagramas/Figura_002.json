@@ -1,0 +1,36 @@
+{
+  "title": "Componentes existentes del negocio",
+  "nodes": [
+    [
+      "controllers",
+      "Controladores de resultados\ny fases",
+      490,
+      115
+    ],
+    [
+      "services",
+      "ActualizarEstadisticasSeleccion\nCalcularGanadorPartido\nDeterminarClasificados\nSiguienteRonda",
+      490,
+      400
+    ],
+    [
+      "classes",
+      "Grupo, Seleccion, Partido\ny Torneo",
+      490,
+      720
+    ]
+  ],
+  "edges": [
+    [
+      "controllers",
+      "services",
+      ""
+    ],
+    [
+      "services",
+      "classes",
+      ""
+    ]
+  ],
+  "source": "app/controllers/; app/services/; app/models/"
+}

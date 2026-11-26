@@ -1,0 +1,1696 @@
+{
+  "tool": "Ruby Prism AST + QA cyclomatic counter v1",
+  "convention": "1 + if/unless/loops/when/in/rescue/and/or + iterator blocks + safe navigation; nested method definitions excluded",
+  "version": "2.1.0",
+  "count": 210,
+  "average": 2.2333333333333334,
+  "max": 14,
+  "distribution": {
+    "at_most_10": 208,
+    "from_11_to_15": 2,
+    "above_15": 0
+  },
+  "methods": [
+    {
+      "file": "app/controllers/campeones_controller.rb",
+      "class": "CampeonesController",
+      "method": "index",
+      "line": 17,
+      "end_line": 38,
+      "complexity": 5
+    },
+    {
+      "file": "app/controllers/campeones_controller.rb",
+      "class": "CampeonesController",
+      "method": "show",
+      "line": 44,
+      "end_line": 58,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/campeones_controller.rb",
+      "class": "CampeonesController",
+      "method": "podio",
+      "line": 64,
+      "end_line": 76,
+      "complexity": 3
+    },
+    {
+      "file": "app/controllers/campeones_controller.rb",
+      "class": "CampeonesController",
+      "method": "estadisticas",
+      "line": 82,
+      "end_line": 110,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/campeones_controller.rb",
+      "class": "CampeonesController",
+      "method": "podio",
+      "line": 112,
+      "end_line": 121,
+      "complexity": 3
+    },
+    {
+      "file": "app/controllers/campeones_controller.rb",
+      "class": "CampeonesController",
+      "method": "verificar_torneo_completo",
+      "line": 130,
+      "end_line": 137,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/clasificados_controller.rb",
+      "class": "ClasificadosController",
+      "method": "index",
+      "line": 21,
+      "end_line": 31,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/clasificados_controller.rb",
+      "class": "ClasificadosController",
+      "method": "show",
+      "line": 37,
+      "end_line": 54,
+      "complexity": 3
+    },
+    {
+      "file": "app/controllers/clasificados_controller.rb",
+      "class": "ClasificadosController",
+      "method": "detalles",
+      "line": 58,
+      "end_line": 60,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/clasificados_controller.rb",
+      "class": "ClasificadosController",
+      "method": "por_grupo",
+      "line": 66,
+      "end_line": 86,
+      "complexity": 3
+    },
+    {
+      "file": "app/controllers/clasificados_controller.rb",
+      "class": "ClasificadosController",
+      "method": "resumen",
+      "line": 92,
+      "end_line": 109,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/clasificados_controller.rb",
+      "class": "ClasificadosController",
+      "method": "set_clasificados_data",
+      "line": 118,
+      "end_line": 120,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/clasificados_controller.rb",
+      "class": "ClasificadosController",
+      "method": "determinar_clasificacion",
+      "line": 127,
+      "end_line": 140,
+      "complexity": 4
+    },
+    {
+      "file": "app/controllers/eliminacion_directa_controller.rb",
+      "class": "EliminacionDirectaController",
+      "method": "index",
+      "line": 20,
+      "end_line": 70,
+      "complexity": 7
+    },
+    {
+      "file": "app/controllers/eliminacion_directa_controller.rb",
+      "class": "EliminacionDirectaController",
+      "method": "show",
+      "line": 76,
+      "end_line": 87,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/eliminacion_directa_controller.rb",
+      "class": "EliminacionDirectaController",
+      "method": "registrar_resultado",
+      "line": 93,
+      "end_line": 129,
+      "complexity": 5
+    },
+    {
+      "file": "app/controllers/eliminacion_directa_controller.rb",
+      "class": "EliminacionDirectaController",
+      "method": "fase_eliminatoria",
+      "line": 132,
+      "end_line": 168,
+      "complexity": 8
+    },
+    {
+      "file": "app/controllers/eliminacion_directa_controller.rb",
+      "class": "EliminacionDirectaController",
+      "method": "actualizar_resultados",
+      "line": 170,
+      "end_line": 231,
+      "complexity": 14
+    },
+    {
+      "file": "app/controllers/eliminacion_directa_controller.rb",
+      "class": "EliminacionDirectaController",
+      "method": "build_partidos_por_etapa",
+      "line": 246,
+      "end_line": 253,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/eliminacion_directa_controller.rb",
+      "class": "EliminacionDirectaController",
+      "method": "resultados_finales_disponibles?",
+      "line": 255,
+      "end_line": 259,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/eliminacion_directa_controller.rb",
+      "class": "EliminacionDirectaController",
+      "method": "partidos_con_penales_empatados",
+      "line": 261,
+      "end_line": 270,
+      "complexity": 7
+    },
+    {
+      "file": "app/controllers/eliminacion_directa_controller.rb",
+      "class": "EliminacionDirectaController",
+      "method": "generar_dieciseisavos_iniciales",
+      "line": 272,
+      "end_line": 298,
+      "complexity": 4
+    },
+    {
+      "file": "app/controllers/eliminacion_directa_controller.rb",
+      "class": "EliminacionDirectaController",
+      "method": "generar_siguiente_ronda_automatico",
+      "line": 300,
+      "end_line": 309,
+      "complexity": 3
+    },
+    {
+      "file": "app/controllers/eliminacion_directa_controller.rb",
+      "class": "EliminacionDirectaController",
+      "method": "partido_estado_label",
+      "line": 311,
+      "end_line": 317,
+      "complexity": 3
+    },
+    {
+      "file": "app/controllers/eliminacion_directa_controller.rb",
+      "class": "EliminacionDirectaController",
+      "method": "partido_estado_class",
+      "line": 319,
+      "end_line": 325,
+      "complexity": 3
+    },
+    {
+      "file": "app/controllers/eliminacion_directa_controller.rb",
+      "class": "EliminacionDirectaController",
+      "method": "set_etapa",
+      "line": 332,
+      "end_line": 340,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/eliminacion_directa_controller.rb",
+      "class": "EliminacionDirectaController",
+      "method": "verificar_fase_grupos_completa",
+      "line": 343,
+      "end_line": 348,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/eliminacion_directa_controller.rb",
+      "class": "EliminacionDirectaController",
+      "method": "etapa_nombre_legible",
+      "line": 355,
+      "end_line": 364,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/eliminacion_directa_controller.rb",
+      "class": "EliminacionDirectaController",
+      "method": "rango_numeros_para",
+      "line": 367,
+      "end_line": 376,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/eliminacion_directa_controller.rb",
+      "class": "EliminacionDirectaController",
+      "method": "etapa_para",
+      "line": 378,
+      "end_line": 388,
+      "complexity": 7
+    },
+    {
+      "file": "app/controllers/grupos_controller.rb",
+      "class": "GruposController",
+      "method": "index",
+      "line": 4,
+      "end_line": 13,
+      "complexity": 3
+    },
+    {
+      "file": "app/controllers/grupos_controller.rb",
+      "class": "GruposController",
+      "method": "show",
+      "line": 15,
+      "end_line": 23,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/grupos_controller.rb",
+      "class": "GruposController",
+      "method": "new",
+      "line": 25,
+      "end_line": 28,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/grupos_controller.rb",
+      "class": "GruposController",
+      "method": "create",
+      "line": 30,
+      "end_line": 48,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/grupos_controller.rb",
+      "class": "GruposController",
+      "method": "edit",
+      "line": 50,
+      "end_line": 52,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/grupos_controller.rb",
+      "class": "GruposController",
+      "method": "update",
+      "line": 54,
+      "end_line": 61,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/grupos_controller.rb",
+      "class": "GruposController",
+      "method": "destroy",
+      "line": 63,
+      "end_line": 71,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/grupos_controller.rb",
+      "class": "GruposController",
+      "method": "tabla",
+      "line": 73,
+      "end_line": 80,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/grupos_controller.rb",
+      "class": "GruposController",
+      "method": "partidos",
+      "line": 82,
+      "end_line": 89,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/grupos_controller.rb",
+      "class": "GruposController",
+      "method": "set_grupo",
+      "line": 93,
+      "end_line": 97,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/grupos_controller.rb",
+      "class": "GruposController",
+      "method": "set_letras_disponibles",
+      "line": 99,
+      "end_line": 102,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/grupos_controller.rb",
+      "class": "GruposController",
+      "method": "grupo_params",
+      "line": 104,
+      "end_line": 106,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/grupos_controller.rb",
+      "class": "GruposController",
+      "method": "tabla_json_format",
+      "line": 108,
+      "end_line": 124,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/grupos_controller.rb",
+      "class": "GruposController",
+      "method": "grupo_json",
+      "line": 126,
+      "end_line": 144,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/partidos_controller.rb",
+      "class": "PartidosController",
+      "method": "index",
+      "line": 8,
+      "end_line": 11,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/partidos_controller.rb",
+      "class": "PartidosController",
+      "method": "show",
+      "line": 14,
+      "end_line": 14,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/partidos_controller.rb",
+      "class": "PartidosController",
+      "method": "new",
+      "line": 17,
+      "end_line": 22,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/partidos_controller.rb",
+      "class": "PartidosController",
+      "method": "create",
+      "line": 25,
+      "end_line": 36,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/partidos_controller.rb",
+      "class": "PartidosController",
+      "method": "edit",
+      "line": 39,
+      "end_line": 43,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/partidos_controller.rb",
+      "class": "PartidosController",
+      "method": "update",
+      "line": 47,
+      "end_line": 56,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/partidos_controller.rb",
+      "class": "PartidosController",
+      "method": "destroy",
+      "line": 59,
+      "end_line": 63,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/partidos_controller.rb",
+      "class": "PartidosController",
+      "method": "registrar_resultado",
+      "line": 68,
+      "end_line": 94,
+      "complexity": 5
+    },
+    {
+      "file": "app/controllers/partidos_controller.rb",
+      "class": "PartidosController",
+      "method": "establecer_partido",
+      "line": 102,
+      "end_line": 106,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/partidos_controller.rb",
+      "class": "PartidosController",
+      "method": "partido_params",
+      "line": 110,
+      "end_line": 120,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/partidos_controller.rb",
+      "class": "PartidosController",
+      "method": "resultado_params",
+      "line": 123,
+      "end_line": 130,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/partidos_grupo_controller.rb",
+      "class": "PartidosGrupoController",
+      "method": "index",
+      "line": 5,
+      "end_line": 11,
+      "complexity": 4
+    },
+    {
+      "file": "app/controllers/partidos_grupo_controller.rb",
+      "class": "PartidosGrupoController",
+      "method": "generar_calendario",
+      "line": 13,
+      "end_line": 32,
+      "complexity": 5
+    },
+    {
+      "file": "app/controllers/partidos_grupo_controller.rb",
+      "class": "PartidosGrupoController",
+      "method": "calendario",
+      "line": 34,
+      "end_line": 40,
+      "complexity": 5
+    },
+    {
+      "file": "app/controllers/partidos_grupo_controller.rb",
+      "class": "PartidosGrupoController",
+      "method": "new",
+      "line": 42,
+      "end_line": 45,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/partidos_grupo_controller.rb",
+      "class": "PartidosGrupoController",
+      "method": "create",
+      "line": 47,
+      "end_line": 56,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/partidos_grupo_controller.rb",
+      "class": "PartidosGrupoController",
+      "method": "edit",
+      "line": 58,
+      "end_line": 60,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/partidos_grupo_controller.rb",
+      "class": "PartidosGrupoController",
+      "method": "update",
+      "line": 62,
+      "end_line": 69,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/partidos_grupo_controller.rb",
+      "class": "PartidosGrupoController",
+      "method": "registrar_resultado",
+      "line": 71,
+      "end_line": 80,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/partidos_grupo_controller.rb",
+      "class": "PartidosGrupoController",
+      "method": "destroy",
+      "line": 82,
+      "end_line": 87,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/partidos_grupo_controller.rb",
+      "class": "PartidosGrupoController",
+      "method": "set_partido",
+      "line": 91,
+      "end_line": 95,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/partidos_grupo_controller.rb",
+      "class": "PartidosGrupoController",
+      "method": "set_grupos",
+      "line": 97,
+      "end_line": 99,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/partidos_grupo_controller.rb",
+      "class": "PartidosGrupoController",
+      "method": "cargar_opciones",
+      "line": 101,
+      "end_line": 103,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/partidos_grupo_controller.rb",
+      "class": "PartidosGrupoController",
+      "method": "partido_params",
+      "line": 105,
+      "end_line": 115,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/partidos_grupo_controller.rb",
+      "class": "PartidosGrupoController",
+      "method": "resultado_params",
+      "line": 117,
+      "end_line": 119,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/partidos_grupo_controller.rb",
+      "class": "PartidosGrupoController",
+      "method": "redirect_after_update",
+      "line": 121,
+      "end_line": 127,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/partidos_grupo_controller.rb",
+      "class": "PartidosGrupoController",
+      "method": "generar_partidos_faltantes",
+      "line": 129,
+      "end_line": 181,
+      "complexity": 5
+    },
+    {
+      "file": "app/controllers/partidos_grupo_controller.rb",
+      "class": "PartidosGrupoController",
+      "method": "numero_partido_fase_grupos",
+      "line": 183,
+      "end_line": 188,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/partidos_grupo_controller.rb",
+      "class": "PartidosGrupoController",
+      "method": "partido_por_emparejamiento",
+      "line": 190,
+      "end_line": 194,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/posiciones_controller.rb",
+      "class": "PosicionesController",
+      "method": "index",
+      "line": 15,
+      "end_line": 28,
+      "complexity": 3
+    },
+    {
+      "file": "app/controllers/posiciones_controller.rb",
+      "class": "PosicionesController",
+      "method": "show",
+      "line": 34,
+      "end_line": 49,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/posiciones_controller.rb",
+      "class": "PosicionesController",
+      "method": "general",
+      "line": 55,
+      "end_line": 74,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/selecciones_controller.rb",
+      "class": "SeleccionesController",
+      "method": "index",
+      "line": 7,
+      "end_line": 9,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/selecciones_controller.rb",
+      "class": "SeleccionesController",
+      "method": "show",
+      "line": 11,
+      "end_line": 13,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/selecciones_controller.rb",
+      "class": "SeleccionesController",
+      "method": "partidos",
+      "line": 15,
+      "end_line": 18,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/selecciones_controller.rb",
+      "class": "SeleccionesController",
+      "method": "new",
+      "line": 20,
+      "end_line": 22,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/selecciones_controller.rb",
+      "class": "SeleccionesController",
+      "method": "create",
+      "line": 24,
+      "end_line": 36,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/selecciones_controller.rb",
+      "class": "SeleccionesController",
+      "method": "edit",
+      "line": 38,
+      "end_line": 38,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/selecciones_controller.rb",
+      "class": "SeleccionesController",
+      "method": "update",
+      "line": 40,
+      "end_line": 50,
+      "complexity": 3
+    },
+    {
+      "file": "app/controllers/selecciones_controller.rb",
+      "class": "SeleccionesController",
+      "method": "destroy",
+      "line": 52,
+      "end_line": 64,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/selecciones_controller.rb",
+      "class": "SeleccionesController",
+      "method": "preparar_index",
+      "line": 68,
+      "end_line": 90,
+      "complexity": 8
+    },
+    {
+      "file": "app/controllers/selecciones_controller.rb",
+      "class": "SeleccionesController",
+      "method": "set_seleccion",
+      "line": 92,
+      "end_line": 96,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/selecciones_controller.rb",
+      "class": "SeleccionesController",
+      "method": "set_grupos",
+      "line": 98,
+      "end_line": 100,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/selecciones_controller.rb",
+      "class": "SeleccionesController",
+      "method": "seleccion_params",
+      "line": 102,
+      "end_line": 113,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/selecciones_controller.rb",
+      "class": "SeleccionesController",
+      "method": "errores_en_espanol",
+      "line": 115,
+      "end_line": 126,
+      "complexity": 4
+    },
+    {
+      "file": "app/controllers/selecciones_controller.rb",
+      "class": "SeleccionesController",
+      "method": "mensaje_error_eliminacion",
+      "line": 128,
+      "end_line": 132,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/torneos_controller.rb",
+      "class": "TorneosController",
+      "method": "index",
+      "line": 10,
+      "end_line": 12,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/torneos_controller.rb",
+      "class": "TorneosController",
+      "method": "show",
+      "line": 16,
+      "end_line": 21,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/torneos_controller.rb",
+      "class": "TorneosController",
+      "method": "new",
+      "line": 24,
+      "end_line": 26,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/torneos_controller.rb",
+      "class": "TorneosController",
+      "method": "create",
+      "line": 29,
+      "end_line": 37,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/torneos_controller.rb",
+      "class": "TorneosController",
+      "method": "edit",
+      "line": 41,
+      "end_line": 41,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/torneos_controller.rb",
+      "class": "TorneosController",
+      "method": "update",
+      "line": 44,
+      "end_line": 50,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/torneos_controller.rb",
+      "class": "TorneosController",
+      "method": "destroy",
+      "line": 53,
+      "end_line": 56,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/torneos_controller.rb",
+      "class": "TorneosController",
+      "method": "avanzar_etapa",
+      "line": 61,
+      "end_line": 74,
+      "complexity": 4
+    },
+    {
+      "file": "app/controllers/torneos_controller.rb",
+      "class": "TorneosController",
+      "method": "podio",
+      "line": 78,
+      "end_line": 85,
+      "complexity": 2
+    },
+    {
+      "file": "app/controllers/torneos_controller.rb",
+      "class": "TorneosController",
+      "method": "establecer_torneo",
+      "line": 93,
+      "end_line": 95,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/torneos_controller.rb",
+      "class": "TorneosController",
+      "method": "torneo_params",
+      "line": 100,
+      "end_line": 102,
+      "complexity": 1
+    },
+    {
+      "file": "app/controllers/torneos_controller.rb",
+      "class": "TorneosController",
+      "method": "podio_listo?",
+      "line": 106,
+      "end_line": 110,
+      "complexity": 2
+    },
+    {
+      "file": "app/helpers/application_helper.rb",
+      "class": "ApplicationHelper",
+      "method": "bandera_seleccion",
+      "line": 4,
+      "end_line": 21,
+      "complexity": 4
+    },
+    {
+      "file": "app/helpers/application_helper.rb",
+      "class": "ApplicationHelper",
+      "method": "fuente_bandera",
+      "line": 25,
+      "end_line": 36,
+      "complexity": 6
+    },
+    {
+      "file": "app/models/grupo.rb",
+      "class": "Grupo",
+      "method": "tabla_posiciones",
+      "line": 57,
+      "end_line": 64,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/grupo.rb",
+      "class": "Grupo",
+      "method": "posiciones",
+      "line": 67,
+      "end_line": 69,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/grupo.rb",
+      "class": "Grupo",
+      "method": "clasificados_directos",
+      "line": 74,
+      "end_line": 76,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/grupo.rb",
+      "class": "Grupo",
+      "method": "tercero",
+      "line": 81,
+      "end_line": 83,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/grupo.rb",
+      "class": "Grupo",
+      "method": "cuarto",
+      "line": 88,
+      "end_line": 90,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/grupo.rb",
+      "class": "Grupo",
+      "method": "completo?",
+      "line": 99,
+      "end_line": 101,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/grupo.rb",
+      "class": "Grupo",
+      "method": "tiene_espacio?",
+      "line": 106,
+      "end_line": 108,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/grupo.rb",
+      "class": "Grupo",
+      "method": "recalcular_todas_las_estadisticas!",
+      "line": 114,
+      "end_line": 119,
+      "complexity": 2
+    },
+    {
+      "file": "app/models/grupo.rb",
+      "class": "Grupo",
+      "method": "to_s",
+      "line": 125,
+      "end_line": 127,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/grupo.rb",
+      "class": "Grupo",
+      "method": "normalizar_letra",
+      "line": 135,
+      "end_line": 137,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/partido.rb",
+      "class": "Partido",
+      "method": "finalizado?",
+      "line": 86,
+      "end_line": 88,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/partido.rb",
+      "class": "Partido",
+      "method": "fase_grupos?",
+      "line": 91,
+      "end_line": 93,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/partido.rb",
+      "class": "Partido",
+      "method": "eliminacion_directa?",
+      "line": 96,
+      "end_line": 98,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/partido.rb",
+      "class": "Partido",
+      "method": "empate?",
+      "line": 101,
+      "end_line": 105,
+      "complexity": 3
+    },
+    {
+      "file": "app/models/partido.rb",
+      "class": "Partido",
+      "method": "registrar_resultado!",
+      "line": 121,
+      "end_line": 131,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/partido.rb",
+      "class": "Partido",
+      "method": "registrar_goles_regulares!",
+      "line": 138,
+      "end_line": 143,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/partido.rb",
+      "class": "Partido",
+      "method": "registrar_penales!",
+      "line": 149,
+      "end_line": 154,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/partido.rb",
+      "class": "Partido",
+      "method": "calcular_ganador",
+      "line": 165,
+      "end_line": 168,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/partido.rb",
+      "class": "Partido",
+      "method": "resumen",
+      "line": 175,
+      "end_line": 186,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/partido.rb",
+      "class": "Partido",
+      "method": "cerrar_torneo_si_corresponde",
+      "line": 194,
+      "end_line": 204,
+      "complexity": 7
+    },
+    {
+      "file": "app/models/partido.rb",
+      "class": "Partido",
+      "method": "actualizar_estadisticas_si_finalizado",
+      "line": 208,
+      "end_line": 219,
+      "complexity": 5
+    },
+    {
+      "file": "app/models/partido.rb",
+      "class": "Partido",
+      "method": "selecciones_deben_ser_diferentes",
+      "line": 222,
+      "end_line": 228,
+      "complexity": 4
+    },
+    {
+      "file": "app/models/seleccion.rb",
+      "class": "Seleccion",
+      "method": "registrar_resultado_grupo",
+      "line": 73,
+      "end_line": 85,
+      "complexity": 3
+    },
+    {
+      "file": "app/models/seleccion.rb",
+      "class": "Seleccion",
+      "method": "reiniciar_estadisticas!",
+      "line": 87,
+      "end_line": 94,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/seleccion.rb",
+      "class": "Seleccion",
+      "method": "todos_los_partidos",
+      "line": 96,
+      "end_line": 101,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/seleccion.rb",
+      "class": "Seleccion",
+      "method": "posicion_en_grupo",
+      "line": 103,
+      "end_line": 105,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/seleccion.rb",
+      "class": "Seleccion",
+      "method": "clasificado_directo?",
+      "line": 109,
+      "end_line": 111,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/seleccion.rb",
+      "class": "Seleccion",
+      "method": "es_tercero?",
+      "line": 114,
+      "end_line": 116,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/seleccion.rb",
+      "class": "Seleccion",
+      "method": "partidos_ordenados",
+      "line": 119,
+      "end_line": 121,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/seleccion.rb",
+      "class": "Seleccion",
+      "method": "partidos_finalizados",
+      "line": 124,
+      "end_line": 126,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/seleccion.rb",
+      "class": "Seleccion",
+      "method": "partidos_pendientes",
+      "line": 129,
+      "end_line": 131,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/seleccion.rb",
+      "class": "Seleccion",
+      "method": "victorias",
+      "line": 134,
+      "end_line": 140,
+      "complexity": 3
+    },
+    {
+      "file": "app/models/seleccion.rb",
+      "class": "Seleccion",
+      "method": "empates",
+      "line": 143,
+      "end_line": 147,
+      "complexity": 2
+    },
+    {
+      "file": "app/models/seleccion.rb",
+      "class": "Seleccion",
+      "method": "derrotas",
+      "line": 150,
+      "end_line": 152,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/seleccion.rb",
+      "class": "Seleccion",
+      "method": "to_s",
+      "line": 155,
+      "end_line": 157,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/seleccion.rb",
+      "class": "Seleccion",
+      "method": "resumen_estadisticas",
+      "line": 160,
+      "end_line": 175,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/seleccion.rb",
+      "class": "Seleccion",
+      "method": "mejores_terceros",
+      "line": 181,
+      "end_line": 186,
+      "complexity": 2
+    },
+    {
+      "file": "app/models/seleccion.rb",
+      "class": "Seleccion",
+      "method": "generar_acronimo",
+      "line": 193,
+      "end_line": 197,
+      "complexity": 2
+    },
+    {
+      "file": "app/models/seleccion.rb",
+      "class": "Seleccion",
+      "method": "construir_acronimo",
+      "line": 200,
+      "end_line": 219,
+      "complexity": 5
+    },
+    {
+      "file": "app/models/seleccion.rb",
+      "class": "Seleccion",
+      "method": "resolver_colision",
+      "line": 221,
+      "end_line": 235,
+      "complexity": 3
+    },
+    {
+      "file": "app/models/seleccion.rb",
+      "class": "Seleccion",
+      "method": "calcular_diferencia_goles",
+      "line": 237,
+      "end_line": 239,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/seleccion.rb",
+      "class": "Seleccion",
+      "method": "capacidad_grupo",
+      "line": 241,
+      "end_line": 245,
+      "complexity": 3
+    },
+    {
+      "file": "app/models/torneo.rb",
+      "class": "Torneo",
+      "method": "actual",
+      "line": 59,
+      "end_line": 61,
+      "complexity": 2
+    },
+    {
+      "file": "app/models/torneo.rb",
+      "class": "Torneo",
+      "method": "en_fase_grupos?",
+      "line": 68,
+      "end_line": 70,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/torneo.rb",
+      "class": "Torneo",
+      "method": "finalizado?",
+      "line": 73,
+      "end_line": 75,
+      "complexity": 3
+    },
+    {
+      "file": "app/models/torneo.rb",
+      "class": "Torneo",
+      "method": "tabla_grupo",
+      "line": 86,
+      "end_line": 88,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/torneo.rb",
+      "class": "Torneo",
+      "method": "selecciones_clasificadas",
+      "line": 94,
+      "end_line": 96,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/torneo.rb",
+      "class": "Torneo",
+      "method": "clasificados_por_primeros_y_segundos",
+      "line": 102,
+      "end_line": 105,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/torneo.rb",
+      "class": "Torneo",
+      "method": "mejores_terceros",
+      "line": 111,
+      "end_line": 113,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/torneo.rb",
+      "class": "Torneo",
+      "method": "fase_grupos_lista?",
+      "line": 119,
+      "end_line": 121,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/torneo.rb",
+      "class": "Torneo",
+      "method": "avanzar_etapa_si_es_posible",
+      "line": 129,
+      "end_line": 137,
+      "complexity": 3
+    },
+    {
+      "file": "app/models/torneo.rb",
+      "class": "Torneo",
+      "method": "determinar_podio!",
+      "line": 141,
+      "end_line": 157,
+      "complexity": 2
+    },
+    {
+      "file": "app/models/torneo.rb",
+      "class": "Torneo",
+      "method": "podio_listo?",
+      "line": 159,
+      "end_line": 168,
+      "complexity": 5
+    },
+    {
+      "file": "app/models/torneo.rb",
+      "class": "Torneo",
+      "method": "partidos_de_fase_grupos",
+      "line": 177,
+      "end_line": 179,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/torneo.rb",
+      "class": "Torneo",
+      "method": "partidos_de_eliminacion",
+      "line": 184,
+      "end_line": 186,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/torneo.rb",
+      "class": "Torneo",
+      "method": "partidos_pendientes",
+      "line": 191,
+      "end_line": 193,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/torneo.rb",
+      "class": "Torneo",
+      "method": "partidos_finalizados_en_etapa",
+      "line": 198,
+      "end_line": 200,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/torneo.rb",
+      "class": "Torneo",
+      "method": "partido_final",
+      "line": 202,
+      "end_line": 204,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/torneo.rb",
+      "class": "Torneo",
+      "method": "partido_tercer_lugar",
+      "line": 206,
+      "end_line": 208,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/torneo.rb",
+      "class": "Torneo",
+      "method": "to_s",
+      "line": 214,
+      "end_line": 216,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/torneo.rb",
+      "class": "Torneo",
+      "method": "asignar_etapa_inicial",
+      "line": 224,
+      "end_line": 226,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/torneo.rb",
+      "class": "Torneo",
+      "method": "todos_los_partidos_finalizados?",
+      "line": 235,
+      "end_line": 238,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/torneo.rb",
+      "class": "Torneo",
+      "method": "partidos_en_etapa_actual",
+      "line": 243,
+      "end_line": 251,
+      "complexity": 2
+    },
+    {
+      "file": "app/models/torneo.rb",
+      "class": "Torneo",
+      "method": "rango_numeros_para",
+      "line": 264,
+      "end_line": 273,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/torneo.rb",
+      "class": "Torneo",
+      "method": "etapa_siguiente",
+      "line": 276,
+      "end_line": 281,
+      "complexity": 3
+    },
+    {
+      "file": "app/models/torneo.rb",
+      "class": "Torneo",
+      "method": "perdedor_de",
+      "line": 285,
+      "end_line": 293,
+      "complexity": 3
+    },
+    {
+      "file": "app/models/torneo.rb",
+      "class": "Torneo",
+      "method": "partido_de_cierre",
+      "line": 296,
+      "end_line": 299,
+      "complexity": 2
+    },
+    {
+      "file": "app/models/torneo.rb",
+      "class": "Torneo",
+      "method": "asociar_partido_de_cierre!",
+      "line": 301,
+      "end_line": 305,
+      "complexity": 3
+    },
+    {
+      "file": "app/models/torneo.rb",
+      "class": "Torneo",
+      "method": "numero_partido_final",
+      "line": 307,
+      "end_line": 309,
+      "complexity": 1
+    },
+    {
+      "file": "app/models/torneo.rb",
+      "class": "Torneo",
+      "method": "numero_partido_tercer_lugar",
+      "line": 312,
+      "end_line": 314,
+      "complexity": 1
+    },
+    {
+      "file": "app/services/actualizar_estadisticas_seleccion.rb",
+      "class": "ActualizarEstadisticasSeleccion",
+      "method": "initialize",
+      "line": 16,
+      "end_line": 18,
+      "complexity": 1
+    },
+    {
+      "file": "app/services/actualizar_estadisticas_seleccion.rb",
+      "class": "ActualizarEstadisticasSeleccion",
+      "method": "recalcular!",
+      "line": 21,
+      "end_line": 24,
+      "complexity": 1
+    },
+    {
+      "file": "app/services/actualizar_estadisticas_seleccion.rb",
+      "class": "ActualizarEstadisticasSeleccion",
+      "method": "calcular",
+      "line": 27,
+      "end_line": 30,
+      "complexity": 1
+    },
+    {
+      "file": "app/services/actualizar_estadisticas_seleccion.rb",
+      "class": "ActualizarEstadisticasSeleccion",
+      "method": "calcular_estadisticas",
+      "line": 35,
+      "end_line": 47,
+      "complexity": 2
+    },
+    {
+      "file": "app/services/actualizar_estadisticas_seleccion.rb",
+      "class": "ActualizarEstadisticasSeleccion",
+      "method": "partidos_finalizados",
+      "line": 50,
+      "end_line": 55,
+      "complexity": 1
+    },
+    {
+      "file": "app/services/actualizar_estadisticas_seleccion.rb",
+      "class": "ActualizarEstadisticasSeleccion",
+      "method": "procesar_partido",
+      "line": 62,
+      "end_line": 87,
+      "complexity": 4
+    },
+    {
+      "file": "app/services/actualizar_estadisticas_seleccion.rb",
+      "class": "ActualizarEstadisticasSeleccion",
+      "method": "estadisticas_actuales",
+      "line": 90,
+      "end_line": 97,
+      "complexity": 1
+    },
+    {
+      "file": "app/services/calcular_ganador_partido.rb",
+      "class": "CalcularGanadorPartido",
+      "method": "initialize",
+      "line": 6,
+      "end_line": 8,
+      "complexity": 1
+    },
+    {
+      "file": "app/services/calcular_ganador_partido.rb",
+      "class": "CalcularGanadorPartido",
+      "method": "calcular_ganador",
+      "line": 13,
+      "end_line": 23,
+      "complexity": 4
+    },
+    {
+      "file": "app/services/calcular_ganador_partido.rb",
+      "class": "CalcularGanadorPartido",
+      "method": "goles_regulares_definitivos?",
+      "line": 28,
+      "end_line": 31,
+      "complexity": 2
+    },
+    {
+      "file": "app/services/calcular_ganador_partido.rb",
+      "class": "CalcularGanadorPartido",
+      "method": "ganador_goles_regulares",
+      "line": 34,
+      "end_line": 40,
+      "complexity": 2
+    },
+    {
+      "file": "app/services/calcular_ganador_partido.rb",
+      "class": "CalcularGanadorPartido",
+      "method": "ganador_por_penales",
+      "line": 44,
+      "end_line": 54,
+      "complexity": 5
+    },
+    {
+      "file": "app/services/determinar_clasificados.rb",
+      "class": "DeterminarClasificados",
+      "method": "obtener",
+      "line": 15,
+      "end_line": 17,
+      "complexity": 1
+    },
+    {
+      "file": "app/services/determinar_clasificados.rb",
+      "class": "DeterminarClasificados",
+      "method": "obtener",
+      "line": 19,
+      "end_line": 26,
+      "complexity": 1
+    },
+    {
+      "file": "app/services/determinar_clasificados.rb",
+      "class": "DeterminarClasificados",
+      "method": "primeros_lugares",
+      "line": 29,
+      "end_line": 32,
+      "complexity": 2
+    },
+    {
+      "file": "app/services/determinar_clasificados.rb",
+      "class": "DeterminarClasificados",
+      "method": "segundos_lugares",
+      "line": 35,
+      "end_line": 38,
+      "complexity": 2
+    },
+    {
+      "file": "app/services/determinar_clasificados.rb",
+      "class": "DeterminarClasificados",
+      "method": "mejores_terceros",
+      "line": 42,
+      "end_line": 48,
+      "complexity": 2
+    },
+    {
+      "file": "app/services/determinar_clasificados.rb",
+      "class": "DeterminarClasificados",
+      "method": "total_clasificados",
+      "line": 51,
+      "end_line": 53,
+      "complexity": 1
+    },
+    {
+      "file": "app/services/determinar_clasificados.rb",
+      "class": "DeterminarClasificados",
+      "method": "fase_grupos_completa?",
+      "line": 57,
+      "end_line": 60,
+      "complexity": 3
+    },
+    {
+      "file": "app/services/determinar_clasificados.rb",
+      "class": "DeterminarClasificados",
+      "method": "partidos_fase_grupos_finalizados",
+      "line": 63,
+      "end_line": 65,
+      "complexity": 1
+    },
+    {
+      "file": "app/services/determinar_clasificados.rb",
+      "class": "DeterminarClasificados",
+      "method": "total_partidos_fase_grupos",
+      "line": 68,
+      "end_line": 70,
+      "complexity": 1
+    },
+    {
+      "file": "app/services/determinar_clasificados.rb",
+      "class": "DeterminarClasificados",
+      "method": "all_partidos_fase_grupos_finalizados?",
+      "line": 73,
+      "end_line": 76,
+      "complexity": 2
+    },
+    {
+      "file": "app/services/determinar_clasificados.rb",
+      "class": "DeterminarClasificados",
+      "method": "progreso_fase_grupos",
+      "line": 79,
+      "end_line": 85,
+      "complexity": 2
+    },
+    {
+      "file": "app/services/determinar_clasificados.rb",
+      "class": "DeterminarClasificados",
+      "method": "partidos_fase_grupos_finalizados?",
+      "line": 94,
+      "end_line": 96,
+      "complexity": 1
+    },
+    {
+      "file": "app/services/siguiente_ronda.rb",
+      "class": "SiguienteRonda",
+      "method": "initialize",
+      "line": 48,
+      "end_line": 50,
+      "complexity": 1
+    },
+    {
+      "file": "app/services/siguiente_ronda.rb",
+      "class": "SiguienteRonda",
+      "method": "avanzar",
+      "line": 52,
+      "end_line": 98,
+      "complexity": 11
+    },
+    {
+      "file": "app/services/siguiente_ronda.rb",
+      "class": "SiguienteRonda",
+      "method": "finalizar_partidos_con_marcador!",
+      "line": 102,
+      "end_line": 118,
+      "complexity": 7
+    },
+    {
+      "file": "app/services/siguiente_ronda.rb",
+      "class": "SiguienteRonda",
+      "method": "partidos_con_penales_empatados",
+      "line": 120,
+      "end_line": 129,
+      "complexity": 7
+    },
+    {
+      "file": "app/services/siguiente_ronda.rb",
+      "class": "SiguienteRonda",
+      "method": "cerrar_torneo_si_corresponde",
+      "line": 131,
+      "end_line": 145,
+      "complexity": 4
+    },
+    {
+      "file": "app/services/siguiente_ronda.rb",
+      "class": "SiguienteRonda",
+      "method": "determinar_etapa_actual",
+      "line": 147,
+      "end_line": 156,
+      "complexity": 5
+    },
+    {
+      "file": "app/services/siguiente_ronda.rb",
+      "class": "SiguienteRonda",
+      "method": "partidos_de_etapa",
+      "line": 158,
+      "end_line": 166,
+      "complexity": 2
+    },
+    {
+      "file": "app/services/siguiente_ronda.rb",
+      "class": "SiguienteRonda",
+      "method": "todos_finalizados?",
+      "line": 168,
+      "end_line": 170,
+      "complexity": 2
+    },
+    {
+      "file": "app/services/siguiente_ronda.rb",
+      "class": "SiguienteRonda",
+      "method": "obtener_ganadores",
+      "line": 172,
+      "end_line": 176,
+      "complexity": 3
+    },
+    {
+      "file": "app/services/siguiente_ronda.rb",
+      "class": "SiguienteRonda",
+      "method": "obtener_perdedores",
+      "line": 178,
+      "end_line": 185,
+      "complexity": 5
+    },
+    {
+      "file": "app/services/siguiente_ronda.rb",
+      "class": "SiguienteRonda",
+      "method": "generar_partidos_bracket",
+      "line": 187,
+      "end_line": 207,
+      "complexity": 3
+    },
+    {
+      "file": "app/services/siguiente_ronda.rb",
+      "class": "SiguienteRonda",
+      "method": "generar_final_y_tercer_lugar",
+      "line": 209,
+      "end_line": 245,
+      "complexity": 3
+    }
+  ],
+  "parse_errors": []
+}

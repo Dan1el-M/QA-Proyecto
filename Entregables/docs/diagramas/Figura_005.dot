@@ -1,0 +1,11 @@
+digraph G { rankdir=TB; node [shape=box];
+risk [label="Requerimientos y riesgos\noráculos congelados"];
+static [label="Revisión estática\nrequerimientos y código"];
+native [label="Minitest\nunidad e integración"];
+browser [label="Playwright, axe y k6\nsistema y no funcionales"];
+human [label="Aceptación, usabilidad\ne inspección humana"];
+risk -> static [label=""];
+risk -> native [label=""];
+risk -> browser [label=""];
+native -> human [label="validación complementaria"];
+}

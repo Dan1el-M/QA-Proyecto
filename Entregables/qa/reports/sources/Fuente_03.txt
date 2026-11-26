@@ -1,0 +1,1262 @@
+=== PÁGINA 1 ===
+SEMANA 5 · UNIDAD DE MEDICIÓN DE LA CALIDAD
+Métricas de calidad
+del software
+
+
+
+De los objetivos del proyecto a los números que sí importan: GQM, ISO/IEC 25010:2023, métricas de prueba y
+defectos, y métricas ágiles y DevOps.
+
+
+IC-6831 · Aseguramiento de la calidad del software
+Escuela de Computación · Ingeniería en Computación · TEC
+Prof. Alicia Salazar Hernández
+
+
+
+
+
+
+
+
+
+                                                                                                                                           1
+=== PÁGINA 2 ===
+AGENDA
+Ruta de la sesión
+
+
+
+
+      1                                                      2                                                      3                                                     4
+
+   Por qué medir                                          Fundamentos                                            GQM                                                   Modelos de calidad
+   El costo de los defectos, qué gana la                  Medida, medición, métrica e                            Goal–Question–Metric: cómo                            De McCall e ISO 9126 a ISO/IEC
+   organización al medir y qué se                         indicador. Escalas, atributos                          derivar métricas desde objetivos en                   25010:2023 y las medidas de
+   pierde al no hacerlo.                                  internos y externos, principios de                     vez de medir lo que sea fácil.                        ISO/IEC 25023.
+                                                          Roche.
+
+
+
+
+      5                                                      6                                                      7                                                     8
+
+   Pruebas y defectos                                     Ágil y DevOps                                          Antipatrones                                          Práctica
+   Cobertura, densidad, DDP/DRE,                          Métricas DORA, deuda técnica,                          Ley de Goodhart, métricas de                          Caso AulaTEC, ejercicios de cálculo,
+   avance de pruebas y métricas de                        defectos escapados y                                   vanidad y cómo NO usar las                            quiz tipo ISTQB y el trabajo en
+   gestión de defectos.                                   automatización de la recolección.                      métricas con las personas.                            grupos.
+
+
+
+    Objetivo de la sesión: al terminar, cada quien debe poder tomar un objetivo de calidad de su proyecto y derivar de él un conjunto pequeño de métricas defendibles,
+    con fórmula, fuente de datos e interpretación.
+
+IC-6831 · Aseguramiento de la calidad del software                                                                                                                                                                  2
+=== PÁGINA 3 ===
+01                      Por qué medir
+
+
+
+
+                        «No se puede controlar lo que no se puede medir» —Tom DeMarco, 1982
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                              3
+=== PÁGINA 4 ===
+1 · POR QUÉ MEDIR
+El costo de un defecto crece con la fase en que se detecta
+
+
+Regla del 1:10:100 (Boehm). El costo relativo de corregir un mismo defecto se multiplica conforme avanza el ciclo de vida: por eso la detección temprana —
+revisiones estáticas incluidas—      es una decisión económica, no estética.
+
+
+                                                                                                        100                  Prevención
+ 100
+                                                                                                                             Estándares, plantillas y capacitación: evitan que el defecto
+                                                                                                                             se introduzca.
+
+  80
+
+
+
+  60                                                                                                                         Detección temprana
+                                                                                                                             Revisiones e inspecciones sobre requisitos y diseño, antes
+  40                                                                                                                         de que exista código.
+                                                                                      30
+
+
+  20                                                                15
+                                                  10                                                                         Contención
+               1                 5                                                                                           Pruebas por niveles: que un defecto no cruce hacia la
+
+   0                                                                                                                         siguiente fase.
+          Requisitos          Diseño         Codificación        Pruebas          Aceptación        Producción
+
+
+
+
+
+
+
+
+IC-6831 · Aseguramiento de la calidad del software                                                                                                                                          4
+=== PÁGINA 5 ===
+1 · POR QUÉ MEDIR
+Qué gana —y qué pierde—                                                        la organización
+
+
+La mala calidad impacta el negocio                                                                 Lo que la medición hace posible
+
+●  Reduce los ingresos y aumenta el gasto operativo por retrabajo y soporte.                       ●  Administrar: decidir si se libera, si se detiene o dónde poner el
+●  Incrementa el riesgo: legal, reputacional y de continuidad del servicio.                           esfuerzo.
+
+●  Erosiona la confianza dentro y fuera de la organización.                                        ●  Comparar: entre versiones, módulos, equipos o proveedores.
+
+●  Consume la capacidad del equipo en apagar incendios en lugar de                                 ●  Evaluar procesos: ¿la inspección de código nos está sirviendo o no?
+
+   construir.                                                                                      ●  Estimar: costo y esfuerzo de pruebas a partir de datos históricos.
+
+●  Vuelve impredecible la planificación: nadie sabe cuánto falta para                              ●  Comunicar: convertir la opinión «esto va mal» en evidencia discutible.
+   «terminar».
+
+
+            Producto                                         Proceso                                        Proyecto                                       Recursos
+
+  ¿Qué tan bueno es lo que construimos?                 ¿Qué tan bien lo estamos                   ¿Vamos a llegar en tiempo y costo?              ¿Con qué capacidad y herramientas
+                                                             construyendo?                                                                                    contamos?
+
+
+
+
+
+
+
+
+IC-6831 · Aseguramiento de la calidad del software                                                                                                                                      5
+=== PÁGINA 6 ===
+02                     Fundamentos de la medición
+
+
+
+
+                       Vocabulario, escalas y el proceso que convierte un dato suelto en una decisión.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                        6
+=== PÁGINA 7 ===
+2 · FUNDAMENTOS
+Medida, medición, métrica e indicador no son sinónimos
+
+
+Vocabulario de ISO/IEC/IEEE 24765 y del glosario ISTQB. La confusión entre estos cuatro términos es la causa más frecuente de                            discusiones estériles sobre
+métricas.
+
+
+ Término                       Definición                                                                              Ejemplo en pruebas
+
+
+ Medida                        El número o categoría asignado a un atributo de una entidad mediante una                37 defectos abiertos.
+                               medición.
+
+
+ Medición                      El proceso mediante el cual se asigna ese número o categoría.                           Contar los defectos con estado «abierto» en Jira al cierre del
+                                                                                                                       sprint.
+
+
+ Métrica                       Medida derivada, definida por una fórmula, que combina medidas para                     Densidad de defectos = defectos / KLOC.
+                               responder una pregunta.
+
+
+ Indicador                     Métrica interpretada contra un umbral o meta: convierte el número en una                Densidad > 3 def/KLOC ⇒     el módulo no pasa a pruebas de
+                               señal para decidir.                                                                     sistema.
+
+    IEEE define métrica como «una medida cuantitativa del grado en que un sistema, componente o proceso posee un atributo determi                                 nado». Toda métrica
+    útil termina siendo un indicador: si nadie define el umbral, el número no cambia ninguna decisión.
+
+
+
+
+
+
+IC-6831 · Aseguramiento de la calidad del software                                                                                                                                             7
+=== PÁGINA 8 ===
+2 · FUNDAMENTOS
+Escalas de medición: qué operaciones son legítimas
+
+
+La escala de una medida determina qué se puede calcular con ella. Promediar severidades (escala ordinal) o sumar prioridades es un error estadístico
+frecuente en los informes de pruebas.
+
+ Escala                  Qué permite                                        Ejemplo en QA                                                         Operaciones válidas
+
+
+ Nominal                 Solo clasificar en categorías sin orden.           Tipo de defecto: funcional, interfaz, desempeño.                      Conteo, moda, frecuencia.
+
+
+ Ordinal                 Ordenar, pero sin distancias comparables.          Severidad: bloqueante > mayor > menor > cosmético.                    Mediana, percentiles. NO promedio.
+
+
+ Intervalo               Diferencias comparables, cero arbitrario.          Fecha de detección del defecto.                                       Diferencias, media.
+
+
+ Razón                   Cero absoluto: las razones tienen sentido.         Defectos por KLOC, horas de reparación.                               Todas, incluidos cocientes.
+
+
+ Absoluta                Un conteo de la propia entidad.                    Número de casos de prueba ejecutados.                                 Todas.
+
+    Regla práctica: si al calcular una métrica se promedia algo ordinal, la métrica no es defendible. Para severidad, use conteos                             por categoría o un índice
+    ponderado con pesos justificados y documentados.
+
+
+
+
+
+
+IC-6831 · Aseguramiento de la calidad del software                                                                                                                                                  8
+=== PÁGINA 9 ===
+2 · FUNDAMENTOS
+Atributos externos: solo se miden por vía indirecta
+
+
+Los atributos que le importan al usuario —mantenibilidad, usabilidad, fiabilidad—                   no se pueden medir directamente. Se miden atributos internos y se asume
+una relación entre ambos.
+
+   Atributos internos (medibles)                                                                                                      Atributos externos (los que importan)
+
+   Tamaño (LOC, puntos de función) · Complejidad                                                                                      Mantenibilidad · Fiabilidad · Usabilidad ·
+   ciclomática · Acoplamiento y cohesión ·                                                                                            Portabilidad · Eficiencia de desempeño ·
+   Profundidad de herencia · Número de                                                      se infiere                                Seguridad
+   parámetros · Cobertura de código                                             relación supuesta, no automática
+
+
+
+
+
+Para que la inferencia valga, deben cumplirse tres condiciones:
+
+
+      1                                                                 2                                                                 3
+
+   Medición precisa                                                  Relación real                                                     Modelo explícito
+   El atributo interno se mide de forma repetible y sin              Existe evidencia de que el atributo interno se                    Esa relación está validada y expresada como
+   ambigüedad.                                                       relaciona con el comportamiento externo.                          fórmula o modelo, no como intuición.
+
+
+
+
+IC-6831 · Aseguramiento de la calidad del software                                                                                                                                              9
+=== PÁGINA 10 ===
+2 · FUNDAMENTOS
+Cómo se clasifican las métricas
+
+
+
+
+ Criterio                               Categorías                 Qué mide                                                                       Ejemplos
+
+
+ Objeto medido                          Producto                   El artefacto en sí: código, diseño, documentación.                             Tamaño, complejidad, densidad de defectos.
+
+
+                                        Proceso                    Cómo se desarrolla y se prueba: eficacia de métodos y técnicas.                DDP, eficacia de la inspección, tiempo medio de reparación.
+
+
+                                        Proyecto                   Avance, costo y esfuerzo frente a lo planificado.                              Desviación de cronograma, esfuerzo de pruebas por caso.
+
+
+ Punto de vista                         Internas                   Propiedades relevantes para el desarrollador.                                  LOC, cobertura de sentencias, deuda técnica.
+
+
+                                        Externas                   Propiedades percibidas por el usuario del sistema.                             Disponibilidad, tiempo de respuesta, tasa de error del usuario.
+
+
+                                        En uso                     Efecto real de usar el software en un contexto concreto.                       Eficacia, eficiencia, satisfacción, ausencia de riesgo.
+
+
+ Momento de obtención                   Estáticas                  Se obtienen sin ejecutar el software.                                          Métricas de código, del diseño y de la documentación.
+
+
+                                        Dinámicas                  Se obtienen de un programa en ejecución.                                       Tiempos de respuesta, consumo de memoria, fallos por hora.
+
+     Las métricas híbridas combinan producto, proceso y recursos —por ejemplo, costo por punto de función—                                   y son las que mejor soportan decisiones de negocio, pero
+     también las más caras de sostener.
+
+
+
+
+IC-6831 · Aseguramiento de la calidad del software                                                                                                                                                                         10
+=== PÁGINA 11 ===
+2 · FUNDAMENTOS
+El proceso de medición: cinco actividades
+
+
+Principios básicos de la medición según Roche. La medición no es un evento aislado: es un ciclo que solo tiene valor si cierra con retroalimentación al equipo.
+
+
+
+      1                                         2                                         3                                        4                                         5
+
+   Formulación                               Recolección                               Análisis                                  Interpretación                            Retroalimentación
+   Derivar las medidas y                     Acumular los datos                        Calcular las métricas y                   Evaluar los resultados                    Transmitir al equipo las
+   métricas apropiadas para                  necesarios. Siempre que                   aplicar herramientas                      frente a umbrales y datos                 recomendaciones
+   la representación del                     sea posible, de forma                     matemáticas y estadísticas                históricos para obtener                   derivadas de la
+   software que se quiere                    automatizada.                             válidas.                                  una visión interna de la                  interpretación.
+   evaluar.                                                                                                                      calidad.
+
+
+
+
+
+                                        ↻   La retroalimentación reinicia el ciclo: si los datos no cambian una decisión, la métrica se retira.
+
+
+●  Automatice la recolección y el análisis siempre que sea posible: el dato recolectado a mano se deja de recolectar.
+
+●  Aplique técnicas estadísticas válidas para relacionar atributos internos del producto con características externas de calidad.
+
+●  Establezca para cada métrica sus lineamientos y recomendaciones de interpretación antes de publicarla.
+
+
+
+IC-6831 · Aseguramiento de la calidad del software                                                                                                                                                        11
+=== PÁGINA 12 ===
+2 · FUNDAMENTOS
+Cómo se reconoce una métrica bien construida
+
+
+
+
+      1                                                  2                                                   3                                                  4
+
+   Simple y calculable                                 Empíricamente persuasiva                           Consistente y objetiva                              Unidades consistentes
+   Su obtención no cuesta más que el                   Coincide con la intuición de quien                 Dos personas que la calculen sobre                  Sin mezclar escalas: no se construye
+   valor de la decisión que soporta.                   conoce el producto; si no, hay que                 los mismos datos obtienen el mismo                  una métrica de razón con
+                                                       explicar por qué.                                  valor.                                              componentes ordinales.
+
+
+
+
+      5                                                  6                                                   7                                                  8
+
+   Independiente del lenguaje                          Rango significativo                                Direccionalidad correcta                            Validada y escalable
+   No favorece ni penaliza una                         Sus valores tienen un mínimo, un                   Si el rasgo positivo aumenta, la                    Probada empíricamente en varios
+   tecnología por su sintaxis.                         máximo y un punto medio                            métrica se mueve siempre en el                      contextos y útil también en sistemas
+                                                       interpretables.                                    mismo sentido.                                      grandes.
+
+
+
+
+    Una métrica debe medir el factor de interés con independencia de otros factores. Antes de publicarla, pregunte: ¿qué otra cosa podría estar moviendo este número?
+
+
+
+IC-6831 · Aseguramiento de la calidad del software                                                                                                                                                     12
+=== PÁGINA 13 ===
+03                      GQM: de objetivos a métricas
+
+
+
+
+                         El error más común no es calcular mal la métrica, es medir lo que resulta fácil de medir.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                              13
+=== PÁGINA 14 ===
+3 · GQM
+Goal–Question–Metric (Basili y Rombach)
+
+
+GQM es un método para derivar métricas de forma descendente: primero el objetivo, luego las preguntas que evidencian si se alcanza y solo al final los
+números. Se lee en sentido contrario para interpretar los resultados.
+
+    GOAL —      Objetivo
+                                                           Qué se quiere lograr, sobre qué objeto y desde el punto de vista de quién.
+    Nivel conceptual
+
+
+            QUESTION —         Preguntas
+                                                                   Qué habría que poder responder para saber si el objetivo se cumple. Entre 2 y 5 por objetivo.
+            Nivel operacional
+
+
+                    METRIC —       Métricas                                Qué datos responden cada pregunta. Una pregunta puede necesitar varias métricas; una
+
+                    Nivel cuantitativo                                     métrica puede servir a varias preguntas.
+
+
+
+
+   Ventaja                                                              Ventaja                                                             Riesgo
+   Toda métrica queda trazable a un objetivo: si nadie                  Limita naturalmente la cantidad: pocos objetivos ⇒                  Objetivos vagos («mejorar la calidad») producen
+   puede nombrar el objetivo, la métrica se elimina.                    pocas preguntas ⇒    pocas métricas que sí se usan.                 preguntas vagas y métricas inservibles.
+
+
+
+
+IC-6831 · Aseguramiento de la calidad del software                                                                                                                                                     14
+=== PÁGINA 15 ===
+3 · GQM
+La plantilla del objetivo GQM
+
+
+Un objetivo GQM bien formulado tiene cinco elementos. Si falta alguno, las preguntas derivadas quedarán ambiguas.
+
+
+
+ Elemento de la plantilla                          Qué se completa                                           Ejemplo aplicado
+
+
+ Analizar                                          el objeto de estudio                                      el proceso de pruebas de sistema
+
+
+ con el propósito de                               el objetivo                                               evaluarlo
+
+
+ con respecto a                                    el foco de calidad                                        su eficacia para detectar defectos
+
+
+ desde el punto de vista de                        la perspectiva                                            el líder de pruebas
+
+
+ en el contexto de                                 el entorno                                                el proyecto AulaTEC, release 2.0
+
+
+    Objetivo redactado: «Analizar el proceso de pruebas de sistema con el propósito de evaluarlo con respecto a su eficacia para detectar defectos, desde
+    el punto de vista del líder de pruebas, en el contexto del proyecto AulaTEC, release 2.0.»
+
+
+
+
+
+
+
+IC-6831 · Aseguramiento de la calidad del software                                                                                                                                               15
+=== PÁGINA 16 ===
+3 · GQM
+Un árbol GQM completo
+
+
+
+
+    OBJETIVO   Analizar el proceso de pruebas de sistema para evaluar su eficacia de detección de defectos, desde el punto de vista del líder de pruebas, en AulaTEC 2.0.
+
+
+
+
+   P1. ¿Estamos encontrando los defectos antes que                          P2. ¿Estamos probando todo lo que acordamos                              P3. ¿El esfuerzo de pruebas está donde está el
+   el usuario?                                                              probar?                                                                  riesgo?
+
+
+
+   ▪  DDP = defectos en pruebas / (defectos en pruebas                      ▪  Cobertura de requisitos = requisitos con casos /                      ▪  Densidad de defectos por módulo
+      + defectos en producción)                                                requisitos totales                                                    ▪  Horas de prueba por módulo frente a su nivel de
+   ▪  Defectos escapados por release                                        ▪  Cobertura de decisiones sobre módulos críticos                           riesgo
+   ▪  Tiempo medio de detección (MTTD)                                      ▪  % de casos ejecutados sobre los diseñados                             ▪  % de defectos de severidad alta por módulo
+
+
+
+
+
+
+
+
+
+
+    Se lee hacia abajo para diseñar el programa de medición y hacia arriba para interpretarlo: un valor de DDP bajo no es «un número                                malo», es evidencia de que P1 se
+    responde negativamente y por tanto el objetivo no se está alcanzando.
+
+
+
+
+IC-6831 · Aseguramiento de la calidad del software                                                                                                                                                              16
+=== PÁGINA 17 ===
+3 · GQM
+Antes de publicar una métrica: la lista de control
+
+
+
+
+
+ Pregunta de control                                                                       Si la respuesta es «no»…
+
+
+
+ ¿A qué objetivo responde y quién es el interesado?                                        La métrica no tiene dueño: se recolectará un par de sprints y luego se abandonará.
+
+
+
+ ¿Qué decisión cambia según su valor?                                                      Es una métrica de vanidad: informa pero no dirige. Elimínela.
+
+
+ ¿Cuál es la fórmula exacta y qué entra y qué no entra en cada término?                    Dos personas obtendrán valores distintos y la discusión será sobre el dato, no sobre el
+                                                                                           problema.
+
+
+ ¿De dónde salen los datos y con qué frecuencia?                                           La recolección manual la matará. Defina la fuente automatizada primero.
+
+
+
+ ¿Cuál es el umbral, la meta o el rango esperado?                                          Nadie sabrá si el valor es bueno o malo, y cada quien lo interpretará a su favor.
+
+
+ ¿Qué comportamiento indeseable podría inducir si se usa como meta?                        Está creando el próximo problema. Toda métrica-meta se optimiza, a veces a costa de lo que
+                                                                                           importa.
+
+
+
+
+IC-6831 · Aseguramiento de la calidad del software                                                                                                                                                      17
+=== PÁGINA 18 ===
+04                       Modelos de calidad
+
+
+
+
+                          Un modelo de calidad es el catálogo de atributos que da nombre a lo que vamos a medir.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                   18
+=== PÁGINA 19 ===
+4 · MODELOS DE CALIDAD
+De McCall a ISO/IEC 25010:2023
+
+
+Los modelos de calidad responden a una pregunta previa a la medición: ¿cuáles son los atributos que componen «la calidad» de un producto de software?
+
+
+  1977                                     1978                                     1991                                     2011                                     2023
+                                                                                    2001
+
+  McCall                                   Boehm                                    ISO/IEC 9126                             ISO/IEC 25010                            ISO/IEC 25010
+                                                                                                                                                                      2.ª edición
+
+
+
+  11 factores en 3                         Añade la utilidad general y              Primer estándar                          Reemplaza a 9126 dentro                  9 características: se agrega
+  perspectivas. Introduce la               la mantenibilidad como                   internacional: 6                         de la familia SQuaRE                     Seguridad física (Safety) y se
+  idea de puntuar atributos                raíces del árbol de                      características. Se divide en            (25000). 8 características de            renombran Usabilidad y
+  con listas de comprobación               características.                         calidad interna, externa y en            producto + 5 de calidad en               Portabilidad.
+  (escala 0–10).                                                                    uso (partes 2, 3 y 4).                   uso.
+
+
+
+
+
+    Consecuencia práctica: ISO/IEC 9126 está retirado. Un informe de calidad que lo cite como estándar vigente es un informe desa                        ctualizado. Úselo solo como
+    referencia histórica.
+
+
+
+
+IC-6831 · Aseguramiento de la calidad del software                                                                                                                                                    19
+=== PÁGINA 20 ===
+4 · MODELOS DE CALIDAD
+McCall: tres perspectivas, once factores
+
+
+McCall organiza los factores según el momento del ciclo de vida en que interesan. Sigue siendo útil como esquema de puntuación mediante listas de
+comprobación.
+
+   Operación del producto                                                 Revisión del producto                                                   Transición del producto
+   Corrección                                                             Facilidad de mantenimiento                                              Portabilidad
+   Fiabilidad                                                             Flexibilidad                                                            Reusabilidad
+   Eficiencia                                                             Facilidad de prueba                                                     Interoperabilidad
+   Integridad
+   Facilidad de uso
+
+Cada factor se descompone en criterios que se puntúan de 0 (bajo) a 10 (alto). Algunos criterios y su definición:
+
+ Criterio                                Qué evalúa                                                      Criterio                                 Qué evalúa
+
+
+ Facilidad de auditoría                  Facilidad para comprobar el cumplimiento de estándares.         Modularidad                              Independencia funcional de los componentes.
+
+
+ Exactitud                               Precisión de los cálculos y del control.                        Autodocumentación                        Grado en que el código fuente se documenta a sí mismo.
+
+
+ Tolerancia al error                     Daño causado cuando el programa encuentra un error.             Trazabilidad                             Capacidad de rastrear un componente hasta su requisito.
+
+
+ Instrumentación                         Grado en que el programa vigila su propio funcionamiento.       Independencia del hardware               Desacople del software respecto del hardware.
+
+
+
+
+IC-6831 · Aseguramiento de la calidad del software                                                                                                                                                            20
+=== PÁGINA 21 ===
+4 · MODELOS DE CALIDAD
+ISO/IEC 25010:2023 —                                                                modelo de calidad del producto
+
+
+Nueve características y sus subcaracterísticas; en negrita, lo que cambió respecto de la edición 2011. El modelo no es una lista                                      de requisitos: es un catálogo del que cada
+proyecto selecciona las características relevantes, les asigna prioridad y define para cada una una medida con su umbral.
+
+ Característica                                        Subcaracterísticas
+
+
+ Adecuación funcional                                  Completitud funcional · Corrección funcional · Pertinencia funcional
+
+
+ Eficiencia de desempeño                               Comportamiento temporal · Utilización de recursos · Capacidad
+
+
+ Compatibilidad                                        Coexistencia · Interoperabilidad
+
+ Capacidad de interacción                              Reconocibilidad de la adecuación · Aprendizabilidad · Operabilidad · Protección frente a errores del usuario · Compromiso del              usuario · Inclusividad ·
+                                                       Asistencia al usuario · Autodescripción
+
+ Fiabilidad                                            Ausencia de fallos · Disponibilidad · Tolerancia a fallos · Capacidad de recuperación
+
+
+ Seguridad (Security)                                  Confidencialidad · Integridad · No repudio · Responsabilidad · Autenticidad · Resistencia
+
+
+ Mantenibilidad                                        Modularidad · Reusabilidad · Analizabilidad · Modificabilidad · Capacidad de ser probado
+
+
+ Flexibilidad                                          Adaptabilidad · Escalabilidad · Instalabilidad · Reemplazabilidad
+
+
+ Seguridad física (Safety)                             Restricción operacional · Identificación de riesgos · Fallo seguro · Advertencia de peligro · Integración segura
+
+
+
+
+
+IC-6831 · Aseguramiento de la calidad del software                                                                                                                                                                             21
+=== PÁGINA 22 ===
+4 · MODELOS DE CALIDAD
+Qué cambió en 2023 y qué es la calidad en uso
+
+
+Cambios de la 2.ª edición (2023-11)                                                                               Calidad en uso (ISO/IEC 25010 · medidas en 25022)
+
+ 2011                                        2023                                                                    Eficacia
+
+ Usabilidad                                  Capacidad de interacción                                                ¿El usuario logra sus objetivos con exactitud e integridad?
+
+
+ Portabilidad                                Flexibilidad                                                            Eficiencia
+                                                                                                                     ¿A qué costo de recursos —tiempo, esfuerzo—         los logra?
+ Madurez (fiabilidad)                        Ausencia de fallos
+                                                                                                                     Satisfacción
+ Estética de la interfaz                     Compromiso del usuario                                                  Utilidad, confianza, placer y comodidad percibidos.
+
+ Accesibilidad                               Inclusividad + Asistencia al usuario                                    Ausencia de riesgo
+ —                                           Seguridad física (Safety): nueva característica                         Económico, para la salud y la seguridad, y ambiental.
+
+
+ —                                           Nuevas: Autodescripción, Resistencia, Escalabilidad                     Cobertura de contexto
+                                                                                                                     Completitud e integridad del contexto y flexibilidad ante contextos no
+                                                                                                                     previstos.
+    La calidad del producto es una propiedad del software; la calidad en uso es una propiedad de la interacción entre el software, el usuario y su contexto. Un producto
+    puede cumplir todas sus especificaciones y aun así tener mala calidad en uso.
+
+
+
+
+
+
+IC-6831 · Aseguramiento de la calidad del software                                                                                                                                                       22
+=== PÁGINA 23 ===
+4 · MODELOS DE CALIDAD
+Cómo se especifica una métrica: la ficha de ISO/IEC 25023
+
+
+Una métrica no es una fórmula suelta. El estándar exige documentar propósito, método, fórmula, interpretación, escala y audiencia. Ejemplo de una medida externa
+de corrección funcional:
+
+ Campo de la ficha                                            Contenido
+
+ Nombre de la métrica                                         Exactitud de cálculo
+
+ Propósito                                                    ¿Con qué frecuencia los usuarios finales encuentran resultados inexactos?
+
+ Método de aplicación                                         Registrar el número de cálculos inexactos respecto de la especificación durante la operación.
+
+ Fórmula y elementos de datos                                 X = A / T   ·   A = número de cálculos inexactos encontrados por los usuarios   ·   T = tiempo de operación
+
+ Interpretación del valor                                     0 ≤ X ; cuanto más cercano a 0,0 mejor.
+
+ Tipo de escala                                               Razón
+
+ Tipo de medida                                               X = cantidad / tiempo · A = cantidad · T = tiempo
+
+ Entrada para la medición                                     Especificación de requisitos · Reporte de pruebas · Registro de operación
+
+ Referencia al proceso (ISO/IEC 12207)                        6.5 Validación · 6.3 Aseguramiento de la calidad
+
+ Audiencia objetivo                                           Desarrollador y usuario
+
+
+    Toda métrica del catálogo del trabajo en grupos debe entregarse en este formato. Es lo que distingue un catálogo operativo deuna lista de buenas intenciones.
+
+
+IC-6831 · Aseguramiento de la calidad del software                                                                                                                                                             23
+=== PÁGINA 24 ===
+05                      Métricas de pruebas y defectos
+
+
+
+
+                         Las métricas que el líder de pruebas revisa cada semana y defiende en el comité de liberación.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                              24
+=== PÁGINA 25 ===
+5 · PRUEBAS Y DEFECTOS
+Cuatro familias de métricas en el proceso de pruebas
+
+
+
+
+      1                                                     2                                                     3                                                     4
+
+   De avance                                             De cobertura                                          De defectos                                           De eficacia y costo
+
+   ¿Cuánto llevamos del trabajo                          ¿Qué parte del alcance hemos                          ¿Qué encontramos y en qué estado                      ¿Vale la pena cómo estamos
+   planificado?                                          tocado?                                               está?                                                 probando?
+
+   · Casos diseñados / planificados                      · Cobertura de requisitos                             · Densidad de defectos                                · DDP / DRE
+   · Casos ejecutados / diseñados                        · Cobertura de código: sentencias,                    · Distribución por severidad y por                    · Costo por defecto detectado
+   · Aprobados, fallidos, bloqueados, no                 decisiones                                            módulo                                                · Esfuerzo por caso de prueba
+   ejecutados                                            · Cobertura de riesgos                                · Curva de llegada y de cierre                        · Tiempo medio de detección y de
+   · Curva S y burndown de pruebas                       · Cobertura del entorno o de                          · Edad, reapertura y defectos                         reparación
+                                                         configuraciones                                       escapados
+
+
+
+
+
+
+
+
+
+
+
+
+    Un tablero de pruebas necesita al menos una métrica de cada familia. Con solo métricas de avance se sabe si el equipo está ocupado, no si el producto está listo.
+
+
+IC-6831 · Aseguramiento de la calidad del software                                                                                                                                                              25
+=== PÁGINA 26 ===
+5 · PRUEBAS Y DEFECTOS
+Métricas de cobertura
+
+
+La cobertura mide qué proporción del alcance definido ha sido ejercitada por las pruebas. Es una métrica de suficiencia, no de calidad: alta cobertura no
+implica buenas pruebas.
+
+                 Cobertura (%) = ( elementos ejercitados por las pruebas / elementos totales identificados ) ×                                                                                    100
+
+
+ Tipo de cobertura                         Elemento contado                                          Para qué sirve                                              Límite
+
+ De requisitos                             Requisitos con al menos un caso de prueba                 Demostrar trazabilidad y suficiencia frente al cliente.     No dice nada sobre la profundidad de cada caso.
+                                           asociado.
+
+ De sentencias                             Líneas de código ejecutadas al menos una vez.             Detectar código nunca ejercitado.                           100 % de sentencias no garantiza probar todas las
+                                                                                                                                                                 decisiones.
+
+ De decisiones (ramas)                     Resultados verdadero y falso de cada decisión.            Criterio mínimo exigible en software crítico.               Más costosa; requiere instrumentación.
+
+ De riesgos                                Riesgos del producto mitigados por al menos una           Priorizar el esfuerzo donde está el impacto.                Depende de la calidad del análisis de riesgos.
+                                           prueba.
+
+ De configuraciones                        Combinaciones de navegador, S.O. o dispositivo            Acotar la matriz de compatibilidad.                         Explota combinatoriamente; requiere técnicas de
+                                           probadas.                                                                                                             reducción.
+
+
+
+     La cobertura de decisiones subsume la de sentencias: si se cubren todas las ramas, se cubren todas las sentencias, pero no alrevés. Este es un punto recurrente del examen
+     ISTQB CTFL.
+
+
+IC-6831 · Aseguramiento de la calidad del software                                                                                                                                                                     26
+=== PÁGINA 27 ===
+5 · PRUEBAS Y DEFECTOS
+Densidad de defectos y eficacia de detección (DDP / DRE)
+
+
+Densidad de defectos                                                                                Eficacia de detección: DDP / DRE
+
+             Densidad = defectos encontrados / tamaño                                                   DDP (%) = D_pruebas / (D_pruebas + D_producción) ×
+             (KLOC, puntos de función, casos de uso)                                                                                         100
+
+
+●  Permite comparar módulos de distinto tamaño dentro del mismo proyecto.                           ●  Responde a la pregunta que le importa al negocio: ¿lo encontramos nosotros o
+●  Comparar entre proyectos u organizaciones exige la misma definición de «defecto»                    lo encontró el cliente?
+
+   y de «tamaño».                                                                                   ●  Se calcula por nivel de prueba o por fase, para saber dónde se está filtrando el
+●  Una densidad muy baja puede significar buen código… o pruebas débiles. Léala                        defecto.
+
+   junto con la cobertura.                                                                          ●  Requiere una ventana de tiempo declarada en producción (por ejemplo, 90 días
+                                                                                                       tras la liberación).
+
+               2,67                                           80 %                                               30                                           20 %
+
+              defectos / KLOC                                      DDP                                      defectos escapados                                 tasa de escape
+          120 defectos en 45 KLOC                        120 de 150 defectos totales                     encontrados por el usuario                        complemento del DDP
+
+
+    Cifras del caso AulaTEC que se trabajará al final de la sesión.
+
+
+
+IC-6831 · Aseguramiento de la calidad del software                                                                                                                                       27
+=== PÁGINA 28 ===
+5 · PRUEBAS Y DEFECTOS
+Métricas de avance: la curva S de ejecución
+
+
+Comparar lo planificado acumulado contra lo ejecutado y lo aprobado revela problemas que un porcentaje aislado esconde: bloqueos, entornos caídos o casos
+que se ejecutan pero no pasan.
+
+ 350
+                                                                                                                                     Brecha planificado –     ejecutado
+ 300                                                                                                                                 32 casos de retraso al día 10. Señal de capacidad insuficiente,
+                                                                                                                                     bloqueos o entorno inestable.
+ 250
+
+ 200                                                                                                                                 Brecha ejecutado –     aprobado
+                                                                                                                                     43 casos ejecutados que no pasaron. Señal de calidad del
+ 150                                                                                                                                 producto, no de avance del equipo.
+
+
+
+ 100                                                                                                                                 Lectura combinada
+                                                                                                                                     Si ambas brechas crecen a la vez, el problema es del producto:
+  50                                                                                                                                 el equipo pierde tiempo re-probando correcciones.
+
+
+    0
+           D1          D2         D3          D4         D5          D6         D7          D8         D9         D10                Qué NO concluir
+                     Planificado acumulado            Ejecutado acumulado             Aprobado acumulado                             «Vamos al 90 %» sin mirar los bloqueados: un caso bloqueado
+                                                                                                                                     no es un caso pendiente cualquiera.
+
+
+
+
+
+
+
+IC-6831 · Aseguramiento de la calidad del software                                                                                                                                                     28
+=== PÁGINA 29 ===
+5 · PRUEBAS Y DEFECTOS
+Métricas de gestión de defectos
+
+
+
+
+ Métrica                                               Fórmula o definición                                                                   Qué revela
+
+ Curva de llegada vs. cierre                           Defectos abiertos por semana frente a defectos cerrados por semana.                    Si la llegada no decrece cerca de la fecha de liberación, el producto no está
+                                                                                                                                              convergiendo.
+
+ Defectos abiertos (backlog)                           Acumulado de defectos sin resolver, desglosado por severidad.                          Deuda de calidad pendiente. Es el dato central del comité de liberación.
+
+
+ Edad del defecto                                      Tiempo desde el reporte hasta el cierre, por severidad.                                Cuellos de botella en el flujo de corrección y en la priorización.
+
+
+ Tiempo medio de reparación (MTTR)                     Σ (t_cierre − t_reporte) / número de defectos corregidos.                              Capacidad de respuesta del equipo de desarrollo.
+
+
+ Tiempo medio de detección (MTTD)                      Σ (t_detección − t_introducción) / número de defectos.                                 Qué tan tarde se descubren los defectos respecto de cuándo se introdujeron.
+
+
+ Tasa de reapertura                                    Defectos reabiertos / defectos cerrados ×       100.                                   Calidad de las correcciones y de la verificación de la corrección.
+
+
+ Densidad de defectos por módulo                       Defectos del módulo / tamaño del módulo.                                               Dónde concentrar el esfuerzo: principio de agrupación de defectos.
+
+
+ Defectos escapados                                    Defectos hallados en producción por release.                                           Métrica de resultado del proceso completo de V&V.
+
+
+
+
+
+
+     Séptimo principio de las pruebas: la ausencia de errores es una falacia. Un backlog de defectos en cero no significa que el sistema satisfaga las necesidades del usuario.
+
+
+
+IC-6831 · Aseguramiento de la calidad del software                                                                                                                                                                                     29
+=== PÁGINA 30 ===
+5 · PRUEBAS Y DEFECTOS
+Fórmulas de referencia
+
+
+
+ Métrica                                                    Fórmula                                                                             Interpretación
+
+ % de casos ejecutados                                      (casos ejecutados / casos diseñados) ×      100                                     Avance de la ejecución.
+
+ % de casos no ejecutados                                   (casos pendientes / casos diseñados) ×      100                                     Trabajo restante; complemento del anterior.
+
+ % de casos aprobados                                       (casos aprobados / casos ejecutados) ×       100                                    Salud del producto bajo prueba.
+
+ % de casos bloqueados                                      (casos bloqueados / casos diseñados) ×       100                                    Impedimentos: entorno, datos o dependencias.
+
+ Densidad de defectos                                       defectos / tamaño (KLOC o PF)                                                       Concentración de defectos; comparable entre módulos.
+
+ DDP                                                        D_pruebas / (D_pruebas + D_producción) ×          100                               Eficacia de detección antes de la liberación.
+
+ Cobertura de requisitos                                    (requisitos con casos / requisitos totales) ×    100                                Suficiencia del alcance de la prueba.
+
+ Eficiencia de la prueba                                    defectos encontrados / horas de prueba                                              Rendimiento del esfuerzo invertido.
+
+ Costo por defecto detectado                                costo total de pruebas / defectos detectados                                        Insumo para el análisis costo-beneficio de la V&V.
+
+ Tasa de defectos escapados                                 D_producción / D_totales ×      100                                                 Complemento del DDP; lo que vio el cliente.
+
+
+
+     Regla de higiene: junto a cada porcentaje publique siempre el denominador. «85 % aprobado» sobre 20 casos y sobre 2 000 casosno                                     son la misma afirmación.
+
+
+
+IC-6831 · Aseguramiento de la calidad del software                                                                                                                                                                         30
+=== PÁGINA 31 ===
+06                     Métricas en entornos ágiles y
+                       DevOps
+
+
+                        Cuando se libera varias veces al día, medir el resultado del flujo importa más que medir la fase.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                           31
+=== PÁGINA 32 ===
+6 · ÁGIL Y DEVOPS
+Métricas DORA: rendimiento de la entrega de software
+
+
+Derivadas del programa de investigación DevOps Research and Assessment. Miden el desempeño del sistema de entrega completo, no la productividad individual.
+En sus revisiones recientes se agrupan en rendimiento (throughput) e inestabilidad.
+
+
+      1                                         2                                         3                                          4                                         5
+
+   Frecuencia de                             Lead time for changes                      Tiempo de                                 Change failure rate                       Rework rate
+   despliegue                                                                           recuperación
+   Cada cuánto se despliega a                Tiempo desde que se                        Cuánto se tarda en                        % de cambios que provocan                 % de despliegues no
+   producción.                               confirma un cambio hasta                   restablecer el servicio tras              un fallo, incidente o                     planificados originados por
+                                             que corre en producción.                   un despliegue fallido.                    reversión.                                un problema en producción.
+   RENDIMIENTO
+                                             RENDIMIENTO                                RENDIMIENTO                               INESTABILIDAD                             INESTABILIDAD · nueva
+
+
+
+
+   Qué las hace distintas                                                 El par que evita el abuso                                             Relación con la calidad
+   Son métricas de resultado del sistema completo                         Rendimiento e inestabilidad se leen siempre juntas.                   Un change failure rate alto es una señal de V&V
+   (equipo + proceso + plataforma). Ninguna se puede                      Optimizar la frecuencia de despliegue sola produce                    insuficiente en el pipeline: faltan pruebas
+   atribuir a una persona, y ese es su principal valor:                   despliegues frágiles; optimizar la estabilidad sola                   automatizadas, o las que hay no cubren lo que se
+   no se prestan a evaluar individuos.                                    produce parálisis.                                                    rompe.
+
+
+
+
+
+
+
+IC-6831 · Aseguramiento de la calidad del software                                                                                                                                                          32
+=== PÁGINA 33 ===
+6 · ÁGIL Y DEVOPS
+Métricas de calidad dentro del flujo ágil
+
+
+
+
+    Defectos escapados por release                           Deuda técnica                                            Cobertura sobre código nuevo                              Estabilidad de la suite (flaky
+                                                                                                                                                                                tests)
+    El indicador de calidad más honesto                      Estimación del esfuerzo de                               Medir la cobertura del cambio, no del                     % de pruebas con resultado no
+    en ágil: cuántos defectos vio el                         remediación (SonarQube: technical                        sistema completo. Es accionable en                        determinista. Una suite inestable
+    usuario. Sustituye a los conteos de                      debt ratio). Útil como tendencia, no                     cada pull request y evita metas                           destruye la confianza en el pipeline y
+    defectos internos como métrica de                        como valor absoluto.                                     globales imposibles.                                      se termina ignorando.
+    resultado.
+
+
+
+
+
+
+    Tiempo de ciclo de la prueba                             Densidad de defectos por                                 Trabajo no planificado                                    Definición de Terminado
+                                                             historia                                                                                                           cumplida
+    Duración de la suite automatizada. Si                    Adapta la densidad clásica a la unidad                   % de la capacidad del sprint                              % de historias que cumplen la DoD sin
+    la retroalimentación tarda horas, deja                   de trabajo ágil cuando no se quiere                      consumido por correcciones y                              excepciones. Métrica de disciplina del
+    de usarse en el momento en que sirve.                    medir en KLOC.                                           soporte. Refleja el costo real de la                      equipo, no de velocidad.
+                                                                                                                      mala calidad.
+
+
+
+
+
+
+     La velocity NO es una métrica de calidad ni de productividad: es una herramienta de planificación interna del equipo. Usarla para comparar equipos garantiza que se infle.
+
+
+IC-6831 · Aseguramiento de la calidad del software                                                                                                                                                                           33
+=== PÁGINA 34 ===
+6 · ÁGIL Y DEVOPS
+Herramientas: quién recolecta cada dato
+
+
+
+
+ Tipo de herramienta                                    Qué mide automáticamente                                                                            Ejemplos
+
+
+ Análisis estático de código                            Complejidad, duplicación, cobertura, deuda técnica, vulnerabilidades, code smells.                  SonarQube · PMD · ESLint · SpotBugs
+
+
+ Cobertura de código                                    Sentencias, ramas y líneas ejercitadas por la suite automatizada.                                   JaCoCo · Coverage.py · Istanbul
+
+
+ Gestión de pruebas                                     Casos diseñados, ejecutados, resultados, trazabilidad a requisitos.                                 Xray · TestRail · Zephyr · Azure Test Plans
+
+
+ Gestión de defectos                                    Llegada, cierre, edad, severidad, reapertura, defectos escapados.                                   Jira · Azure DevOps · Bugzilla · GitLab
+
+
+ Integración continua                                   Frecuencia de despliegue, lead time, tasa de fallo, duración de la suite.                           GitHub Actions · GitLab CI · Jenkins
+
+
+ Observabilidad en producción                           Disponibilidad, tiempo de respuesta, tasa de error, MTTR real.                                      Grafana · Prometheus · Datadog · Sentry
+
+
+
+    Beneficio                                                                   Riesgo                                                                      Riesgo
+    El dato automatizado es consistente, barato y no                            La herramienta define qué es fácil de medir, y lo                           Métricas distintas en herramientas distintas
+    depende de que alguien recuerde llenar una hoja de                          fácil termina desplazando a lo importante. El                               producen cifras contradictorias. Defina una única
+    cálculo.                                                                    objetivo manda, no el tablero.                                              fuente de verdad por métrica.
+
+
+
+
+
+
+IC-6831 · Aseguramiento de la calidad del software                                                                                                                                                                          34
+=== PÁGINA 35 ===
+07                    Antipatrones de la medición
+
+
+
+
+                      Toda métrica que se convierte en meta deja de ser una buena métrica.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                    35
+=== PÁGINA 36 ===
+7 · ANTIPATRONES
+Siete formas de arruinar un programa de métricas
+
+
+
+
+      1                                                        2                                                        3                                                       4
+
+    Ley de Goodhart                                         Medir personas                                           Métricas de vanidad                                     LOC como medida de valor
+
+    Cuando una medida se convierte en                       «Defectos por desarrollador» o «casos                    Números que siempre suben y nunca                       Penaliza la simplificación: refactorizar
+    objetivo, deja de ser una buena                         ejecutados por tester» destruyen la                      cambian una decisión: total                             y borrar código empeora la métrica. Es
+    medida. Si se premia «defectos                          colaboración y la honestidad del                         acumulado de casos, líneas escritas,                    la razón por la que KLOC se usa solo
+    encontrados», aparecerán defectos                       reporte. Las métricas evalúan                            pruebas automatizadas creadas.                          para normalizar densidades.
+    triviales duplicados.                                   procesos y productos.
+
+
+
+      5                                                        6                                                        7                                                    El contraste
+
+                                                                                                                                                                             Una métrica sana es aburrida: tiene
+    Demasiadas métricas                                     Métricas sin contexto                                    Recolección manual perpetua                             dueño, fórmula, fuente automatizada,
+                                                                                                                                                                             umbral y una decisión asociada. Y se
+    Un tablero con 40 indicadores no se                     Un porcentaje sin denominador, sin                       Lo que se llena a mano se llena tarde,                  retira cuando deja de usarse.
+    lee. GQM existe precisamente para                       línea base y sin umbral no permite                       incompleto y al final no se llena. Si no
+    podar: pocos objetivos, pocas                           decidir nada; solo alimenta                              se puede automatizar, cuestione si
+    métricas, todas usadas.                                 interpretaciones convenientes.                           vale la pena medirlo.
+
+
+
+     Ética en las pruebas: el reporte de métricas debe ser fiel aunque sea incómodo. Presentar cifras seleccionadas para tranquilizar                            a la gerencia es una falta profesional, no
+     una habilidad política.
+
+IC-6831 · Aseguramiento de la calidad del software                                                                                                                                                                        36
+=== PÁGINA 37 ===
+7 · ANTIPATRONES
+Cómo se comunican: el informe de pruebas
+
+
+ISO/IEC/IEEE 29119-3 define las plantillas de los informes de pruebas. Un informe de avance responde a preguntas; un tablero de métricas sin narrativa no
+informa a nadie.
+Preguntas que el informe debe responder                                                                       1 · Un titular, no un tablero
+●  ¿Cuántos casos se diseñaron por requisito y cuántos faltan por diseñar?                                    La primera línea es la conclusión, no el primer gráfico del tablero.
+
+●  ¿Cuántos se ejecutaron y cuántos quedan pendientes?
+
+●  ¿Cuántos aprobaron, fallaron o quedaron bloqueados, y por qué?                                             2 · Tendencia sobre foto fija
+
+●  ¿Cuántos defectos se identificaron y con qué severidad?                                                    Un valor aislado no dice nada: la dirección del movimiento es la información.
+
+●  ¿Cuántos casos fallan por un mismo defecto?
+
+●  ¿Qué riesgos del producto siguen sin mitigar?                                                              3 · Riesgo antes que conteo
+
+●  ¿Cuál es la recomendación: liberar, liberar con condiciones o no liberar?                                  «12 defectos abiertos» importa menos que «3 afectan la matrícula».
+
+
+
+
+    El destinatario del informe decide el formato: el equipo necesita el detalle por módulo; el comité de liberación necesita una                  recomendación con su justificación y sus
+    riesgos residuales.
+
+
+
+
+
+
+IC-6831 · Aseguramiento de la calidad del software                                                                                                                                                   37

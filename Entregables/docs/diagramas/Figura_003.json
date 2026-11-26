@@ -1,0 +1,57 @@
+{
+  "title": "Relaciones persistidas del sistema",
+  "nodes": [
+    [
+      "t",
+      "torneos\netapa_actual; podio opcional",
+      600,
+      120
+    ],
+    [
+      "g",
+      "grupos\nletra única; torneo opcional",
+      80,
+      420
+    ],
+    [
+      "m",
+      "partidos\nmarcador; equipos; ganador",
+      1120,
+      420
+    ],
+    [
+      "s",
+      "selecciones\ngrupo; puntos; GF; GC; DG",
+      600,
+      750
+    ]
+  ],
+  "edges": [
+    [
+      "t",
+      "g",
+      "1 : N"
+    ],
+    [
+      "t",
+      "m",
+      "1 : N"
+    ],
+    [
+      "g",
+      "s",
+      "1 : N"
+    ],
+    [
+      "m",
+      "s",
+      "local / visitante / ganador"
+    ],
+    [
+      "g",
+      "m",
+      "1 : N"
+    ]
+  ],
+  "source": "db/schema.rb; claves foráneas reales"
+}

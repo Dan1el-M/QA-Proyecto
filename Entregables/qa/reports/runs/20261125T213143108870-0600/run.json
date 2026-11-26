@@ -1,0 +1,62 @@
+{
+  "run_id": "20261125T213143108870-0600",
+  "commit": "789565ea61bae6a84cc8d9ae3be871f601f4a2d1",
+  "os": "Windows-11-10.0.26200-SP0",
+  "jobs": [
+    {
+      "name": "versions",
+      "command": [
+        "C:\\Users\\jdmor\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "qa/scripts/versions.py"
+      ],
+      "exit_code": 0,
+      "seconds": 1.015,
+      "log": "qa\\reports\\runs\\20261125T213143108870-0600\\versions.log",
+      "started_at": "20261125T213143108870-0600"
+    },
+    {
+      "name": "prepare",
+      "command": [
+        "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\.qa-runtime\\rubyinstaller-4.0.5-1-x64\\bin\\ruby.EXE",
+        "qa/scripts/prepare.rb",
+        "finished"
+      ],
+      "exit_code": 1,
+      "seconds": 0.61,
+      "log": "qa\\reports\\runs\\20261125T213143108870-0600\\prepare.log",
+      "started_at": "20261125T213143108870-0600"
+    },
+    {
+      "name": "performance-normal",
+      "command": [
+        "k6",
+        "run",
+        "--out",
+        "json=C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T213143108870-0600\\k6-normal.jsonl",
+        "--summary-export",
+        "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T213143108870-0600\\k6-normal-summary.json",
+        "qa/performance/load.js"
+      ],
+      "exit_code": 127,
+      "seconds": 0.015,
+      "log": "qa\\reports\\runs\\20261125T213143108870-0600\\performance-normal.log",
+      "started_at": "20261125T213143108870-0600"
+    },
+    {
+      "name": "performance-high",
+      "command": [
+        "k6",
+        "run",
+        "--out",
+        "json=C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T213143108870-0600\\k6-high.jsonl",
+        "--summary-export",
+        "C:\\Users\\jdmor\\OneDrive - Estudiantes ITCR\\@TEC\\VI Semestre\\QA\\proyecto\\QA-Proyecto\\qa\\reports\\runs\\20261125T213143108870-0600\\k6-high-summary.json",
+        "qa/performance/load.js"
+      ],
+      "exit_code": 127,
+      "seconds": 0.016,
+      "log": "qa\\reports\\runs\\20261125T213143108870-0600\\performance-high.log",
+      "started_at": "20261125T213143108870-0600"
+    }
+  ]
+}

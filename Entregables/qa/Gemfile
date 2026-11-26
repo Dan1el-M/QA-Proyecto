@@ -1,0 +1,11 @@
+# Isolated QA bundle. Production Gemfile and lock remain unchanged.
+eval_gemfile File.expand_path('../../Gemfile', __dir__)
+group :test do
+  gem 'minitest', '~> 5.25'
+  gem 'simplecov', '~> 0.22'
+  gem 'rubocop', '~> 1.80'
+  gem 'reek', '~> 6.5'
+  gem 'flay', '~> 2.13'
+  gem 'brakeman', '~> 7.0'
+  gem 'bundler-audit', '~> 0.9'
+end

@@ -1,0 +1,58 @@
+{
+  "title": "Estrategia de QA propuesta",
+  "nodes": [
+    [
+      "risk",
+      "Requerimientos y riesgos\noráculos congelados",
+      600,
+      115
+    ],
+    [
+      "static",
+      "Revisión estática\nrequerimientos y código",
+      80,
+      400
+    ],
+    [
+      "native",
+      "Minitest\nunidad e integración",
+      600,
+      400
+    ],
+    [
+      "browser",
+      "Playwright, axe y k6\nsistema y no funcionales",
+      1120,
+      400
+    ],
+    [
+      "human",
+      "Aceptación, usabilidad\ne inspección humana",
+      600,
+      730
+    ]
+  ],
+  "edges": [
+    [
+      "risk",
+      "static",
+      ""
+    ],
+    [
+      "risk",
+      "native",
+      ""
+    ],
+    [
+      "risk",
+      "browser",
+      ""
+    ],
+    [
+      "native",
+      "human",
+      "validación complementaria"
+    ]
+  ],
+  "source": "qa/data/design.json; propuesta de auditoría"
+}

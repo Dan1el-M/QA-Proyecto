@@ -1,0 +1,170 @@
+[
+  {
+    "number": 1,
+    "title": "Arquitectura existente",
+    "path": "docs\\diagramas\\Figura_001.png",
+    "pending": false,
+    "instructions": ""
+  },
+  {
+    "number": 2,
+    "title": "Componentes existentes",
+    "path": "docs\\diagramas\\Figura_002.png",
+    "pending": false,
+    "instructions": ""
+  },
+  {
+    "number": 3,
+    "title": "Entidades y relaciones",
+    "path": "docs\\diagramas\\Figura_003.png",
+    "pending": false,
+    "instructions": ""
+  },
+  {
+    "number": 4,
+    "title": "Flujo de registro de marcador",
+    "path": "docs\\diagramas\\Figura_004.png",
+    "pending": false,
+    "instructions": ""
+  },
+  {
+    "number": 5,
+    "title": "Estrategia de pruebas propuesta",
+    "path": "docs\\diagramas\\Figura_005.png",
+    "pending": false,
+    "instructions": ""
+  },
+  {
+    "number": 6,
+    "title": "Gestión de defectos",
+    "path": "docs\\diagramas\\Figura_006.png",
+    "pending": false,
+    "instructions": ""
+  },
+  {
+    "number": 7,
+    "title": "Automatización e integración continua propuesta",
+    "path": "docs\\diagramas\\Figura_007.png",
+    "pending": false,
+    "instructions": ""
+  },
+  {
+    "number": 8,
+    "title": "Relación entre modelo,GQM,pruebas ymétricas",
+    "path": "docs\\diagramas\\Figura_008.png",
+    "pending": false,
+    "instructions": ""
+  },
+  {
+    "number": 9,
+    "title": "Estados reales del catálogo",
+    "path": "docs\\diagramas\\Figura_009.png",
+    "pending": false,
+    "instructions": ""
+  },
+  {
+    "number": 10,
+    "title": "Hallazgos por severidad",
+    "path": "docs\\diagramas\\Figura_010.png",
+    "pending": false,
+    "instructions": ""
+  },
+  {
+    "number": 11,
+    "title": "Métodos con mayor complejidad",
+    "path": "docs\\diagramas\\Figura_011.png",
+    "pending": false,
+    "instructions": "Ejecutar --only static."
+  },
+  {
+    "number": 12,
+    "title": "Resultado de pruebas unitarias",
+    "path": "docs\\diagramas\\Figura_012.png",
+    "pending": false,
+    "instructions": "Desde Entregables: bash qa/scripts/run_all.sh --only unit. Para actividades humanas, realizar primero la sesión y completar el instrumento. Guardar evidencia en qa/evidence; consultar PENDIENTES_EVIDENCIAS.md."
+  },
+  {
+    "number": 13,
+    "title": "Resultado de integración",
+    "path": "",
+    "pending": true,
+    "instructions": "Desde Entregables: bash qa/scripts/run_all.sh --only integration. Para actividades humanas, realizar primero la sesión y completar el instrumento. Guardar evidencia en qa/evidence; consultar PENDIENTES_EVIDENCIAS.md."
+  },
+  {
+    "number": 14,
+    "title": "Evidencia de recorrido E2E",
+    "path": "",
+    "pending": true,
+    "instructions": "Desde Entregables: bash qa/scripts/run_all.sh --only e2e. Para actividades humanas, realizar primero la sesión y completar el instrumento. Guardar evidencia en qa/evidence; consultar PENDIENTES_EVIDENCIAS.md."
+  },
+  {
+    "number": 15,
+    "title": "P95 por escenario y carga",
+    "path": "",
+    "pending": true,
+    "instructions": "Desde Entregables: bash qa/scripts/run_all.sh --only performance --load. Para actividades humanas, realizar primero la sesión y completar el instrumento. Guardar evidencia en qa/evidence; consultar PENDIENTES_EVIDENCIAS.md."
+  },
+  {
+    "number": 16,
+    "title": "Verificaciones de seguridad",
+    "path": "",
+    "pending": true,
+    "instructions": "Desde Entregables: bash qa/scripts/run_all.sh --only security. Para actividades humanas, realizar primero la sesión y completar el instrumento. Guardar evidencia en qa/evidence; consultar PENDIENTES_EVIDENCIAS.md."
+  },
+  {
+    "number": 17,
+    "title": "Evaluación de accesibilidad",
+    "path": "",
+    "pending": true,
+    "instructions": "Desde Entregables: bash qa/scripts/run_all.sh --only accessibility. Para actividades humanas, realizar primero la sesión y completar el instrumento. Guardar evidencia en qa/evidence; consultar PENDIENTES_EVIDENCIAS.md."
+  },
+  {
+    "number": 18,
+    "title": "Aceptación con personas externas",
+    "path": "",
+    "pending": true,
+    "instructions": "Desde Entregables: python qa/scripts/import_human.py qa/acceptance/resultados.csv. Para actividades humanas, realizar primero la sesión y completar el instrumento. Guardar evidencia en qa/evidence; consultar PENDIENTES_EVIDENCIAS.md."
+  },
+  {
+    "number": 19,
+    "title": "Tiempos de usabilidad reales",
+    "path": "",
+    "pending": true,
+    "instructions": "Desde Entregables: python qa/scripts/import_human.py qa/usability/resultados.csv. Para actividades humanas, realizar primero la sesión y completar el instrumento. Guardar evidencia en qa/evidence; consultar PENDIENTES_EVIDENCIAS.md."
+  },
+  {
+    "number": 20,
+    "title": "Inspección formal confirmada",
+    "path": "",
+    "pending": true,
+    "instructions": "Desde Entregables: python qa/scripts/import_human.py qa/static/inspeccion.json. Para actividades humanas, realizar primero la sesión y completar el instrumento. Guardar evidencia en qa/evidence; consultar PENDIENTES_EVIDENCIAS.md."
+  },
+  {
+    "number": 21,
+    "title": "Pantalla principal del producto",
+    "path": "",
+    "pending": true,
+    "instructions": "Ejecutar E2E o abrir la ruta local y guardar el archivo con el nombre establecido en qa/evidence."
+  },
+  {
+    "number": 22,
+    "title": "Calendario y tabla de posiciones",
+    "path": "",
+    "pending": true,
+    "instructions": "Ejecutar E2E o abrir la ruta local y guardar el archivo con el nombre establecido en qa/evidence."
+  },
+  {
+    "number": 23,
+    "title": "Podio del torneo",
+    "path": "",
+    "pending": true,
+    "instructions": "Ejecutar E2E o abrir la ruta local y guardar el archivo con el nombre establecido en qa/evidence."
+  },
+  {
+    "number": 24,
+    "title": "Ejecución remota de GitHub Actions",
+    "path": "",
+    "pending": true,
+    "instructions": "Después de publicar por decisión del equipo,ejecutar workflow_dispatch y conservar captura auténtica Figura_024_CI.png."
+  }
+]

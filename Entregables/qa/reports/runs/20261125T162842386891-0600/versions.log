@@ -1,0 +1,28 @@
+{
+  "os": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.14",
+  "cpu": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+  "ruby": {
+    "exit_code": 0,
+    "output": "ruby 4.0.5 (2026-05-20 revision 64336ffd0e) +PRISM [x64-mingw-ucrt]"
+  },
+  "bundler": {
+    "exit_code": 0,
+    "output": "4.0.10"
+  },
+  "git": {
+    "exit_code": 0,
+    "output": "git version 2.55.0.windows.4"
+  },
+  "node": {
+    "exit_code": 0,
+    "output": "v24.21.0"
+  },
+  "k6": {
+    "error": "[WinError 2] El sistema no puede encontrar el archivo especificado"
+  },
+  "npm": {
+    "exit_code": 0,
+    "output": "11.19.0"
+  }
+}

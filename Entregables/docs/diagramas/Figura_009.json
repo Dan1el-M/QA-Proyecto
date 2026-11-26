@@ -1,0 +1,10 @@
+{
+  "title": "Estados reales del catálogo",
+  "values": {
+    "Aprobado": 18,
+    "Bloqueado": 29,
+    "No ejecutado": 4,
+    "Fallido": 1
+  },
+  "source": "qa/reports/summary.json; no equivale a pruebas aprobadas"
+}

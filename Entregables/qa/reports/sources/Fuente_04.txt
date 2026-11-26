@@ -1,0 +1,307 @@
+=== PÁGINA 1 ===
+                                     Laboratorio Asincrónico
+           Pruebas de Integración de Servicios API con Postman y Pytest
+
+
+
+ Elemento                                                         Detalle
+ Producto final                                                   Colección de Postman + pruebas automatizadas en
+                                                                  Pytest + reporte de resultados
+ Modalidad                                                        Parejas
+ Herramientas                                                     Postman, Newman opcional, Python, Pytest,
+                                                                  Requests, SQLite en memoria
+ Entregables                                                      Documento PDF/Word, evidencias, código fuente,
+                                                                  archivo .json de Postman y README
+
+1. Contexto del laboratorio
+En este laboratorio el estudiante deberá diseñar, ejecutar y documentar pruebas de integración para un flujo de
+compra o consumo de servicios mediante APIs. El objetivo no es solo llamar endpoints, sino validar que varios
+componentes trabajan correctamente: consulta de productos o servicios, creación de carrito, cálculo de total,
+persistencia temporal, validación de contrato, manejo de errores y generación de métricas de calidad.
+
+2. Objetivos de aprendizaje
+•   Diseñar casos de prueba de integración a partir de un flujo funcional real.
+•   Configurar y ejecutar pruebas de API en Postman utilizando variables, ambientes, scripts y aserciones.
+•   Validar contratos de respuesta: estructura JSON, tipos de datos, códigos HTTP y reglas de negocio.
+•   Automatizar pruebas de integración con Pytest usando una API pública y SQLite en memoria.
+•   Definir métricas de calidad para evaluar estabilidad, cobertura, tiempos de respuesta y defectos
+    encontrados.
+•   Documentar evidencias de ejecución y conclusiones técnicas del proceso de pruebas.
+
+3. Escenario base del laboratorio
+Buscar un prohyecto  con un  un sistema o API donde exista un proceso similar al siguiente:
+
+•   Consultar productos o servicios disponibles.
+•   Seleccionar uno o varios productos o servicios.
+•   Agregar elementos a un carrito, orden o solicitud.
+•   Consultar el total calculado.
+•   Ejecutar o simular el proceso final de compra/solicitud.
+•   Validar que el sistema responda correctamente y que los datos se puedan persistir o registrar.
+
+Se puede utilizar un proyecto propio. Si no se cuenta con uno, se permite usar una API pública o de prueba.
+Ejemplos:
+
+•   https://dummyjson.com/products
+
+
+=== PÁGINA 2 ===
+•   https://fakestoreapi.com/products
+•   https://jsonplaceholder.typicode.com/
+•   Stripe en modo sandbox o test mode
+•   Tilopay u otro proveedor con ambiente de pruebas
+
+4. Parte A: Diseño de casos de prueba de integración
+Antes de ejecutar pruebas en Postman o Pytest, se debe diseñar una matriz de casos de prueba. Cada caso
+debe tener objetivo, datos de entrada, pasos, resultado esperado, tipo de validación y métrica asociada
+
+Ejemplo: .
+
+ ID                        Caso                      Endpoint/acción           Resultado                 Validación
+                                                                               esperado
+ TC-01                     Consultar catálogo        GET /products             200 OK, lista no          Contrato + estado
+                                                                               vacía, cada               HTTP
+                                                                               producto tiene id,
+                                                                               nombre y precio
+
+5. Métricas mínimas obligatorias
+ Métrica                                    Cálculo                                    Criterio sugerido
+ Porcentaje de casos aprobados              Casos aprobados / total de casos           >= 85%
+                                            x 100
+ Tiempo promedio de respuesta               Promedio de ms por endpoint                Por ejemplo < 1000 ms
+                                            crítico
+ Defectos encontrados                       Cantidad de errores funcionales,           Registrar severidad
+                                            técnicos o de contrato
+ Cobertura de endpoints                     Endpoints probados / endpoints             >= 80% del flujo elegido
+                                            del flujo x 100
+ Validaciones por endpoint                  Cantidad de assertions por                 Mínimo 3 por endpoint importante
+                                            request
+ Tasa de error                              Respuestas 4xx/5xx inesperadas /           Lo más baja posible
+                                            total de ejecuciones
+
+6. Parte B: Pruebas de integración con Postman
+
+Ejercicio 1: Configuración del ambiente
+•   Crear un environment en Postman llamado QA_API_LAB.
+•   Definir variables: base_url, product_id, cart_id, token si aplica.
+•   Crear una colección llamada Integración API - Carrito o Servicios.
+•   Organizar la colección por carpetas: Catálogo, Carrito, Total, Checkout, Errores.
+
+Ejercicio 2: Consulta de productos o servicios
+•   Crear un request GET para consultar productos o servicios.
+•   Agregar pruebas en la pestaña Tests: status code, tiempo de respuesta, estructura y lista no vacía.
+
+
+
+=== PÁGINA 3 ===
+Ejercicio 3: Guardar datos dinámicos
+•   Guardar el id y precio de un producto en variables de ambiente para usarlos en requests posteriores.
+
+Ejercicio 4: Agregar producto o servicio al carrito
+•   Crear un request POST para simular la creación de un carrito o solicitud.
+•   Si la API pública no tiene carrito real, se permite simularlo con un endpoint POST de prueba y documentar
+    la limitación.
+
+Ejercicio 5: Validar contrato del carrito
+•   Validar que exista id de carrito, lista de productos, cantidades y total si aplica.
+
+Ejercicio 6: Consultar y validar total
+•   Comparar el total devuelto por la API contra el cálculo esperado. Si la API no calcula total, calcularlo en
+    Postman y documentarlo.
+
+Ejercicio 7: Pruebas negativas obligatorias
+•   Consultar un producto inexistente.
+•   Enviar cantidad cero o negativa.
+•   Enviar un body incompleto.
+•   Enviar tipo de dato incorrecto.
+•   Enviar request sin token si aplica.
+•   Validar errores claros y controlados.
+
+Ejercicio 8: Ejecución de colección completa
+•   Ejecutar la colección con Collection Runner.
+•   Ejecutar al menos 3 iteraciones.
+•   Registrar pruebas aprobadas y fallidas.
+•   Opcional: ejecutar con Newman desde consola.
+
+pm.test('Status code is 200', function () {
+    pm.response.to.have.status(200);
+});
+
+pm.test('Response time is acceptable', function () {
+    pm.expect(pm.response.responseTime).to.be.below(1000);
+});
+
+pm.test('Response contains a product list', function () {
+    const jsonData = pm.response.json();
+    pm.expect(jsonData).to.be.an('array');
+    pm.expect(jsonData.length).to.be.above(0);
+});
+
+const products = pm.response.json();
+pm.environment.set('product_id', products[0].id);
+pm.environment.set('product_price', products[0].price);
+
+{
+  "userId": 1,
+  "products": [
+    { "id": {{product_id}}, "quantity": 2 }
+
+=== PÁGINA 4 ===
+  ]
+}
+
+newman run Integracion_API_Carrito.postman_collection.json -e QA_API_LAB.postman_environment.json
+
+7. Parte C: Pruebas de integración con Pytest y SQLite en memoria
+En esta parte se debe automatizar un flujo básico usando Python. Se consumirá una API pública, se validará la
+respuesta y se almacenará información en SQLite en memoria como persistencia falsa. La base de datos debe
+crearse y destruirse en cada prueba para garantizar aislamiento.
+
+Estructura sugerida del proyecto
+qa_api_lab/
+  tests/
+    test_api_integration.py
+  requirements.txt
+  README.md
+Ejercicio 9: Crear base de datos SQLite en memoria
+import sqlite3
+import pytest
+
+@pytest.fixture
+def db_connection():
+    conn = sqlite3.connect(':memory:')
+    cursor = conn.cursor()
+    cursor.execute('''
+        CREATE TABLE carrito (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            producto_id INTEGER NOT NULL,
+            nombre TEXT NOT NULL,
+            precio REAL NOT NULL,
+            cantidad INTEGER NOT NULL,
+            total REAL NOT NULL
+        )
+    ''')
+    conn.commit()
+    yield conn
+    conn.close()
+Ejercicio 10: Consultar API pública y validar contrato
+import requests
+
+BASE_URL = xxxx
+
+def test_consultar_productos():
+    response = requests.get(f'{BASE_URL}/products', timeout=10)
+    assert response.status_code == 200
+    products = response.json()
+    assert isinstance(products, list)
+    assert len(products) > 0
+    product = products[0]
+    assert 'id' in product
+    assert 'title' in product
+    assert 'price' in product
+    assert isinstance(product['price'], (int, float))
+
+
+=== PÁGINA 5 ===
+8. A partir de lo anterior, realizar los siguientes ejercicios
+                       Prueba a realizar                            Descripción
+                       Insertar producto consultado en              Crear un registro del producto,
+                       SQLite                                       con nombre, cantidad
+
+
+                       Validar total del carrito                    Verificar el total de productos y
+                                                                    monto del carrito
+                       Validar cantidades                           Verificar la cantidad de acuerdo
+                                                                    con las reglas del negocio (que
+                                                                    haya disponible, que existan, que
+                                                                    no sean negativos, etc)
+                       Ingresar Productos inexistentes              Validar el ingreso de un producto
+                                                                    que no existe
+                       Medir tiempo de respuesta                    Cuanto tarda en ejecutarse el API?
+                       Autenticación simulada                       Crear una variable token en
+                                                                    Postman y validar
+                                                                    comportamiento con y sin token.
+                       Prueba de contrato estricta                  Validar tipos de dato exactos de
+                                                                    id, title, price, category e image.
+                       Idempotencia                                 Ejecutar dos veces la misma
+                                                                    operación y analizar si genera
+                                                                    duplicados o mantiene
+                                                                    consistencia.
+                       Manejo de errores                            Forzar body inválido y documentar
+                                                                    el mensaje de error recibido.
+                       Prueba de integración parcial                Simular que la API responde bien,
+                                                                    pero la base de datos falla.
+                                                                    Documentar qué debería pasar.
+                       Mock opcional                                Crear una respuesta mock en
+                                                                    Postman para simular un
+                                                                    proveedor externo caído.
+                       Comparación técnica                          Comparar Postman vs Pytest:
+                                                                    ventajas, limitaciones y cuándo
+                                                                    usar cada uno.
+
+9. Entregables obligatorios
+•   Matriz de casos de prueba con mínimo 8 casos.
+•   Colección de Postman exportada en formato JSON.
+•   Environment de Postman exportado, sin credenciales reales.
+•   Capturas o reporte de ejecución de Postman.
+•   Proyecto Python con Pytest y SQLite en memoria.
+•   Evidencia de ejecución de Pytest.
+•   Reporte final con métricas, hallazgos, defectos y conclusiones.
+•   README con instrucciones para ejecutar el laboratorio.
+
+
+=== PÁGINA 6 ===
+12. Criterios de calidad esperados
+•   No se aceptan pruebas que solo verifiquen status 200. Cada endpoint importante debe tener al menos tres
+    validaciones.
+•   Las credenciales reales no deben incluirse en capturas, repositorios ni archivos exportados.
+•   Los datos de prueba deben ser claros y repetibles.
+•   Las pruebas automatizadas deben poder ejecutarse desde cero sin configuración manual excesiva.
+•   El reporte debe explicar qué se probó, qué falló, por qué es importante y qué se recomienda mejorar.
+
+14. Conclusiones
+•   ¿Qué diferencia observó entre una prueba de API aislada y una prueba de integración?
+•   ¿Qué defectos podrían pasar desapercibidos si solo se prueba la interfaz gráfica?
+•   ¿Qué validaciones fueron más importantes: estado HTTP, contrato JSON, reglas de negocio o persistencia?
+    Justifique.
+•   ¿Qué riesgos tendría integrar un proveedor externo de pagos sin pruebas automatizadas?
+•   ¿Qué mejoraría en su estrategia de pruebas si este proyecto fuera para producción?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

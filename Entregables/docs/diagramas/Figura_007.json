@@ -1,0 +1,47 @@
+{
+  "title": "Automatización local e integración continua propuesta",
+  "nodes": [
+    [
+      "entry",
+      "run_all.sh\nprerrequisitos y aislamiento",
+      600,
+      115
+    ],
+    [
+      "jobs",
+      "Estática, Minitest\ny navegador local",
+      80,
+      410
+    ],
+    [
+      "logs",
+      "Reportes por corrida\ncódigos de salida y fallos",
+      1120,
+      410
+    ],
+    [
+      "final",
+      "Métricas y trazabilidad\nWord y verificación final",
+      600,
+      740
+    ]
+  ],
+  "edges": [
+    [
+      "entry",
+      "jobs",
+      ""
+    ],
+    [
+      "jobs",
+      "logs",
+      ""
+    ],
+    [
+      "logs",
+      "final",
+      "evidencia auténtica"
+    ]
+  ],
+  "source": "Entregables/qa/scripts/run_all.py; .github/workflows/qa.yml"
+}

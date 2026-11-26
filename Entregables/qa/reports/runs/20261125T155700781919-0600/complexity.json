@@ -1,0 +1,15 @@
+{
+  "tool": "Ruby Prism AST + QA cyclomatic counter v1",
+  "convention": "1 + if/unless/loops/when/in/rescue/and/or + iterator blocks + safe navigation; nested method definitions excluded",
+  "version": "2.1.0",
+  "count": 0,
+  "average": null,
+  "max": null,
+  "distribution": {
+    "at_most_10": 0,
+    "from_11_to_15": 0,
+    "above_15": 0
+  },
+  "methods": [],
+  "parse_errors": []
+}

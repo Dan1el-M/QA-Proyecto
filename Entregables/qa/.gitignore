@@ -1,0 +1,10 @@
+# Downloaded runtimes, packages and browser caches are reproducible, not evidence.
+/node_modules/
+/data/*.sqlite3*
+/reports/document-render/*.png
+/reports/document-render/*.pdf
+/reports/document-render/**/*.png
+/reports/document-render/**/*.pdf
+/reports/backups/
+**/__pycache__/
+**/*.pyc
